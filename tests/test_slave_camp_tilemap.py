@@ -14,7 +14,7 @@ reports_dir = skill_repo / "reports"
 class TestSlaveCampTilemap(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        from generate_masterpiece_slave_camp_map import grid_l1, grid_l2, grid_l25, grid_l3
+        from generate_true_34_slave_camp_map import grid_l1, grid_l2, grid_l25, grid_l3
         cls.grid_l1 = grid_l1
         cls.grid_l2 = grid_l2
         cls.grid_l25 = grid_l25
