@@ -29,22 +29,33 @@ description: "Architect, paint, and generate native Godot 4.3+ TileMapLayer tact
 
 ```text
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│ 🌟 STEP 1: 先定義分層純語意二維矩陣 (Define Pure 2D Semantic Grid Arrays)   │
-│    • 地圖以 2D 矩陣為唯一真相源 (Single Source of Truth, SSOT)。             │
-│    • 在每一層中，每一個網格座標 (x, y) 儲存且僅儲存 1 個專屬語意 Enum ID。   │
-│    • 建築物在實體層劃定佔地語意面積 (如 6x5 的 HOUSE_FOOTPRINT)，             │
-│      在屋頂層劃定對應的屋頂淡出語意面積 (如 6x3 的 ROOF_FADER_GROUP)。       │
+│ 🌟 STEP 1: 定義四層獨立純語意二維矩陣 (4-Layer Pure Semantic Grid Arrays)   │
+│    • 地圖以 4 組獨立 2D 矩陣為唯一真相源 (Single Source of Truth, SSOT)：    │
+│      1. Layer 1 自然底地語意 ([沙] [路] [石] [田] [渠])                       │
+│      2. Layer 2 建築店內層與本體語意 ([吧台] [武架] [藥架] [鐵砧] [熔爐] [水井])│
+│      3. Layer 2.5 環境雜物語意 ([碎石] [枯草] [木箱] [木桶] [木橋])           │
+│      4. Layer 3 屋頂淡出語意 ([▲店頂] [▲鐵頂] [▲酒頂] [▲塔頂] [▲棚頂])       │
+│    • 建立全局唯一的 BUILDINGS 幾何字典，像素坐標嚴格等於 (gx * 32, gy * 32)！ │
 ├─────────────────────────────────────────────────────────────────────────────┤
-│ 🎨 STEP 2: 依據語意矩陣，精準填入 Tile 與整棟 3/4 房子 Prefab              │
-│    • 遍歷語意矩陣，依照數值填入對應的 Ground / Road / Farmland Tile。        │
-│    • 遇到建築佔地語意面積時，直接放置整棟 3/4 俯視木屋 Prefab，絕不盲目拼貼碎磚！│
-│    • 放置 3/4 樹木 (帶樹幹與陰影)、水井 (帶木拱架)、鐵匠熔爐與桌椅。         │
+│ 🎨 STEP 2: 建築進店前後雙態徹底解耦 ＆ 100% 統一地基原則                    │
+│    • 進店前 (外觀層)：正面木板實體外牆 ＋ 雙開閉合大木門 ＋ 門楣大 Logo 招牌 │
+│      ＋ 黃金比例 3/4 俯視斜坡屋頂 (絕非露天，招牌牢固鉚接於門楣絕不浮空)！    │
+│    • 進店後 (店內層)：踏入門檻觸發 Roof_Fader 淡出，展現室內地磚、吧台、    │
+│      長桌、壁爐、武器架、鐵砧、藥水貨架與金庫箱！                           │
+│    • 100% 統一地基原則：外圈石砌基座、接地陰影與迎賓石階在進店前後完全同源， │
+│      切換時保持 0 像素位移與 0 抖動！                                        │
 ├─────────────────────────────────────────────────────────────────────────────┤
-│ 🖼️ STEP 3: 無損疊加產出【最終遊戲合併大圖 (Final Merged Map)】              │
-│    • 最終合併大圖 100% 由上述語意矩陣驅動生成，確保「左側語意 ⟷ 右側大圖」   │
+│ 🏬 STEP 3: 建築全面封裝為獨立子場景 (Dedicated Sub-Scene Architecture)       │
+│    • 存放於 res://場景/地圖/建築/ 目錄下。                                   │
+│    • 內部封裝：店內層 (Sprite2D)、Roof_Fader (Area2D + class_屋頂淡出器)、   │
+│      Roof_Exterior_Sprite、CollisionShape2D 門檻感應區與門楣大招牌。         │
+│    • 主場景 Visual_Structures_YSort 直接實例化掛載這些子場景！              │
+├─────────────────────────────────────────────────────────────────────────────┤
+│ 🖼️ STEP 4: 無損疊加產出【最終遊戲合併大圖 (Final Merged Map)】              │
+│    • 最終合併大圖 100% 由上述四層語意矩陣驅動生成，確保「語意 ⟷ 大圖」       │
 │      絕對同源同構、嚴絲合縫！                                               │
 ├─────────────────────────────────────────────────────────────────────────────┤
-│ 🛠️ STEP 4: 烘焙至 Godot 原生 .tscn 並綁定 Custom Data Layer 戰術屬性        │
+│ 🛠️ STEP 5: 烘焙至 Godot 原生 .tscn 並綁定 Custom Data Layer 戰術屬性        │
 │    • 物理寫入 TileMapLayer 的 tile_map_data 二進制緩衝區。                   │
 │    • GDScript 透過 get_cell_tile_data(pos) 極速查表計算通行、AP消耗與掩體率。│
 └─────────────────────────────────────────────────────────────────────────────┘
@@ -71,16 +82,16 @@ description: "Architect, paint, and generate native Godot 4.3+ TileMapLayer tact
 ## 3. 視覺透視與有機生活美學規範 (Aesthetic & Perspective Rules)
 
 1. **100% 統一 3/4 斜上方俯視角 (Top-Down 3/4 Oblique)**：
-   * **房屋**：俯視梯形瓦片斜面 + 正面直立橡木立面牆 + 門窗石階 + 右下立體投影陰影。
+   * **房屋**：俯視梯形瓦片斜面 + 正面直立橡木立面牆 + 雙開閉合木門石階 + 門楣大 Logo 招牌 + 右下立體投影陰影。
    * **樹木**：斜向立體樹冠 + 直立棕色樹幹 + 根系 + 地表陰影（拒絕 90 度平面圓球！）。
    * **水井**：正面圓柱石砌井身 + 木拱架橫樑 + 絞盤滑輪 + 橢圓透視井口波光（拒絕平面圓圈！）。
    * **熔爐與桌椅**：石砌拱頂爐門與鐵砧、木桌面與垂直桌腿。
-2. **徹底拒絕幾何死板複製 (No Sterile Grid Copy-Paste)**：
+2. **屋頂與正面立面黃金分割比例 (Golden Ratio Roof & Facade Proportions)**：
+   * 屋頂下緣屋簷高度必須精確搭接在正面立面牆頂部（約占總高 40%~50%），為下方的正面木牆、閉合大門、發光窗台與門楣招牌保留 50%~60% 的舒展空間，絕不壓迫大門！
+3. **徹底拒絕幾何死板複製 (No Sterile Grid Copy-Paste)**：
    * 道路必須是自然起伏、隨地勢蜿蜒分叉、帶有車轍暗紋與碎石的泥土小徑。
    * 麥田伴隨清澈灌溉水渠自然起伏展開為梯形耕地。
-   * 建築依功能錯落佈局（西北村長宅、東北鐵匠鋪、西南酒館、東南穀倉），絕不搞十字激光路與方塊複製。
-3. **整間房屋獨立 Prefab (Whole-House Dedicated Scene)**：
-   * 建築物應繪製整間高解析度 3/4 俯視大圖（如 $192\times 160\text{ px}$），並完全解耦獨立屋頂淡出層與室內傢俱層。
+   * 建築依功能錯落佈局（西北雜貨鋪、東北鐵匠鋪、西南酒館、東南農舍），絕不搞十字激光路與方塊複製。
 
 ---
 
@@ -92,22 +103,21 @@ description: "Architect, paint, and generate native Godot 4.3+ TileMapLayer tact
 
 ## 5. 🗺️ 地圖交付標準報告格式規範 (Mandatory Map Delivery Report Format)
 
-每次完成地圖設計或向大叔/團隊交付成果時，**必須生成一份獨立的互動式 HTML 網頁報告 (`map_delivery_report_<x>_<y>.html`)**，並包含以下三大核心要素與互動功能，缺一不可：
+每次完成地圖設計或向大叔/團隊交付成果時，**必須生成一份獨立的互動式 HTML 網頁報告 (`map_delivery_report_<x>_<y>.html`)**，並包含以下核心要素與互動功能，缺一不可：
 
 1. 🔒 **【Base64 100% 內嵌防破圖鐵律 (Zero-Broken-Image Inlining)】**：
-   * 報告內所有圖片（合併圖、語意圖、四大分層圖）**必須全面編碼為 Base64 Data URI (`data:image/png;base64,...`) 直接內嵌於 HTML 中**，嚴禁使用易因相對路徑或 CORS 失敗的外部引用，保證在任何環境下 100% 秒開不破圖！
+   * 報告內所有圖片（合併圖、語意圖、四大分層圖）**必須全面編碼為 Base64 Data URI (`data:image/png;base64,...`) 直接內嵌於 HTML 中**，嚴禁使用外部相對路徑，保證在任何環境下 100% 秒開不破圖！
 2. 🖼️ **【合併圖 (Final Merged Map View)】**：
-   * 最終遊戲視角高解析度無損疊加大圖（含底地、建築、飾物、屋頂）。
-3. 📑 **【每格文字標籤分層語意圖 (Per-Cell Text Label Semantic Grid)】**：
-   * **每一個網格單元 $(x, y)$ 都必須印出專屬的文字標籤 Token**（例如：`[沙]`、`[路]`、`[田]`、`[溝]`、`[屋]`、`[井]`、`[爐]`、`[草]`、`[石]`、`[▲頂]`）。
-   * 附帶完整的【語意文字標籤全索引與戰術屬性對照表】（AP 消耗、掩體率、通行規則）。
+   * 提供「進去前·完整外觀層全景 (Roofs ON)」與「進去後·店內層全景 (Roofs OFF)」一鍵雙態切換！
+3. 📑 **【四層獨立純語意矩陣圖 (4-Layer Per-Cell Semantic Grid SSOT)】**：
+   * 包含 Layer 1 自然底地、Layer 2 建築店內層、Layer 2.5 環境雜物、Layer 3 屋頂淡出的獨立 40×40 矩陣，且每個網格單元 $(x, y)$ 均印出專屬文字標籤 Token。
 4. 📐 **【四大分層獨立圖 (Discrete Layer-by-Layer Breakdown Views)】**：
    * **Layer 1**：純自然原野底地 (Sand / Ground)。
-   * **Layer 2**：人工建築與地景 (Roads, Farmlands, Earthen Ditches, Houses, Wells, Forges)。
+   * **Layer 2**：人工建築與地景 (Roads, Farmlands, Earthen Ditches, Houses, Wells, Forges, Interiors)。
    * **Layer 2.5**：雜草、碎石、枯木佈置層 (Arid Scrub & Scree Clutter)。
-   * **Layer 3**：頭頂屋頂與樹冠淡出層 (Roofs & Canopies)。
+   * **Layer 3**：頭頂屋頂與樹冠淡出層 (Roofs, Canopies, Signboards)。
 5. 🔍 **【互動式 Lightbox 像素級無損放大與拖拽 (Pixel-Perfect Lightbox Pan/Zoom)】**：
-   * 報告中**所有圖片點擊皆可進入全螢幕 Lightbox 放大模態框**，支援滑鼠滾輪自由放大 (100% ~ 1000%) 與按住拖拽平移，保持點陣像素絕對銳利不模糊 (`image-rendering: pixelated`)。
+   * 報告中**所有圖片點擊皆可進入全螢幕 Lightbox 放大模態框**，支援滑鼠滾輪自由放大 (100% ~ 800%) 與按住拖拽平移，保持點陣像素絕對銳利不模糊 (`image-rendering: pixelated`)。
 6. 🎛️ **【即時圖層疊加檢驗沙盒 (Interactive Layer Blending Sandbox)】**：
    * 提供動態 Checkbox，可即時勾選/隱藏任意圖層，方便肉眼逐層 QC 驗收。
 
@@ -126,9 +136,10 @@ res://圖片/地圖/
 ├── 02_拓撲過渡 (02_Autotile_Transitions)/ # 12~47 拓撲過渡圖塊 (內凹/外凸/平邊/齒狀過渡)
 │   └── autotile_[過渡類型]_[解析度]_[47t|9slice].png
 ├── 03_建築與預製體 (03_Prefabs_Structures)/ # 3/4 完整房屋、工坊、要塞、室內與屋頂淡出層
-│   ├── prefab_[風格]_[建築名]_[尺寸]_[主體].png
-│   ├── fader_[風格]_[建築名]_[尺寸]_[屋頂淡出].png
-│   └── interior_[風格]_[建築名]_[尺寸]_[室內傢俱].png
+│   ├── exterior_[風格]_[建築名]_[尺寸].png  # 進店前完整外觀
+│   ├── interior_[風格]_[建築名]_[尺寸].png  # 進店後室內傢俱
+│   ├── fader_[風格]_[建築名]_[尺寸].png     # 屋頂淡出層
+│   └── sign_[風格]_[建築名]_[尺寸].png      # 門楣大 Logo 招牌
 ├── 04_環境飾物與植被 (04_Props_Clutter)/   # 雜草、碎石、水井、熔爐、木箱、骨骸
 │   └── prop_[風格]_[物件名]_[尺寸]_[34].png
 └── 05_TileSet資源庫 (05_TileSet_Resources)/ # Godot 原生 .tres 與 Custom Data 綁定
@@ -138,11 +149,12 @@ res://圖片/地圖/
 ### 🏷️ 2. 資產統一命名規範 (Strict Naming Conventions)
 所有資產檔名採用蛇形命名法 (`snake_case`)，格式為：
 `[類別前綴]_[風格/群系]_[物件描述]_[尺寸]_[透視/狀態].[ext]`
-* **類別前綴**：`ground_` (底地), `autotile_` (過渡), `prefab_` (完整建築), `fader_` (淡出屋頂), `prop_` (飾物/道具), `ts_` (TileSet)。
+* **類別前綴**：`ground_` (底地), `autotile_` (過渡), `exterior_` (外觀), `interior_` (店內層), `fader_` (淡出屋頂), `sign_` (招牌), `prop_` (飾物/道具), `ts_` (TileSet)。
 * **範例**：
-  * `prefab_kenshi_house_chief_192x160_34.png` (Kenshi 風格村長大宅 192x160 3/4 俯視)
-  * `fader_kenshi_roof_chief_192x160_34.png` (對應的屋頂淡出層)
-  * `autotile_sand_clay_32px_47t.png` (沙土與黏土 47-tile 拓撲過渡集)
+  * `exterior_kenshi_tavern_256x192.png` (進店前完整封閉外觀)
+  * `interior_kenshi_tavern_256x192.png` (進店後室內吧台與壁爐)
+  * `fader_kenshi_tavern_256x192.png` (對應的屋頂淡出層)
+  * `sign_kenshi_tavern_beer_64x64.png` (門楣大啤酒杯 Logo 招牌)
   * `prop_kenshi_well_stone_48x48_34.png` (Kenshi 粗木石水井 48x48 3/4 俯視)
 
 ### 🛡️ 3. 資產品質與治理硬紅線 (QC & Governance Red Lines)
