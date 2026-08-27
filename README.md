@@ -3,10 +3,10 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Assets: CC0-1.0](https://img.shields.io/badge/Assets-CC0--1.0-green.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
 [![Godot Engine](https://img.shields.io/badge/Godot-4.3%2B-blue.svg)](https://godotengine.org/)
-[![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://python.org/)
+[![AI Agent Skill](https://img.shields.io/badge/AI%20Skill-Ready-purple.svg)](skills/godot-tilemap-architect/SKILL.md)
 
 > **A Semantics-First, 3/4 Oblique Pixel Art Tactical Map & Autotile Generation Engine for Godot 4.x.**  
-> 由 AI 軟體架構師 **諾瓦 (Nova / Nono)** 親手設計並 100% 演算法程序繪製之開源像素戰棋地圖引擎。
+> 由 AI 軟體架構師 **諾瓦 (Nova / Nono)** 親手設計並 100% 演算法程序繪製之開源像素戰棋地圖引擎，內建完整 AI Agent 技能卡片與方法論。
 
 ---
 
@@ -28,6 +28,9 @@
    * 內建全螢幕 Lightbox 像素級無損放大 (支援 100% ~ 1000% 滾輪放大與平移拖拽)。
    * 內建即時圖層疊加 QC 沙盒，動態開關圖層。
    * 100% Base64 內嵌，零外部依賴，永遠不破圖！
+6. 🤖 **開箱即用之 AI Agent 技能卡片與協同 SOP (AI Agent Skill & SOPs)**：
+   * 附帶標準 `skills/godot-tilemap-architect/SKILL.md`，可供 Gemini CLI / Claude Code / Cursor 一鍵掛載調用。
+   * 沉澱完整地圖工程 SOP 與 AI 結對編程工作守則。
 
 ---
 
@@ -42,13 +45,19 @@ nono-tactical-tilemap-engine/
 │   ├── 04_props/                    # 枯草、碎石、水井、熔爐
 │   ├── kenshi_village_merged_1280.png
 │   └── kenshi_village_per_cell_text_labels.png
+├── skills/                          # AI Agent 技能卡片 (可直接掛載)
+│   └── godot-tilemap-architect/
+│       └── SKILL.md                 # 完整地圖架構師 Skill 規範
 ├── src/                             # Python 核心生成器源碼
 │   └── nono_tilemap_engine.py       # SSOT 語意矩陣構建、Autotile 演算與無損合成
 ├── reports/                         # 獨立可放大 HTML 交付驗收報告
 │   └── map_delivery_report_0_0_village.html
-├── docs/                            # 架構設計與避坑指南
+├── docs/                            # 核心工程文檔與方法論
+│   ├── MAP_ENGINEERING_SOP.md       # 地圖工程標準 SOP 與 4 大鐵律
+│   └── AI_AGENT_PAIR_PROGRAMMING_GUIDE.md # AI Agent 結對編程與主動煞車守則
 ├── LICENSE                          # MIT + CC0 雙重開源協議
-└── README.md
+├── .gitignore                       # 乾淨的 Git 忽略清單
+└── README.md                        # 完整中英文開源文檔
 ```
 
 ---
@@ -64,10 +73,8 @@ pip install pillow numpy
 python src/nono_tilemap_engine.py
 ```
 
-### 2. 開啟互動式 HTML 驗收報告
-直接雙擊開啟 `reports/map_delivery_report_0_0_village.html`，即可在任何瀏覽器中體驗：
-* 滾輪自由無損放大 1000% 檢驗像素點。
-* 動態 Checkbox 即時切換各圖層進行 QC 審查。
+### 2. 掛載 AI Agent Skill
+將 `skills/godot-tilemap-architect/` 複製到您的 Agent 配置目錄（如 `~/.gemini/config/skills/` 或 `.claude/skills/`），即可讓 AI Agent 自動獲取頂級地圖架構與繪製能力！
 
 ---
 
