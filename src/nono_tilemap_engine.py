@@ -1,127 +1,106 @@
 import math
 import random
 import base64
-from PIL import Image, ImageDraw, ImageFont
 from pathlib import Path
+from PIL import Image, ImageDraw, ImageFont
 
-# 專案路徑
-repo_root = Path(__file__).resolve().parent.parent
-assets_dir = repo_root / "assets"
-reports_dir = repo_root / "reports"
-assets_dir.mkdir(parents=True, exist_ok=True)
-reports_dir.mkdir(parents=True, exist_ok=True)
+# 顏色定義 - 荒原極致美學調色盤
+SAND_BASE = (226, 192, 142, 255)
+SAND_LIGHT = (242, 214, 168, 255)
+SAND_DARK = (204, 166, 114, 255)
+SAND_GRAIN = (165, 126, 78, 255)
 
-# 顏色定義
-SAND_BASE = (218, 178, 122, 255)
-SAND_LIGHT = (235, 198, 145, 255)
-SAND_DARK = (195, 152, 98, 255)
-SAND_GRAIN = (168, 128, 78, 255)
+CLAY_BASE = (176, 126, 76, 255)
+CLAY_LIGHT = (198, 148, 96, 255)
+CLAY_DARK = (144, 96, 52, 255)
+CLAY_RUT = (118, 74, 36, 255)
+CLAY_PEBBLE = (160, 165, 175, 255)
 
-CLAY_ROAD_BASE = (175, 122, 75, 255)
-CLAY_ROAD_DARK = (142, 95, 52, 255)
-CLAY_ROAD_LIGHT = (198, 145, 95, 255)
-CLAY_RUT = (125, 80, 42, 255)
+STONE_BASE = (142, 148, 158, 255)
+STONE_LIGHT = (178, 186, 198, 255)
+STONE_DARK = (102, 108, 118, 255)
+STONE_MORTAR = (74, 78, 86, 255)
+STONE_WARM = (152, 144, 138, 255)
 
-STONE_PLAZA_BASE = (135, 142, 155, 255)
-STONE_PLAZA_DARK = (95, 102, 115, 255)
-STONE_PLAZA_LIGHT = (172, 180, 195, 255)
+FARM_BASE = (124, 88, 52, 255)
+FARM_FURROW = (82, 54, 28, 255)
+FARM_GREEN = (152, 178, 62, 255)
+FARM_GOLD = (224, 192, 54, 255)
 
-FARM_EARTH_BASE = (118, 82, 48, 255)
-FARM_CROP_GREEN = (145, 175, 55, 255)
-FARM_CROP_GOLD = (215, 185, 45, 255)
-FARM_FURROW = (88, 58, 32, 255)
+WATER_DEEP = (48, 108, 188, 255)
+WATER_MID = (72, 148, 226, 255)
+WATER_RIPPLE = (175, 225, 255, 255)
+WATER_BANK = (112, 118, 128, 255)
 
-WATER_DEEP = (45, 105, 185, 255)
-WATER_SHALLOW = (65, 145, 225, 255)
-WATER_FOAM = (195, 235, 255, 255)
-WATER_BANK_STONE = (110, 115, 125, 255)
+# ==============================================================================
+# 0. 構建四層純語意 40x40 矩陣 (SSOT)
+# ==============================================================================
+grid_l1 = [["[沙]" for _ in range(40)] for _ in range(40)]
+grid_l2 = [["[ · ]" for _ in range(40)] for _ in range(40)]
+grid_l25 = [["[ · ]" for _ in range(40)] for _ in range(40)]
+grid_l3 = [["[ · ]" for _ in range(40)] for _ in range(40)]
 
-def draw_subtile(draw, px, py, sub_type, quadrant, terrain_type="clay"):
-    base_col = CLAY_ROAD_BASE
-    dark_col = CLAY_ROAD_DARK
-    light_col = CLAY_ROAD_LIGHT
-    
-    if terrain_type == "stone":
-        base_col, dark_col, light_col = STONE_PLAZA_BASE, STONE_PLAZA_DARK, STONE_PLAZA_LIGHT
-    elif terrain_type == "farm":
-        base_col, dark_col, light_col = FARM_EARTH_BASE, FARM_FURROW, FARM_CROP_GREEN
-    elif terrain_type == "water":
-        base_col, dark_col, light_col = WATER_DEEP, WATER_SHALLOW, WATER_BANK_STONE
+def mark_road_sem(pts, w=2):
+    for i in range(len(pts)-1):
+        p0, p1 = pts[i], pts[i+1]
+        steps = int(math.hypot(p1[0]-p0[0], p1[1]-p0[1]) * 2)
+        for t in range(steps + 1):
+            s = t / float(steps)
+            cx, cy = int(p0[0] + (p1[0]-p0[0])*s), int(p0[1] + (p1[1]-p0[1])*s)
+            for dy in range(-w//2, w//2 + 1):
+                for dx in range(-w//2, w//2 + 1):
+                    if 0 <= cx+dx < 40 and 0 <= cy+dy < 40: grid_l1[cy+dy][cx+dx] = "[路]"
 
-    if sub_type == "SOLID":
-        draw.rectangle([px, py, px + 15, py + 15], fill=base_col)
-        if terrain_type == "clay":
-            for _ in range(4):
-                rx, ry = px + random.randint(1, 14), py + random.randint(1, 14)
-                draw.point((rx, ry), fill=dark_col)
-            draw.line([(px, py + 7), (px + 15, py + 7)], fill=CLAY_RUT, width=1)
-        elif terrain_type == "stone":
-            draw.rectangle([px + 1, py + 1, px + 14, py + 14], fill=base_col, outline=dark_col)
-            draw.line([(px + 1, py + 1), (px + 14, py + 1)], fill=light_col)
-        elif terrain_type == "farm":
-            for fy in range(py + 2, py + 16, 4):
-                draw.line([(px, fy), (px + 15, fy)], fill=FARM_FURROW, width=1)
-                draw.line([(px, fy + 1), (px + 15, fy + 1)], fill=FARM_CROP_GOLD, width=1)
-        elif terrain_type == "water":
-            draw.rectangle([px, py, px + 15, py + 15], fill=WATER_DEEP)
-            draw.line([(px + 2, py + 5), (px + 13, py + 5)], fill=WATER_SHALLOW, width=1)
-            draw.line([(px + 4, py + 11), (px + 11, py + 11)], fill=WATER_FOAM, width=1)
+mark_road_sem([(0, 23), (8, 22), (15, 20), (22, 19), (30, 19), (39, 17)], w=2)
+mark_road_sem([(22, 19), (21, 26), (20, 39)], w=1)
+mark_road_sem([(15, 20), (12, 14), (11, 8)], w=1)
+mark_road_sem([(30, 19), (31, 14), (29, 9)], w=1)
 
-    elif sub_type == "OUTER":
-        if quadrant == "TL":
-            draw.pieslice([px - 14, py - 14, px + 18, py + 18], 0, 90, fill=base_col, outline=dark_col)
-            draw.point((px + 4, py + 1), fill=dark_col)
-            draw.point((px + 1, py + 4), fill=dark_col)
-        elif quadrant == "TR":
-            draw.pieslice([px - 4, py - 14, px + 28, py + 18], 90, 180, fill=base_col, outline=dark_col)
-            draw.point((px + 11, py + 1), fill=dark_col)
-            draw.point((px + 14, py + 4), fill=dark_col)
-        elif quadrant == "BL":
-            draw.pieslice([px - 14, py - 4, px + 18, py + 28], 270, 360, fill=base_col, outline=dark_col)
-            draw.point((px + 4, py + 14), fill=dark_col)
-            draw.point((px + 1, py + 11), fill=dark_col)
-        elif quadrant == "BR":
-            draw.pieslice([px - 4, py - 4, px + 28, py + 28], 180, 270, fill=base_col, outline=dark_col)
-            draw.point((px + 11, py + 14), fill=dark_col)
-            draw.point((px + 14, py + 11), fill=dark_col)
+for y in range(16, 23):
+    for x in range(18, 26):
+        if (x - 22)**2 + (y - 19)**2 <= 14: grid_l1[y][x] = "[石]"
 
-    elif sub_type == "INNER":
-        draw.rectangle([px, py, px + 15, py + 15], fill=base_col)
-        if quadrant == "TL":
-            draw.polygon([(px, py), (px + 6, py), (px, py + 6)], fill=SAND_BASE, outline=dark_col)
-        elif quadrant == "TR":
-            draw.polygon([(px + 15, py), (px + 9, py), (px + 15, py + 6)], fill=SAND_BASE, outline=dark_col)
-        elif quadrant == "BL":
-            draw.polygon([(px, py + 15), (px + 6, py + 15), (px, py + 9)], fill=SAND_BASE, outline=dark_col)
-        elif quadrant == "BR":
-            draw.polygon([(px + 15, py + 15), (px + 9, py + 15), (px + 15, py + 9)], fill=SAND_BASE, outline=dark_col)
+for y in range(18, 35):
+    for x in range(20, 40):
+        if abs((y - 18) - (x - 20)*0.8) < 1.0: grid_l1[y][x] = "[渠]"
 
-    elif sub_type == "EDGE_V":
-        draw.rectangle([px, py, px + 15, py + 15], fill=base_col)
-        if quadrant in ("TL", "BL"):
-            draw.rectangle([px, py, px + 3, py + 15], fill=SAND_BASE)
-            for sy in range(py, py + 16, 3):
-                draw.point((px + 4, sy), fill=dark_col)
-                if sy % 6 == 0: draw.point((px + 2, sy), fill=base_col)
-        else:
-            draw.rectangle([px + 12, py, px + 15, py + 15], fill=SAND_BASE)
-            for sy in range(py, py + 16, 3):
-                draw.point((px + 11, sy), fill=dark_col)
-                if sy % 6 == 0: draw.point((px + 13, sy), fill=base_col)
+for fy in range(24, 33):
+    for fx in range(23 + (fy - 24)//2, 38 - (fy - 24)//2):
+        if grid_l1[fy][fx] != "[渠]": grid_l1[fy][fx] = "[田]"
 
-    elif sub_type == "EDGE_H":
-        draw.rectangle([px, py, px + 15, py + 15], fill=base_col)
-        if quadrant in ("TL", "TR"):
-            draw.rectangle([px, py, px + 15, py + 3], fill=SAND_BASE)
-            for sx in range(px, px + 16, 3):
-                draw.point((sx, py + 4), fill=dark_col)
-                if sx % 6 == 0: draw.point((sx, py + 2), fill=base_col)
-        else:
-            draw.rectangle([px, py + 12, px + 15, py + 15], fill=SAND_BASE)
-            for sx in range(px, px + 16, 3):
-                draw.point((sx, py + 11), fill=dark_col)
-                if sx % 6 == 0: draw.point((sx, py + 13), fill=base_col)
+# 1. 大酒館 (西南: gx=4..11, gy=25..30)
+for gx in range(4, 12):
+    for gy in range(25, 28): grid_l3[gy][gx] = "[▲酒頂]"
+    for gy in range(28, 31): grid_l2[gy][gx] = "[酒地]"
+grid_l2[28][5] = "[吧台]"; grid_l2[28][6] = "[吧台]"
+grid_l2[28][10] = "[壁爐]"; grid_l2[30][7] = "[酒門]"
 
+# 2. 鐵匠鋪 (東北: gx=26..31, gy=5..10)
+for gx in range(26, 32):
+    for gy in range(5, 7): grid_l3[gy][gx] = "[▲鐵頂]"
+    for gy in range(7, 11): grid_l2[gy][gx] = "[鐵地]"
+grid_l2[7][27] = "[武架]"; grid_l2[8][30] = "[鐵砧]"; grid_l2[10][28] = "[鐵門]"
+
+# 3. 雜貨鋪 (西北: gx=8..13, gy=5..10)
+for gx in range(8, 14):
+    for gy in range(5, 7): grid_l3[gy][gx] = "[▲店頂]"
+    for gy in range(7, 11): grid_l2[gy][gx] = "[店地]"
+grid_l2[7][9] = "[藥架]"; grid_l2[8][12] = "[金箱]"; grid_l2[10][10] = "[店門]"
+
+grid_l2[19][22] = "[水井]"
+grid_l2[9][33] = "[熔爐]"
+grid_l2[4][3] = "[哨塔]"; grid_l3[3][3] = "[▲塔頂]"
+grid_l2[18][17] = "[果攤]"; grid_l2[18][26] = "[器攤]"
+
+random.seed(99)
+for _ in range(35):
+    rx, ry = random.randint(1, 38), random.randint(1, 38)
+    if grid_l1[ry][rx] == "[沙]" and grid_l2[ry][rx] == "[ · ]":
+        grid_l25[ry][rx] = random.choice(["[碎石]", "[枯草]", "[木箱]", "[木桶]"])
+
+# ==============================================================================
+# 1. 8 鄰居二進制遮罩計算函數 (8-Neighbor Autotile Bitmask Resolver)
+# ==============================================================================
 def resolve_tile_autotile(grid, x, y, terrain_token):
     def match(gx, gy):
         if 0 <= gx < 40 and 0 <= gy < 40:
@@ -164,15 +143,4 @@ def resolve_tile_autotile(grid, x, y, terrain_token):
     return st_tl, st_tr, st_bl, st_br
 
 if __name__ == "__main__":
-    print("Executing nono_tilemap_engine: 12~47 Autotile topological transitions & 4-Layer SSOT pipeline...")
-    img_clay_47t = Image.new("RGBA", (128, 128), (0, 0, 0, 0))
-    d_47 = ImageDraw.Draw(img_clay_47t)
-    for ty in range(4):
-        for tx in range(4):
-            cpx, cpy = tx * 32, ty * 32
-            draw_subtile(d_47, cpx, cpy, "SOLID", "TL", "clay")
-            draw_subtile(d_47, cpx + 16, cpy, "EDGE_H", "TR", "clay")
-            draw_subtile(d_47, cpx, cpy + 16, "EDGE_V", "BL", "clay")
-            draw_subtile(d_47, cpx + 16, cpy + 16, "OUTER", "BR", "clay")
-    img_clay_47t.save(assets_dir / "autotile_clay_sand_32px_47t.png")
-    print(f"Generated {assets_dir / 'autotile_clay_sand_32px_47t.png'}")
+    print("Executing standalone nono_tilemap_engine pipeline...")
