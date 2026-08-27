@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🏰 Kenshi 廢土建築群全套 Prefabs 交付與互動驗收報告</title>
+    <style>
+        :root {
+            --bg-primary: #0f1117;
+            --bg-card: #181b24;
+            --accent-gold: #e5a93c;
+            --accent-blue: #38bdf8;
+            --accent-purple: #a855f7;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --border-color: #2e3446;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background: var(--bg-primary);
+            color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            padding: 30px 20px 80px;
+        }
+        .header {
+            text-align: center;
+            max-width: 1000px;
+            margin: 0 auto 35px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .header h1 { font-size: 28px; color: var(--accent-gold); margin-bottom: 10px; }
+        .header p { color: var(--text-muted); font-size: 15px; }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(540px, 1fr));
+            gap: 28px;
+        }
+        
+        .building-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+            display: flex;
+            flex-direction: column;
+        }
+        .card-header {
+            padding: 16px 20px;
+            background: #212533;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .title-group { display: flex; align-items: center; gap: 10px; }
+        .title-group h2 { font-size: 17px; color: #fff; }
+        .badge-size {
+            background: var(--accent-blue);
+            color: #000;
+            font-size: 11px;
+            font-weight: bold;
+            padding: 3px 8px;
+            border-radius: 4px;
+        }
+        .badge-alpha {
+            background: rgba(34, 197, 94, 0.15);
+            color: #4ade80;
+            border: 1px solid #22c55e;
+            font-size: 11px;
+            padding: 3px 8px;
+            border-radius: 4px;
+        }
+        
+        .interactive-stage {
+            position: relative;
+            background: #12141c;
+            background-image: 
+                linear-gradient(45deg, #181b24 25%, transparent 25%), 
+                linear-gradient(-45deg, #181b24 25%, transparent 25%), 
+                linear-gradient(45deg, transparent 75%, #181b24 75%), 
+                linear-gradient(-45deg, transparent 75%, #181b24 75%);
+            background-size: 20px 20px;
+            background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+            height: 240px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            overflow: hidden;
+        }
+        .interactive-stage img {
+            position: absolute;
+            image-rendering: pixelated;
+            transform: scale(1.5);
+            transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .layer-body { z-index: 1; }
+        .layer-roof { z-index: 2; }
+        
+        .hover-hint {
+            position: absolute;
+            bottom: 8px;
+            background: rgba(0,0,0,0.75);
+            color: #fbbf24;
+            font-size: 11px;
+            padding: 4px 10px;
+            border-radius: 20px;
+            border: 1px solid rgba(251, 191, 36, 0.3);
+            pointer-events: none;
+            z-index: 10;
+        }
+        
+        .card-desc {
+            padding: 18px 20px;
+            font-size: 13px;
+            line-height: 1.6;
+            color: var(--text-muted);
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .card-desc b { color: var(--text-main); }
+        
+        .view-buttons {
+            margin-top: 14px;
+            display: flex;
+            gap: 10px;
+        }
+        .btn-inspect {
+            flex: 1;
+            background: #2a3142;
+            border: 1px solid var(--border-color);
+            color: #e2e8f0;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .btn-inspect:hover {
+            background: var(--accent-gold);
+            color: #000;
+            border-color: var(--accent-gold);
+        }
+        
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            background: rgba(0,0,0,0.92);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .lightbox.active { display: flex; }
+        .lightbox-img {
+            max-width: 85vw;
+            max-height: 75vh;
+            image-rendering: pixelated;
+            transform-origin: center center;
+            cursor: grab;
+            transition: transform 0.1s ease;
+        }
+        .lightbox-controls {
+            margin-top: 15px;
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+        .btn-lb {
+            background: #2563eb;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .btn-close { background: #dc2626; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>🏰 Kenshi 廢土全系列建築 Prefabs 圖鑑庫</h1>
+        <p>包含酒館/驛站 (8x6)、鐵匠工坊 (6x5)、游商雜貨鋪 (5x4)、拾荒民居 (4x3)、雙層哨塔 (4x5) • 100% 純淨 Alpha 通道 • 3/4 俯視角一致性</p>
+    </div>
+
+    <div class="container">
+        
+    <div class="building-card">
+        <div class="card-header">
+            <div class="title-group">
+                <span class="badge-size">8x6 (256x192 px)</span>
+                <h2>廢土酒館與驛站 (Tavern / Saloon)</h2>
+            </div>
+            <span class="badge-alpha">100% Alpha Clean (無黑邊)</span>
+        </div>
+        
+        <div class="interactive-stage" id="stage_prefab_kenshi_tavern_saloon_256x192_34" onmouseenter="fadeRoof('prefab_kenshi_tavern_saloon_256x192_34', 0.15)" onmouseleave="fadeRoof('prefab_kenshi_tavern_saloon_256x192_34', 1.0)">
+            <img src="data:image/png;base64,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" class="layer-body" alt="廢土酒館與驛站 (Tavern / Saloon) - 主體">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAADACAYAAADr7b1mAAAEY0lEQVR4nO3dvW4cVRiA4V0rFUL0UKRCxvQpoUEoSgGmpbYQJQ1RLmIEDSVCuQcMFaKk5ALMiooCeoQoAUWKECRZz+6e//M9T2fJPjvx+Hv3zKyz3mwAAAAAAAAAAAAAGNSjqw/+bn0MtLNt+Nh0OPTL46/9TATiZAcf+IuL1zc3Nz/v/VpBmJuTG2zonwz8mn1BEIP5OKETSRn6fcRgbkkn8YfrL91Agsbeuvz45DlW8Qme5VOe4VO9aIdgdzAOJ6pzvQ38GkEYixPTodGGfh8x6J+T0enQjzjwxwZBDNpzAhqJMPBrBKG9qt9wrxpA2bv6xwpX3K/ePa8SoY++322ffaaP+CyfY3dgZ1BOuG9srQDs7r5p4DMShDLCfSNrBeDs/vs1HmYTPQhikOZO4tdDFa/dffWFH79z/+2sQX/w4cNQQTlrfQBAO13XrsSrBjdffLap4eKTh1UeJ4o//vy9yuO8/NIrQ9/VP1a3B1aKewBzXAKU8sAlABCFAEBgIbY7j5dP/932//XdN1Ue0yXAmJcAv/7y2/8+vnr0+dQzcmf2gYecP0tXkwVhO9NJOr94Y/VzvQowpp5eBdjd/DRNELbRnuVdAoyp1SXAMUaMwTAHbFsf2wgBGDEI3R6ggWf0AIwQhG4OyMAzewB6DELTAzD0RA5ADzHYRh74Q141YH67/9zV70WtIGwjDTyM6qpQELIuauBhrCAkL2LoYdwYbHP8auRtf34aKOfJW6Kl/LrySeUw8NCnY98j8eBPNvQwXwym/N+AnP6DIfSxCEAAx2wLn/1cQZibAEwo53vlC8LcBGACNf84hiDMRQAG1NNfwxGEsQnAAHoa+DWCMBYB6NBIA79GEPomAJ2YaegP/XeKQXsC0EiUgb+N3UF7AlCJgV8nCPUJQCEGPp0glCcAmRj48gQhPwE4kYFvTxDSCcCBDHz/BOF4ArCHgR+fIKwTgKcM/PwE4XlhA2DgWQQhTgAMPGuWgEGYNgAGnlRLgCBMEwADT2nLhEEYNgAGntaWCYIwTAAMPL1bBgxC1wEw9IxsGeC/PncVAAPPrJZOdwdNA2DgiWrpJAhVA2Dgoa8gFA2AgYe+g5A1AAYexgpCUgAMPAS5ZOjlriWwzrwCAAAAAAAAAAAAAAAAAAAAAADAEJLe1HP34/VB7zv27fX15r3Ly5SHsp71rHeL83uXJ83y2SlfBMzhrEV1gHxS5rD4DqDH7ZL1rDfresdyCQCBCQAElhwA9wGgndT5swOAwAQAAisagN7vmFrPejOt1ywA7gNAfTnmziUABCYAEJgAQGDZAuA+ANSTa96K7QB6v2NqPevNtN6pXAJAYAIAgWUNgPsAUF7OObMDgMAEAAIrEoDe75haz3ozrddVANwHgHJyz5dLAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIDo/gE3wTo5ZosDcAAAAABJRU5ErkJggg==" class="layer-roof" id="roof_prefab_kenshi_tavern_saloon_256x192_34" alt="廢土酒館與驛站 (Tavern / Saloon) - 屋頂">
+            <div class="hover-hint">👆 滑鼠懸停模擬【走進屋內・屋頂自動平滑淡出】</div>
+        </div>
+        
+        <div class="card-desc">
+            <p><b>📐 微觀像素細節：</b>大型雙層風化厚木、戶外門廊長椅、雙酒桶、懸掛獸骨招牌、雙開大門與暖光百葉窗</p>
+            <div class="view-buttons">
+                <button class="btn-inspect" onclick="openLightbox('data:image/png;base64,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', '廢土酒館與驛站 (Tavern / Saloon) - 主體 (1000% 放大)')">🔍 放大檢驗主體</button>
+                <button class="btn-inspect" onclick="openLightbox('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAADACAYAAADr7b1mAAAEY0lEQVR4nO3dvW4cVRiA4V0rFUL0UKRCxvQpoUEoSgGmpbYQJQ1RLmIEDSVCuQcMFaKk5ALMiooCeoQoAUWKECRZz+6e//M9T2fJPjvx+Hv3zKyz3mwAAAAAAAAAAAAAGNSjqw/+bn0MtLNt+Nh0OPTL46/9TATiZAcf+IuL1zc3Nz/v/VpBmJuTG2zonwz8mn1BEIP5OKETSRn6fcRgbkkn8YfrL91Agsbeuvz45DlW8Qme5VOe4VO9aIdgdzAOJ6pzvQ38GkEYixPTodGGfh8x6J+T0enQjzjwxwZBDNpzAhqJMPBrBKG9qt9wrxpA2bv6xwpX3K/ePa8SoY++322ffaaP+CyfY3dgZ1BOuG9srQDs7r5p4DMShDLCfSNrBeDs/vs1HmYTPQhikOZO4tdDFa/dffWFH79z/+2sQX/w4cNQQTlrfQBAO13XrsSrBjdffLap4eKTh1UeJ4o//vy9yuO8/NIrQ9/VP1a3B1aKewBzXAKU8sAlABCFAEBgIbY7j5dP/932//XdN1Ue0yXAmJcAv/7y2/8+vnr0+dQzcmf2gYecP0tXkwVhO9NJOr94Y/VzvQowpp5eBdjd/DRNELbRnuVdAoyp1SXAMUaMwTAHbFsf2wgBGDEI3R6ggWf0AIwQhG4OyMAzewB6DELTAzD0RA5ADzHYRh74Q141YH67/9zV70WtIGwjDTyM6qpQELIuauBhrCAkL2LoYdwYbHP8auRtf34aKOfJW6Kl/LrySeUw8NCnY98j8eBPNvQwXwym/N+AnP6DIfSxCEAAx2wLn/1cQZibAEwo53vlC8LcBGACNf84hiDMRQAG1NNfwxGEsQnAAHoa+DWCMBYB6NBIA79GEPomAJ2YaegP/XeKQXsC0EiUgb+N3UF7AlCJgV8nCPUJQCEGPp0glCcAmRj48gQhPwE4kYFvTxDSCcCBDHz/BOF4ArCHgR+fIKwTgKcM/PwE4XlhA2DgWQQhTgAMPGuWgEGYNgAGnlRLgCBMEwADT2nLhEEYNgAGntaWCYIwTAAMPL1bBgxC1wEw9IxsGeC/PncVAAPPrJZOdwdNA2DgiWrpJAhVA2Dgoa8gFA2AgYe+g5A1AAYexgpCUgAMPAS5ZOjlriWwzrwCAAAAAAAAAAAAAAAAAAAAAADAEJLe1HP34/VB7zv27fX15r3Ly5SHsp71rHeL83uXJ83y2SlfBMzhrEV1gHxS5rD4DqDH7ZL1rDfresdyCQCBCQAElhwA9wGgndT5swOAwAQAAisagN7vmFrPejOt1ywA7gNAfTnmziUABCYAEJgAQGDZAuA+ANSTa96K7QB6v2NqPevNtN6pXAJAYAIAgWUNgPsAUF7OObMDgMAEAAIrEoDe75haz3ozrddVANwHgHJyz5dLAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIDo/gE3wTo5ZosDcAAAAABJRU5ErkJggg==', '廢土酒館與驛站 (Tavern / Saloon) - 屋頂淡出層 (1000% 放大)')">🔍 放大檢驗屋頂</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="building-card">
+        <div class="card-header">
+            <div class="title-group">
+                <span class="badge-size">6x5 (192x160 px)</span>
+                <h2>鐵匠鋪與軍械工坊 (Blacksmith / Forge)</h2>
+            </div>
+            <span class="badge-alpha">100% Alpha Clean (無黑邊)</span>
+        </div>
+        
+        <div class="interactive-stage" id="stage_prefab_kenshi_blacksmith_forge_192x160_34" onmouseenter="fadeRoof('prefab_kenshi_blacksmith_forge_192x160_34', 0.15)" onmouseleave="fadeRoof('prefab_kenshi_blacksmith_forge_192x160_34', 1.0)">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAACgCAYAAABaKGNdAAAD5ElEQVR4nO3cz4tWVRgH8JtGiwkEWyhmWUjEW5IQQrgQFF23atEuUlq5CoL+iCBo5SoU2rVo264omFUhQTLyIhJUVuDC5ezCoKEhSpl53/vrnPP9fEAYmJn3nuH65fx4nnu7DgAAAAAAAAAAAAAAAAAAAAAAAArwxFAf9NqrLz/sJnTr9p3Bxk6uA3MPAOYkAEQTAKIJANF6bSTfv3pld+P71Teb3ZQuXTi3+/Un167bELMWMwDRBIBoT46xJIFamAGI1msGmHrjC0UFoJRlz63bd+YeApWyBCKaABBNAIgmAEQTAKIJANEEgGgCQDQBIJoAEE0vENH0AhHNEohogz0QM6frH30w6Uu5KNuVDz/e9zPiZgCiCQDRBIBoAkC0JjbBy+XduYdApZoIwGLx0txDoFKWQEQTAKI10Qt0+t035x4ClWqiFwjWZQlENAEgWhPHoOoARAdAHYB1WQIRTQCIJgBEEwCiCQDRBIBoTfQCPXX2lbmHQKWa6AVavHh47iFQKUsgogkA0QSAaAJANAEgmgAQrYl2aM8DEB0AzwOwLksgogkA0ZroBfJeIKJ7gSB6E8yOa59+3pXk6ntvd6WzByBaEzOAOkCZlhXclyYCoA6w4+vNm7tfXzx3ZvYxLCq4L5ZARBMAogkA0QSAaAJANAEgWhO9QN4LVKZl63WAUnqBvBfo/2fwJVioA0DZBIBoAkA0ASCaABBNAIjWRDt0DefNiZYV3JcmAlDDefMU1AFWZwlE0U4uv//731gEgGhN9AJ5LxDRvUCwLksgojVxCkS7x6In9/jdvidNTQSghvPmRMsJ7kvfazQRgBrOm6dQeh1g+Yj/rBtHdn5m+/7dWe69PQDRBIBoAkA0ASCaABBNAIjWRC+Q9wKVadl6HeCF557tSqAOUG8doC91AOhBAIgmAEQTAKKN1gx349ivg3/m5T+e78b2y4PRL9GdeGb8a7A/ZgCiNdEOPeTx2j/tuWNKeX6h+TrAKjYur/788PaNzcnrAFMsgcaqW6gDrM4SiGgCQLReS6Cf7/3++G8e6/PJq17vzOAnNJ998W03tHfeOj/4Z9KV2gs0/DFoKb1HtMMSiGgCQDR1gAnVMs6hqANMZOvHH4b/0INH6hhnwbb+8/eeOv366NdYlSUQ0QSAaJMtgfbb1gBTMgMQrYlNMPXa3uOluF92h0e9vgCs6I1Tx/f8me+2fptkLBTcC3Tx3sFueI++3omN4a/09J/3H/Od4z1+l9I08V6ghw9+mnsIVMommGj2AA05eujA7FXno/8aQw2VcDMA0QSAaJZAKypxGmd9ZgAAAAAAAACArjF/AdOf0v9m9AzeAAAAAElFTkSuQmCC" class="layer-body" alt="鐵匠鋪與軍械工坊 (Blacksmith / Forge) - 主體">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAACgCAYAAABaKGNdAAADzElEQVR4nO3cvWoUURQA4I2kEhQrCSJiISkUfACLYJEnkal9BPEJLKwXnyRFSGFpYWERUqUQsZL4ACuz5OoYM072Z+b+fR+EJNzs7sydc+45OzuT2QwAAAAAAAAAAAAAAOKaH+4vYm9DbnZibwDjBH5zdOrY3oBJqmC1lwz9TExFbY5E+JcJqbC3lwh/3Jol4vjVwaL9Cr+/fnp/Uft4G/gh+J882lt+BZ+//ug+fKXx9jnD888S3v/ZBHaneBFuLgTl1QAe+/VqlUwFePnhZFmWwyrw/sv3ne4qUPr42fm35fewSj9/cO+vJJhq/DjR+RmLChBZiivwfOIqFFMyFaAm3d4+dfNMtnNdyZ0NCCUwlMS2DLblMPfx7pvZbsvRrrJtOxKkPN4cne7Ent9tUwEmUMoqOi9kP5JOgJD5uY/3tTlhZe2Ty/i8Z//Gnt/iW6BW7DJbY5vz+c6jWSzPf54vz/rEaIOSqwC5CUFfYntQgyQTIPY551XHY52z3+Z4TDE/E/A5wAqs8uWRAD0+Pdxffn/35k/QX3THww+Xf/d4zfG7A286qbAFSqHNmUoqbVBssY6PCtDT5nRXa8olASq79iVF84jzn2wLlMIVmFOpvQ160tm+qdugKiuAszl5HJ9mgjvXqkkAbU5+5hMsVEm3QJu2Oe0EbtomjG2bbUy7Yrb7v87jY7vJjTrt8dx2G1RsBSi9zem2B8ev9hZ946XNw/xwf7HNBSr5CpDCFZhjW2X7ruuL/zc/7d8Pzd9ZRvsfhGO9aYJnkQBBX5tz9SrMvjZmlfEY+rYvBH0Y72sDhs6WhDYp1tmuIesev00SYTfnMlhaeb9qrLMg7fO2CdIcnf6+hPvts9tRL9GOdfYoyfsB+oQVboqDdPHiYIpdmt39ePLP68e+z+EsofsUNk2ioWRIvgKUvsp3D9J1b2YZtyoknwClS/HfFDaX2xTj4sCpJTf5QxUgdpnN/b8qlH67Zx8VIKIUV/lVNYW2ackfmBzfA5QQ8KUdHxVgAjUFfimfOEuADdUY9EPzkFMySIA1CPpyqoIEuCFBX2ZVkAADBH7ZVUECXEPQ11MVJMAlQV9nMlSdAII+HbFapOoSQNCnrZm4KlSTAAI/P80EVaHoBBD0ZWhGrArFJYCgL1uz5WQoIgEEfZ2aLbRIWSeAwGfTqpBdAgh6cvzEeW3F7AjRiCEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgtjW/AJfWZWRlgV8vAAAAAElFTkSuQmCC" class="layer-roof" id="roof_prefab_kenshi_blacksmith_forge_192x160_34" alt="鐵匠鋪與軍械工坊 (Blacksmith / Forge) - 屋頂">
+            <div class="hover-hint">👆 滑鼠懸停模擬【走進屋內・屋頂自動平滑淡出】</div>
+        </div>
+        
+        <div class="card-desc">
+            <p><b>📐 微觀像素細節：</b>附帶外置高聳石造熔爐煙囪（帶火光炭黑）、戶外鐵砧木墩、武器展示架、波浪鏽鐵皮補丁屋頂</p>
+            <div class="view-buttons">
+                <button class="btn-inspect" onclick="openLightbox('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAACgCAYAAABaKGNdAAAD5ElEQVR4nO3cz4tWVRgH8JtGiwkEWyhmWUjEW5IQQrgQFF23atEuUlq5CoL+iCBo5SoU2rVo264omFUhQTLyIhJUVuDC5ezCoKEhSpl53/vrnPP9fEAYmJn3nuH65fx4nnu7DgAAAAAAAAAAAAAAAAAAAAAAAArwxFAf9NqrLz/sJnTr9p3Bxk6uA3MPAOYkAEQTAKIJANF6bSTfv3pld+P71Teb3ZQuXTi3+/Un167bELMWMwDRBIBoT46xJIFamAGI1msGmHrjC0UFoJRlz63bd+YeApWyBCKaABBNAIgmAEQTAKIJANEEgGgCQDQBIJoAEE0vENH0AhHNEohogz0QM6frH30w6Uu5KNuVDz/e9zPiZgCiCQDRBIBoAkC0JjbBy+XduYdApZoIwGLx0txDoFKWQEQTAKI10Qt0+t035x4ClWqiFwjWZQlENAEgWhPHoOoARAdAHYB1WQIRTQCIJgBEEwCiCQDRBIBoTfQCPXX2lbmHQKWa6AVavHh47iFQKUsgogkA0QSAaAJANAEgmgAQrYl2aM8DEB0AzwOwLksgogkA0ZroBfJeIKJ7gSB6E8yOa59+3pXk6ntvd6WzByBaEzOAOkCZlhXclyYCoA6w4+vNm7tfXzx3ZvYxLCq4L5ZARBMAogkA0QSAaAJANAEgWhO9QN4LVKZl63WAUnqBvBfo/2fwJVioA0DZBIBoAkA0ASCaABBNAIjWRDt0DefNiZYV3JcmAlDDefMU1AFWZwlE0U4uv//731gEgGhN9AJ5LxDRvUCwLksgojVxCkS7x6In9/jdvidNTQSghvPmRMsJ7kvfazQRgBrOm6dQeh1g+Yj/rBtHdn5m+/7dWe69PQDRBIBoAkA0ASCaABBNAIjWRC+Q9wKVadl6HeCF557tSqAOUG8doC91AOhBAIgmAEQTAKKN1gx349ivg3/m5T+e78b2y4PRL9GdeGb8a7A/ZgCiNdEOPeTx2j/tuWNKeX6h+TrAKjYur/788PaNzcnrAFMsgcaqW6gDrM4SiGgCQLReS6Cf7/3++G8e6/PJq17vzOAnNJ998W03tHfeOj/4Z9KV2gs0/DFoKb1HtMMSiGgCQDR1gAnVMs6hqANMZOvHH4b/0INH6hhnwbb+8/eeOv366NdYlSUQ0QSAaJMtgfbb1gBTMgMQrYlNMPXa3uOluF92h0e9vgCs6I1Tx/f8me+2fptkLBTcC3Tx3sFueI++3omN4a/09J/3H/Od4z1+l9I08V6ghw9+mnsIVMommGj2AA05eujA7FXno/8aQw2VcDMA0QSAaJZAKypxGmd9ZgAAAAAAAACArjF/AdOf0v9m9AzeAAAAAElFTkSuQmCC', '鐵匠鋪與軍械工坊 (Blacksmith / Forge) - 主體 (1000% 放大)')">🔍 放大檢驗主體</button>
+                <button class="btn-inspect" onclick="openLightbox('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAACgCAYAAABaKGNdAAADzElEQVR4nO3cvWoUURQA4I2kEhQrCSJiISkUfACLYJEnkal9BPEJLKwXnyRFSGFpYWERUqUQsZL4ACuz5OoYM072Z+b+fR+EJNzs7sydc+45OzuT2QwAAAAAAAAAAAAAAOKaH+4vYm9DbnZibwDjBH5zdOrY3oBJqmC1lwz9TExFbY5E+JcJqbC3lwh/3Jol4vjVwaL9Cr+/fnp/Uft4G/gh+J882lt+BZ+//ug+fKXx9jnD888S3v/ZBHaneBFuLgTl1QAe+/VqlUwFePnhZFmWwyrw/sv3ne4qUPr42fm35fewSj9/cO+vJJhq/DjR+RmLChBZiivwfOIqFFMyFaAm3d4+dfNMtnNdyZ0NCCUwlMS2DLblMPfx7pvZbsvRrrJtOxKkPN4cne7Ent9tUwEmUMoqOi9kP5JOgJD5uY/3tTlhZe2Ty/i8Z//Gnt/iW6BW7DJbY5vz+c6jWSzPf54vz/rEaIOSqwC5CUFfYntQgyQTIPY551XHY52z3+Z4TDE/E/A5wAqs8uWRAD0+Pdxffn/35k/QX3THww+Xf/d4zfG7A286qbAFSqHNmUoqbVBssY6PCtDT5nRXa8olASq79iVF84jzn2wLlMIVmFOpvQ160tm+qdugKiuAszl5HJ9mgjvXqkkAbU5+5hMsVEm3QJu2Oe0EbtomjG2bbUy7Yrb7v87jY7vJjTrt8dx2G1RsBSi9zem2B8ev9hZ946XNw/xwf7HNBSr5CpDCFZhjW2X7ruuL/zc/7d8Pzd9ZRvsfhGO9aYJnkQBBX5tz9SrMvjZmlfEY+rYvBH0Y72sDhs6WhDYp1tmuIesev00SYTfnMlhaeb9qrLMg7fO2CdIcnf6+hPvts9tRL9GOdfYoyfsB+oQVboqDdPHiYIpdmt39ePLP68e+z+EsofsUNk2ioWRIvgKUvsp3D9J1b2YZtyoknwClS/HfFDaX2xTj4sCpJTf5QxUgdpnN/b8qlH67Zx8VIKIUV/lVNYW2ackfmBzfA5QQ8KUdHxVgAjUFfimfOEuADdUY9EPzkFMySIA1CPpyqoIEuCFBX2ZVkAADBH7ZVUECXEPQ11MVJMAlQV9nMlSdAII+HbFapOoSQNCnrZm4KlSTAAI/P80EVaHoBBD0ZWhGrArFJYCgL1uz5WQoIgEEfZ2aLbRIWSeAwGfTqpBdAgh6cvzEeW3F7AjRiCEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgtjW/AJfWZWRlgV8vAAAAAElFTkSuQmCC', '鐵匠鋪與軍械工坊 (Blacksmith / Forge) - 屋頂淡出層 (1000% 放大)')">🔍 放大檢驗屋頂</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="building-card">
+        <div class="card-header">
+            <div class="title-group">
+                <span class="badge-size">5x4 (160x128 px)</span>
+                <h2>雜貨鋪與游商行 (Merchant Store)</h2>
+            </div>
+            <span class="badge-alpha">100% Alpha Clean (無黑邊)</span>
+        </div>
+        
+        <div class="interactive-stage" id="stage_prefab_kenshi_merchant_store_160x128_34" onmouseenter="fadeRoof('prefab_kenshi_merchant_store_160x128_34', 0.15)" onmouseleave="fadeRoof('prefab_kenshi_merchant_store_160x128_34', 1.0)">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAACACAYAAACMY2IbAAACy0lEQVR4nO3csUsWcRjA8dOamkMkwiAcXiiiQJoioikSRJzCuUEaGkL8I0QaGsKhWZpEEqNJGppCEKLgHURIIkSa28oQM0R7fd/z/d37nHefz6K873l3vHx57r17fS/LAAAAAAAAAAAAAAAAAAAAAAAAAAAAoJb6Uq9wfmZiN/U6KZep2cVk3fSnWhGchgAJJUBCCZBQAiSUAAklQEIJkFACJJQACSVAQgmQUAIklAAJJUBCCZBQAiSUAAklQEIJkFACJJQACSVAQgmQUOezEnm19DF6F0rr8fjtrIpMQEIJkFACJJQACVWqkxDy2/zxKyvK1YvnsqKZgIQSIKEcgiuk0Rjueh3N5kbWSyYgoQRIKAESSoCEEiChBEgoARJKgIQSIKF8ElKAqaELp/q7+a2fWd2YgISqzAR8PTDSdplHO2s92Rc6ZwISqvQT8PLz9y2f+/bsXvLtLSy8PPbY5OST5NthnwnYJr6THqd7AuwwMhEWQ4A54hJhegIklAAJJcAcZ7nOhtMTYIdxia8YfalXOD8zsZtn+et3Hpz4/Fz//ZbPTf9e/ff74OzbttvannnYdpmBS4PHHtv5vp3l0Xwxl51G4+l0R8t9/vDuv19MT/2tuFZfTJ+aXeyrzYXow5F1G1cn8sbWTUg4BBNMgIQSIKEESKhkJyFjd2/uNoav5L5d2ObSSjY2PppqN6jrBNyLr7nxNdXqqAmHYKoToClI+IXogwj3fub1Zmkl9e5UxlhF3yeX4pOQwx8tUa/XqJD3gA7FdMpJCNUM0BQkfAKKkHYcgql2gKYg4Zdh2l0bXF7dv2fLtRu3erE7Z9Ly39foqCJfs1bbTMkhmFA9C9ChmPAJKEKOcgimXgGaghxmAlK/AE1BwiegCCnN/wMe+PJpPXoXqNN7QFOQ5DcnGh0ZynVzIs6elbWtZN04CyaUAAklQAAAALLa+ANrjZL04nImuQAAAABJRU5ErkJggg==" class="layer-body" alt="雜貨鋪與游商行 (Merchant Store) - 主體">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAACACAYAAACMY2IbAAACPElEQVR4nO3ZvS4FQRiA4SXngkTlLrSnVquVCuXWarWWq1CIqBQ6V0JIJE7s4tizOzPf9zwl2d2Z8Wb2R9cBAAAAAAAAABvOTo5fS4+hZXulBxAtuv7qxppuwWLNuNOJ8XcWaIFbrBDHWZiFn+vEuMliFHyZ6MWYO8Ca3mD7pDGmm3RN0Y3JFGOKibYQXdYYQ0+u5fCyhBhuUpGiyxBjiIlkiC5qjM0OPnN0kWJsasCiixdj9YMUXewYqx2Y8HKEWNWARJcvxuKDEF3uGItcWHT16heOcbGLRYtu6A+VYY67NusFMv9BMs99G7OcNNLi72Lhrce4nZ3MIv+Nddo06QQWc5oz69etusRKfwvrv1w/UozbSBdg6ejG9EljTBFgrdGNyRRj2ABbiy5rjKECjBJdphibDzB6dNFjbDbArOH9tBYththUgKKLtytWH6DoYsdYZYCiyxNjNQGKLmeMRQMUXVk1xLhIgIdPL4M/vz46+Jj04eXF4O8fTs9/Pq/jBq3vHvdaibGaWzD1WDLG1RKT+NzpaE8/c4yruZ/pnu9vX3+7ZZA3xtXcLxK1PR9FP279j+e/kjHu72oQ5NVP6GBSgDDVrAG+P//NeX7aZwekKAGSN8CxNz3HXfzruKXegJsIcMr3P8cNi/g91S2YogRIUQIkXoC+//FXdkBiBljbP+mjH7du8BPMOzsgsQL0/Mc27IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA3Tdvz4pDicoG2mMAAAAASUVORK5CYII=" class="layer-roof" id="roof_prefab_kenshi_merchant_store_160x128_34" alt="雜貨鋪與游商行 (Merchant Store) - 屋頂">
+            <div class="hover-hint">👆 滑鼠懸停模擬【走進屋內・屋頂自動平滑淡出】</div>
+        </div>
+        
+        <div class="card-desc">
+            <p><b>📐 微觀像素細節：</b>開放式交易櫃台、藥水瓶與糧袋展示、紅條紋遮陽雨棚、門口木箱堆疊</p>
+            <div class="view-buttons">
+                <button class="btn-inspect" onclick="openLightbox('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAACACAYAAACMY2IbAAACy0lEQVR4nO3csUsWcRjA8dOamkMkwiAcXiiiQJoioikSRJzCuUEaGkL8I0QaGsKhWZpEEqNJGppCEKLgHURIIkSa28oQM0R7fd/z/d37nHefz6K873l3vHx57r17fS/LAAAAAAAAAAAAAAAAAAAAAAAAAAAAoJb6Uq9wfmZiN/U6KZep2cVk3fSnWhGchgAJJUBCCZBQAiSUAAklQEIJkFACJJQACSVAQgmQUAIklAAJJUBCCZBQAiSUAAklQEIJkFACJJQACSVAQgmQUOezEnm19DF6F0rr8fjtrIpMQEIJkFACJJQACVWqkxDy2/zxKyvK1YvnsqKZgIQSIKEcgiuk0Rjueh3N5kbWSyYgoQRIKAESSoCEEiChBEgoARJKgIQSIKF8ElKAqaELp/q7+a2fWd2YgISqzAR8PTDSdplHO2s92Rc6ZwISqvQT8PLz9y2f+/bsXvLtLSy8PPbY5OST5NthnwnYJr6THqd7AuwwMhEWQ4A54hJhegIklAAJJcAcZ7nOhtMTYIdxia8YfalXOD8zsZtn+et3Hpz4/Fz//ZbPTf9e/ff74OzbttvannnYdpmBS4PHHtv5vp3l0Xwxl51G4+l0R8t9/vDuv19MT/2tuFZfTJ+aXeyrzYXow5F1G1cn8sbWTUg4BBNMgIQSIKEESKhkJyFjd2/uNoav5L5d2ObSSjY2PppqN6jrBNyLr7nxNdXqqAmHYKoToClI+IXogwj3fub1Zmkl9e5UxlhF3yeX4pOQwx8tUa/XqJD3gA7FdMpJCNUM0BQkfAKKkHYcgql2gKYg4Zdh2l0bXF7dv2fLtRu3erE7Z9Ly39foqCJfs1bbTMkhmFA9C9ChmPAJKEKOcgimXgGaghxmAlK/AE1BwiegCCnN/wMe+PJpPXoXqNN7QFOQ5DcnGh0ZynVzIs6elbWtZN04CyaUAAklQAAAALLa+ANrjZL04nImuQAAAABJRU5ErkJggg==', '雜貨鋪與游商行 (Merchant Store) - 主體 (1000% 放大)')">🔍 放大檢驗主體</button>
+                <button class="btn-inspect" onclick="openLightbox('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAACACAYAAACMY2IbAAACPElEQVR4nO3ZvS4FQRiA4SXngkTlLrSnVquVCuXWarWWq1CIqBQ6V0JIJE7s4tizOzPf9zwl2d2Z8Wb2R9cBAAAAAAAAABvOTo5fS4+hZXulBxAtuv7qxppuwWLNuNOJ8XcWaIFbrBDHWZiFn+vEuMliFHyZ6MWYO8Ca3mD7pDGmm3RN0Y3JFGOKibYQXdYYQ0+u5fCyhBhuUpGiyxBjiIlkiC5qjM0OPnN0kWJsasCiixdj9YMUXewYqx2Y8HKEWNWARJcvxuKDEF3uGItcWHT16heOcbGLRYtu6A+VYY67NusFMv9BMs99G7OcNNLi72Lhrce4nZ3MIv+Nddo06QQWc5oz69etusRKfwvrv1w/UozbSBdg6ejG9EljTBFgrdGNyRRj2ABbiy5rjKECjBJdphibDzB6dNFjbDbArOH9tBYththUgKKLtytWH6DoYsdYZYCiyxNjNQGKLmeMRQMUXVk1xLhIgIdPL4M/vz46+Jj04eXF4O8fTs9/Pq/jBq3vHvdaibGaWzD1WDLG1RKT+NzpaE8/c4yruZ/pnu9vX3+7ZZA3xtXcLxK1PR9FP279j+e/kjHu72oQ5NVP6GBSgDDVrAG+P//NeX7aZwekKAGSN8CxNz3HXfzruKXegJsIcMr3P8cNi/g91S2YogRIUQIkXoC+//FXdkBiBljbP+mjH7du8BPMOzsgsQL0/Mc27IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA3Tdvz4pDicoG2mMAAAAASUVORK5CYII=', '雜貨鋪與游商行 (Merchant Store) - 屋頂淡出層 (1000% 放大)')">🔍 放大檢驗屋頂</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="building-card">
+        <div class="card-header">
+            <div class="title-group">
+                <span class="badge-size">4x3 (128x96 px)</span>
+                <h2>避難民居與拾荒小屋 (Small Shack)</h2>
+            </div>
+            <span class="badge-alpha">100% Alpha Clean (無黑邊)</span>
+        </div>
+        
+        <div class="interactive-stage" id="stage_prefab_kenshi_small_shack_128x96_34" onmouseenter="fadeRoof('prefab_kenshi_small_shack_128x96_34', 0.15)" onmouseleave="fadeRoof('prefab_kenshi_small_shack_128x96_34', 1.0)">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAABgCAYAAADVenpJAAACBklEQVR4nO3bMS87YRzA8Yf0BfAeDHYSi6iwWQ22Do0YrBKrWCVWg4ihm8Fq07TSRcMo6WA18w6IUWhd07t7nrvv97P9pTlP2u//ubtfTwiSJEmSJEmS6m8u9gLoeu2Nz6yv3bx+yP3zms/7gKoWA4AzADgDgPMiMBGba6tjLwZ7j0+FfU7uAHAGAGcAcAYAZwBwBgBnAHAGAGcAcAYAZwBwBgCX25cM12dHmZ9s0W+d234Yp7Xb/PPn7ePzmT8/dwA4A4AzALhGXgcajV7zOpRKfG9zC2B5eSmvQyENX96ivLeeAuAMAM4A4AwAzgDgDADOOUAFOAcAGDoHUAwGAGcAcLldA9TVxdVN4b/jcH8vxOIOAOcOkFH/cjvT6047H+GktZDptc2D+4CdA3QHz6EMW+srIXWjf967Ws4Bygpg1nvobgnr/F5jrDlA9FNAUf9Dywqs6qIHoMmPfhfNuwA4A4AzADgDgKv98wCpriuVNToHSGQOEIunADgDgDMAOAOAMwA4A4BzDpDRNA9vdAdhKs4BCuQcYDK/Dk74gc0yeA0AV/kdYCe8//j3XViMtpYqcgeAMwA4A4BzDgDnHACu8ncBXvXPxmsAOAOAMwA4A4AzADjnAHCNuv85dqrrSoWnADgDgDMAOAOAMwA4A4AzALjoXwd7nx6XOwCcAcAZgCRJAekLXvp3vmQPThkAAAAASUVORK5CYII=" class="layer-body" alt="避難民居與拾荒小屋 (Small Shack) - 主體">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAABgCAYAAADVenpJAAABQ0lEQVR4nO3aIU7EQBQG4C7ZM6DQCM6B4AgcYINEcQwUkvQAHAHBKSoQaIJAcYMlFbhF9GW6OzPv+3TbNPn/zrQvHQYAAAAAAAAAAAAAqjNeX+6XHL9d71Y4dpgRCtBRmBEK8I/Xl8f9ze3DpqUwI7aZAl16zthR0F0VIBImFRdAoOXs3j4ObltHK4Aw27K4ABn2xUzOTn0Dtfocn4cMFCA5BUhOAZIrWoCL3V3Jy1FbAXwB9McWkJwCJKcAicfAMwVITgESTwFnCpCcAiSnAJ2Yvn5C5xX7H8AU8PRhNvtHUO+mQKBP79+LP+lWLUCrY+DSb/RTxWGmWAFKBjoFl9qaA22qAMLsrAClAp1HmvdX54u3nOxhRmzWfgcQZkcrQCTMv+MF2onI0wwAAAAAAAAAAAAAAAAAAAAAAAAAAADAcNAvmPZjGHc5ViAAAAAASUVORK5CYII=" class="layer-roof" id="roof_prefab_kenshi_small_shack_128x96_34" alt="避難民居與拾荒小屋 (Small Shack) - 屋頂">
+            <div class="hover-hint">👆 滑鼠懸停模擬【走進屋內・屋頂自動平滑淡出】</div>
+        </div>
+        
+        <div class="card-desc">
+            <p><b>📐 微觀像素細節：</b>緊湊型拼湊木板房、單扇防禦厚木門、方形氣窗、金屬排煙煙囪管、單斜面鐵皮毛皮屋頂</p>
+            <div class="view-buttons">
+                <button class="btn-inspect" onclick="openLightbox('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAABgCAYAAADVenpJAAACBklEQVR4nO3bMS87YRzA8Yf0BfAeDHYSi6iwWQ22Do0YrBKrWCVWg4ihm8Fq07TSRcMo6WA18w6IUWhd07t7nrvv97P9pTlP2u//ubtfTwiSJEmSJEmS6m8u9gLoeu2Nz6yv3bx+yP3zms/7gKoWA4AzADgDgPMiMBGba6tjLwZ7j0+FfU7uAHAGAGcAcAYAZwBwBgBnAHAGAGcAcAYAZwBwBgCX25cM12dHmZ9s0W+d234Yp7Xb/PPn7ePzmT8/dwA4A4AzALhGXgcajV7zOpRKfG9zC2B5eSmvQyENX96ivLeeAuAMAM4A4AwAzgDgDADOOUAFOAcAGDoHUAwGAGcAcLldA9TVxdVN4b/jcH8vxOIOAOcOkFH/cjvT6047H+GktZDptc2D+4CdA3QHz6EMW+srIXWjf967Ws4Bygpg1nvobgnr/F5jrDlA9FNAUf9Dywqs6qIHoMmPfhfNuwA4A4AzADgDgKv98wCpriuVNToHSGQOEIunADgDgDMAOAOAMwA4A4BzDpDRNA9vdAdhKs4BCuQcYDK/Dk74gc0yeA0AV/kdYCe8//j3XViMtpYqcgeAMwA4A4BzDgDnHACu8ncBXvXPxmsAOAOAMwA4A4AzADjnAHCNuv85dqrrSoWnADgDgDMAOAOAMwA4A4AzALjoXwd7nx6XOwCcAcAZgCRJAekLXvp3vmQPThkAAAAASUVORK5CYII=', '避難民居與拾荒小屋 (Small Shack) - 主體 (1000% 放大)')">🔍 放大檢驗主體</button>
+                <button class="btn-inspect" onclick="openLightbox('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAABgCAYAAADVenpJAAABQ0lEQVR4nO3aIU7EQBQG4C7ZM6DQCM6B4AgcYINEcQwUkvQAHAHBKSoQaIJAcYMlFbhF9GW6OzPv+3TbNPn/zrQvHQYAAAAAAAAAAAAAqjNeX+6XHL9d71Y4dpgRCtBRmBEK8I/Xl8f9ze3DpqUwI7aZAl16zthR0F0VIBImFRdAoOXs3j4ObltHK4Aw27K4ABn2xUzOTn0Dtfocn4cMFCA5BUhOAZIrWoCL3V3Jy1FbAXwB9McWkJwCJKcAicfAMwVITgESTwFnCpCcAiSnAJ2Yvn5C5xX7H8AU8PRhNvtHUO+mQKBP79+LP+lWLUCrY+DSb/RTxWGmWAFKBjoFl9qaA22qAMLsrAClAp1HmvdX54u3nOxhRmzWfgcQZkcrQCTMv+MF2onI0wwAAAAAAAAAAAAAAAAAAAAAAAAAAADAcNAvmPZjGHc5ViAAAAAASUVORK5CYII=', '避難民居與拾荒小屋 (Small Shack) - 屋頂淡出層 (1000% 放大)')">🔍 放大檢驗屋頂</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="building-card">
+        <div class="card-header">
+            <div class="title-group">
+                <span class="badge-size">4x5 (128x160 px)</span>
+                <h2>雙層衛兵哨塔 (Guard Watchtower)</h2>
+            </div>
+            <span class="badge-alpha">100% Alpha Clean (無黑邊)</span>
+        </div>
+        
+        <div class="interactive-stage" id="stage_prefab_kenshi_guard_watchtower_128x160_34" onmouseenter="fadeRoof('prefab_kenshi_guard_watchtower_128x160_34', 0.15)" onmouseleave="fadeRoof('prefab_kenshi_guard_watchtower_128x160_34', 1.0)">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACgCAYAAADEkmT9AAADOElEQVR4nO3bsWsTYRjH8TdFUHBx8g+QUEPBXcHBQQQR1M1NIThlEEEouChOQlEoDpkkoJubCiIUhw5COxaEouUQCyLi5CK4RSwYymFz792975u8z+/7WUIa+l5y98tz771PzjkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwJzqhBpouX9lHGos+FkZvWp9/BbaDoC8EQBxBEAcARBHAMQRAHGH2vzzr/Ubk0u/B89/BnlDaLb/j5571uiSsNN2w2UEIb77148d+FrdIHAKELcQ8ttflU60V7V/q45PGRVAHAEQVzsAVZMMJoFxVe1fJoGopXE78dbS8fHD4cXJ87uDt+7I6TOT55evXmo6tHv98s3U13MdO+T4vzc3XHn/P9n+0Um6EPR3o5idEPufU4A4AiCOAIhrNQco6/W6czWOpbHL429tbrgQqADiCIA4AiAu6Bxgv52Pn2INne3YKcaviwogjgCIIwDigt0bOFq5w72BifWXH3NvINohAOIIgDgCII4AiCMA4giAOAIgjgCIIwDiCIA4AiAuWDNomtuDPo2ihlaHo6jHiAogjgCIIwDiov0odL+i+JxiM5jXAHS7J1Jsxqa19ajDcwoQRwDEEQBxSeYAMb1/t/bfvw9uXtt7HD59EWQ7gynjnT1/weWKCiCOAIgjAOIIgLjsJ4EHWeyd3HtcfXTP7K3dIVABxJntBfz7toa+DLTW68i+F/D9S+FmrRuz10EvADERAHEEQBwBEMc6QA2sA8AcsxUg5TpAzqgA4giAOAIgzmwvIKUi489HL0C8F2D2KoB1AD/MAcSZrQCsA/ihAogjAOIIgDgCII4AiDN7FcA6gB8qgDizvQDuC/BDL0C8F8ApQBwBEEcAxBEAcawD1MA6AMwxWwH4PYAfKoA4AiCOAIgz2wtIqcj489ELEO8FmL0KYB3AD3MAcWYrAOsAfqgA4giAOAIgjgCIIwDizF4FsA7ghwogzmwvgPsC5igAu1+/RRv7sJu93YifLzZOAeIIgDgCII4AiGMdoAbWAWCO2QrA7wH8UAHEEQBxnRQbObW0OE6xHYs+bO9EPUZUAHEEQBwBEEcAAAAAnJ4/fM7r9f3eaBsAAAAASUVORK5CYII=" class="layer-body" alt="雙層衛兵哨塔 (Guard Watchtower) - 主體">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACgCAYAAADEkmT9AAACNklEQVR4nO3c7YkaURiG4XmXlBIm9hJIUkOK2CIsIT9SQ7KQDrYIE9LLBiWCETUz63ycc97rApFlPxCfm0Ed3a4DAAAAAGje89OXl/2lS+qhS+rx88eX/eX06y6hN10yt4Z+/Pu97dfv0SURWYffbN4ervvNu8P1r93Pbrf7/c/vZAghsg5/1J8EcJQphMg6/K0AMoUQWYcfEkCGEB5aHX8//P/GH+r8b7X0jCFaHH6MfsAR4NYRofajQWQd/p4AWgohsg4/RQAthBBZh58ygJpDiKzDzxFAjSFE1uHnDKCmECLr8EsEUEMIkXX4JQMoOYTIOvwaAZQYQmQdfs0ASgohsg5fQgAlhBBZhy8pgDVDiKzDlxjAGiE8LDX+lGfnWrc5ua/mPvMYSwxfsr7AI8C1I8IcR4PIOnxNAcwZQmQdvsYA5gghsg5fcwBThhBZh28hgClCiKzDtxTAPSEM/sGhT0dqC6OvMIDzdylfMySEux4DjH2OWmIcfaEBDB356LWPA2Z5HaCmMPqVA1hq6NXPBbzmFa0lwugXCmDs0EudD1j9/QBrh9FPHECpQxcbwCX3vP699AdDxlr7DSDniroxt9x7UmSKD4fWPvYlxd/AucP48On94frp24+mh272P4RcuvPnPIW6rXjsJgMYM9KYMLaNDc0Vz8n/SxgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAV6c/IVRkARrQgpkAAAAASUVORK5CYII=" class="layer-roof" id="roof_prefab_kenshi_guard_watchtower_128x160_34" alt="雙層衛兵哨塔 (Guard Watchtower) - 屋頂">
+            <div class="hover-hint">👆 滑鼠懸停模擬【走進屋內・屋頂自動平滑淡出】</div>
+        </div>
+        
+        <div class="card-desc">
+            <p><b>📐 微觀像素細節：</b>底層加固石墩基座、外掛攀爬木梯、二樓木造箭垛瞭望台、雙側夜巡火把支架、四角錐木瓦頂</p>
+            <div class="view-buttons">
+                <button class="btn-inspect" onclick="openLightbox('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACgCAYAAADEkmT9AAADOElEQVR4nO3bsWsTYRjH8TdFUHBx8g+QUEPBXcHBQQQR1M1NIThlEEEouChOQlEoDpkkoJubCiIUhw5COxaEouUQCyLi5CK4RSwYymFz792975u8z+/7WUIa+l5y98tz771PzjkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwJzqhBpouX9lHGos+FkZvWp9/BbaDoC8EQBxBEAcARBHAMQRAHGH2vzzr/Ubk0u/B89/BnlDaLb/j5571uiSsNN2w2UEIb77148d+FrdIHAKELcQ8ttflU60V7V/q45PGRVAHAEQVzsAVZMMJoFxVe1fJoGopXE78dbS8fHD4cXJ87uDt+7I6TOT55evXmo6tHv98s3U13MdO+T4vzc3XHn/P9n+0Um6EPR3o5idEPufU4A4AiCOAIhrNQco6/W6czWOpbHL429tbrgQqADiCIA4AiAu6Bxgv52Pn2INne3YKcaviwogjgCIIwDigt0bOFq5w72BifWXH3NvINohAOIIgDgCII4AiCMA4giAOAIgjgCIIwDiCIA4AiAuWDNomtuDPo2ihlaHo6jHiAogjgCIIwDiov0odL+i+JxiM5jXAHS7J1Jsxqa19ajDcwoQRwDEEQBxSeYAMb1/t/bfvw9uXtt7HD59EWQ7gynjnT1/weWKCiCOAIgjAOIIgLjsJ4EHWeyd3HtcfXTP7K3dIVABxJntBfz7toa+DLTW68i+F/D9S+FmrRuz10EvADERAHEEQBwBEMc6QA2sA8AcsxUg5TpAzqgA4giAOAIgzmwvIKUi489HL0C8F2D2KoB1AD/MAcSZrQCsA/ihAogjAOIIgDgCII4AiDN7FcA6gB8qgDizvQDuC/BDL0C8F8ApQBwBEEcAxBEAcawD1MA6AMwxWwH4PYAfKoA4AiCOAIgz2wtIqcj489ELEO8FmL0KYB3AD3MAcWYrAOsAfqgA4giAOAIgjgCIIwDizF4FsA7ghwogzmwvgPsC5igAu1+/RRv7sJu93YifLzZOAeIIgDgCII4AiGMdoAbWAWCO2QrA7wH8UAHEEQBxnRQbObW0OE6xHYs+bO9EPUZUAHEEQBwBEEcAAAAAnJ4/fM7r9f3eaBsAAAAASUVORK5CYII=', '雙層衛兵哨塔 (Guard Watchtower) - 主體 (1000% 放大)')">🔍 放大檢驗主體</button>
+                <button class="btn-inspect" onclick="openLightbox('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACgCAYAAADEkmT9AAACNklEQVR4nO3c7YkaURiG4XmXlBIm9hJIUkOK2CIsIT9SQ7KQDrYIE9LLBiWCETUz63ycc97rApFlPxCfm0Ed3a4DAAAAAGje89OXl/2lS+qhS+rx88eX/eX06y6hN10yt4Z+/Pu97dfv0SURWYffbN4ervvNu8P1r93Pbrf7/c/vZAghsg5/1J8EcJQphMg6/K0AMoUQWYcfEkCGEB5aHX8//P/GH+r8b7X0jCFaHH6MfsAR4NYRofajQWQd/p4AWgohsg4/RQAthBBZh58ygJpDiKzDzxFAjSFE1uHnDKCmECLr8EsEUEMIkXX4JQMoOYTIOvwaAZQYQmQdfs0ASgohsg5fQgAlhBBZhy8pgDVDiKzDlxjAGiE8LDX+lGfnWrc5ua/mPvMYSwxfsr7AI8C1I8IcR4PIOnxNAcwZQmQdvsYA5gghsg5fcwBThhBZh28hgClCiKzDtxTAPSEM/sGhT0dqC6OvMIDzdylfMySEux4DjH2OWmIcfaEBDB356LWPA2Z5HaCmMPqVA1hq6NXPBbzmFa0lwugXCmDs0EudD1j9/QBrh9FPHECpQxcbwCX3vP699AdDxlr7DSDniroxt9x7UmSKD4fWPvYlxd/AucP48On94frp24+mh272P4RcuvPnPIW6rXjsJgMYM9KYMLaNDc0Vz8n/SxgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAV6c/IVRkARrQgpkAAAAASUVORK5CYII=', '雙層衛兵哨塔 (Guard Watchtower) - 屋頂淡出層 (1000% 放大)')">🔍 放大檢驗屋頂</button>
+            </div>
+        </div>
+    </div>
+    
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+        <h3 id="lb-title" style="color:var(--accent-gold); margin-bottom:12px;"></h3>
+        <img src="" id="lb-img" class="lightbox-img" alt="Zoomed View">
+        <div class="lightbox-controls" onclick="event.stopPropagation()">
+            <button class="btn-lb" onclick="zoomIn()">➕ 放大 (滾輪亦可)</button>
+            <button class="btn-lb" onclick="zoomOut()">➖ 縮小</button>
+            <button class="btn-lb" onclick="resetZoom()">🔄 重設 100%</button>
+            <button class="btn-lb btn-close" onclick="closeLightboxDirect()">❌ 關閉</button>
+        </div>
+    </div>
+
+    <script>
+        function fadeRoof(id, alpha) {
+            const el = document.getElementById('roof_' + id);
+            if (el) el.style.opacity = alpha;
+        }
+        
+        let currentScale = 3.0;
+        const lb = document.getElementById('lightbox');
+        const lbImg = document.getElementById('lb-img');
+        const lbTitle = document.getElementById('lb-title');
+        
+        function openLightbox(src, title) {
+            lbImg.src = src;
+            lbTitle.innerText = title;
+            currentScale = 3.0;
+            updateScale();
+            lb.classList.add('active');
+        }
+        function closeLightbox(e) {
+            if (e.target === lb) closeLightboxDirect();
+        }
+        function closeLightboxDirect() {
+            lb.classList.remove('active');
+        }
+        function zoomIn() {
+            currentScale = Math.min(10.0, currentScale + 0.5);
+            updateScale();
+        }
+        function zoomOut() {
+            currentScale = Math.max(1.0, currentScale - 0.5);
+            updateScale();
+        }
+        function resetZoom() {
+            currentScale = 3.0;
+            updateScale();
+        }
+        function updateScale() {
+            lbImg.style.transform = `scale(${currentScale})`;
+        }
+        
+        window.addEventListener('wheel', function(e) {
+            if (lb.classList.contains('active')) {
+                e.preventDefault();
+                if (e.deltaY < 0) zoomIn();
+                else zoomOut();
+            }
+        }, { passive: false });
+    </script>
+</body>
+</html>
