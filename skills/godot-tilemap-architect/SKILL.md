@@ -7,6 +7,20 @@ description: "Architect, paint, and generate native Godot 4.3+ TileMapLayer tact
 
 本技能書規範 AI Agent 在 Godot 4.3+ 專案中，如何直接建置高水準、具備戰鬥效果、透視嚴格統一且符合商業授權的戰棋地圖。
 
+## 0. 🛑 專案寫入防火牆與多 Agent 審查鐵律 (Architecture Review & Approval Firewall)
+
+> [!CAUTION]
+> **【改動 Godot 專案的唯一合法流程】**：
+> 在將任何演算法生成的圖層、場景 (`.tscn`)、TileSet (`.tres`) 或 GDScript 寫入/修改至 Godot 遊戲專案目錄前，**必須嚴格執行以下雙重防火牆**：
+> 1. **向澄羽姐姐架構師提呈正式交接方案 (Handoff to Chengyu)**：
+>    * 必須將整合方案（圖層契約、Y-Sort 域、TileSet Custom Data 格式、Bake 方式）撰寫為 Markdown 正本存放於 `docs/outbox_to_chengyu/`，並透過 CLI 提請澄羽姐姐進行架構審查。
+>    * **必須獲得澄羽姐姐的正式核准 (Sign-off / Approved)**。
+> 2. **向大叔呈報並取得明確動工指令 (Explicit User Approval)**：
+>    * 即使澄羽姐姐審查通過，**亦絕對禁止直接動手修改**！
+>    * 必須將澄羽姐姐的審查意見與完整計畫端給大叔，**只有在收到大叔明確的「同意」、「開工」指示後，方可執行檔案寫入與指令執行**！
+> 
+> **未獲雙重核准前，所有生成物一律僅存放於工作快取 (brain) 或獨立開源倉庫，絕不污染 Godot 遊戲本體！**
+
 ---
 
 ## 1. 核心開發鐵律：分層語意先，再放圖 (Semantics First, Images Second)
