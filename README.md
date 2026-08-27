@@ -59,10 +59,10 @@
 
 ## 🖼️ 成果展示 (Showcase)
 
-| 1. 最終合併大圖 (1280x1280) | 2. 1,600 格每格文字標籤分層語意圖 (SSOT) |
-| :---: | :---: |
-| ![Merged Map](assets/kenshi_village_merged_1280.png) | ![Semantic Grid](assets/kenshi_village_per_cell_text_labels.png) |
-| **3/4 廢土風貌與連通水系** | **每格標註 [沙][路][田][溝][屋][井][爐][草][石][▲頂]** |
+| 1. 🏠 進店前·完整外觀層全景 (Roofs ON) | 2. 🚪 進店後·店內層全景 (Roofs OFF) | 3. 📑 1,600 格分層視覺化語意圖 (SSOT) |
+| :---: | :---: | :---: |
+| ![Exterior View](assets/kenshi_village_exterior_1280.png) | ![Interior View](assets/kenshi_village_interior_1280.png) | ![Semantic Grid](assets/kenshi_village_semantic_ssot_1280.png) |
+| **黃金比例屋頂 ＋ 門楣大招牌 ＋ 閉合木門** | **吧台、壁爐、武器架、藥水貨架店內層** | **每格色塊標籤 [沙][路][田][溝][酒][鐵][店][井]** |
 
 ---
 
@@ -71,8 +71,8 @@
 ### 執行地圖生成演算法
 ```bash
 pip install pillow numpy
-python src/nono_tilemap_engine.py
-# 開啟 reports/map_delivery_report_0_0_village.html 查看可放大成果
+# 查看已生成的全規格互動驗收報告 (支援 800% Lightbox 縮放與圖層沙盒)
+# 開啟 reports/map_delivery_report_0_0_village.html
 ```
 
 ---

@@ -109,16 +109,18 @@ description: "Architect, paint, and generate native Godot 4.3+ TileMapLayer tact
    * 報告內所有圖片（合併圖、語意圖、四大分層圖）**必須全面編碼為 Base64 Data URI (`data:image/png;base64,...`) 直接內嵌於 HTML 中**，嚴禁使用外部相對路徑，保證在任何環境下 100% 秒開不破圖！
 2. 🖼️ **【合併圖 (Final Merged Map View)】**：
    * 提供「進去前·完整外觀層全景 (Roofs ON)」與「進去後·店內層全景 (Roofs OFF)」一鍵雙態切換！
-3. 📑 **【四層獨立純語意矩陣圖 (4-Layer Per-Cell Semantic Grid SSOT)】**：
-   * 包含 Layer 1 自然底地、Layer 2 建築店內層、Layer 2.5 環境雜物、Layer 3 屋頂淡出的獨立 40×40 矩陣，且每個網格單元 $(x, y)$ 均印出專屬文字標籤 Token。
-4. 📐 **【四大分層獨立圖 (Discrete Layer-by-Layer Breakdown Views)】**：
+3. 📑 **【五態切換分層視覺化語意圖 (5-State Visual Semantic Grid SSOT)】**：
+   * **徹底取代純字串 ASCII 文本區塊**！以 $1280\times 1280$ 專屬色塊與置中中文 Token 渲染獨立視覺大圖（綜合 SSOT、Layer 1 底地、Layer 2 建築店內、Layer 2.5 雜物、Layer 3 屋頂），支援 Lightbox 800% 逐格放大驗收！
+4. 📊 **【戰術屬性對照表 (Tactical Custom Data Layer Table)】**：
+   * 完整列出各語意 Token 的 AP 移動消耗、戰術掩體率 (Cover %)、通行規則與特殊機制。
+5. 📐 **【四大分層獨立圖 (Discrete Layer-by-Layer Breakdown Views)】**：
    * **Layer 1**：純自然原野底地 (Sand / Ground)。
    * **Layer 2**：人工建築與地景 (Roads, Farmlands, Earthen Ditches, Houses, Wells, Forges, Interiors)。
    * **Layer 2.5**：雜草、碎石、枯木佈置層 (Arid Scrub & Scree Clutter)。
    * **Layer 3**：頭頂屋頂與樹冠淡出層 (Roofs, Canopies, Signboards)。
-5. 🔍 **【互動式 Lightbox 像素級無損放大與拖拽 (Pixel-Perfect Lightbox Pan/Zoom)】**：
+6. 🔍 **【互動式 Lightbox 像素級無損放大與拖拽 (Pixel-Perfect Lightbox Pan/Zoom)】**：
    * 報告中**所有圖片點擊皆可進入全螢幕 Lightbox 放大模態框**，支援滑鼠滾輪自由放大 (100% ~ 800%) 與按住拖拽平移，保持點陣像素絕對銳利不模糊 (`image-rendering: pixelated`)。
-6. 🎛️ **【即時圖層疊加檢驗沙盒 (Interactive Layer Blending Sandbox)】**：
+7. 🎛️ **【即時圖層疊加檢驗沙盒 (Interactive Layer Blending Sandbox)】**：
    * 提供動態 Checkbox，可即時勾選/隱藏任意圖層，方便肉眼逐層 QC 驗收。
 
 ---
