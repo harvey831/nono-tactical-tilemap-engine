@@ -14,7 +14,7 @@ reports_dir = skill_repo / "reports"
 class TestSlaveCampTilemap(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        from generate_western_slave_camp_map import grid_l1, grid_l2, grid_l25, grid_l3
+        from generate_masterpiece_slave_camp_map import grid_l1, grid_l2, grid_l25, grid_l3
         cls.grid_l1 = grid_l1
         cls.grid_l2 = grid_l2
         cls.grid_l25 = grid_l25
@@ -31,28 +31,34 @@ class TestSlaveCampTilemap(unittest.TestCase):
 
     def test_02_spatial_decoupling_roof_vs_interior(self):
         """TDD 2: 驗證帳篷屋頂 (Layer 3) 與 帳內地基 (Layer 2) 空間物理語意徹底解耦，0 碰撞"""
-        # 奴隸主帳篷 (gx: 6..12, gy: 6..10)
-        for gx in range(6, 13):
-            self.assertEqual(self.grid_l3[6][gx], "[▲帳頂]", f"帳篷頂部 (gy=6, gx={gx}) 必須為 [▲帳頂]")
-            self.assertEqual(self.grid_l2[6][gx], "[ · ]", f"帳篷頂部 (gy=6, gx={gx}) 在 Layer 2 必須留空")
+        # 奴隸主帳篷 (gx: 6..13, gy: 5..10)
+        for gx in range(6, 14):
+            for gy in range(5, 7):
+                self.assertEqual(self.grid_l3[gy][gx], "[▲帳頂]", f"帳篷頂部 (gy={gy}, gx={gx}) 必須為 [▲帳頂]")
+                self.assertEqual(self.grid_l2[gy][gx], "[ · ]", f"帳篷頂部 (gy={gy}, gx={gx}) 在 Layer 2 必須留空")
             for gy in range(7, 11):
                 self.assertEqual(self.grid_l3[gy][gx], "[ · ]", f"帳內佔地 (gy={gy}, gx={gx}) 在 Layer 3 必須留空")
                 self.assertIn(self.grid_l2[gy][gx], ["[帳地]", "[皮椅]", "[戰圖]", "[金箱]", "[地毯]", "[帳門]"])
 
-        # 刑具鍛造鋪 (gx: 27..32, gy: 6..10)
-        for gx in range(27, 33):
-            self.assertEqual(self.grid_l3[6][gx], "[▲鍛頂]")
-            self.assertEqual(self.grid_l2[6][gx], "[ · ]")
+        # 刑具鍛造鋪 (gx: 26..31, gy: 5..10)
+        for gx in range(26, 32):
+            for gy in range(5, 7):
+                self.assertEqual(self.grid_l3[gy][gx], "[▲鍛頂]")
+                self.assertEqual(self.grid_l2[gy][gx], "[ · ]")
             for gy in range(7, 11):
                 self.assertEqual(self.grid_l3[gy][gx], "[ · ]")
                 self.assertIn(self.grid_l2[gy][gx], ["[鍛地]", "[風箱]", "[熔爐]", "[鐵砧]", "[鐐架]", "[鍛門]"])
 
-    def test_03_quarry_pit_stepped_geography(self):
-        """TDD 3: 驗證階梯採石坑包含 Tier 1 (中層坑) 與 Tier 2 (深層坑) 立體地勢"""
+    def test_03_quarry_pit_stepped_geography_and_megablocks(self):
+        """TDD 3: 驗證階梯採石坑包含 3 階立體地勢與巨型開採石塊區"""
         tier1_count = sum(row.count("[岩層1]") for row in self.grid_l1)
         tier2_count = sum(row.count("[岩層2]") for row in self.grid_l1)
-        self.assertGreater(tier1_count, 100, "Tier 1 中層採石平台必須具備足夠戰術面積")
-        self.assertGreater(tier2_count, 50, "Tier 2 深層採石坑必須具備足夠戰術面積")
+        tier3_count = sum(row.count("[岩層3]") for row in self.grid_l1)
+        megablock_count = sum(row.count("[巨石條]") for row in self.grid_l2)
+        self.assertGreater(tier1_count, 100, "Tier 1 中層採石平台面積充足")
+        self.assertGreater(tier2_count, 80, "Tier 2 深層採石坑面積充足")
+        self.assertGreater(tier3_count, 40, "Tier 3 最深岩心面積充足")
+        self.assertGreaterEqual(megablock_count, 16, "必須包含巨型開採石條塊")
 
     def test_04_building_facades_and_doors_present_in_exterior_view(self):
         """TDD 4: 驗證外觀全景大圖 (view_exterior_merged.png) 中包含完整的帳篷立面與鍛造鋪大門"""
@@ -70,6 +76,7 @@ class TestSlaveCampTilemap(unittest.TestCase):
         self.assertNotIn('src="layer_', content, "報告中禁止出現未內嵌的 layer_*.png 相對路徑")
         self.assertNotIn('src="view_', content, "報告中禁止出現未內嵌的 view_*.png 相對路徑")
         self.assertGreaterEqual(content.count("data:image/png;base64,"), 5, "報告中必須內嵌至少 5 張 Base64 大圖")
+        self.assertIn("handleLightboxWheel", content, "報告中必須包含 800% 滾輪縮放腳本")
 
     def test_06_tilemap_assets_and_integrity(self):
         """TDD 6: 驗證所有導出的地圖資產完整性與解析度"""
