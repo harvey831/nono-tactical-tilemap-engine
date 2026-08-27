@@ -18,8 +18,10 @@ description: "Architect, paint, and generate native Godot 4.3+ TileMapLayer tact
 > 2. **向大叔呈報並取得明確動工指令 (Explicit User Approval)**：
 >    * 即使澄羽姐姐審查通過，**亦絕對禁止直接動手修改**！
 >    * 必須將澄羽姐姐的審查意見與完整計畫端給大叔，**只有在收到大叔明確的「同意」、「開工」指示後，方可執行檔案寫入與指令執行**！
+> 3. **【交付前強制實機驗證鐵律】(Mandatory Pre-Delivery Verification)**：
+>    * 在向大叔回報交付、完成任何修改前，**必須先執行實體引擎自動化驗證**（包含使用 Godot engine headless 實際 `load()` / 實例化所有修改的場景與資源，或執行 TDD 測試），確認 0 解析錯誤 (Parse Error)、0 資源 ID 遺失 (Broken Reference)、0 缺失依賴！未經實機驗證通過前，**絕對禁止**宣告交付！
 > 
-> **未獲雙重核准前，所有生成物一律僅存放於工作快取 (brain) 或獨立開源倉庫，絕不污染 Godot 遊戲本體！**
+> **未獲核准或未經實機驗證前，所有生成物一律僅存放於工作快取 (brain) 或獨立開源倉庫，絕不交付不完整的成果！**
 
 ---
 
