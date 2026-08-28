@@ -281,11 +281,22 @@ l3_roofs.paste(kenshi_roof, (6 * cell, 4 * cell), kenshi_roof)
 l3_roofs.paste(kenshi_roof, (25 * cell, 5 * cell), kenshi_roof)
 l3_roofs.paste(kenshi_roof, (4 * cell, 25 * cell), kenshi_roof)
 
-# 保存獨立圖層
-l1_img.save(brain_dir / "layer_1_sand_ground.png")
-l2_img.save(brain_dir / "layer_2_civil_structures.png")
-l_clutter.save(brain_dir / "layer_2_5_clutter_decor.png")
-l3_roofs.save(brain_dir / "layer_3_roofs_faders.png")
+# 保存獨立圖層 (包含村落專屬命名與 Godot 正式資產同步)
+village_godot_dir = godot_base / "圖片" / "地圖" / "荒原九大戰區_正式資產" / "00_邊境村落"
+village_godot_dir.mkdir(parents=True, exist_ok=True)
+assets_dir = Path(r"C:\GPTfile\godot\nono-tactical-tilemap-engine\assets")
+assets_dir.mkdir(parents=True, exist_ok=True)
+
+l1_img.save(brain_dir / "village_layer_1_ground.png")
+l2_img.save(brain_dir / "village_layer_2_structures.png")
+l_clutter.save(brain_dir / "village_layer_2_5_clutter.png")
+l3_roofs.save(brain_dir / "village_layer_3_roofs.png")
+
+# 同步至 Godot 遊戲專案 00_邊境村落
+l1_img.save(village_godot_dir / "layer_1_ground.png")
+l2_img.save(village_godot_dir / "layer_2_structures.png")
+l_clutter.save(village_godot_dir / "layer_2_5_clutter.png")
+l3_roofs.save(village_godot_dir / "layer_3_roofs.png")
 
 # 最終合併大圖
 master_merged = Image.new("RGBA", (gw * cell, gh * cell))
@@ -296,6 +307,9 @@ master_merged.alpha_composite(l3_roofs)
 
 out_merged = brain_dir / "kenshi_village_final_master_merged.png"
 master_merged.save(out_merged)
+master_merged.save(village_godot_dir / "map_0_0_village_merged_1280.png")
+master_merged.save(assets_dir / "kenshi_village_exterior_1280.png")
+sem_img.save(assets_dir / "kenshi_village_semantic_ssot_1280.png")
 
 # ==============================================================================
 # 🌐 5. 生成 Base64 自包含 HTML 交付報告
