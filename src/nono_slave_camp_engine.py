@@ -5,7 +5,7 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 
 brain_dir = Path(r"C:\Users\ihate\.gemini\antigravity\brain\522dd70e-62d4-4f27-893e-70f3ade173ca")
-skill_repo = Path(r"C:\GPTfile\godot\nono-tactical-tilemap-engine")
+skill_repo = Path(__file__).resolve().parent.parent
 godot_base = Path(r"C:\GPTfile\godot\adventure-of-self-realization-v-0.5")
 slave_camp_godot_dir = godot_base / "圖片" / "地圖" / "荒原九大戰區_正式資產" / "01_西方奴隸營"
 slave_camp_godot_dir.mkdir(parents=True, exist_ok=True)

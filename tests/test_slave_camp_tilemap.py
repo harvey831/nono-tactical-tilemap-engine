@@ -7,7 +7,7 @@ brain_dir = Path(r"C:\Users\ihate\.gemini\antigravity\brain\522dd70e-62d4-4f27-8
 sys.path.insert(0, str(brain_dir))
 sys.path.insert(0, str(brain_dir / "scratch"))
 
-skill_repo = Path(r"C:\GPTfile\godot\nono-tactical-tilemap-engine")
+skill_repo = Path(__file__).resolve().parent.parent
 assets_dir = skill_repo / "assets"
 reports_dir = skill_repo / "reports"
 

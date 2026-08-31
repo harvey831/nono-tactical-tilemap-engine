@@ -206,56 +206,59 @@ def render_autotile(target_draw, mask, fill_col, dark_col, light_col):
                 target_draw.rectangle([px + cell - 6, py + cell - 6, px + cell, py + cell], fill=SAND_DESERT)
                 target_draw.line([(px + cell - 6, py + cell), (px + cell, py + cell - 6)], fill=dark_col, width=2)
 
-render_autotile(draw_l2, clay_mask, CLAY_EARTH, CLAY_DARK, SAND_DUNE_L)
-render_autotile(draw_l2, farm_mask, MUDBRICK_BASE, MUDBRICK_DARK, MUDBRICK_LIGHT)
+# 渲染地面自然拓撲（黏土車轍路、農田耕地、連通灌溉泥溝、水槽與水井底座）至 Layer 1 (Ground)
+render_autotile(draw_l1, clay_mask, CLAY_EARTH, CLAY_DARK, SAND_DUNE_L)
+render_autotile(draw_l1, farm_mask, MUDBRICK_BASE, MUDBRICK_DARK, MUDBRICK_LIGHT)
 
-# 耕地麥垄
+# 耕地麥垄 (Layer 1)
 for fy in range(24, 31):
     for fx in range(gw):
         if farm_mask[fy, fx]:
             px, py = fx * cell, fy * cell
-            draw_l2.line([(px, py + 8), (px + cell, py + 8)], fill=CLAY_DARK, width=2)
-            draw_l2.line([(px, py + 20), (px + cell, py + 20)], fill=CLAY_DARK, width=2)
+            draw_l1.line([(px, py + 8), (px + cell, py + 8)], fill=CLAY_DARK, width=2)
+            draw_l1.line([(px, py + 20), (px + cell, py + 20)], fill=CLAY_DARK, width=2)
             for wx in (6, 16, 26):
-                draw_l2.line([(px + wx, py + 3), (px + wx, py + 8)], fill=GOLD_STUD, width=2)
-                draw_l2.line([(px + wx, py + 15), (px + wx, py + 20)], fill=GOLD_STUD, width=2)
+                draw_l1.line([(px + wx, py + 3), (px + wx, py + 8)], fill=GOLD_STUD, width=2)
+                draw_l1.line([(px + wx, py + 15), (px + wx, py + 20)], fill=GOLD_STUD, width=2)
 
-# 完整連通水渠 (Connected Ditch from Well to Boundary)
+# 完整連通水渠 (Connected Ditch from Well to Boundary) (Layer 1)
 for i in range(len(ditch_pts)-1):
     p0, p1 = ditch_pts[i], ditch_pts[i+1]
     x0, y0 = p0[0]*cell, p0[1]*cell
     x1, y1 = p1[0]*cell, p1[1]*cell
     # 渠埂土堤
-    draw_l2.line([(x0, y0), (x1, y1)], fill=DITCH_BANK, width=10)
+    draw_l1.line([(x0, y0), (x1, y1)], fill=DITCH_BANK, width=10)
     # 渠底深泥
-    draw_l2.line([(x0, y0), (x1, y1)], fill=DITCH_SOIL_DEEP, width=6)
+    draw_l1.line([(x0, y0), (x1, y1)], fill=DITCH_SOIL_DEEP, width=6)
     # 微量滲水光澤
-    draw_l2.line([(x0, y0), (x1, y1)], fill=WATER_SEEPAGE, width=2)
+    draw_l1.line([(x0, y0), (x1, y1)], fill=WATER_SEEPAGE, width=2)
     # 分水閘門
     if i == 0:
         # 水井引水木槽
-        draw_l2.rectangle([x0 - 4, y0 - 4, x0 + 12, y0 + 12], fill=WOOD_SLUICE, outline=BLEACHED_WOOD_0)
+        draw_l1.rectangle([x0 - 4, y0 - 4, x0 + 12, y0 + 12], fill=WOOD_SLUICE, outline=BLEACHED_WOOD_0)
     elif i == 3:
         # 麥田中段木質分流閘門
-        draw_l2.rectangle([x0 - 4, y0 - 4, x0 + 8, y0 + 8], fill=WOOD_SLUICE, outline=BLEACHED_WOOD_0)
+        draw_l1.rectangle([x0 - 4, y0 - 4, x0 + 8, y0 + 8], fill=WOOD_SLUICE, outline=BLEACHED_WOOD_0)
 
-# 放置 3 棟 Kenshi 房屋
+# 水井地表投影與底座 (Layer 1)
+wx, wy = 21 * cell + 16, 18 * cell + 8
+draw_l1.ellipse([wx + 4, wy + 20, wx + 44, wy + 38], fill=(35, 25, 20, 80))
+draw_l1.rectangle([wx + 6, wy + 16, wx + 38, wy + 32], fill=MUDBRICK_BASE, outline=MUDBRICK_DARK, width=2)
+draw_l1.ellipse([wx + 6, wy + 8, wx + 38, wy + 20], fill=MUDBRICK_LIGHT, outline=MUDBRICK_DARK, width=2)
+draw_l1.ellipse([wx + 12, wy + 11, wx + 32, wy + 17], fill=DITCH_SOIL_DEEP)
+draw_l1.rectangle([wx + 18, wy + 26, wx + 26, wy + 42], fill=WOOD_SLUICE, outline=BLEACHED_WOOD_0)
+
+# 放置 3 棟 Kenshi 房屋 (Layer 2 建築本體)
 l2_img.paste(kenshi_house, (6 * cell, 4 * cell), kenshi_house)
 l2_img.paste(kenshi_house, (25 * cell, 5 * cell), kenshi_house)
 l2_img.paste(kenshi_house, (4 * cell, 25 * cell), kenshi_house)
 
-# 放置 Kenshi 水井與熔爐 (水井源頭與引水槽相連！)
-wx, wy = 21 * cell + 16, 18 * cell + 8
-draw_l2.ellipse([wx + 4, wy + 20, wx + 44, wy + 38], fill=(35, 25, 20, 80))
-draw_l2.rectangle([wx + 6, wy + 16, wx + 38, wy + 32], fill=MUDBRICK_BASE, outline=MUDBRICK_DARK, width=2)
-draw_l2.ellipse([wx + 6, wy + 8, wx + 38, wy + 20], fill=MUDBRICK_LIGHT, outline=MUDBRICK_DARK, width=2)
-draw_l2.ellipse([wx + 12, wy + 11, wx + 32, wy + 17], fill=DITCH_SOIL_DEEP)
+# 放置 Kenshi 水井立面支架 (Layer 2 立面)
 draw_l2.line([(wx + 8, wy + 16), (wx + 8, wy - 4)], fill=BLEACHED_WOOD_0, width=2)
 draw_l2.line([(wx + 36, wy + 16), (wx + 36, wy - 4)], fill=BLEACHED_WOOD_0, width=2)
 draw_l2.line([(wx + 6, wy - 4), (wx + 38, wy - 4)], fill=BLEACHED_WOOD_2, width=3)
-# 水井溢流出水口木槽 (Spillway Trough into ditch)
-draw_l2.rectangle([wx + 18, wy + 26, wx + 26, wy + 42], fill=WOOD_SLUICE, outline=BLEACHED_WOOD_0)
 
+# 放置熔爐 (Layer 2)
 fx, fy = 23 * cell, 7 * cell
 draw_l2.rectangle([fx, fy + 8, fx + 48, fy + 40], fill=MUDBRICK_BASE, outline=MUDBRICK_DARK, width=2)
 draw_l2.arc([fx + 10, fy + 16, fx + 38, fy + 40], start=180, end=0, fill=MUDBRICK_DARK, width=2)
@@ -284,7 +287,7 @@ l3_roofs.paste(kenshi_roof, (4 * cell, 25 * cell), kenshi_roof)
 # 保存獨立圖層 (包含村落專屬命名與 Godot 正式資產同步)
 village_godot_dir = godot_base / "圖片" / "地圖" / "荒原九大戰區_正式資產" / "00_邊境村落"
 village_godot_dir.mkdir(parents=True, exist_ok=True)
-assets_dir = Path(r"C:\GPTfile\godot\nono-tactical-tilemap-engine\assets")
+assets_dir = Path(__file__).resolve().parent.parent / "assets"
 assets_dir.mkdir(parents=True, exist_ok=True)
 
 l1_img.save(brain_dir / "village_layer_1_ground.png")
