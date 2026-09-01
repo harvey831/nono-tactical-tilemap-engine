@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>測試戰術分層地圖</title>
+  <style>
+    :root {
+      --bg: #0f111a;
+      --card: #181a24;
+      --border: #2d3345;
+      --foreground: #e2e8f0;
+      --muted-foreground: #94a3b8;
+      --primary: #e5a823;
+      --primary-foreground: #000;
+      --accent-cyan: #38bdf8;
+      --green: #22c55e;
+      --yellow: #eab308;
+      --blue: #3b82f6;
+      --orange: #f97316;
+      --purple: #a855f7;
+    }
+    body {
+      margin: 0; padding: 24px;
+      background: var(--bg); color: var(--foreground);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    #pan-layered-map-demo {
+      --plm-ground: color-mix(in srgb, var(--green) 19%, var(--bg));
+      --plm-ground-alt: color-mix(in srgb, var(--green) 12%, var(--bg));
+      --plm-road: color-mix(in srgb, var(--yellow) 23%, var(--bg));
+      --plm-water: color-mix(in srgb, var(--blue) 28%, var(--bg));
+      --plm-grid: color-mix(in srgb, var(--foreground) 18%, transparent);
+      --plm-edge: color-mix(in srgb, var(--foreground) 70%, transparent);
+      --plm-h1: color-mix(in srgb, var(--green) 26%, var(--card));
+      --plm-h2: color-mix(in srgb, var(--green) 34%, var(--card));
+      --plm-h3: color-mix(in srgb, var(--green) 42%, var(--card));
+      --plm-h4: color-mix(in srgb, var(--green) 50%, var(--card));
+      --plm-cliff-front: color-mix(in srgb, var(--orange) 34%, var(--bg));
+      --plm-cliff-side: color-mix(in srgb, var(--orange) 49%, var(--bg));
+      --plm-roof: color-mix(in srgb, var(--orange) 39%, var(--card));
+      --plm-wall: color-mix(in srgb, var(--yellow) 23%, var(--card));
+      --plm-wall-side: color-mix(in srgb, var(--orange) 28%, var(--card));
+      --plm-neg1: color-mix(in srgb, var(--purple) 19%, var(--bg));
+      --plm-neg2: color-mix(in srgb, var(--purple) 30%, var(--bg));
+      --plm-pit-wall: color-mix(in srgb, var(--purple) 42%, var(--bg));
+      --plm-cut: color-mix(in srgb, var(--bg) 88%, var(--foreground));
+      --plm-interior: color-mix(in srgb, var(--blue) 18%, var(--card));
+      width: 100%;
+    }
+    .plm-heading {
+      display: flex; justify-content: space-between; align-items: flex-end;
+      gap: 12px; flex-wrap: wrap; margin-bottom: 12px;
+    }
+    .plm-heading h3 { margin: 0; color: var(--primary); font-size: 20px; }
+    .plm-heading p { margin: 4px 0 0 0; font-size: 13px; color: var(--muted-foreground); }
+    .viz-controls {
+      display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin-bottom: 10px;
+    }
+    .text-small { font-size: 12px; font-weight: bold; color: var(--accent-cyan); }
+    .btn {
+      background: var(--card); color: var(--foreground);
+      border: 1px solid var(--border); padding: 5px 12px;
+      border-radius: 6px; cursor: pointer; font-size: 12px; font-weight: 600;
+      transition: all 0.15s;
+    }
+    .btn:hover { border-color: var(--primary); }
+    .btn.active, .btn-primary {
+      background: var(--primary); color: var(--primary-foreground); border-color: var(--primary);
+    }
+    .plm-map {
+      display: block; width: 100%; height: 580px;
+      overflow: hidden; touch-action: none; user-select: none;
+      cursor: grab; background: #08090d; border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+    .plm-map.is-dragging { cursor: grabbing; }
+    .plm-status {
+      display: flex; justify-content: space-between; gap: 12px;
+      flex-wrap: wrap; margin-top: 8px; font-size: 12px; color: var(--muted-foreground);
+    }
+  </style>
+</head>
+<body>
+
+<div id="pan-layered-map-demo" data-layer="all" data-offset-mode="camera" data-grid-shape="square">
+  <div class="plm-heading">
+    <div>
+      <h3>🗺️ 測試戰術分層地圖</h3>
+      <p>ADR-0072 & pan-layered-map-prototype.html 同構空間引擎（支援滑鼠按住拖曳平移、即時透視計算與分層切面）</p>
+    </div>
+    <button class="btn" type="button" data-plm-reset>🔄 回到中心</button>
+  </div>
+
+  <div class="viz-controls" aria-label="選擇顯示高度">
+    <span class="text-small">顯示高程層級：</span>
+    <button class="btn active" type="button" data-plm-layer="all">全部</button>
+    <button class="btn" type="button" data-plm-layer="-2">H-2</button>
+    <button class="btn" type="button" data-plm-layer="-1">H-1</button>
+    <button class="btn" type="button" data-plm-layer="0">H0</button>
+    <button class="btn" type="button" data-plm-layer="1">H1</button>
+    <button class="btn" type="button" data-plm-layer="2">H2</button>
+    <button class="btn" type="button" data-plm-layer="3">H3</button>
+    <button class="btn" type="button" data-plm-layer="4">H4</button>
+    <button class="btn" type="button" data-plm-layer="5">H5</button>
+  </div>
+
+  <div class="viz-controls" aria-label="選擇側向錯位規則">
+    <span class="text-small">側向透視模式：</span>
+    <button class="btn active" type="button" data-plm-mode="camera">跟隨鏡頭中心 (動態 ΔX)</button>
+    <button class="btn" type="button" data-plm-mode="fixed">固定向右</button>
+  </div>
+
+  <div class="viz-controls" aria-label="選擇每級高度差">
+    <span class="text-small">垂直高差比率：</span>
+    <button class="btn" type="button" data-plm-height-gap="0.50">緊湊 0.50</button>
+    <button class="btn" type="button" data-plm-height-gap="0.60">平衡 0.60</button>
+    <button class="btn active" type="button" data-plm-height-gap="0.72">ADR-0072 原值 0.72 (23.04px)</button>
+  </div>
+
+  <svg class="plm-map" role="img">
+    <title>測試戰術分層地圖</title>
+  </svg>
+
+  <div class="plm-status">
+    <span data-plm-position>中心格：20, 20</span>
+    <span data-plm-state>全部高度 ｜ 32×32 原生網格 ｜ 跟隨鏡頭中心</span>
+  </div>
+</div>
+
+<script>
+(() => {
+  const mapData = {
+  "grid_width": 40,
+  "grid_height": 40,
+  "cell_size": 32,
+  "plateaus": [
+    {
+      "col": 5,
+      "row": 5,
+      "cols": 10,
+      "rows": 8,
+      "height": 2,
+      "label": "採石高台"
+    }
+  ],
+  "buildings": [
+    {
+      "col": 20,
+      "row": 20,
+      "cols": 8,
+      "rows": 6,
+      "height": 3,
+      "floors": 2,
+      "label": "邊境酒館",
+      "stairs": [
+        {
+          "col": 26,
+          "row": 23,
+          "height": 1
+        },
+        {
+          "col": 26,
+          "row": 22,
+          "height": 2
+        }
+      ]
+    }
+  ],
+  "actors": [
+    {
+      "col": 21,
+      "row": 21,
+      "height": 0,
+      "label": "Arya",
+      "color": "#38bdf8"
+    }
+  ]
+};
+  const root = document.getElementById('pan-layered-map-demo');
+  const svg = root.querySelector('.plm-map');
+  const positionText = root.querySelector('[data-plm-position]');
+  const stateText = root.querySelector('[data-plm-state]');
+  const layerButtons = Array.from(root.querySelectorAll('[data-plm-layer]'));
+  const modeButtons = Array.from(root.querySelectorAll('[data-plm-mode]'));
+  const heightGapButtons = Array.from(root.querySelectorAll('[data-plm-height-gap]'));
+  const resetButton = root.querySelector('[data-plm-reset]');
+  const ns = 'http://www.w3.org/2000/svg';
+
+  const columns = mapData.grid_width || 40;
+  const rows = mapData.grid_height || 40;
+  const cellX = mapData.cell_size || 32;
+  const cellY = mapData.cell_size || 32;
+  const worldWidth = columns * cellX;
+  const worldHeight = rows * cellY;
+
+  let heightGapRatio = 0.72;
+  let sideShiftRatio = 0.12;
+  let rise = cellX * heightGapRatio;
+  let sideShift = cellX * sideShiftRatio;
+
+  let viewportWidth = svg.clientWidth || 800;
+  let viewportHeight = 580;
+  let panX = viewportWidth * 0.5 - worldWidth * 0.5;
+  let panY = viewportHeight * 0.5 - worldHeight * 0.5;
+  let currentLayer = 'all';
+  let offsetMode = 'camera';
+  let dragging = false;
+  let lastPointerX = 0, lastPointerY = 0;
+  let framePending = false;
+
+  const make = (name, attrs = {}, content = '') => {
+    const el = document.createElementNS(ns, name);
+    Object.entries(attrs).forEach(([k, v]) => el.setAttribute(k, String(v)));
+    if (content) el.textContent = content;
+    return el;
+  };
+
+  const cutHeight = () => currentLayer === 'all' ? null : Number(currentLayer);
+
+  const screenSide = (worldCenterX) => {
+    if (offsetMode === 'fixed') return 1.0;
+    const delta = panX + worldCenterX - viewportWidth * 0.5;
+    return Math.max(-1.0, Math.min(1.0, delta / (cellX * 6.0)));
+  };
+
+  const projectedRect = (rect, height, side) => ({
+    x: rect.x + side * height * sideShift,
+    y: rect.y - height * rise,
+    w: rect.w,
+    h: rect.h
+  });
+
+  const drawGridSurface = (parent, rect, fill, label = '') => {
+    parent.appendChild(make('rect', {
+      x: rect.x, y: rect.y, width: rect.w, height: rect.h,
+      fill, stroke: 'var(--plm-edge)', 'stroke-width': 1.2
+    }));
+    const cols = Math.round(rect.w / cellX);
+    const surfaceRows = Math.round(rect.h / cellY);
+    for (let c = 1; c < cols; c++) {
+      parent.appendChild(make('line', {
+        x1: rect.x + c * cellX, y1: rect.y,
+        x2: rect.x + c * cellX, y2: rect.y + rect.h,
+        stroke: 'var(--plm-grid)', 'stroke-width': 1
+      }));
+    }
+    for (let r = 1; r < surfaceRows; r++) {
+      parent.appendChild(make('line', {
+        x1: rect.x, y1: rect.y + r * cellY,
+        x2: rect.x + rect.w, y2: rect.y + r * cellY,
+        stroke: 'var(--plm-grid)', 'stroke-width': 1
+      }));
+    }
+    if (label) {
+      parent.appendChild(make('text', {
+        x: rect.x + 6, y: rect.y + 16,
+        fill: 'var(--foreground)', 'font-size': 11, 'font-weight': 600
+      }, label));
+    }
+  };
+
+  const drawRaisedFaces = (parent, topRect, lowerRect, side, frontFill = 'var(--plm-cliff-front)', sideFill = 'var(--plm-cliff-side)') => {
+    parent.appendChild(make('polygon', {
+      points: `${topRect.x},${topRect.y + topRect.h} ${topRect.x + topRect.w},${topRect.y + topRect.h} ${lowerRect.x + lowerRect.w},${lowerRect.y + lowerRect.h} ${lowerRect.x},${lowerRect.y + lowerRect.h}`,
+      fill: frontFill, stroke: 'var(--plm-edge)', 'stroke-width': 1.2
+    }));
+    if (side < -0.03) {
+      parent.appendChild(make('polygon', {
+        points: `${topRect.x + topRect.w},${topRect.y} ${topRect.x + topRect.w},${topRect.y + topRect.h} ${lowerRect.x + lowerRect.w},${lowerRect.y + lowerRect.h} ${lowerRect.x + lowerRect.w},${lowerRect.y}`,
+        fill: sideFill, stroke: 'var(--plm-edge)', 'stroke-width': 1.2
+      }));
+    } else if (side > 0.03) {
+      parent.appendChild(make('polygon', {
+        points: `${topRect.x},${topRect.y} ${topRect.x},${topRect.y + topRect.h} ${lowerRect.x},${lowerRect.y + lowerRect.h} ${lowerRect.x},${lowerRect.y}`,
+        fill: sideFill, stroke: 'var(--plm-edge)', 'stroke-width': 1.2
+      }));
+    }
+  };
+
+  const drawPlateau = (world, def) => {
+    const rect = { x: def.col * cellX, y: def.row * cellY, w: def.cols * cellX, h: def.rows * cellY };
+    const activeCut = cutHeight();
+    const isCut = activeCut !== null && activeCut >= 0 && def.height > activeCut;
+    const displayH = isCut ? activeCut : def.height;
+    const side = screenSide(rect.x + rect.w * 0.5);
+    const topRect = projectedRect(rect, displayH, side);
+    const lowerRect = projectedRect(rect, Math.max(0, displayH - 1), side);
+    const group = make('g');
+    if (displayH > 0 && !isCut) drawRaisedFaces(group, topRect, lowerRect, side);
+    const fill = isCut ? 'var(--plm-cut)' : `var(--plm-h${Math.min(4, def.height)})`;
+    drawGridSurface(group, topRect, fill, isCut ? `H${activeCut} 剖面` : `H${def.height} ${def.label || ''}`);
+    world.appendChild(group);
+  };
+
+  const drawBuilding = (world, bldg) => {
+    const base = { x: bldg.col * cellX, y: bldg.row * cellY, w: bldg.cols * cellX, h: bldg.rows * cellY };
+    const activeCut = cutHeight();
+    const isCut = activeCut !== null && activeCut >= 0 && activeCut < bldg.height;
+    const displayH = isCut ? activeCut : bldg.height;
+    const side = screenSide(base.x + base.w * 0.5);
+    const floorH = bldg.height / (bldg.floors || 2);
+    const visibleFloorH = activeCut === null ? bldg.height : Math.min(bldg.height, Math.floor(Math.max(0, activeCut) / floorH) * floorH);
+
+    const group = make('g');
+    const topRect = projectedRect(base, displayH, side);
+    const lowerRect = projectedRect(base, Math.max(0, displayH - 1), side);
+
+    if (displayH > 0 && !isCut) {
+      drawRaisedFaces(group, topRect, lowerRect, side, 'var(--plm-wall)', 'var(--plm-wall-side)');
+    }
+
+    const surfaceFill = isCut ? 'var(--plm-interior)' : 'var(--plm-roof)';
+    drawGridSurface(group, topRect, surfaceFill, `${bldg.label} ${isCut ? `(H${activeCut} 切面)` : ''}`);
+
+    // 繪製實體階梯
+    if (bldg.stairs && displayH > 0) {
+      bldg.stairs.forEach(st => {
+        if (st.height <= displayH) {
+          const stRect = projectedRect({ x: st.col * cellX, y: st.row * cellY, w: cellX, h: cellY }, st.height, side);
+          drawGridSurface(group, stRect, 'var(--plm-h2)', `梯 H${st.height}`);
+        }
+      });
+    }
+    world.appendChild(group);
+  };
+
+  const drawActor = (world, actor) => {
+    const activeCut = cutHeight();
+    if (activeCut !== null && actor.height > activeCut) return;
+    const worldX = (actor.col + 0.5) * cellX;
+    const side = screenSide(worldX);
+    const cx = worldX + side * actor.height * sideShift;
+    const cy = (actor.row + 0.5) * cellY - actor.height * rise;
+
+    const g = make('g');
+    g.appendChild(make('ellipse', { cx, cy: cy + 10, rx: 14, ry: 6, fill: 'var(--foreground)', opacity: 0.2 }));
+    g.appendChild(make('circle', { cx, cy: cy - 2, r: 12, fill: actor.color || 'var(--primary)', stroke: 'var(--foreground)', 'stroke-width': 1.4 }));
+    g.appendChild(make('text', { x: cx, y: cy + 2, fill: '#000', 'font-size': 10, 'font-weight': 'bold', 'text-anchor': 'middle' }, actor.label || 'A'));
+    world.appendChild(g);
+  };
+
+  const render = () => {
+    framePending = false;
+    viewportWidth = svg.clientWidth || 800;
+    while (svg.firstChild) svg.removeChild(svg.firstChild);
+
+    const defs = make('defs');
+    svg.appendChild(defs);
+
+    const world = make('g', { transform: `translate(${panX.toFixed(2)}, ${panY.toFixed(2)})` });
+
+    // 1. 地表 H0 底層
+    drawGridSurface(world, { x: 0, y: 0, w: worldWidth, h: worldHeight }, 'var(--plm-ground)', 'H0 地表面');
+
+    // 2. 高台與地形階梯 (Plateaus)
+    if (mapData.plateaus) mapData.plateaus.forEach(p => drawPlateau(world, p));
+
+    // 3. 建築與多樓層 (Buildings)
+    if (mapData.buildings) mapData.buildings.forEach(b => drawBuilding(world, b));
+
+    // 4. 角色與演員 (Actors)
+    if (mapData.actors) mapData.actors.forEach(a => drawActor(world, a));
+
+    svg.appendChild(world);
+
+    // 狀態更新
+    const centerCol = Math.round((-panX + viewportWidth * 0.5) / cellX);
+    const centerRow = Math.round((-panY + viewportHeight * 0.5) / cellY);
+    positionText.textContent = `中心格：${centerCol}, ${centerRow}`;
+    stateText.textContent = `顯示：${currentLayer === 'all' ? '全部高度' : 'H' + currentLayer} ｜ 32×32 原生 ｜ ${offsetMode === 'camera' ? '跟隨鏡頭' : '固定向右'} ｜ 高差比率：${heightGapRatio}`;
+  };
+
+  const requestRender = () => {
+    if (!framePending) {
+      framePending = true;
+      requestAnimationFrame(render);
+    }
+  };
+
+  // 事件綁定
+  layerButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      layerButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentLayer = btn.getAttribute('data-plm-layer');
+      requestRender();
+    });
+  });
+
+  modeButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      modeButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      offsetMode = btn.getAttribute('data-plm-mode');
+      requestRender();
+    });
+  });
+
+  heightGapButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      heightGapButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      heightGapRatio = parseFloat(btn.getAttribute('data-plm-height-gap'));
+      rise = cellX * heightGapRatio;
+      requestRender();
+    });
+  });
+
+  resetButton.addEventListener('click', () => {
+    panX = viewportWidth * 0.5 - worldWidth * 0.5;
+    panY = viewportHeight * 0.5 - worldHeight * 0.5;
+    requestRender();
+  });
+
+  svg.addEventListener('pointerdown', (e) => {
+    dragging = true;
+    svg.classList.add('is-dragging');
+    lastPointerX = e.clientX;
+    lastPointerY = e.clientY;
+  });
+
+  window.addEventListener('pointermove', (e) => {
+    if (!dragging) return;
+    panX += e.clientX - lastPointerX;
+    panY += e.clientY - lastPointerY;
+    lastPointerX = e.clientX;
+    lastPointerY = e.clientY;
+    requestRender();
+  });
+
+  window.addEventListener('pointerup', () => {
+    dragging = false;
+    svg.classList.remove('is-dragging');
+  });
+
+  window.addEventListener('resize', requestRender);
+  requestRender();
+})();
+</script>
+</body>
+</html>
