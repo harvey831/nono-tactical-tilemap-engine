@@ -93,7 +93,8 @@ class TestLayeredVillageArchitecture(unittest.TestCase):
             content = f.read()
 
         self.assertIn("data:image/png;base64,", content, "必須使用 Base64 內嵌貼圖")
-        self.assertIn("toggleLayer", content, "必須包含圖層切換控制邏輯")
+        self.assertIn("switchSemView", content, "必須包含語意圖層切換控制邏輯")
+        self.assertIn("openLightboxImage", content, "必須包含 800% Lightbox 放大功能")
         self.assertIn("ADR-0072", content, "必須註記 ADR-0072 合規")
 
     def test_05_authoring_overlay_and_preview_integrity(self):
