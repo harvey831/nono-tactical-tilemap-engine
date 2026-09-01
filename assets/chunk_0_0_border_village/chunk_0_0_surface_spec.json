@@ -1,0 +1,174 @@
+{
+  "chunk_id": "chunk_0_0_border_village",
+  "grid_size": [
+    40,
+    40
+  ],
+  "cell_size_px": 32,
+  "projection": {
+    "delta_y_per_elevation": 23.04,
+    "delta_x_per_elevation": 3.84
+  },
+  "surfaces": [
+    {
+      "surface_id": "surf_ground_h0",
+      "name": "Village Ground",
+      "elevation": 0,
+      "type": "TERRAIN_SURFACE",
+      "bounds": [
+        0,
+        0,
+        39,
+        39
+      ],
+      "default_ap_cost": 1,
+      "default_cover_rate": 0.0
+    },
+    {
+      "surface_id": "surf_tavern_1f",
+      "name": "Tavern Ground Floor",
+      "elevation": 0,
+      "type": "INTERIOR_FLOOR",
+      "bounds": [
+        4,
+        25,
+        11,
+        30
+      ],
+      "default_ap_cost": 1,
+      "default_cover_rate": 0.3
+    },
+    {
+      "surface_id": "surf_tavern_stairs_h1",
+      "name": "Tavern Stairs Step 1",
+      "elevation": 1,
+      "type": "STAIRS_PHYSICAL",
+      "cells": [
+        [
+          10,
+          29
+        ],
+        [
+          11,
+          29
+        ]
+      ],
+      "default_ap_cost": 2,
+      "traversal_edge": "BIDIRECTIONAL"
+    },
+    {
+      "surface_id": "surf_tavern_stairs_h2",
+      "name": "Tavern Stairs Step 2",
+      "elevation": 2,
+      "type": "STAIRS_PHYSICAL",
+      "cells": [
+        [
+          10,
+          28
+        ],
+        [
+          11,
+          28
+        ]
+      ],
+      "default_ap_cost": 2,
+      "traversal_edge": "BIDIRECTIONAL"
+    },
+    {
+      "surface_id": "surf_tavern_2f",
+      "name": "Tavern Second Floor",
+      "elevation": 3,
+      "type": "INTERIOR_FLOOR",
+      "bounds": [
+        4,
+        25,
+        11,
+        30
+      ],
+      "void_cells": [
+        [
+          10,
+          27
+        ],
+        [
+          11,
+          27
+        ],
+        [
+          10,
+          28
+        ],
+        [
+          11,
+          28
+        ],
+        [
+          10,
+          29
+        ],
+        [
+          11,
+          29
+        ]
+      ],
+      "default_ap_cost": 1,
+      "default_cover_rate": 0.4
+    }
+  ],
+  "blocking_edges": [
+    {
+      "type": "WALL_OUTER",
+      "from": [
+        4,
+        25
+      ],
+      "to": [
+        11,
+        25
+      ]
+    },
+    {
+      "type": "WALL_OUTER",
+      "from": [
+        4,
+        25
+      ],
+      "to": [
+        4,
+        30
+      ]
+    },
+    {
+      "type": "WALL_OUTER",
+      "from": [
+        11,
+        25
+      ],
+      "to": [
+        11,
+        30
+      ]
+    },
+    {
+      "type": "WALL_OUTER_WITH_DOOR",
+      "from": [
+        4,
+        30
+      ],
+      "to": [
+        11,
+        30
+      ],
+      "door_cells": [
+        [
+          7,
+          30
+        ],
+        [
+          8,
+          30
+        ]
+      ]
+    }
+  ]
+}

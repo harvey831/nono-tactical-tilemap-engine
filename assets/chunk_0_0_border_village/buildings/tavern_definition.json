@@ -1,0 +1,61 @@
+{
+  "building_id": "bldg_tavern_00",
+  "name": "Border Tavern (邊境大酒館)",
+  "footprint": {
+    "origin": [
+      4,
+      25
+    ],
+    "width": 8,
+    "height": 6
+  },
+  "storeys": [
+    {
+      "floor_index": 1,
+      "elevation": 0,
+      "surface_id": "surf_tavern_1f",
+      "sprite_file": "tavern_floor_1f.png",
+      "wall_thickness_cells": 1,
+      "doors": [
+        [
+          7,
+          30
+        ],
+        [
+          8,
+          30
+        ]
+      ]
+    },
+    {
+      "floor_index": "stairs",
+      "elevation_range": [
+        1,
+        2
+      ],
+      "surface_ids": [
+        "surf_tavern_stairs_h1",
+        "surf_tavern_stairs_h2"
+      ],
+      "sprite_file": "tavern_stairs_h1_h2.png"
+    },
+    {
+      "floor_index": 2,
+      "elevation": 3,
+      "surface_id": "surf_tavern_2f",
+      "sprite_file": "tavern_floor_2f.png",
+      "stair_void_rect": {
+        "x": 6,
+        "y": 2,
+        "w": 2,
+        "h": 3,
+        "over_extension_px": 69.1
+      }
+    }
+  ],
+  "roof": {
+    "elevation": 4,
+    "exterior_sprite": "tavern_exterior_roof.png",
+    "cut_cap_sprite": "tavern_roof_cut_cap.png"
+  }
+}
