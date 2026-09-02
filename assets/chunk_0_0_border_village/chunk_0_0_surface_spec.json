@@ -486,11 +486,6 @@
           "height": 1.65
         }
       ],
-      "textures": {
-        "floor_1f": "b64_tav_1f",
-        "floor_2f": "b64_tav_2f",
-        "roof": "b64_tav_rf"
-      },
       "stair": {
         "flightCells": [
           {
@@ -631,9 +626,6 @@
           "height": 1.65
         }
       ],
-      "textures": {
-        "roof": "b64_tower"
-      },
       "stair": {
         "flightCells": [
           {
@@ -814,9 +806,6 @@
           "height": 1.65
         }
       ],
-      "textures": {
-        "roof": "b64_smith_ext"
-      },
       "stair": null
     },
     {
@@ -957,9 +946,6 @@
           "height": 1.65
         }
       ],
-      "textures": {
-        "roof": "b64_merch_ext"
-      },
       "stair": null
     }
   ],
@@ -971,8 +957,7 @@
       "rows": 2,
       "height": 0,
       "label": "中央蓄水井",
-      "color": "#3b82f6",
-      "tex": "b64_well"
+      "color": "#3b82f6"
     },
     {
       "col": 27,
@@ -981,8 +966,7 @@
       "rows": 2,
       "height": 0,
       "label": "露天鍛造熔爐",
-      "color": "#f97316",
-      "tex": "b64_furnace"
+      "color": "#f97316"
     },
     {
       "col": 16,
