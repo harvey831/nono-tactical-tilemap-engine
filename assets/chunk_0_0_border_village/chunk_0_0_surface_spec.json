@@ -7,12 +7,14 @@
   "cell_size_px": 32,
   "projection": {
     "delta_y_per_elevation": 23.04,
-    "delta_x_per_elevation": 3.84
+    "delta_x_per_elevation": 3.84,
+    "rise_ratio": 0.72,
+    "side_shift_ratio": 0.12
   },
   "surfaces": [
     {
       "surface_id": "surf_ground_h0",
-      "name": "Village Ground",
+      "name": "Village Ground & Desert Sand",
       "elevation": 0,
       "type": "TERRAIN_SURFACE",
       "bounds": [
@@ -25,8 +27,38 @@
       "default_cover_rate": 0.0
     },
     {
+      "surface_id": "surf_road_h0",
+      "name": "Clay Thoroughfare & Main Plaza",
+      "elevation": 0,
+      "type": "ROAD_SURFACE",
+      "default_ap_cost": 1,
+      "default_cover_rate": 0.0
+    },
+    {
+      "surface_id": "surf_farm_h0",
+      "name": "Terraced Wheat Fields",
+      "elevation": 0,
+      "type": "FARM_SURFACE",
+      "bounds": [
+        24,
+        24,
+        37,
+        31
+      ],
+      "default_ap_cost": 1,
+      "default_cover_rate": 0.2
+    },
+    {
+      "surface_id": "surf_ditch_h0",
+      "name": "Irrigation Ditch System",
+      "elevation": 0,
+      "type": "DITCH_WATER",
+      "default_ap_cost": 2,
+      "default_cover_rate": 0.1
+    },
+    {
       "surface_id": "surf_tavern_1f",
-      "name": "Tavern Ground Floor",
+      "name": "Border Tavern Ground Floor",
       "elevation": 0,
       "type": "INTERIOR_FLOOR",
       "bounds": [
@@ -40,7 +72,7 @@
     },
     {
       "surface_id": "surf_tavern_stairs_h1",
-      "name": "Tavern Stairs Step 1",
+      "name": "Tavern Stairs Step 1 (Physical)",
       "elevation": 1,
       "type": "STAIRS_PHYSICAL",
       "cells": [
@@ -54,11 +86,12 @@
         ]
       ],
       "default_ap_cost": 2,
+      "default_cover_rate": 0.2,
       "traversal_edge": "BIDIRECTIONAL"
     },
     {
       "surface_id": "surf_tavern_stairs_h2",
-      "name": "Tavern Stairs Step 2",
+      "name": "Tavern Stairs Step 2 (Physical)",
       "elevation": 2,
       "type": "STAIRS_PHYSICAL",
       "cells": [
@@ -72,11 +105,12 @@
         ]
       ],
       "default_ap_cost": 2,
+      "default_cover_rate": 0.3,
       "traversal_edge": "BIDIRECTIONAL"
     },
     {
       "surface_id": "surf_tavern_2f",
-      "name": "Tavern Second Floor",
+      "name": "Tavern Second Floor (Guest Rooms)",
       "elevation": 3,
       "type": "INTERIOR_FLOOR",
       "bounds": [

@@ -37,7 +37,37 @@
         "surf_tavern_stairs_h1",
         "surf_tavern_stairs_h2"
       ],
-      "sprite_file": "tavern_stairs_h1_h2.png"
+      "sprite_file": "tavern_stairs_h1_h2.png",
+      "steps": [
+        {
+          "step": 1,
+          "elevation": 1,
+          "cells": [
+            [
+              10,
+              29
+            ],
+            [
+              11,
+              29
+            ]
+          ]
+        },
+        {
+          "step": 2,
+          "elevation": 2,
+          "cells": [
+            [
+              10,
+              28
+            ],
+            [
+              11,
+              28
+            ]
+          ]
+        }
+      ]
     },
     {
       "floor_index": 2,
@@ -45,11 +75,15 @@
       "surface_id": "surf_tavern_2f",
       "sprite_file": "tavern_floor_2f.png",
       "stair_void_rect": {
-        "x": 6,
-        "y": 2,
-        "w": 2,
-        "h": 3,
-        "over_extension_px": 69.1
+        "origin": [
+          10,
+          27
+        ],
+        "size_cells": [
+          2,
+          3
+        ],
+        "over_extension_px": 69.12
       }
     }
   ],
