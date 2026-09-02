@@ -4,6 +4,9 @@
     40,
     40
   ],
+  "grid_width": 40,
+  "grid_height": 40,
+  "cell_size": 32,
   "cell_size_px": 32,
   "projection": {
     "delta_y_per_elevation": 23.04,
@@ -149,60 +152,312 @@
       "default_cover_rate": 0.4
     }
   ],
-  "blocking_edges": [
+  "plateaus": [
     {
-      "type": "WALL_OUTER",
-      "from": [
-        4,
-        25
-      ],
-      "to": [
-        11,
-        25
-      ]
-    },
+      "col": 24,
+      "row": 24,
+      "cols": 13,
+      "rows": 8,
+      "height": 0,
+      "label": "東南梯形麥田 (H0 灌溉田壟)",
+      "color_type": "farm"
+    }
+  ],
+  "roads": [
     {
-      "type": "WALL_OUTER",
-      "from": [
-        4,
-        25
-      ],
-      "to": [
-        4,
-        30
-      ]
-    },
-    {
-      "type": "WALL_OUTER",
-      "from": [
-        11,
-        25
-      ],
-      "to": [
-        11,
-        30
-      ]
-    },
-    {
-      "type": "WALL_OUTER_WITH_DOOR",
-      "from": [
-        4,
-        30
-      ],
-      "to": [
-        11,
-        30
-      ],
-      "door_cells": [
+      "points": [
         [
-          7,
-          30
+          0,
+          23
         ],
         [
           8,
-          30
+          22
+        ],
+        [
+          15,
+          20
+        ],
+        [
+          22,
+          19
+        ],
+        [
+          30,
+          19
+        ],
+        [
+          39,
+          17
         ]
-      ]
+      ],
+      "width": 2,
+      "label": "村落泥土主幹道"
+    },
+    {
+      "points": [
+        [
+          22,
+          19
+        ],
+        [
+          21,
+          26
+        ],
+        [
+          20,
+          39
+        ]
+      ],
+      "width": 1,
+      "label": "南側通往農田小道"
+    },
+    {
+      "points": [
+        [
+          15,
+          20
+        ],
+        [
+          12,
+          14
+        ],
+        [
+          11,
+          8
+        ]
+      ],
+      "width": 1,
+      "label": "北側通往雜貨鋪小徑"
+    }
+  ],
+  "plaza": {
+    "center": [
+      22,
+      19
+    ],
+    "radius": 3,
+    "label": "中央石板生活廣場"
+  },
+  "ditches": [
+    {
+      "points": [
+        [
+          20,
+          18
+        ],
+        [
+          22,
+          21
+        ],
+        [
+          24,
+          24
+        ],
+        [
+          28,
+          27
+        ],
+        [
+          33,
+          30
+        ],
+        [
+          39,
+          33
+        ]
+      ],
+      "label": "連通灌溉水渠"
+    }
+  ],
+  "buildings": [
+    {
+      "building_id": "bldg_tavern",
+      "label": "邊境大酒館",
+      "col": 4,
+      "row": 25,
+      "cols": 8,
+      "rows": 6,
+      "height": 4,
+      "floors": 2,
+      "wall_ring_thickness": 1,
+      "doors": [
+        {
+          "col": 7,
+          "row": 30
+        },
+        {
+          "col": 8,
+          "row": 30
+        }
+      ],
+      "stairs": [
+        {
+          "step": 1,
+          "col": 10,
+          "row": 29,
+          "height": 1,
+          "label": "階梯第1階 (H1)"
+        },
+        {
+          "step": 2,
+          "col": 10,
+          "row": 28,
+          "height": 2,
+          "label": "階梯第2階 (H2)"
+        }
+      ],
+      "stair_void": {
+        "col": 10,
+        "row": 27,
+        "cols": 2,
+        "rows": 3,
+        "over_extension_px": 69.12
+      }
+    },
+    {
+      "building_id": "bldg_watchtower",
+      "label": "荒原守衛哨塔",
+      "col": 32,
+      "row": 4,
+      "cols": 4,
+      "rows": 5,
+      "height": 4,
+      "floors": 2,
+      "wall_ring_thickness": 1,
+      "doors": [
+        {
+          "col": 33,
+          "row": 8
+        }
+      ],
+      "stairs": [
+        {
+          "step": 1,
+          "col": 34,
+          "row": 7,
+          "height": 1,
+          "label": "哨塔梯1"
+        },
+        {
+          "step": 2,
+          "col": 34,
+          "row": 6,
+          "height": 2,
+          "label": "哨塔梯2"
+        }
+      ],
+      "stair_void": {
+        "col": 34,
+        "row": 5,
+        "cols": 1,
+        "rows": 3,
+        "over_extension_px": 69.12
+      }
+    },
+    {
+      "building_id": "bldg_blacksmith",
+      "label": "鐵匠工坊",
+      "col": 26,
+      "row": 24,
+      "cols": 6,
+      "rows": 5,
+      "height": 2,
+      "floors": 1,
+      "wall_ring_thickness": 1,
+      "doors": [
+        {
+          "col": 28,
+          "row": 28
+        }
+      ],
+      "stairs": []
+    },
+    {
+      "building_id": "bldg_merchant",
+      "label": "道具雜貨鋪",
+      "col": 13,
+      "row": 6,
+      "cols": 6,
+      "rows": 5,
+      "height": 2,
+      "floors": 1,
+      "wall_ring_thickness": 1,
+      "doors": [
+        {
+          "col": 15,
+          "row": 10
+        }
+      ],
+      "stairs": []
+    }
+  ],
+  "props": [
+    {
+      "col": 20,
+      "row": 18,
+      "cols": 2,
+      "rows": 2,
+      "height": 0,
+      "label": "中央蓄水井 (2x2)",
+      "color": "#3b82f6"
+    },
+    {
+      "col": 27,
+      "row": 6,
+      "cols": 2,
+      "rows": 2,
+      "height": 0,
+      "label": "露天鍛造熔爐 (2x2)",
+      "color": "#f97316"
+    },
+    {
+      "col": 16,
+      "row": 16,
+      "cols": 2,
+      "rows": 2,
+      "height": 0,
+      "label": "市集攤位 A",
+      "color": "#eab308"
+    },
+    {
+      "col": 24,
+      "row": 16,
+      "cols": 2,
+      "rows": 2,
+      "height": 0,
+      "label": "市集攤位 B",
+      "color": "#eab308"
+    }
+  ],
+  "actors": [
+    {
+      "col": 10,
+      "row": 29,
+      "height": 1,
+      "label": "Arya (階梯 H1)",
+      "color": "#38bdf8"
+    },
+    {
+      "col": 33,
+      "row": 5,
+      "height": 3,
+      "label": "哨兵 (高台 H3)",
+      "color": "#eab308"
+    },
+    {
+      "col": 28,
+      "row": 26,
+      "height": 0,
+      "label": "鐵匠 (1F H0)",
+      "color": "#f97316"
+    },
+    {
+      "col": 21,
+      "row": 19,
+      "height": 0,
+      "label": "村民 (廣場 H0)",
+      "color": "#22c55e"
     }
   ]
 }
