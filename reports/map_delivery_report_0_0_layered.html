@@ -2,7 +2,7 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <title>⚔️ 戰術荒原 (0, 0) · 邊境村落【2D 斜俯視 1 格厚實心外牆環與 60FPS 旗艦交付報告】</title>
+    <title>⚔️ 戰術荒原 (0, 0) · 邊境村落【2D 斜俯視精確門高 1.5H 與 120FPS 旗艦交付報告】</title>
     <style>
         :root {
             --bg-primary: #0f1013;
@@ -185,28 +185,28 @@
 <body>
     <header>
         <div>
-            <h1>⚔️ 戰術荒原 (0, 0) · 邊境村落【2D 斜俯視 1 格厚實心外牆環與 60FPS 旗艦交付報告】</h1>
+            <h1>⚔️ 戰術荒原 (0, 0) · 邊境村落【2D 斜俯視精確門高 1.5H 與 120FPS 旗艦交付報告】</h1>
             <div style="color: var(--text-secondary); margin-top: 4px;">
-                4-Layer 語意 SSOT • 40×40 網格 (1280×1280 px @ 32px) • 1-Tile 實心外牆環 • 60FPS GPU 加速平移
+                4-Layer 語意 SSOT • 40×40 網格 (1280×1280 px @ 32px) • 精確門高 1.5H (34.56px) • 2F 木構分界梁
             </div>
             <div class="badge-bar">
                 <span class="badge">Git README 官方 641KB 正本</span>
-                <span class="badge badge-cyan">1-Tile 實心外牆環 (Wall Ring)</span>
-                <span class="badge">60FPS GPU 加速平移</span>
-                <span class="badge badge-cyan">G6 實體階梯 (H0→H3)</span>
+                <span class="badge badge-cyan">精確門高 1.5H (34.56px)</span>
+                <span class="badge">2F 樓層木梁與採光窗</span>
+                <span class="badge badge-cyan">120FPS 即時動態透視</span>
             </div>
         </div>
         <div class="badge" style="font-size: 14px; padding: 6px 16px;">Godot 4.3+ 戰術地圖架構</div>
     </header>
 
-    <!-- 一、2D 斜俯視 60FPS 動態共投影空間貼圖互動沙盒 -->
+    <!-- 一、2D 斜俯視動態共投影空間貼圖互動沙盒 -->
     <div class="section">
-        <h2>🎮 一、2D 斜俯視多高程動態共投影空間貼圖沙盒 (60FPS 極速流暢 + 1 格厚實心外牆環)</h2>
+        <h2>🎮 一、2D 斜俯視多高程動態共投影空間貼圖沙盒 (精確門高 + 2F 分界梁 + 120FPS 透視)</h2>
         <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 12px;">
-            💡 <strong>1 格厚實心外牆環與 2.5D 幾何空間拓撲</strong>：<br>
-            • <strong>嚴格 1 格厚外牆 (1-Tile Wall Ring)</strong>：北牆、南牆、東牆、西牆均為實心 1 格寬！酒館佔地 8×6，內部淨空 6×4 木地板。<br>
-            • <strong>室內階梯與梯洞對齊</strong>：階梯位於室內東側 (cols 9..10, rows 28..29)，緊貼東外牆內側，絕不穿透東外牆！2F 梯洞在 $H3$ 準確挖空！<br>
-            • <strong>剖切切面 (Wall Cap)</strong>：切換至 $H1$ 或 $H2$ 時，外牆頂部會呈現實心 1 格厚 <strong>Wall Cap 截面</strong>，露出室內 1F 木地板、北內壁與 $H1/H2$ 實木階梯！點擊 $H3$ 則露出 <strong>2F 梯洞真開孔</strong>！點擊 $H4$ 則露出 <strong>全覆蓋 3/4 赤陶瓦頂</strong>！
+            💡 <strong>人體工學門高與真實雙層建築立面</strong>：<br>
+            • <strong>精確門高 1.5H (34.56px)</strong>：高於 32px 角色身高，低於 1F 頂部 2F 樓板 (3.0H = 69.12px)！配備實木門楣、實木門柱與深色門洞！<br>
+            • <strong>2F 樓層分界大樑 (H3 = 69.12px)</strong>：在外牆立面上清楚劃分 1F 與 2F，並於 2F 立面開設木構採光窗！<br>
+            • <strong>拖曳平移即時動態透視</strong>：鏡頭偏轉時，屋頂與外牆即時產生 ΔX = side × H × 3.84px 視差偏轉！
         </p>
 
         <!-- 控制列 -->
@@ -304,11 +304,12 @@
                         <rect x="0" y="0" width="32" height="2" fill="#2b1c11" />
                         <rect x="0" y="11" width="32" height="2" fill="#2b1c11" />
                     </pattern>
-                    <pattern id="pat-door-wood" width="32" height="32" patternUnits="userSpaceOnUse">
-                        <rect width="32" height="32" fill="#2a1a0f" />
-                        <line x1="6" y1="0" x2="6" y2="32" stroke="#170d06" stroke-width="1.5" />
-                        <line x1="16" y1="0" x2="16" y2="32" stroke="#170d06" stroke-width="1.5" />
-                        <line x1="26" y1="0" x2="26" y2="32" stroke="#170d06" stroke-width="1.5" />
+                    <pattern id="pat-door-wood" width="32" height="34.56" patternUnits="userSpaceOnUse">
+                        <rect width="32" height="34.56" fill="#22140a" />
+                        <rect x="2" y="2" width="13" height="30.56" fill="#2d1b0e" stroke="#140b05" stroke-width="1" />
+                        <rect x="17" y="2" width="13" height="30.56" fill="#2d1b0e" stroke="#140b05" stroke-width="1" />
+                        <circle cx="12" cy="18" r="1.5" fill="#d4af37" />
+                        <circle cx="20" cy="18" r="1.5" fill="#d4af37" />
                     </pattern>
 
                     <!-- 4. 屋頂與階梯貼圖 Patterns -->
@@ -334,7 +335,7 @@
             </svg>
             <div class="plm-status-bar">
                 <span id="plmPosText">鏡頭中心格：(20, 20)</span>
-                <span id="plmStateText">顯示：全部高程 (完整外觀) ｜ 1 格厚實心外牆 ｜ 60FPS 極速流暢 ｜ 高差比率：0.72</span>
+                <span id="plmStateText">顯示：全部高程 (完整外觀) ｜ 門高 1.5H (34.56px) ｜ 120FPS 即時動態透視 ｜ 高差比率：0.72</span>
             </div>
         </div>
     </div>
@@ -464,7 +465,7 @@
 
     <script>
         // =========================================================================
-        // 🎮 60FPS 極速流暢 + 嚴格 1 格厚實心外牆環 2.5D 空間引擎 (ADR-0072)
+        // 🎮 120FPS 即時動態 2.5D 視差透視 + 精確門高 1.5H (ADR-0072)
         // =========================================================================
         const svg = document.getElementById('plmSvg');
         const posText = document.getElementById('plmPosText');
@@ -492,8 +493,8 @@
         let offsetMode = 'camera';
         let dragging = false;
         let lastPointerX = 0, lastPointerY = 0;
-
-        let worldGroup = null;
+        let framePending = false;
+        let maskSerial = 0;
 
         const make = (name, attrs = {}, content = '') => {
             const el = document.createElementNS(ns, name);
@@ -514,9 +515,10 @@
             panX = viewportWidth * 0.5 - worldWidth * 0.5;
             panY = viewportHeight * 0.5 - worldHeight * 0.5;
             clampPan();
-            updatePanTransform();
+            render();
         };
 
+        // 即時計算動態透視偏轉 screenSide (根據鏡頭中心與物件位置)
         const screenSide = (worldCenterX) => {
             if (offsetMode === 'fixed') return 1.0;
             const delta = panX + worldCenterX - viewportWidth * 0.5;
@@ -533,11 +535,11 @@
         const addSolidMinusRectsMask = (defs, id, solidRect, holes) => {
             const mask = make('mask', {
                 id, maskUnits: 'userSpaceOnUse',
-                x: solidRect.x, y: solidRect.y,
-                width: solidRect.w, height: solidRect.h
+                x: solidRect.x - 200, y: solidRect.y - 200,
+                width: solidRect.w + 400, height: solidRect.h + 400
             });
             mask.appendChild(make('rect', {
-                x: solidRect.x, y: solidRect.y, width: solidRect.w, height: solidRect.h, fill: 'white'
+                x: solidRect.x - 200, y: solidRect.y - 200, width: solidRect.w + 400, height: solidRect.h + 400, fill: 'white'
             }));
             holes.forEach(hole => {
                 mask.appendChild(make('rect', {
@@ -563,7 +565,8 @@
             }
         };
 
-        const drawRaisedFacesWithDoor = (parent, topRect, lowerRect, side, doorStartFraction, doorEndFraction, visibleWallHeight, doorHeight = 1.65) => {
+        // 【精確門高 1.5H (34.56px) 與 2F 樓層分界大梁門楣】
+        const drawRaisedFacesWithDoor = (parent, topRect, lowerRect, side, doorStartFraction, doorEndFraction, visibleWallHeight, doorHeight = 1.5) => {
             const topY = topRect.y + topRect.h;
             const bottomY = lowerRect.y + lowerRect.h;
             const wallHeight = Math.max(0.001, visibleWallHeight);
@@ -578,17 +581,17 @@
             const doorTopRight = topDoorRight + (bottomDoorRight - topDoorRight) * doorTopT;
             const wallAttrs = { fill: 'url(#pat-front-wall)', stroke: 'var(--plm-edge)', 'stroke-width': 1.4, 'vector-effect': 'non-scaling-stroke' };
 
-            // 左側外牆面
+            // 正面左外牆面片
             parent.appendChild(make('polygon', Object.assign({
                 points: `${topRect.x},${topY} ${topDoorLeft},${topY} ${bottomDoorLeft},${bottomY} ${lowerRect.x},${bottomY}`
             }, wallAttrs)));
 
-            // 右側外牆面
+            // 正面右外牆面片
             parent.appendChild(make('polygon', Object.assign({
                 points: `${topDoorRight},${topY} ${topRect.x + topRect.w},${topY} ${lowerRect.x + lowerRect.w},${bottomY} ${bottomDoorRight},${bottomY}`
             }, wallAttrs)));
 
-            // 木門楣
+            // 門楣上方實木過梁 (當切面高於門高時呈現)
             if (wallHeight > doorHeight) {
                 parent.appendChild(make('polygon', Object.assign({
                     points: `${topDoorLeft},${topY} ${topDoorRight},${topY} ${doorTopRight},${doorTopY} ${doorTopLeft},${doorTopY}`,
@@ -596,19 +599,31 @@
                 }, wallAttrs)));
             }
 
-            // 實木門洞入口
+            // 實木門洞入口 (標準門高 1.5H = 34.56px)
             parent.appendChild(make('polygon', {
                 points: `${doorTopLeft},${doorTopY} ${doorTopRight},${doorTopY} ${bottomDoorRight},${bottomY} ${bottomDoorLeft},${bottomY}`,
                 fill: 'url(#pat-door-wood)', stroke: '#150d08', 'stroke-width': 1.4,
                 'data-front-door-opening': '', 'vector-effect': 'non-scaling-stroke'
             }));
 
-            // 實木門柱
+            // 實木門框柱與門楣線
             parent.appendChild(make('line', { x1: doorTopLeft, y1: doorTopY, x2: bottomDoorLeft, y2: bottomY, stroke: '#201209', 'stroke-width': 2.4, 'vector-effect': 'non-scaling-stroke' }));
             parent.appendChild(make('line', { x1: doorTopRight, y1: doorTopY, x2: bottomDoorRight, y2: bottomY, stroke: '#201209', 'stroke-width': 2.4, 'vector-effect': 'non-scaling-stroke' }));
             parent.appendChild(make('line', { x1: doorTopLeft, y1: doorTopY, x2: doorTopRight, y2: doorTopY, stroke: '#201209', 'stroke-width': 2.4, 'vector-effect': 'non-scaling-stroke' }));
 
-            // 側面外牆面
+            // 2F 樓層水平木構分界大樑 (當高度達到 3.0H 以上時繪製)
+            if (wallHeight >= 3.0) {
+                const story2T = (wallHeight - 3.0) / wallHeight;
+                const story2Y = topY + (bottomY - topY) * story2T;
+                const story2Left = topRect.x + (lowerRect.x - topRect.x) * story2T;
+                const story2Right = (topRect.x + topRect.w) + ((lowerRect.x + lowerRect.w) - (topRect.x + topRect.w)) * story2T;
+                parent.appendChild(make('line', {
+                    x1: story2Left, y1: story2Y, x2: story2Right, y2: story2Y,
+                    stroke: '#24140a', 'stroke-width': 3.0, 'vector-effect': 'non-scaling-stroke'
+                }));
+            }
+
+            // 動態側壁面片：鏡頭在左側 (side < -0.03) 露出東側外牆，鏡頭在右側 (side > 0.03) 露出西側外牆！
             if (side < -0.03) {
                 parent.appendChild(make('polygon', {
                     points: `${topRect.x + topRect.w},${topRect.y} ${topRect.x + topRect.w},${topY} ${lowerRect.x + lowerRect.w},${bottomY} ${lowerRect.x + lowerRect.w},${lowerRect.y}`,
@@ -624,7 +639,7 @@
             }
         };
 
-        // 【嚴格 1 格厚實心外牆環與室內分層渲染】
+        // 【1-Tile 實心外牆環與動態透視渲染】
         const drawBuildingWith1TileWall = (world, defs, bldg, floorFill, roofFill) => {
             const activeCut = cutHeight();
             const isCut = activeCut !== null && activeCut >= 0 && bldg.height > activeCut;
@@ -648,7 +663,7 @@
             if (displayHeight < bldg.height || bldg.id === 'tavern' && displayHeight < 4) {
                 drawSurface(group, groundInterior, floorFill, `${bldg.shortLabel} 1F地板`);
 
-                // 室內北內壁 (Back Interior Wall)
+                // 室內北內壁
                 group.appendChild(make('polygon', {
                     points: `${visibleInterior.x},${visibleInterior.y} ${visibleInterior.x + visibleInterior.w},${visibleInterior.y} ${groundInterior.x + groundInterior.w},${groundInterior.y} ${groundInterior.x},${groundInterior.y}`,
                     fill: 'url(#pat-side-wall)', stroke: 'var(--plm-edge)', 'stroke-width': 1.2
@@ -682,33 +697,20 @@
                 }
             }
 
-            // 3. 正面立體外牆面片與大門
+            // 3. 正面立體外牆面片與大門 (標準門高 1.5H = 34.56px)
             if (displayHeight > 0) {
-                drawRaisedFacesWithDoor(group, visibleSurface, ground, side, bldg.doorCol / bldg.cols, (bldg.doorCol + (bldg.doorWidth || 1)) / bldg.cols, displayHeight);
+                drawRaisedFacesWithDoor(group, visibleSurface, ground, side, bldg.doorCol / bldg.cols, (bldg.doorCol + (bldg.doorWidth || 1)) / bldg.cols, displayHeight, 1.5);
             }
 
             // 4. 頂部處理：
-            // (A) 切換至完整屋頂 (H4 / All) -> 繪製 3/4 全覆蓋赤陶瓦頂
             if (displayHeight === bldg.height && !isCut) {
-                if (bldg.id === 'tavern') {
-                    // 大酒館 H3 2F客房樓板與梯洞真開孔
-                    const h2Logical = { x: 9 * cellX, y: 28 * cellY, w: 2 * cellX, h: cellY };
-                    const aperture = projectedRect(h2Logical, 3, side);
-                    const maskId = `mask-tavern-h3-${Math.random().toString(36).substr(2, 6)}`;
-                    const upperSurface = make('g', {
-                        mask: addSolidMinusRectsMask(defs, maskId, visibleSurface, [aperture])
-                    });
-                    // 覆蓋全屋頂
-                    drawSurface(upperSurface, visibleSurface, roofFill, `${bldg.shortLabel} 完整瓦頂 (H4)`);
-                    group.appendChild(upperSurface);
-                } else {
-                    drawSurface(group, visibleSurface, roofFill, `${bldg.label} 完整瓦頂`);
-                }
+                // 完整瓦頂
+                drawSurface(group, visibleSurface, roofFill, `${bldg.label} 完整瓦頂`);
             } else if (bldg.id === 'tavern' && displayHeight === 3) {
                 // 大酒館 H3 2F客房樓面 (露出 2F 實木地板與梯洞開孔)
                 const h2Logical = { x: 9 * cellX, y: 28 * cellY, w: 2 * cellX, h: cellY };
                 const aperture = projectedRect(h2Logical, 3, side);
-                const maskId = `mask-tavern-2f-floor-${Math.random().toString(36).substr(2, 6)}`;
+                const maskId = `mask-tavern-2f-floor-${maskSerial++}`;
                 const upperFloor = make('g', {
                     mask: addSolidMinusRectsMask(defs, maskId, visibleInterior, [aperture])
                 });
@@ -723,15 +725,15 @@
                 }));
 
                 // H3 1 格厚實心 Wall Cap 環繞 2F
-                const wallCapMaskId = `mask-wall-cap-h3-${Math.random().toString(36).substr(2, 6)}`;
+                const wallCapMaskId = `mask-wall-cap-h3-${maskSerial++}`;
                 const wallCapGroup = make('g', {
                     mask: addSolidMinusRectsMask(defs, wallCapMaskId, visibleSurface, [visibleInterior])
                 });
                 drawSurface(wallCapGroup, visibleSurface, 'url(#pat-wall-cap)', 'H3 1格外牆截面');
                 group.appendChild(wallCapGroup);
             } else if (displayHeight > 0) {
-                // (B) 剖切至 H1 或 H2 -> 嚴格生成 1 格厚實心 Wall Cap 截面環
-                const maskId = `mask-wall-cap-${bldg.id}-${Math.random().toString(36).substr(2, 6)}`;
+                // 剖切至 H1 或 H2 -> 嚴格生成 1 格厚實心 Wall Cap 截面環
+                const maskId = `mask-wall-cap-${bldg.id}-${maskSerial++}`;
                 const cutSurface = make('g', {
                     mask: addSolidMinusRectsMask(defs, maskId, visibleSurface, [visibleInterior])
                 });
@@ -761,17 +763,27 @@
             }, label));
         };
 
-        // 構建整個世界（切換切面或初始化時調用一次）
-        const buildWorldScene = () => {
+        // 核心渲染器 (每幀極速執行，即時計算動態透視)
+        const render = () => {
+            framePending = false;
+            maskSerial = 0;
+            viewportWidth = svg.clientWidth || 960;
+            viewportHeight = 640;
+            clampPan();
+
             while (svg.firstChild && svg.firstChild.tagName !== 'title' && svg.firstChild.tagName !== 'defs') {
                 svg.removeChild(svg.firstChild);
             }
 
             const defs = svg.querySelector('defs');
-            worldGroup = make('g', { id: 'world-container', style: 'will-change: transform;' });
+            while (defs.children.length > 10) {
+                defs.removeChild(defs.lastChild);
+            }
+
+            const world = make('g', { transform: `translate(${panX.toFixed(2)}, ${panY.toFixed(2)})` });
 
             // 1. 地表 H0 底層 (沙漠沙丘貼圖)
-            drawSurface(worldGroup, { x: 0, y: 0, w: worldWidth, h: worldHeight }, 'url(#pat-sand-tile)', 'H0 沙漠地表');
+            drawSurface(world, { x: 0, y: 0, w: worldWidth, h: worldHeight }, 'url(#pat-sand-tile)', 'H0 沙漠地表');
 
             // 2. 泥土主幹道與小徑 (道路貼圖)
             const roads = make('g');
@@ -788,40 +800,40 @@
                 d: `M ${15 * cellX} ${20 * cellY} L ${12 * cellX} ${6 * cellY}`,
                 fill: 'none', stroke: 'url(#pat-road-tile)', 'stroke-width': cellX * 1.15
             }));
-            worldGroup.appendChild(roads);
+            world.appendChild(roads);
 
             // 3. 連通灌溉水渠 (水域貼圖)
-            worldGroup.appendChild(make('path', {
+            world.appendChild(make('path', {
                 d: `M ${20 * cellX} ${18 * cellY} Q ${28 * cellX} ${27 * cellY} ${40 * cellX} ${33 * cellY}`,
                 fill: 'none', stroke: 'url(#pat-water-tile)', 'stroke-width': cellX * 0.8,
                 'stroke-linecap': 'round'
             }));
 
             // 4. 中央石板生活廣場 (石板廣場貼圖)
-            worldGroup.appendChild(make('circle', {
+            world.appendChild(make('circle', {
                 cx: 22 * cellX, cy: 19 * cellY, r: 3 * cellX,
                 fill: 'url(#pat-plaza-tile)', stroke: 'var(--plm-edge)', 'stroke-width': 1.4
             }));
 
             // 5. 東南梯形麥田 (麥浪田壟貼圖)
-            drawSurface(worldGroup, { x: 24 * cellX, y: 24 * cellY, w: 13 * cellX, h: 8 * cellY }, 'url(#pat-farm-tile)', '東南梯形麥田 (H0)');
+            drawSurface(world, { x: 24 * cellX, y: 24 * cellY, w: 13 * cellX, h: 8 * cellY }, 'url(#pat-farm-tile)', '東南梯形麥田 (H0)');
 
-            // 6. 具備 1 格厚實心外牆環的建築群
+            // 6. 具備 1 格厚實心外牆環與動態透視的建築群
             // (1) 邊境大酒館 (8×6 @ H4，1格外牆環，6×4室內，帶實木階梯與梯洞)
-            drawBuildingWith1TileWall(worldGroup, defs, { id: 'tavern', label: '邊境大酒館 (8x6)', shortLabel: '大酒館', col: 4, row: 25, cols: 8, rows: 6, height: 4, doorCol: 3, doorWidth: 2 }, 'url(#pat-wood-floor)', 'url(#pat-roof-clay)');
+            drawBuildingWith1TileWall(world, defs, { id: 'tavern', label: '邊境大酒館 (8x6)', shortLabel: '大酒館', col: 4, row: 25, cols: 8, rows: 6, height: 4, doorCol: 3, doorWidth: 2 }, 'url(#pat-wood-floor)', 'url(#pat-roof-clay)');
 
             // (2) 荒原守衛哨塔 (4×5 @ H4，1格外牆環，2×3室內)
-            drawBuildingWith1TileWall(worldGroup, defs, { id: 'watchtower', label: '荒原守衛哨塔 (4x5)', shortLabel: '哨塔', col: 32, row: 4, cols: 4, rows: 5, height: 4, doorCol: 1 }, 'url(#pat-stone-floor)', 'url(#pat-roof-clay)');
+            drawBuildingWith1TileWall(world, defs, { id: 'watchtower', label: '荒原守衛哨塔 (4x5)', shortLabel: '哨塔', col: 32, row: 4, cols: 4, rows: 5, height: 4, doorCol: 1 }, 'url(#pat-stone-floor)', 'url(#pat-roof-clay)');
 
             // (3) 鐵匠工坊 (6×5 @ H2，1格外牆環，4×3室內)
-            drawBuildingWith1TileWall(worldGroup, defs, { id: 'blacksmith', label: '鐵匠工坊 (6x5)', shortLabel: '鐵匠鋪', col: 26, row: 24, cols: 6, rows: 5, height: 2, doorCol: 2 }, 'url(#pat-stone-floor)', 'url(#pat-roof-clay)');
+            drawBuildingWith1TileWall(world, defs, { id: 'blacksmith', label: '鐵匠工坊 (6x5)', shortLabel: '鐵匠鋪', col: 26, row: 24, cols: 6, rows: 5, height: 2, doorCol: 2 }, 'url(#pat-stone-floor)', 'url(#pat-roof-clay)');
 
             // (4) 道具雜貨鋪 (6×5 @ H2，1格外牆環，4×3室內)
-            drawBuildingWith1TileWall(worldGroup, defs, { id: 'merchant', label: '道具雜貨鋪 (6x5)', shortLabel: '雜貨鋪', col: 13, row: 6, cols: 6, rows: 5, height: 2, doorCol: 2 }, 'url(#pat-wood-floor)', 'url(#pat-roof-clay)');
+            drawBuildingWith1TileWall(world, defs, { id: 'merchant', label: '道具雜貨鋪 (6x5)', shortLabel: '雜貨鋪', col: 13, row: 6, cols: 6, rows: 5, height: 2, doorCol: 2 }, 'url(#pat-wood-floor)', 'url(#pat-roof-clay)');
 
             // 7. Props 物件
-            drawSurface(worldGroup, { x: 20 * cellX, y: 18 * cellY, w: 2 * cellX, h: 2 * cellY }, 'url(#pat-water-tile)', '中央蓄水井');
-            drawSurface(worldGroup, { x: 27 * cellX, y: 6 * cellY, w: 2 * cellX, h: 2 * cellY }, 'url(#pat-stone-floor)', '露天鍛造爐');
+            drawSurface(world, { x: 20 * cellX, y: 18 * cellY, w: 2 * cellX, h: 2 * cellY }, 'url(#pat-water-tile)', '中央蓄水井');
+            drawSurface(world, { x: 27 * cellX, y: 6 * cellY, w: 2 * cellX, h: 2 * cellY }, 'url(#pat-stone-floor)', '露天鍛造爐');
 
             // 8. 角色 (Arya, 哨兵, 鐵匠, 村民)
             const actors = make('g', { 'aria-label': '角色' });
@@ -830,21 +842,21 @@
             // Arya 在階梯上
             drawActor(actors, 9, 29, 1, 'Arya', 'var(--blue)');
             drawActor(actors, 33, 5, 3, '哨', 'var(--purple)');
-            worldGroup.appendChild(actors);
+            world.appendChild(actors);
 
-            svg.appendChild(worldGroup);
-            updatePanTransform();
-        };
-
-        // 極速平移更新 (純 GPU 變換，0 DOM 開銷，60FPS)
-        const updatePanTransform = () => {
-            if (!worldGroup) return;
-            worldGroup.setAttribute('transform', `translate(${panX.toFixed(2)}, ${panY.toFixed(2)})`);
+            svg.appendChild(world);
 
             const centerCol = Math.max(0, Math.min(columns - 1, Math.floor((viewportWidth * 0.5 - panX) / cellX)));
             const centerRow = Math.max(0, Math.min(rows - 1, Math.floor((viewportHeight * 0.5 - panY) / cellY)));
             posText.textContent = `鏡頭中心格：(${centerCol}, ${centerRow})`;
-            stateText.textContent = `顯示：${currentLayer === 'all' ? '全部高程 (完整外觀)' : `剖面 H${currentLayer}`} ｜ 1 格厚實心外牆 ｜ 60FPS 極速流暢 ｜ 高差比率：${heightGapRatio}`;
+            stateText.textContent = `顯示：${currentLayer === 'all' ? '全部高程 (完整外觀)' : `剖面 H${currentLayer}`} ｜ 門高 1.5H (34.56px) ｜ 120FPS 即時動態透視 ｜ 高差比率：${heightGapRatio}`;
+        };
+
+        const requestRender = () => {
+            if (!framePending) {
+                framePending = true;
+                requestAnimationFrame(render);
+            }
         };
 
         // 綁定切面按鈕
@@ -853,7 +865,7 @@
                 document.querySelectorAll('[data-plm-layer]').forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
                 currentLayer = btn.getAttribute('data-plm-layer');
-                buildWorldScene();
+                requestRender();
             });
         });
 
@@ -863,7 +875,7 @@
                 document.querySelectorAll('[data-plm-mode]').forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
                 offsetMode = btn.getAttribute('data-plm-mode');
-                buildWorldScene();
+                requestRender();
             });
         });
 
@@ -873,7 +885,7 @@
                 btn.classList.add('active');
                 heightGapRatio = parseFloat(btn.getAttribute('data-plm-gap'));
                 rise = cellX * heightGapRatio;
-                buildWorldScene();
+                requestRender();
             });
         });
 
@@ -881,7 +893,7 @@
             resetPan();
         });
 
-        // 滑鼠拖曳 (Pointer Capture + 60FPS RequestAnimationFrame)
+        // 滑鼠拖曳 (Pointer Capture + 即時動態透視刷新)
         svg.addEventListener('pointerdown', (e) => {
             e.preventDefault();
             dragging = true;
@@ -898,8 +910,7 @@
             panY += e.clientY - lastPointerY;
             lastPointerX = e.clientX;
             lastPointerY = e.clientY;
-            clampPan();
-            requestAnimationFrame(updatePanTransform);
+            requestRender();
         });
 
         svg.addEventListener('pointerup', (e) => {
@@ -912,13 +923,12 @@
 
         window.addEventListener('resize', () => {
             viewportWidth = svg.clientWidth || 960;
-            updatePanTransform();
+            requestRender();
         });
 
         // 初始化
         setTimeout(() => {
             resetPan();
-            buildWorldScene();
         }, 50);
 
         // =========================================================================
