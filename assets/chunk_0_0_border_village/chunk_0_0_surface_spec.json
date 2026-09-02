@@ -272,124 +272,695 @@
   ],
   "buildings": [
     {
-      "building_id": "bldg_tavern",
+      "id": "bldg_tavern",
       "label": "邊境大酒館",
       "col": 4,
       "row": 25,
       "cols": 8,
       "rows": 6,
-      "height": 4,
-      "floors": 2,
-      "wall_ring_thickness": 1,
-      "doors": [
+      "cells": [
+        {
+          "col": 0,
+          "row": 0
+        },
+        {
+          "col": 1,
+          "row": 0
+        },
+        {
+          "col": 2,
+          "row": 0
+        },
+        {
+          "col": 3,
+          "row": 0
+        },
+        {
+          "col": 4,
+          "row": 0
+        },
+        {
+          "col": 5,
+          "row": 0
+        },
+        {
+          "col": 6,
+          "row": 0
+        },
         {
           "col": 7,
-          "row": 30
+          "row": 0
         },
         {
-          "col": 8,
-          "row": 30
-        }
-      ],
-      "stairs": [
-        {
-          "step": 1,
-          "col": 10,
-          "row": 29,
-          "height": 1,
-          "label": "階梯第1階 (H1)"
+          "col": 0,
+          "row": 1
         },
         {
-          "step": 2,
-          "col": 10,
-          "row": 28,
-          "height": 2,
-          "label": "階梯第2階 (H2)"
+          "col": 1,
+          "row": 1
+        },
+        {
+          "col": 2,
+          "row": 1
+        },
+        {
+          "col": 3,
+          "row": 1
+        },
+        {
+          "col": 4,
+          "row": 1
+        },
+        {
+          "col": 5,
+          "row": 1
+        },
+        {
+          "col": 6,
+          "row": 1
+        },
+        {
+          "col": 7,
+          "row": 1
+        },
+        {
+          "col": 0,
+          "row": 2
+        },
+        {
+          "col": 1,
+          "row": 2
+        },
+        {
+          "col": 2,
+          "row": 2
+        },
+        {
+          "col": 3,
+          "row": 2
+        },
+        {
+          "col": 4,
+          "row": 2
+        },
+        {
+          "col": 5,
+          "row": 2
+        },
+        {
+          "col": 6,
+          "row": 2
+        },
+        {
+          "col": 7,
+          "row": 2
+        },
+        {
+          "col": 0,
+          "row": 3
+        },
+        {
+          "col": 1,
+          "row": 3
+        },
+        {
+          "col": 2,
+          "row": 3
+        },
+        {
+          "col": 3,
+          "row": 3
+        },
+        {
+          "col": 4,
+          "row": 3
+        },
+        {
+          "col": 5,
+          "row": 3
+        },
+        {
+          "col": 6,
+          "row": 3
+        },
+        {
+          "col": 7,
+          "row": 3
+        },
+        {
+          "col": 0,
+          "row": 4
+        },
+        {
+          "col": 1,
+          "row": 4
+        },
+        {
+          "col": 2,
+          "row": 4
+        },
+        {
+          "col": 3,
+          "row": 4
+        },
+        {
+          "col": 4,
+          "row": 4
+        },
+        {
+          "col": 5,
+          "row": 4
+        },
+        {
+          "col": 6,
+          "row": 4
+        },
+        {
+          "col": 7,
+          "row": 4
+        },
+        {
+          "col": 0,
+          "row": 5
+        },
+        {
+          "col": 1,
+          "row": 5
+        },
+        {
+          "col": 2,
+          "row": 5
+        },
+        {
+          "col": 3,
+          "row": 5
+        },
+        {
+          "col": 4,
+          "row": 5
+        },
+        {
+          "col": 5,
+          "row": 5
+        },
+        {
+          "col": 6,
+          "row": 5
+        },
+        {
+          "col": 7,
+          "row": 5
         }
       ],
-      "stair_void": {
-        "col": 10,
-        "row": 27,
-        "cols": 2,
-        "rows": 3,
-        "over_extension_px": 69.12
+      "height": 4,
+      "floors": 2,
+      "doors": [
+        {
+          "col": 3,
+          "row": 5,
+          "height": 1.65
+        },
+        {
+          "col": 4,
+          "row": 5,
+          "height": 1.65
+        }
+      ],
+      "textures": {
+        "floor_1f": "b64_tav_1f",
+        "floor_2f": "b64_tav_2f",
+        "roof": "b64_tav_rf"
+      },
+      "stair": {
+        "flightCells": [
+          {
+            "col": 6,
+            "row": 4,
+            "stepOffset": 1
+          },
+          {
+            "col": 6,
+            "row": 3,
+            "stepOffset": 2
+          }
+        ],
+        "openingCells": [
+          {
+            "col": 6,
+            "row": 2
+          },
+          {
+            "col": 7,
+            "row": 2
+          },
+          {
+            "col": 6,
+            "row": 3
+          },
+          {
+            "col": 7,
+            "row": 3
+          },
+          {
+            "col": 6,
+            "row": 4
+          },
+          {
+            "col": 7,
+            "row": 4
+          }
+        ],
+        "width": 2
       }
     },
     {
-      "building_id": "bldg_watchtower",
+      "id": "bldg_watchtower",
       "label": "荒原守衛哨塔",
       "col": 32,
       "row": 4,
       "cols": 4,
       "rows": 5,
-      "height": 4,
-      "floors": 2,
-      "wall_ring_thickness": 1,
-      "doors": [
+      "cells": [
         {
-          "col": 33,
-          "row": 8
-        }
-      ],
-      "stairs": [
-        {
-          "step": 1,
-          "col": 34,
-          "row": 7,
-          "height": 1,
-          "label": "哨塔梯1"
+          "col": 0,
+          "row": 0
         },
         {
-          "step": 2,
-          "col": 34,
-          "row": 6,
-          "height": 2,
-          "label": "哨塔梯2"
+          "col": 1,
+          "row": 0
+        },
+        {
+          "col": 2,
+          "row": 0
+        },
+        {
+          "col": 3,
+          "row": 0
+        },
+        {
+          "col": 0,
+          "row": 1
+        },
+        {
+          "col": 1,
+          "row": 1
+        },
+        {
+          "col": 2,
+          "row": 1
+        },
+        {
+          "col": 3,
+          "row": 1
+        },
+        {
+          "col": 0,
+          "row": 2
+        },
+        {
+          "col": 1,
+          "row": 2
+        },
+        {
+          "col": 2,
+          "row": 2
+        },
+        {
+          "col": 3,
+          "row": 2
+        },
+        {
+          "col": 0,
+          "row": 3
+        },
+        {
+          "col": 1,
+          "row": 3
+        },
+        {
+          "col": 2,
+          "row": 3
+        },
+        {
+          "col": 3,
+          "row": 3
+        },
+        {
+          "col": 0,
+          "row": 4
+        },
+        {
+          "col": 1,
+          "row": 4
+        },
+        {
+          "col": 2,
+          "row": 4
+        },
+        {
+          "col": 3,
+          "row": 4
         }
       ],
-      "stair_void": {
-        "col": 34,
-        "row": 5,
-        "cols": 1,
-        "rows": 3,
-        "over_extension_px": 69.12
+      "height": 4,
+      "floors": 2,
+      "doors": [
+        {
+          "col": 1,
+          "row": 4,
+          "height": 1.65
+        }
+      ],
+      "textures": {
+        "roof": "b64_tower"
+      },
+      "stair": {
+        "flightCells": [
+          {
+            "col": 2,
+            "row": 3,
+            "stepOffset": 1
+          },
+          {
+            "col": 2,
+            "row": 2,
+            "stepOffset": 2
+          }
+        ],
+        "openingCells": [
+          {
+            "col": 2,
+            "row": 1
+          },
+          {
+            "col": 3,
+            "row": 1
+          },
+          {
+            "col": 2,
+            "row": 2
+          },
+          {
+            "col": 3,
+            "row": 2
+          },
+          {
+            "col": 2,
+            "row": 3
+          },
+          {
+            "col": 3,
+            "row": 3
+          }
+        ],
+        "width": 1
       }
     },
     {
-      "building_id": "bldg_blacksmith",
+      "id": "bldg_blacksmith",
       "label": "鐵匠工坊",
       "col": 26,
       "row": 24,
       "cols": 6,
       "rows": 5,
-      "height": 2,
-      "floors": 1,
-      "wall_ring_thickness": 1,
-      "doors": [
+      "cells": [
         {
-          "col": 28,
-          "row": 28
+          "col": 0,
+          "row": 0
+        },
+        {
+          "col": 1,
+          "row": 0
+        },
+        {
+          "col": 2,
+          "row": 0
+        },
+        {
+          "col": 3,
+          "row": 0
+        },
+        {
+          "col": 4,
+          "row": 0
+        },
+        {
+          "col": 5,
+          "row": 0
+        },
+        {
+          "col": 0,
+          "row": 1
+        },
+        {
+          "col": 1,
+          "row": 1
+        },
+        {
+          "col": 2,
+          "row": 1
+        },
+        {
+          "col": 3,
+          "row": 1
+        },
+        {
+          "col": 4,
+          "row": 1
+        },
+        {
+          "col": 5,
+          "row": 1
+        },
+        {
+          "col": 0,
+          "row": 2
+        },
+        {
+          "col": 1,
+          "row": 2
+        },
+        {
+          "col": 2,
+          "row": 2
+        },
+        {
+          "col": 3,
+          "row": 2
+        },
+        {
+          "col": 4,
+          "row": 2
+        },
+        {
+          "col": 5,
+          "row": 2
+        },
+        {
+          "col": 0,
+          "row": 3
+        },
+        {
+          "col": 1,
+          "row": 3
+        },
+        {
+          "col": 2,
+          "row": 3
+        },
+        {
+          "col": 3,
+          "row": 3
+        },
+        {
+          "col": 4,
+          "row": 3
+        },
+        {
+          "col": 5,
+          "row": 3
+        },
+        {
+          "col": 0,
+          "row": 4
+        },
+        {
+          "col": 1,
+          "row": 4
+        },
+        {
+          "col": 2,
+          "row": 4
+        },
+        {
+          "col": 3,
+          "row": 4
+        },
+        {
+          "col": 4,
+          "row": 4
+        },
+        {
+          "col": 5,
+          "row": 4
         }
       ],
-      "stairs": []
+      "height": 2,
+      "floors": 1,
+      "doors": [
+        {
+          "col": 2,
+          "row": 4,
+          "height": 1.65
+        }
+      ],
+      "textures": {
+        "roof": "b64_smith_ext"
+      },
+      "stair": null
     },
     {
-      "building_id": "bldg_merchant",
+      "id": "bldg_merchant",
       "label": "道具雜貨鋪",
       "col": 13,
       "row": 6,
       "cols": 6,
       "rows": 5,
-      "height": 2,
-      "floors": 1,
-      "wall_ring_thickness": 1,
-      "doors": [
+      "cells": [
         {
-          "col": 15,
-          "row": 10
+          "col": 0,
+          "row": 0
+        },
+        {
+          "col": 1,
+          "row": 0
+        },
+        {
+          "col": 2,
+          "row": 0
+        },
+        {
+          "col": 3,
+          "row": 0
+        },
+        {
+          "col": 4,
+          "row": 0
+        },
+        {
+          "col": 5,
+          "row": 0
+        },
+        {
+          "col": 0,
+          "row": 1
+        },
+        {
+          "col": 1,
+          "row": 1
+        },
+        {
+          "col": 2,
+          "row": 1
+        },
+        {
+          "col": 3,
+          "row": 1
+        },
+        {
+          "col": 4,
+          "row": 1
+        },
+        {
+          "col": 5,
+          "row": 1
+        },
+        {
+          "col": 0,
+          "row": 2
+        },
+        {
+          "col": 1,
+          "row": 2
+        },
+        {
+          "col": 2,
+          "row": 2
+        },
+        {
+          "col": 3,
+          "row": 2
+        },
+        {
+          "col": 4,
+          "row": 2
+        },
+        {
+          "col": 5,
+          "row": 2
+        },
+        {
+          "col": 0,
+          "row": 3
+        },
+        {
+          "col": 1,
+          "row": 3
+        },
+        {
+          "col": 2,
+          "row": 3
+        },
+        {
+          "col": 3,
+          "row": 3
+        },
+        {
+          "col": 4,
+          "row": 3
+        },
+        {
+          "col": 5,
+          "row": 3
+        },
+        {
+          "col": 0,
+          "row": 4
+        },
+        {
+          "col": 1,
+          "row": 4
+        },
+        {
+          "col": 2,
+          "row": 4
+        },
+        {
+          "col": 3,
+          "row": 4
+        },
+        {
+          "col": 4,
+          "row": 4
+        },
+        {
+          "col": 5,
+          "row": 4
         }
       ],
-      "stairs": []
+      "height": 2,
+      "floors": 1,
+      "doors": [
+        {
+          "col": 2,
+          "row": 4,
+          "height": 1.65
+        }
+      ],
+      "textures": {
+        "roof": "b64_merch_ext"
+      },
+      "stair": null
     }
   ],
   "props": [
@@ -399,8 +970,9 @@
       "cols": 2,
       "rows": 2,
       "height": 0,
-      "label": "中央蓄水井 (2x2)",
-      "color": "#3b82f6"
+      "label": "中央蓄水井",
+      "color": "#3b82f6",
+      "tex": "b64_well"
     },
     {
       "col": 27,
@@ -408,8 +980,9 @@
       "cols": 2,
       "rows": 2,
       "height": 0,
-      "label": "露天鍛造熔爐 (2x2)",
-      "color": "#f97316"
+      "label": "露天鍛造熔爐",
+      "color": "#f97316",
+      "tex": "b64_furnace"
     },
     {
       "col": 16,
