@@ -1,15 +1,18 @@
 """
 build_authoritative_village_interactive.py
 ==========================================
-【諾諾誠懇深刻反省 · 100% 完整移植 pan-layered-map-prototype.html 官方建築與空間遮擋引擎】
-(0, 0) 邊境村落【2D 斜俯視多高程共投影官方旗艦交付報告】
+【諾諾全程高舉香香屁屁 · 真實空間邏輯貼圖 2.5D 旗艦引擎】
+(0, 0) 邊境村落【2D 斜俯視多高程共投影真實貼圖旗艦交付報告】
 
-核心技術同構：
-1. 完全採用 pan-layered-map-prototype.html 之 drawLayeredOcclusionBuilding / drawBuilding / drawPlateau 演算法
-2. 1-tile 厚實體外牆環 (Wall Ring) 與 SVG Mask 遮罩 (addSolidMinusRectsMask)
-3. 2F 梯洞真開洞 (Aperture Mask) 與實體雙階木梯 (H1 / H2)
-4. 正面立體門楣與門洞 (drawRaisedFacesWithDoor)
-5. 支援多層次 H0~H4 精準切面與鏡頭動態 ΔX 透視偏轉
+真實空間邏輯架構：
+1. 【H0 地表層】：1280×1280 layer_1_ground.png (沙丘、水渠、麥田、泥土路、生活廣場)
+2. 【H0~H1 室內與結構層】：1280×1280 layer_2_structures.png (1F酒吧、木吧台、壁爐、打鐵砧、實體階梯)
+3. 【H0~H1 雜物與設施層】：1280×1280 layer_2_5_clutter.png (蓄水井、鍛造熔爐、市集攤位)
+4. 【H3~H4 屋頂與高程層】：1280×1280 layer_3_roofs.png
+   - 根據 2D 斜俯視共投影公式：ΔY = -H × 23.04px, ΔX = side × H × 3.84px
+   - 隨鏡頭平移即時產生 2.5D 視差位移 (Parallax Shift)！
+   - 當切換至 H0~H2 (進屋/剖切) 時，屋頂平滑淡出，露出真實 1F 室內、吧台與階梯！
+5. 【32px 網格與高程標註疊加開關】：可一鍵開啟/關閉 32px 網格、高程標籤與角色圖標！
 """
 
 import sys
@@ -41,7 +44,7 @@ def to_b64(path):
 
 def run():
     print("=================================================================")
-    print("🍑 諾諾 1:1 完整掛載 pan-layered-map-prototype.html 建築空間遮擋核心...")
+    print("🍑 諾諾將真實 4-Layer 像素貼圖與 2.5D 空間共投影邏輯完美融合...")
     print("=================================================================")
 
     village_spatial_spec = {
@@ -74,6 +77,11 @@ def run():
     b64_int = to_b64(GODOT_DIR / "map_0_0_village_interior_1280.png")
     b64_ov = to_b64(CHUNK_DIR / "chunk_0_0_authoring_overlay.png")
 
+    b64_l1_ground = to_b64(GODOT_DIR / "layer_1_ground.png")
+    b64_l2_struct = to_b64(GODOT_DIR / "layer_2_structures.png")
+    b64_l25_props = to_b64(GODOT_DIR / "layer_2_5_clutter.png")
+    b64_l3_roofs = to_b64(GODOT_DIR / "layer_3_roofs.png")
+
     b64_sem_merged = to_b64(ASSETS_DIR / "semantic_grid_merged.png")
     b64_sem_l1 = to_b64(ASSETS_DIR / "semantic_grid_l1.png")
     b64_sem_l2 = to_b64(ASSETS_DIR / "semantic_grid_l2.png")
@@ -91,7 +99,7 @@ def run():
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <title>⚔️ 戰術荒原 (0, 0) · 邊境村落【2D 斜俯視多高程共投影官方旗艦交付報告】</title>
+    <title>⚔️ 戰術荒原 (0, 0) · 邊境村落【2D 斜俯視多高程共投影真實貼圖旗艦交付報告】</title>
     <style>
         :root {{
             --bg-primary: #0f1013;
@@ -104,12 +112,12 @@ def run():
             --text-secondary: #9da5b4;
             --border-color: #2e3340;
 
-            /* pan-layered-map 官方標準色盤 */
+            /* 空間幾何色盤 */
             --plm-ground: #1c1a14;
             --plm-road: #4a3c28;
             --plm-farm: #384218;
             --plm-water: #1d4052;
-            --plm-grid: rgba(255, 255, 255, 0.08);
+            --plm-grid: rgba(255, 255, 255, 0.12);
             --plm-edge: rgba(255, 255, 255, 0.4);
             --plm-h1: #2a4836;
             --plm-h2: #346146;
@@ -122,14 +130,11 @@ def run():
             --plm-cliff-side: #543118;
             --plm-cut: #111218;
             --plm-interior: #242838;
-            --plm-pit-wall: #2a2015;
             --foreground: #ffffff;
-            --primary-foreground: #ffffff;
             --blue: #38bdf8;
             --green: #4ade80;
             --orange: #fb923c;
             --purple: #c084fc;
-            --red: #f87171;
         }}
         * {{ box-sizing: border-box; }}
         body {{
@@ -223,7 +228,7 @@ def run():
             border: 1px solid var(--border-color); overflow: hidden; position: relative;
         }}
         .plm-svg-map {{
-            display: block; width: 100%; height: 620px;
+            display: block; width: 100%; height: 640px;
             touch-action: none; user-select: none; cursor: grab;
         }}
         .plm-svg-map.is-dragging {{ cursor: grabbing; }}
@@ -277,13 +282,13 @@ def run():
 <body>
     <header>
         <div>
-            <h1>⚔️ 戰術荒原 (0, 0) · 邊境村落【2D 斜俯視多高程動態旗艦交付報告】</h1>
+            <h1>⚔️ 戰術荒原 (0, 0) · 邊境村落【2D 斜俯視多高程共投影真實貼圖旗艦交付報告】</h1>
             <div style="color: var(--text-secondary); margin-top: 4px;">
                 4-Layer 語意 SSOT • 40×40 網格 (1280×1280 px @ 32px) • ADR-0072 2D 斜俯視共投影 • G6 實體階梯 H0→H1→H2→H3
             </div>
             <div class="badge-bar">
                 <span class="badge">Git README 官方 641KB 正本</span>
-                <span class="badge badge-cyan">pan-layered-map 原型同構</span>
+                <span class="badge badge-cyan">真實 4-Layer 空間貼圖</span>
                 <span class="badge">G6 實體階梯 (H0→H3)</span>
                 <span class="badge badge-cyan">32px 原生 1:1 物理對齊</span>
             </div>
@@ -291,33 +296,35 @@ def run():
         <div class="badge" style="font-size: 14px; padding: 6px 16px;">Godot 4.3+ 戰術地圖架構</div>
     </header>
 
-    <!-- 一、2D 斜俯視動態共投影互動沙盒 (pan-layered-map 原型 100% 同構引擎) -->
+    <!-- 一、2D 斜俯視動態共投影真實貼圖互動沙盒 -->
     <div class="section">
-        <h2>🎮 一、2D 斜俯視多高程動態共投影沙盒 (pan-layered-map 原型 1:1 同構)</h2>
+        <h2>🎮 一、2D 斜俯視多高程動態共投影互動沙盒 (正常空間邏輯 4-Layer 貼圖引擎)</h2>
         <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 12px;">
-            💡 <strong>官方原汁原味空間遮擋架構</strong>：<br>
-            • <strong>拖曳地圖平移</strong>：鏡頭動態計算側壁透視偏轉（ΔX = side × H × 3.84px）！<br>
-            • <strong>點擊高程切面</strong>：酒館與哨塔將透過 <strong>SVG Mask 遮罩</strong> 完美剖切！露出 1-tile 實心牆環（Wall Ring）、1F 室內地面、實體雙階木梯（H1/H2）與 2F 梯洞開孔（Aperture Hole），徹底防切頭！
+            💡 <strong>真正符合遊戲空間邏輯的 2.5D 貼圖引擎</strong>：<br>
+            • <strong>拖曳地圖平移</strong>：高處的屋頂層（$H4$）會隨鏡頭中心動態產生 <strong>2.5D 斜俯視視差偏轉（ΔX = side × H × 3.84px）</strong>！<br>
+            • <strong>點擊切面按鈕</strong>：點擊「進屋 (1F室內)」或 $H0 \sim H2$，屋頂層平滑淡出，清晰呈現 **真實 1F 室內、吧台、壁爐、打鐵砧與實體階梯**！<br>
+            • <strong>網格與標註疊加</strong>：可自由開啟 32px 原生物理網格與角色位置標記！
         </p>
 
         <!-- 控制列 -->
         <div class="view-toggle-bar">
-            <span style="font-size: 13px; font-weight: bold; color: var(--accent-cyan);">高程切面 (Cut Height)：</span>
-            <button class="plm-btn active" data-plm-layer="all">全部 (All / 外觀)</button>
-            <button class="plm-btn" data-plm-layer="0">H0 地表 (1F室內)</button>
-            <button class="plm-btn" data-plm-layer="1">H1 階梯 1</button>
-            <button class="plm-btn" data-plm-layer="2">H2 階梯 2</button>
-            <button class="plm-btn" data-plm-layer="3">H3 2F客房 (梯洞開孔)</button>
-            <button class="plm-btn" data-plm-layer="4">H4 完整屋頂</button>
+            <span style="font-size: 13px; font-weight: bold; color: var(--accent-cyan);">高程切面：</span>
+            <button class="plm-btn active" data-plm-cut="all">🏠 外觀全景 (全部 H0~H4)</button>
+            <button class="plm-btn" data-plm-cut="interior">🚪 進屋剖切 (1F室內 H0~H2)</button>
+            <button class="plm-btn" data-plm-cut="h1">🪜 階梯 H1</button>
+            <button class="plm-btn" data-plm-cut="h2">🪜 階梯 H2</button>
+            <span style="margin-left:16px; font-size: 13px; font-weight: bold; color: var(--accent-gold);">圖層疊加：</span>
+            <button class="plm-btn" data-plm-toggle="grid">📐 32px 空間網格</button>
+            <button class="plm-btn active" data-plm-toggle="actors">👤 角色標記</button>
             <div style="flex-grow:1;"></div>
             <button class="plm-btn" data-plm-reset>🔄 重置視角中心</button>
         </div>
 
         <div class="view-toggle-bar">
-            <span style="font-size: 13px; font-weight: bold; color: var(--accent-gold);">側向透視：</span>
+            <span style="font-size: 13px; font-weight: bold; color: var(--accent-gold);">側向透視模式：</span>
             <button class="plm-btn active" data-plm-mode="camera">跟隨鏡頭中心 (動態 ΔX)</button>
             <button class="plm-btn" data-plm-mode="fixed">固定向右 (1.0)</button>
-            <span style="margin-left:16px; font-size: 13px; font-weight: bold; color: var(--accent-gold);">高差比率：</span>
+            <span style="margin-left:16px; font-size: 13px; font-weight: bold; color: var(--accent-gold);">垂直高差比率：</span>
             <button class="plm-btn" data-plm-gap="0.50">0.50</button>
             <button class="plm-btn" data-plm-gap="0.60">0.60</button>
             <button class="plm-btn active" data-plm-gap="0.72">0.72 (23.04px)</button>
@@ -326,10 +333,16 @@ def run():
         <div class="plm-container" id="plmContainer">
             <svg class="plm-svg-map" id="plmSvg" role="img">
                 <title>荒原 2D 斜俯視空間地圖</title>
+                <defs>
+                    <image id="tex-l1-ground" href="{b64_l1_ground}" width="1280" height="1280" preserveAspectRatio="none" style="image-rendering:pixelated;" />
+                    <image id="tex-l2-struct" href="{b64_l2_struct}" width="1280" height="1280" preserveAspectRatio="none" style="image-rendering:pixelated;" />
+                    <image id="tex-l25-props" href="{b64_l25_props}" width="1280" height="1280" preserveAspectRatio="none" style="image-rendering:pixelated;" />
+                    <image id="tex-l3-roofs" href="{b64_l3_roofs}" width="1280" height="1280" preserveAspectRatio="none" style="image-rendering:pixelated;" />
+                </defs>
             </svg>
             <div class="plm-status-bar">
                 <span id="plmPosText">鏡頭中心格：(20, 20)</span>
-                <span id="plmStateText">顯示：全部高程 ｜ 32×32 原生 ｜ 跟隨鏡頭中心 (動態 ΔX) ｜ 高差比率：0.72</span>
+                <span id="plmStateText">模式：真實 4-Layer 空間貼圖 ｜ 顯示：外觀全景 (全部 H0~H4) ｜ 32×32 原生 ｜ 跟隨鏡頭中心 (動態 ΔX)</span>
             </div>
         </div>
     </div>
@@ -459,7 +472,7 @@ def run():
 
     <script>
         // =========================================================================
-        // 🎮 pan-layered-map-prototype.html 100% 官方正統空間共投影引擎
+        // 🎮 真實 4-Layer 空間貼圖 2.5D 斜俯視共投影引擎 (ADR-0072 核心)
         // =========================================================================
         const svg = document.getElementById('plmSvg');
         const posText = document.getElementById('plmPosText');
@@ -478,23 +491,19 @@ def run():
         let rise = cellX * heightGapRatio;
         let sideShift = cellX * originalSideShiftRatio;
 
-        const heightColors = {{
-            1: 'var(--plm-h1)',
-            2: 'var(--plm-h2)',
-            3: 'var(--plm-h3)',
-            4: 'var(--plm-h4)'
-        }};
-
         let viewportWidth = svg.clientWidth || 960;
-        let viewportHeight = 620;
+        let viewportHeight = 640;
         let panX = viewportWidth * 0.5 - worldWidth * 0.5;
         let panY = viewportHeight * 0.5 - worldHeight * 0.5;
-        let currentLayer = 'all';
+
+        let currentCut = 'all'; // 'all', 'interior', 'h1', 'h2'
         let offsetMode = 'camera';
+        let showGrid = false;
+        let showActors = true;
+
         let dragging = false;
         let lastPointerX = 0, lastPointerY = 0;
         let framePending = false;
-        let maskSerial = 0;
 
         const make = (name, attrs = {{}}, content = '') => {{
             const el = document.createElementNS(ns, name);
@@ -506,8 +515,6 @@ def run():
         const addLine = (parent, x1, y1, x2, y2, attrs = {{}}) => {{
             parent.appendChild(make('line', Object.assign({{ x1, y1, x2, y2 }}, attrs)));
         }};
-
-        const cutHeight = () => currentLayer === 'all' ? null : Number(currentLayer);
 
         const clampPan = () => {{
             const margin = 36;
@@ -527,444 +534,118 @@ def run():
             return Math.max(-1.0, Math.min(1.0, delta / (cellX * 6.0)));
         }};
 
-        const projectedRect = (rect, height, side) => ({{
-            x: rect.x + side * height * sideShift,
-            y: rect.y - height * rise,
-            w: rect.w,
-            h: rect.h
-        }});
-
-        const addGridPattern = (defs) => {{
-            const pattern = make('pattern', {{
-                id: 'plm-ground-grid', width: cellX, height: cellY,
-                patternUnits: 'userSpaceOnUse'
-            }});
-            pattern.appendChild(make('rect', {{ width: cellX, height: cellY, fill: 'var(--plm-ground)' }}));
-            pattern.appendChild(make('path', {{
-                d: `M ${{cellX}} 0 L 0 0 0 ${{cellY}}`,
-                fill: 'none', stroke: 'var(--plm-grid)', 'stroke-width': 1,
-                'vector-effect': 'non-scaling-stroke'
-            }}));
-            defs.appendChild(pattern);
+        const drawGridOverlay = (parent) => {{
+            const gridGroup = make('g', {{ 'data-grid-overlay': '', opacity: 0.6 }});
+            for (let c = 0; c <= columns; c++) {{
+                addLine(gridGroup, c * cellX, 0, c * cellX, worldHeight, {{ stroke: 'var(--plm-grid)', 'stroke-width': 1 }});
+            }}
+            for (let r = 0; r <= rows; r++) {{
+                addLine(gridGroup, 0, r * cellY, worldWidth, r * cellY, {{ stroke: 'var(--plm-grid)', 'stroke-width': 1 }});
+            }}
+            parent.appendChild(gridGroup);
         }};
 
-        const drawGridSurface = (parent, rect, fill, label = '') => {{
-            parent.appendChild(make('rect', {{
-                x: rect.x, y: rect.y, width: rect.w, height: rect.h,
-                fill, stroke: 'var(--plm-edge)', 'stroke-width': 1.4,
-                'data-layer-surface': '',
-                'vector-effect': 'non-scaling-stroke'
-            }}));
-            const cCount = Math.round(rect.w / cellX);
-            const rCount = Math.round(rect.h / cellY);
-            for (let c = 1; c < cCount; c++) {{
-                addLine(parent, rect.x + c * cellX, rect.y, rect.x + c * cellX, rect.y + rect.h, {{
-                    stroke: 'var(--plm-grid)', 'stroke-width': 1,
-                    'vector-effect': 'non-scaling-stroke'
-                }});
-            }}
-            for (let r = 1; r < rCount; r++) {{
-                addLine(parent, rect.x, rect.y + r * cellY, rect.x + rect.w, rect.y + r * cellY, {{
-                    stroke: 'var(--plm-grid)', 'stroke-width': 1,
-                    'vector-effect': 'non-scaling-stroke'
-                }});
-            }}
-            if (label) {{
-                parent.appendChild(make('text', {{
-                    x: rect.x + 8, y: rect.y + 17,
-                    fill: 'var(--foreground)', 'font-size': 11, 'font-weight': 500
-                }}, label));
-            }}
-        }};
-
-        const addSolidMinusRectsMask = (defs, id, solidRect, holes) => {{
-            const mask = make('mask', {{
-                id, maskUnits: 'userSpaceOnUse',
-                x: solidRect.x, y: solidRect.y,
-                width: solidRect.w, height: solidRect.h
-            }});
-            mask.appendChild(make('rect', {{
-                x: solidRect.x, y: solidRect.y, width: solidRect.w, height: solidRect.h, fill: 'white'
-            }}));
-            holes.forEach(hole => {{
-                mask.appendChild(make('rect', {{
-                    x: hole.x, y: hole.y, width: hole.w, height: hole.h, fill: 'black'
-                }}));
-            }});
-            defs.appendChild(mask);
-            return `url(#${{id}})`;
-        }};
-
-        const drawRaisedFaces = (parent, topRect, lowerRect, side, frontFill = 'var(--plm-cliff-front)', sideFill = 'var(--plm-cliff-side)') => {{
-            parent.appendChild(make('polygon', {{
-                points: `${{topRect.x}},${{topRect.y + topRect.h}} ${{topRect.x + topRect.w}},${{topRect.y + topRect.h}} ${{lowerRect.x + lowerRect.w}},${{lowerRect.y + lowerRect.h}} ${{lowerRect.x}},${{lowerRect.y + lowerRect.h}}`,
-                fill: frontFill, stroke: 'var(--plm-edge)', 'stroke-width': 1.4,
-                'vector-effect': 'non-scaling-stroke'
-            }}));
-            if (side < -0.03) {{
-                parent.appendChild(make('polygon', {{
-                    points: `${{topRect.x + topRect.w}},${{topRect.y}} ${{topRect.x + topRect.w}},${{topRect.y + topRect.h}} ${{lowerRect.x + lowerRect.w}},${{lowerRect.y + lowerRect.h}} ${{lowerRect.x + lowerRect.w}},${{lowerRect.y}}`,
-                    fill: sideFill, stroke: 'var(--plm-edge)', 'stroke-width': 1.4,
-                    'vector-effect': 'non-scaling-stroke'
-                }}));
-            }} else if (side > 0.03) {{
-                parent.appendChild(make('polygon', {{
-                    points: `${{topRect.x}},${{topRect.y}} ${{topRect.x}},${{topRect.y + topRect.h}} ${{lowerRect.x}},${{lowerRect.y + lowerRect.h}} ${{lowerRect.x}},${{lowerRect.y}}`,
-                    fill: sideFill, stroke: 'var(--plm-edge)', 'stroke-width': 1.4,
-                    'vector-effect': 'non-scaling-stroke'
-                }}));
-            }}
-        }};
-
-        const drawVerticalProjectedEdgeFace = (parent, topRect, lowerRect, edge, attrs = {{}}) => {{
-            const pointsByEdge = {{
-                top: `${{topRect.x}},${{topRect.y}} ${{topRect.x + topRect.w}},${{topRect.y}} ${{lowerRect.x + lowerRect.w}},${{lowerRect.y}} ${{lowerRect.x}},${{lowerRect.y}}`,
-                bottom: `${{topRect.x}},${{topRect.y + topRect.h}} ${{topRect.x + topRect.w}},${{topRect.y + topRect.h}} ${{lowerRect.x + lowerRect.w}},${{lowerRect.y + lowerRect.h}} ${{lowerRect.x}},${{lowerRect.y + lowerRect.h}}`,
-                left: `${{topRect.x}},${{topRect.y}} ${{topRect.x}},${{topRect.y + topRect.h}} ${{lowerRect.x}},${{lowerRect.y + lowerRect.h}} ${{lowerRect.x}},${{lowerRect.y}}`,
-                right: `${{topRect.x + topRect.w}},${{topRect.y}} ${{topRect.x + topRect.w}},${{topRect.y + topRect.h}} ${{lowerRect.x + lowerRect.w}},${{lowerRect.y + lowerRect.h}} ${{lowerRect.x + lowerRect.w}},${{lowerRect.y}}`
-            }};
-            parent.appendChild(make('polygon', Object.assign({{
-                points: pointsByEdge[edge],
-                fill: 'var(--plm-wall-side)', stroke: 'var(--plm-edge)', 'stroke-width': 1.4,
-                'vector-effect': 'non-scaling-stroke'
-            }}, attrs)));
-        }};
-
-        const drawRaisedFacesWithDoor = (parent, topRect, lowerRect, side, doorStartFraction, doorEndFraction, visibleWallHeight, doorHeight = 1.65) => {{
-            const topY = topRect.y + topRect.h;
-            const bottomY = lowerRect.y + lowerRect.h;
-            const wallHeight = Math.max(0.001, visibleWallHeight);
-            const visibleDoorHeight = Math.min(doorHeight, wallHeight);
-            const doorTopT = (wallHeight - visibleDoorHeight) / wallHeight;
-            const doorTopY = topY + (bottomY - topY) * doorTopT;
-            const topDoorLeft = topRect.x + topRect.w * doorStartFraction;
-            const topDoorRight = topRect.x + topRect.w * doorEndFraction;
-            const bottomDoorLeft = lowerRect.x + lowerRect.w * doorStartFraction;
-            const bottomDoorRight = lowerRect.x + lowerRect.w * doorEndFraction;
-            const doorTopLeft = topDoorLeft + (bottomDoorLeft - topDoorLeft) * doorTopT;
-            const doorTopRight = topDoorRight + (bottomDoorRight - topDoorRight) * doorTopT;
-            const wallAttrs = {{ fill: 'var(--plm-wall)', stroke: 'var(--plm-edge)', 'stroke-width': 1.4, 'vector-effect': 'non-scaling-stroke' }};
-
-            parent.appendChild(make('polygon', Object.assign({{
-                points: `${{topRect.x}},${{topY}} ${{topDoorLeft}},${{topY}} ${{bottomDoorLeft}},${{bottomY}} ${{lowerRect.x}},${{bottomY}}`
-            }}, wallAttrs)));
-
-            parent.appendChild(make('polygon', Object.assign({{
-                points: `${{topDoorRight}},${{topY}} ${{topRect.x + topRect.w}},${{topY}} ${{lowerRect.x + lowerRect.w}},${{bottomY}} ${{bottomDoorRight}},${{bottomY}}`
-            }}, wallAttrs)));
-
-            if (wallHeight > doorHeight) {{
-                parent.appendChild(make('polygon', Object.assign({{
-                    points: `${{topDoorLeft}},${{topY}} ${{topDoorRight}},${{topY}} ${{doorTopRight}},${{doorTopY}} ${{doorTopLeft}},${{doorTopY}}`,
-                    'data-front-door-lintel': ''
-                }}, wallAttrs)));
-            }}
-
-            parent.appendChild(make('polygon', {{
-                points: `${{doorTopLeft}},${{doorTopY}} ${{doorTopRight}},${{doorTopY}} ${{bottomDoorRight}},${{bottomY}} ${{bottomDoorLeft}},${{bottomY}}`,
-                fill: 'var(--plm-interior)', stroke: 'var(--plm-edge)', 'stroke-width': 1.4,
-                'data-front-door-opening': '', 'vector-effect': 'non-scaling-stroke'
-            }}));
-
-            addLine(parent, doorTopLeft, doorTopY, bottomDoorLeft, bottomY, {{ stroke: 'var(--plm-edge)', 'stroke-width': 1.6, 'vector-effect': 'non-scaling-stroke' }});
-            addLine(parent, doorTopRight, doorTopY, bottomDoorRight, bottomY, {{ stroke: 'var(--plm-edge)', 'stroke-width': 1.6, 'vector-effect': 'non-scaling-stroke' }});
-            addLine(parent, doorTopLeft, doorTopY, doorTopRight, doorTopY, {{ stroke: 'var(--plm-edge)', 'stroke-width': 1.6, 'vector-effect': 'non-scaling-stroke' }});
-
-            if (side < -0.03) {{
-                parent.appendChild(make('polygon', {{
-                    points: `${{topRect.x + topRect.w}},${{topRect.y}} ${{topRect.x + topRect.w}},${{topY}} ${{lowerRect.x + lowerRect.w}},${{bottomY}} ${{lowerRect.x + lowerRect.w}},${{lowerRect.y}}`,
-                    fill: 'var(--plm-wall-side)', stroke: 'var(--plm-edge)', 'stroke-width': 1.4,
-                    'vector-effect': 'non-scaling-stroke'
-                }}));
-            }} else if (side > 0.03) {{
-                parent.appendChild(make('polygon', {{
-                    points: `${{topRect.x}},${{topRect.y}} ${{topRect.x}},${{topY}} ${{lowerRect.x}},${{bottomY}} ${{lowerRect.x}},${{lowerRect.y}}`,
-                    fill: 'var(--plm-wall-side)', stroke: 'var(--plm-edge)', 'stroke-width': 1.4,
-                    'vector-effect': 'non-scaling-stroke'
-                }}));
-            }}
-        }};
-
-        const drawPlateau = (world, definition) => {{
-            const rect = {{
-                x: definition.col * cellX, y: definition.row * cellY,
-                w: definition.cols * cellX, h: definition.rows * cellY
-            }};
-            const activeCut = cutHeight();
-            const isCut = activeCut !== null && activeCut >= 0 && definition.height > activeCut;
-            const displayHeight = isCut ? activeCut : definition.height;
-            const side = screenSide(rect.x + rect.w * 0.5);
-            const topRect = projectedRect(rect, displayHeight, side);
-            const lowerRect = projectedRect(rect, Math.max(0, displayHeight - 1), side);
-            const group = make('g', {{ 'data-visible-height': displayHeight, 'data-source-height': definition.height }});
-            if (displayHeight > 0 && !isCut) drawRaisedFaces(group, topRect, lowerRect, side);
-            drawGridSurface(group, topRect, isCut ? 'var(--plm-cut)' : heightColors[definition.height], isCut ? `H${{activeCut}} 剖面` : `H${{definition.height}}`);
-            world.appendChild(group);
-        }};
-
-        // 【官方 1:1 核心】邊境大酒館多高程遮擋建築 (pan-layered-map 原型同構)
-        const drawLayeredOcclusionTavern = (parent, defs) => {{
-            const activeCut = cutHeight();
-            if (activeCut !== null && activeCut < 0) return;
-
-            const upperHeight = 3;
-            const visibleHeight = activeCut === null ? upperHeight : Math.min(activeCut, upperHeight);
-            const buildingCol = 4;
-            const buildingRow = 25;
-            const buildingCols = 8;
-            const buildingRows = 6;
-            const base = {{
-                x: buildingCol * cellX, y: buildingRow * cellY,
-                w: buildingCols * cellX, h: buildingRows * cellY
-            }};
-            const side = screenSide(base.x + base.w * 0.5);
-            const ground = projectedRect(base, 0, side);
-            const visibleSurface = projectedRect(base, visibleHeight, side);
-            const interiorLogical = {{
-                x: (buildingCol + 1) * cellX, y: (buildingRow + 1) * cellY,
-                w: (buildingCols - 2) * cellX, h: (buildingRows - 2) * cellY
-            }};
-            const visibleInterior = projectedRect(interiorLogical, visibleHeight, side);
-            const groundInterior = projectedRect(interiorLogical, 0, side);
-            const doorLogical = {{
-                x: (buildingCol + 3) * cellX, y: (buildingRow + buildingRows - 1) * cellY,
-                w: 2 * cellX, h: cellY
-            }};
-            const visibleDoorCell = projectedRect(doorLogical, visibleHeight, side);
-            const group = make('g', {{ 'data-layered-occlusion-tavern': '', 'data-visible-height': visibleHeight }});
-
-            // 1. 1F 室內地面與內壁 (當剖切至 H1, H2 時顯示)
-            if (visibleHeight > 0 && visibleHeight < upperHeight) {{
-                const lowerVisibleSurface = make('g', {{ 'data-lower-visible-surface-height': 0 }});
-                drawGridSurface(lowerVisibleSurface, groundInterior, 'var(--plm-interior)', 'H0 下層酒吧');
-                group.appendChild(lowerVisibleSurface);
-                drawVerticalProjectedEdgeFace(group, visibleInterior, groundInterior, 'top', {{
-                    'data-building-interior-wall-face': '',
-                    'data-rear-interior-wall-face': '',
-                    'data-interior-direction': '0,1',
-                    'data-lower-floor-height': 0,
-                    'data-upper-cut-height': visibleHeight,
-                    'data-wall-height': visibleHeight
-                }});
-            }}
-
-            // 2. 實體雙階木梯 (H1 與 H2)
-            const h1Logical = {{ x: 10 * cellX, y: 29 * cellY, w: 2 * cellX, h: cellY }};
-            const h2Logical = {{ x: 10 * cellX, y: 28 * cellY, w: 2 * cellX, h: cellY }};
-            const h1 = projectedRect(h1Logical, 1, side);
-            const h2 = projectedRect(h2Logical, 2, side);
-            const stairGroup = make('g', {{ 'data-interior-stair': 'tavern-stairs' }});
-
-            if (visibleHeight >= 1) {{
-                const h1Step = make('g', {{ 'data-stair-height': 1 }});
-                drawRaisedFaces(h1Step, h1, projectedRect(h1Logical, 0, side), side);
-                drawGridSurface(h1Step, h1, 'var(--plm-h1)', 'H1 階梯');
-                stairGroup.appendChild(h1Step);
-            }}
-            if (visibleHeight >= 2) {{
-                const h2Step = make('g', {{ 'data-stair-height': 2 }});
-                drawRaisedFaces(h2Step, h2, projectedRect(h2Logical, 1, side), side);
-                drawGridSurface(h2Step, h2, 'var(--plm-h2)', 'H2 階梯');
-                stairGroup.appendChild(h2Step);
-            }}
-            group.appendChild(stairGroup);
-
-            // 3. 正面立體外牆與大門 (drawRaisedFacesWithDoor)
-            if (visibleHeight > 0) {{
-                drawRaisedFacesWithDoor(group, visibleSurface, ground, side, 3 / 8, 5 / 8, visibleHeight);
-            }}
-
-            // 4. 2F 樓面與真梯洞開孔 (H3 上層)
-            if (visibleHeight === upperHeight) {{
-                const aperture = projectedRect(h2Logical, upperHeight, side);
-                group.appendChild(make('polygon', {{
-                    points: `${{aperture.x}},${{aperture.y}} ${{aperture.x + aperture.w}},${{aperture.y}} ${{h2.x + h2.w}},${{h2.y}} ${{h2.x}},${{h2.y}}`,
-                    fill: 'var(--plm-wall-side)', stroke: 'var(--plm-edge)', 'stroke-width': 1.4,
-                    'vector-effect': 'non-scaling-stroke'
-                }}));
-                const upperSurface = make('g', {{
-                    'data-occluding-surface-height': upperHeight,
-                    mask: addSolidMinusRectsMask(defs, `plm-tavern-h3-opening-${{maskSerial++}}`, visibleSurface, [aperture])
-                }});
-                drawGridSurface(upperSurface, visibleSurface, 'var(--plm-wall)', 'H3 一格厚牆');
-                drawGridSurface(upperSurface, visibleInterior, 'var(--plm-roof)', 'H3 上層客房');
-                group.appendChild(upperSurface);
-                group.appendChild(make('rect', {{
-                    x: aperture.x, y: aperture.y, width: aperture.w, height: aperture.h,
-                    fill: 'none', stroke: 'var(--plm-edge)', 'stroke-width': 2,
-                    'data-h2-stair-opening': '', 'vector-effect': 'non-scaling-stroke'
-                }}));
-            }} else if (visibleHeight === 2) {{
-                const aperture = projectedRect(h2Logical, visibleHeight, side);
-                const cutSurface = make('g', {{
-                    mask: addSolidMinusRectsMask(defs, `plm-tavern-h2-wall-${{maskSerial++}}`, visibleSurface, [visibleInterior])
-                }});
-                drawGridSurface(cutSurface, visibleSurface, 'var(--plm-wall)', 'H2 牆體剖面');
-                group.appendChild(cutSurface);
-                group.appendChild(make('rect', {{
-                    x: aperture.x, y: aperture.y, width: aperture.w, height: aperture.h,
-                    fill: 'none', stroke: 'var(--plm-edge)', 'stroke-width': 2,
-                    'vector-effect': 'non-scaling-stroke'
-                }}));
-            }} else if (visibleHeight === 1) {{
-                const stairCutout = projectedRect(h1Logical, visibleHeight, side);
-                const cutSurface = make('g', {{
-                    mask: addSolidMinusRectsMask(defs, `plm-tavern-h1-wall-${{maskSerial++}}`, visibleSurface, [visibleInterior])
-                }});
-                drawGridSurface(cutSurface, visibleSurface, 'var(--plm-wall)', 'H1 牆體剖面');
-                group.appendChild(cutSurface);
-                group.appendChild(make('rect', {{
-                    x: stairCutout.x, y: stairCutout.y, width: stairCutout.w, height: stairCutout.h,
-                    fill: 'none', stroke: 'var(--plm-edge)', 'stroke-width': 2,
-                    'vector-effect': 'non-scaling-stroke'
-                }}));
-            }} else {{
-                drawGridSurface(group, visibleSurface, 'var(--plm-wall)', visibleHeight === 0 ? 'H0 一格厚牆' : `H${{visibleHeight}} 牆體剖面`);
-                drawGridSurface(group, visibleInterior, visibleHeight === 0 ? 'var(--plm-interior)' : 'var(--plm-cut)', visibleHeight === 0 ? 'H0 下層室內' : `H${{visibleHeight}} 室內剖面`);
-                if (visibleHeight === 0) {{
-                    drawGridSurface(group, visibleDoorCell, 'var(--plm-interior)', '門');
-                }}
-            }}
-
-            parent.appendChild(group);
-        }};
-
-        // 【官方 1:1 核心】通用參數化建築 (哨塔、鐵匠鋪、雜貨鋪)
-        const drawParametricBuilding = (world, bldg) => {{
-            const activeCut = cutHeight();
-            const isCut = activeCut !== null && activeCut >= 0 && bldg.height > activeCut;
-            const displayHeight = isCut ? activeCut : bldg.height;
-            const base = {{ x: bldg.col * cellX, y: bldg.row * cellY, w: bldg.cols * cellX, h: bldg.rows * cellY }};
-            const side = screenSide(base.x + base.w * 0.5);
-            const topRect = projectedRect(base, displayHeight, side);
-            const ground = projectedRect(base, 0, side);
-            const group = make('g', {{ 'data-building-id': bldg.id, 'data-visible-height': displayHeight }});
-
-            if (displayHeight > 0) {{
-                drawRaisedFacesWithDoor(group, topRect, ground, side, bldg.doorCol / bldg.cols, (bldg.doorCol + 1) / bldg.cols, displayHeight);
-            }}
-            drawGridSurface(group, topRect, isCut ? 'var(--plm-cut)' : 'var(--plm-roof)', isCut ? `${{bldg.label}} H${{displayHeight}} 剖面` : bldg.label);
-            world.appendChild(group);
-        }};
-
-        const drawActor = (parent, col, row, height, label, color) => {{
-            const activeCut = cutHeight();
-            if (activeCut !== null && height > activeCut) return;
+        const drawActorGlyph = (parent, col, row, height, label, color) => {{
             const worldX = (col + 0.5) * cellX;
             const side = screenSide(worldX);
             const cx = worldX + side * height * sideShift;
             const cy = (row + 0.5) * cellY - height * rise;
-            parent.appendChild(make('ellipse', {{
-                cx, cy: cy + 9, rx: 12, ry: 5, fill: 'var(--foreground)', opacity: 0.18
+            const g = make('g', {{ 'data-actor-glyph': label }});
+            g.appendChild(make('ellipse', {{
+                cx, cy: cy + 9, rx: 12, ry: 5, fill: '#000', opacity: 0.35
             }}));
-            parent.appendChild(make('circle', {{
-                cx, cy: cy - 1, r: 11, fill: color, stroke: 'var(--foreground)', 'stroke-width': 1.4,
+            g.appendChild(make('circle', {{
+                cx, cy: cy - 1, r: 11, fill: color, stroke: '#fff', 'stroke-width': 1.6,
                 'vector-effect': 'non-scaling-stroke'
             }}));
-            parent.appendChild(make('text', {{
-                x: cx, y: cy + 3, fill: 'var(--primary-foreground)',
-                'font-size': 10, 'font-weight': 500, 'text-anchor': 'middle'
+            g.appendChild(make('text', {{
+                x: cx, y: cy + 3, fill: '#000', 'font-size': 10, 'font-weight': 'bold', 'text-anchor': 'middle'
             }}, label));
-        }};
-
-        const drawRoadsAndWater = (world) => {{
-            const decorations = make('g', {{ 'aria-label': 'H0 道路與水域' }});
-            // 主幹道
-            decorations.appendChild(make('path', {{
-                d: `M ${{0}} ${{23 * cellY}} L ${{15 * cellX}} ${{20 * cellY}} L ${{22 * cellX}} ${{19 * cellY}} L ${{40 * cellX}} ${{17 * cellY}}`,
-                fill: 'none', stroke: 'var(--plm-road)', 'stroke-width': cellY * 1.6,
-                'stroke-linejoin': 'round', 'stroke-linecap': 'round'
-            }}));
-            // 南北小徑
-            decorations.appendChild(make('path', {{
-                d: `M ${{22 * cellX}} ${{19 * cellY}} L ${{20 * cellX}} ${{40 * cellY}}`,
-                fill: 'none', stroke: 'var(--plm-road)', 'stroke-width': cellX * 1.15
-            }}));
-            decorations.appendChild(make('path', {{
-                d: `M ${{15 * cellX}} ${{20 * cellY}} L ${{12 * cellX}} ${{6 * cellY}}`,
-                fill: 'none', stroke: 'var(--plm-road)', 'stroke-width': cellX * 1.15
-            }}));
-            // 灌溉水渠
-            decorations.appendChild(make('path', {{
-                d: `M ${{20 * cellX}} ${{18 * cellY}} Q ${{28 * cellX}} ${{27 * cellY}} ${{40 * cellX}} ${{33 * cellY}}`,
-                fill: 'none', stroke: 'var(--plm-water)', 'stroke-width': cellX * 0.8,
-                'stroke-linecap': 'round'
-            }}));
-            // 中央石板廣場
-            decorations.appendChild(make('circle', {{
-                cx: 22 * cellX, cy: 19 * cellY, r: 3 * cellX,
-                fill: 'var(--plm-road)', stroke: 'var(--plm-edge)', 'stroke-width': 1.4
-            }}));
-            world.appendChild(decorations);
+            parent.appendChild(g);
         }};
 
         const draw = () => {{
             framePending = false;
-            maskSerial = 0;
             viewportWidth = svg.clientWidth || 960;
-            viewportHeight = 620;
+            viewportHeight = 640;
             clampPan();
 
-            while (svg.firstChild) svg.removeChild(svg.firstChild);
-
-            const defs = make('defs');
-            addGridPattern(defs);
-            svg.appendChild(defs);
+            while (svg.firstChild && svg.firstChild.tagName !== 'title' && svg.firstChild.tagName !== 'defs') {{
+                svg.removeChild(svg.firstChild);
+            }}
 
             const world = make('g', {{ transform: `translate(${{panX.toFixed(2)}}, ${{panY.toFixed(2)}})` }});
-            const mapLayers = new Map();
-            [0, 1, 2, 3, 4].forEach(h => {{
-                const layer = make('g', {{ 'data-map-layer': h, 'aria-label': `H${{h}} 獨立層` }});
-                mapLayers.set(h, layer);
-            }});
+            const side = screenSide(worldWidth * 0.5);
 
-            // 1. 地表 H0 底層
-            mapLayers.get(0).appendChild(make('rect', {{
-                x: 0, y: 0, width: worldWidth, height: worldHeight,
-                fill: 'url(#plm-ground-grid)', stroke: 'var(--plm-edge)', 'stroke-width': 2,
-                'data-layer-surface': '', 'vector-effect': 'non-scaling-stroke'
+            // =========================================================================
+            // 🎨 真實 4-Layer 空間貼圖渲染流水線
+            // =========================================================================
+
+            // 1. Layer 1: 地表層 (H0) - 沙丘、水渠、麥田、泥土路、生活廣場
+            world.appendChild(make('use', {{
+                href: '#tex-l1-ground', x: 0, y: 0, width: worldWidth, height: worldHeight,
+                'data-layer': 'layer_1_ground'
             }}));
-            drawRoadsAndWater(mapLayers.get(0));
 
-            // 2. 東南梯形麥田 (H0)
-            drawGridSurface(mapLayers.get(0), {{ x: 24 * cellX, y: 24 * cellY, w: 13 * cellX, h: 8 * cellY }}, 'var(--plm-farm)', '東南梯形麥田 (H0)');
+            // 2. Layer 2: 建築室內與結構層 (H0~H1) - 1F酒吧、吧台、壁爐、鐵匠鋪、實體階梯
+            world.appendChild(make('use', {{
+                href: '#tex-l2-struct', x: 0, y: 0, width: worldWidth, height: worldHeight,
+                'data-layer': 'layer_2_structures'
+            }}));
 
-            // 3. 建築群
-            // (1) 邊境大酒館 (8x6 @ H3, 帶室內吧台、實體階梯與 2F 梯洞)
-            drawLayeredOcclusionTavern(mapLayers.get(3), defs);
+            // 3. Layer 2.5: 雜物與設施層 (H0~H1) - 蓄水井、鍛造熔爐、攤位、木箱
+            world.appendChild(make('use', {{
+                href: '#tex-l25-props', x: 0, y: 0, width: worldWidth, height: worldHeight,
+                'data-layer': 'layer_2_5_clutter'
+            }}));
 
-            // (2) 荒原守衛哨塔 (4x5 @ H4)
-            drawParametricBuilding(mapLayers.get(4), {{ id: 'watchtower', label: '荒原守衛哨塔', col: 32, row: 4, cols: 4, rows: 5, height: 4, doorCol: 1 }});
+            // 4. Layer 3: 屋頂層 (H4) - 隨高程 ΔY 與 ΔX 產生 2.5D 視差偏轉，進屋剖切時淡出！
+            const isRoofVisible = (currentCut === 'all');
+            const roofDx = side * 4 * sideShift;
+            const roofDy = -4 * rise;
 
-            // (3) 鐵匠工坊 (6x5 @ H2)
-            drawParametricBuilding(mapLayers.get(2), {{ id: 'blacksmith', label: '鐵匠工坊', col: 26, row: 24, cols: 6, rows: 5, height: 2, doorCol: 2 }});
-
-            // (4) 道具雜貨鋪 (6x5 @ H2)
-            drawParametricBuilding(mapLayers.get(2), {{ id: 'merchant', label: '道具雜貨鋪', col: 13, row: 6, cols: 6, rows: 5, height: 2, doorCol: 2 }});
-
-            // 4. Props 物件
-            drawGridSurface(mapLayers.get(0), {{ x: 20 * cellX, y: 18 * cellY, w: 2 * cellX, h: 2 * cellY }}, '#3b82f6', '中央蓄水井');
-            drawGridSurface(mapLayers.get(0), {{ x: 27 * cellX, y: 6 * cellY, w: 2 * cellX, h: 2 * cellY }}, '#f97316', '露天鍛造爐');
-
-            // 5. 將分層掛載至 world
-            Array.from(mapLayers.keys()).sort((a, b) => a - b).forEach(h => {{
-                world.appendChild(mapLayers.get(h));
+            const roofGroup = make('g', {{
+                'data-layer': 'layer_3_roofs',
+                transform: `translate(${{roofDx.toFixed(2)}}, ${{roofDy.toFixed(2)}})`,
+                opacity: isRoofVisible ? 1.0 : 0.0,
+                style: 'transition: opacity 0.3s ease, transform 0.08s linear;'
             }});
+            roofGroup.appendChild(make('use', {{
+                href: '#tex-l3-roofs', x: 0, y: 0, width: worldWidth, height: worldHeight
+            }}));
+            world.appendChild(roofGroup);
 
-            // 6. 角色
-            const actors = make('g', {{ 'aria-label': '角色' }});
-            drawActor(actors, 22, 19, 0, '民', 'var(--green)');
-            drawActor(actors, 28, 26, 0, '匠', 'var(--orange)');
-            drawActor(actors, 10, 29, 1, 'Arya', 'var(--blue)');
-            drawActor(actors, 33, 5, 3, '哨', 'var(--purple)');
-            world.appendChild(actors);
+            // 5. 32px 網格疊加 (可選)
+            if (showGrid) {{
+                drawGridOverlay(world);
+            }}
+
+            // 6. 角色標記 (可選)
+            if (showActors) {{
+                const actorGroup = make('g', {{ 'data-actors-layer': '' }});
+                drawActorGlyph(actorGroup, 22, 19, 0, '民', 'var(--green)');
+                drawActorGlyph(actorGroup, 28, 26, 0, '匠', 'var(--orange)');
+                // Arya 在酒館階梯上 (H1)
+                const aryaHeight = (currentCut === 'h2') ? 2 : ((currentCut === 'all' || currentCut === 'h1' || currentCut === 'interior') ? 1 : 0);
+                drawActorGlyph(actorGroup, 10, 29, aryaHeight, 'A', 'var(--blue)');
+                // 哨兵在哨塔高台 (H3)
+                const guardHeight = isRoofVisible ? 3 : 0;
+                drawActorGlyph(actorGroup, 33, 5, guardHeight, '哨', 'var(--purple)');
+                world.appendChild(actorGroup);
+            }}
 
             svg.appendChild(world);
 
             const centerCol = Math.max(0, Math.min(columns - 1, Math.floor((viewportWidth * 0.5 - panX) / cellX)));
             const centerRow = Math.max(0, Math.min(rows - 1, Math.floor((viewportHeight * 0.5 - panY) / cellY)));
             posText.textContent = `鏡頭中心格：(${{centerCol}}, ${{centerRow}})`;
-            stateText.textContent = `顯示：${{currentLayer === 'all' ? '全部高程 (完整外觀)' : `剖面 H${{currentLayer}}`}} ｜ 32×32 原生 ｜ ${{offsetMode === 'camera' ? '跟隨鏡頭中心 (動態 ΔX)' : '固定向右 (1.0)'}} ｜ 高差比率：${{heightGapRatio}}`;
+
+            let cutLabel = '外觀全景 (全部 H0~H4)';
+            if (currentCut === 'interior') cutLabel = '進屋剖切 (1F室內 H0~H2)';
+            else if (currentCut === 'h1') cutLabel = '階梯 H1 (1F室內)';
+            else if (currentCut === 'h2') cutLabel = '階梯 H2 (1F室內)';
+
+            stateText.textContent = `模式：真實 4-Layer 空間貼圖 ｜ 顯示：${{cutLabel}} ｜ 32×32 原生 ｜ ${{offsetMode === 'camera' ? '跟隨鏡頭中心 (動態 ΔX)' : '固定向右 (1.0)'}} ｜ 高差比率：${{heightGapRatio}}`;
         }};
 
         const requestRenderPlm = () => {{
@@ -974,16 +655,32 @@ def run():
             }}
         }};
 
-        // 綁定按鈕
-        document.querySelectorAll('[data-plm-layer]').forEach(btn => {{
+        // 綁定切面按鈕
+        document.querySelectorAll('[data-plm-cut]').forEach(btn => {{
             btn.addEventListener('click', () => {{
-                document.querySelectorAll('[data-plm-layer]').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('[data-plm-cut]').forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
-                currentLayer = btn.getAttribute('data-plm-layer');
+                currentCut = btn.getAttribute('data-plm-cut');
                 requestRenderPlm();
             }});
         }});
 
+        // 綁定圖層疊加按鈕
+        document.querySelectorAll('[data-plm-toggle]').forEach(btn => {{
+            btn.addEventListener('click', () => {{
+                const target = btn.getAttribute('data-plm-toggle');
+                if (target === 'grid') {{
+                    showGrid = !showGrid;
+                    btn.classList.toggle('active', showGrid);
+                }} else if (target === 'actors') {{
+                    showActors = !showActors;
+                    btn.classList.toggle('active', showActors);
+                }}
+                requestRenderPlm();
+            }});
+        }});
+
+        // 綁定模式與高差比率按鈕
         document.querySelectorAll('[data-plm-mode]').forEach(btn => {{
             btn.addEventListener('click', () => {{
                 document.querySelectorAll('[data-plm-mode]').forEach(b => b.classList.remove('active'));
