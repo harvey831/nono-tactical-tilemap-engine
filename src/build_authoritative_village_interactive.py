@@ -1,20 +1,24 @@
 """
 build_authoritative_village_interactive.py
 ==========================================
-【諾諾誠懇深刻反省 · 60FPS 極速流暢 + 1 格厚真實外牆環 2.5D 拓撲旗艦引擎】
+【諾諾誠懇深刻反省 · 嚴格 1 格厚實體外牆環與 2.5D 幾何空間拓撲旗艦引擎】
 (0, 0) 邊境村落【2D 斜俯視多高程共投影官方旗艦交付報告】
 
-核心升級：
-1. 【0 卡頓 · 60FPS 極速渲染架構】：
-   - 徹底消除每次拖曳重建 DOM 的負擔！DOM 樹僅構建一次，平移時直接操作 GPU 硬件加速 CSS/SVG Transform，拖曳絲滑順暢 60+ FPS！
-2. 【嚴格 1 格厚實體外牆環 (1-Tile Thick Wall Ring)】：
-   - 嚴格實現 1-Tile 實心牆環（Outer Footprint - 1 Tile Padding = Interior Floor）！
-   - 酒館 (8x6)：外圍 1 格厚外牆環，內部 6x4 實木地板。
-   - 哨塔 (4x5)：外圍 1 格厚防禦石牆環，內部 2x3 石板地面。
-   - 鐵匠鋪 (6x5)：外圍 1 格厚工坊牆環，內部 4x3 打鐵地面。
-   - 雜貨鋪 (6x5)：外圍 1 格厚商鋪牆環，內部 4x3 營業地面。
-3. 【立體剖切面 (Wall Cap)】：
-   - 剖切至 H1/H2 時，外牆頂部精確呈現 1 格厚實心頂部截面 (Wall Cap)，露出內部深色室內內壁、1F 地面與爬升階梯！
+嚴格 1 格厚外牆環幾何規格：
+1. 【大酒館 (8×6 @ H3)】：
+   - 全外圍佔地：col 4..11 (8格), row 25..30 (6格)
+   - 1 格厚實心外牆環：
+     * 北外牆 (North Wall)：row 25, cols 4..11 (厚度 1 格)
+     * 南外牆 (South Wall)：row 30, cols 4..11 (厚度 1 格，col 7..8 設有實木大門)
+     * 西外牆 (West Wall)：col 4, rows 25..30 (厚度 1 格)
+     * 東外牆 (East Wall)：col 11, rows 25..30 (厚度 1 格)
+   - 室內淨空間 (Interior Floor)：cols 5..10 (6格), rows 26..29 (4格)
+   - 實體雙階木梯 (Stairs)：位於室內東側 (cols 9..10, rows 28..29)，完全在室內，絕不切進東外牆！
+     * Step 1 (H1)：(cols 9..10, row 29)
+     * Step 2 (H2)：(cols 9..10, row 28)
+   - 2F 梯洞真開孔 (Stair Void)：2F 樓板在 (cols 9..10, row 28) 精準挖空，直通下層階梯！
+   - 屋頂外觀層 (H4 / All)：完整赤陶瓦頂覆蓋全建築 (含 1 格簷口飄出)！
+   - 切面剖切層 (H1/H2)：外牆頂部生成實心 1 格厚 Wall Cap 截面，露出室內 1F 木地板、後內壁與階梯！
 """
 
 import sys
@@ -46,7 +50,7 @@ def to_b64(path):
 
 def run():
     print("=================================================================")
-    print("🍑 諾諾重構 60FPS 極速渲染與 1 格厚實心外牆環 (1-Tile Wall Ring)...")
+    print("🍑 諾諾重構嚴格 1 格厚實心外牆環 (1-Tile Wall Ring) 與極速 60FPS 引擎...")
     print("=================================================================")
 
     village_spatial_spec = {
@@ -96,7 +100,7 @@ def run():
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <title>⚔️ 戰術荒原 (0, 0) · 邊境村落【2D 斜俯視 60FPS 空間貼圖與 1 格厚外牆旗艦交付報告】</title>
+    <title>⚔️ 戰術荒原 (0, 0) · 邊境村落【2D 斜俯視 1 格厚實心外牆環與 60FPS 旗艦交付報告】</title>
     <style>
         :root {{
             --bg-primary: #0f1013;
@@ -113,8 +117,8 @@ def run():
             --plm-road: #4a3c28;
             --plm-farm: #384218;
             --plm-water: #1d4052;
-            --plm-grid: rgba(255, 255, 255, 0.10);
-            --plm-edge: rgba(255, 255, 255, 0.35);
+            --plm-grid: rgba(255, 255, 255, 0.12);
+            --plm-edge: rgba(255, 255, 255, 0.40);
             --plm-h1: #2a4836;
             --plm-h2: #346146;
             --plm-h3: #3e7856;
@@ -279,7 +283,7 @@ def run():
 <body>
     <header>
         <div>
-            <h1>⚔️ 戰術荒原 (0, 0) · 邊境村落【2D 斜俯視 60FPS 空間貼圖與 1 格厚外牆旗艦交付報告】</h1>
+            <h1>⚔️ 戰術荒原 (0, 0) · 邊境村落【2D 斜俯視 1 格厚實心外牆環與 60FPS 旗艦交付報告】</h1>
             <div style="color: var(--text-secondary); margin-top: 4px;">
                 4-Layer 語意 SSOT • 40×40 網格 (1280×1280 px @ 32px) • 1-Tile 實心外牆環 • 60FPS GPU 加速平移
             </div>
@@ -297,10 +301,10 @@ def run():
     <div class="section">
         <h2>🎮 一、2D 斜俯視多高程動態共投影空間貼圖沙盒 (60FPS 極速流暢 + 1 格厚實心外牆環)</h2>
         <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 12px;">
-            💡 <strong>解決卡頓與外牆結構的根本之道</strong>：<br>
-            • <strong>拖曳絲滑 60+ FPS</strong>：DOM 節點只構建一次，平移時純操作 GPU Hardware Transform，完全告別卡頓！<br>
-            • <strong>1 格厚實心外牆環 (1-Tile Wall Ring)</strong>：外牆嚴格佔據 1 格寬度（酒館 8×6 外框 - 1格外牆 = 內部 6×4 木地板）！<br>
-            • <strong>剖切切面 (Wall Cap)</strong>：切換至 $H1$ 或 $H2$ 時，外牆頂部會呈現實心 1 格厚 <strong>Wall Cap 截面</strong>，露出室內 1F 木地板、壁面與 $H1/H2$ 實木階梯！點擊 $H3$ 則露出 <strong>2F 梯洞真開孔</strong>！
+            💡 <strong>1 格厚實心外牆環與 2.5D 幾何空間拓撲</strong>：<br>
+            • <strong>嚴格 1 格厚外牆 (1-Tile Wall Ring)</strong>：北牆、南牆、東牆、西牆均為實心 1 格寬！酒館佔地 8×6，內部淨空 6×4 木地板。<br>
+            • <strong>室內階梯與梯洞對齊</strong>：階梯位於室內東側 (cols 9..10, rows 28..29)，緊貼東外牆內側，絕不穿透東外牆！2F 梯洞在 $H3$ 準確挖空！<br>
+            • <strong>剖切切面 (Wall Cap)</strong>：切換至 $H1$ 或 $H2$ 時，外牆頂部會呈現實心 1 格厚 <strong>Wall Cap 截面</strong>，露出室內 1F 木地板、北內壁與 $H1/H2$ 實木階梯！點擊 $H3$ 則露出 <strong>2F 梯洞真開孔</strong>！點擊 $H4$ 則露出 <strong>全覆蓋 3/4 赤陶瓦頂</strong>！
         </p>
 
         <!-- 控制列 -->
@@ -421,8 +425,8 @@ def run():
                         <line x1="0" y1="18" x2="32" y2="18" stroke="#2b1c11" stroke-width="1.5" />
                     </pattern>
                     <pattern id="pat-wall-cap" width="32" height="32" patternUnits="userSpaceOnUse">
-                        <rect width="32" height="32" fill="#1e212b" />
-                        <rect x="2" y="2" width="28" height="28" fill="#2d3240" stroke="#12141a" stroke-width="1" />
+                        <rect width="32" height="32" fill="#382e24" />
+                        <rect x="2" y="2" width="28" height="28" fill="#524335" stroke="#241d17" stroke-width="1.5" />
                     </pattern>
                 </defs>
             </svg>
@@ -558,7 +562,7 @@ def run():
 
     <script>
         // =========================================================================
-        // 🎮 60FPS 極速流暢 + 1 格厚實體外牆環 2.5D 空間引擎 (ADR-0072)
+        // 🎮 60FPS 極速流暢 + 嚴格 1 格厚實心外牆環 2.5D 空間引擎 (ADR-0072)
         // =========================================================================
         const svg = document.getElementById('plmSvg');
         const posText = document.getElementById('plmPosText');
@@ -588,7 +592,6 @@ def run():
         let lastPointerX = 0, lastPointerY = 0;
 
         let worldGroup = null;
-        let dynamicSkewElements = [];
 
         const make = (name, attrs = {{}}, content = '') => {{
             const el = document.createElementNS(ns, name);
@@ -673,12 +676,12 @@ def run():
             const doorTopRight = topDoorRight + (bottomDoorRight - topDoorRight) * doorTopT;
             const wallAttrs = {{ fill: 'url(#pat-front-wall)', stroke: 'var(--plm-edge)', 'stroke-width': 1.4, 'vector-effect': 'non-scaling-stroke' }};
 
-            // 左側外牆
+            // 左側外牆面
             parent.appendChild(make('polygon', Object.assign({{
                 points: `${{topRect.x}},${{topY}} ${{topDoorLeft}},${{topY}} ${{bottomDoorLeft}},${{bottomY}} ${{lowerRect.x}},${{bottomY}}`
             }}, wallAttrs)));
 
-            // 右側外牆
+            // 右側外牆面
             parent.appendChild(make('polygon', Object.assign({{
                 points: `${{topDoorRight}},${{topY}} ${{topRect.x + topRect.w}},${{topY}} ${{lowerRect.x + lowerRect.w}},${{bottomY}} ${{bottomDoorRight}},${{bottomY}}`
             }}, wallAttrs)));
@@ -703,7 +706,7 @@ def run():
             parent.appendChild(make('line', {{ x1: doorTopRight, y1: doorTopY, x2: bottomDoorRight, y2: bottomY, stroke: '#201209', 'stroke-width': 2.4, 'vector-effect': 'non-scaling-stroke' }}));
             parent.appendChild(make('line', {{ x1: doorTopLeft, y1: doorTopY, x2: doorTopRight, y2: doorTopY, stroke: '#201209', 'stroke-width': 2.4, 'vector-effect': 'non-scaling-stroke' }}));
 
-            // 側面外牆
+            // 側面外牆面
             if (side < -0.03) {{
                 parent.appendChild(make('polygon', {{
                     points: `${{topRect.x + topRect.w}},${{topRect.y}} ${{topRect.x + topRect.w}},${{topY}} ${{lowerRect.x + lowerRect.w}},${{bottomY}} ${{lowerRect.x + lowerRect.w}},${{lowerRect.y}}`,
@@ -719,7 +722,7 @@ def run():
             }}
         }};
 
-        // 【1-Tile 實心外牆環核心】
+        // 【嚴格 1 格厚實心外牆環與室內分層渲染】
         const drawBuildingWith1TileWall = (world, defs, bldg, floorFill, roofFill) => {{
             const activeCut = cutHeight();
             const isCut = activeCut !== null && activeCut >= 0 && bldg.height > activeCut;
@@ -727,7 +730,7 @@ def run():
             const base = {{ x: bldg.col * cellX, y: bldg.row * cellY, w: bldg.cols * cellX, h: bldg.rows * cellY }};
             const side = screenSide(base.x + base.w * 0.5);
 
-            // 1-Tile 實心外牆與室內地板網格
+            // 1-Tile 實心外牆環內縮 1 格
             const interiorLogical = {{
                 x: (bldg.col + 1) * cellX, y: (bldg.row + 1) * cellY,
                 w: (bldg.cols - 2) * cellX, h: (bldg.rows - 2) * cellY
@@ -739,15 +742,21 @@ def run():
 
             const group = make('g', {{ 'data-building-id': bldg.id, 'data-visible-height': displayHeight }});
 
-            // 1. 1F 室內地板 (當剖切至 H1, H2 時露出)
-            if (displayHeight < bldg.height) {{
-                drawSurface(group, groundInterior, floorFill, `${{bldg.shortLabel}} 1F地面`);
+            // 1. 1F 室內地板 (當剖切時顯示)
+            if (displayHeight < bldg.height || bldg.id === 'tavern' && displayHeight < 4) {{
+                drawSurface(group, groundInterior, floorFill, `${{bldg.shortLabel}} 1F地板`);
+
+                // 室內北內壁 (Back Interior Wall)
+                group.appendChild(make('polygon', {{
+                    points: `${{visibleInterior.x}},${{visibleInterior.y}} ${{visibleInterior.x + visibleInterior.w}},${{visibleInterior.y}} ${{groundInterior.x + groundInterior.w}},${{groundInterior.y}} ${{groundInterior.x}},${{groundInterior.y}}`,
+                    fill: 'url(#pat-side-wall)', stroke: 'var(--plm-edge)', 'stroke-width': 1.2
+                }}));
             }}
 
-            // 2. 特殊設施：大酒館實木雙階梯 (H1 & H2)
+            // 2. 特殊設施：大酒館實木雙階梯 (H1 & H2) 位於室內東側 (cols 9..10, rows 28..29)
             if (bldg.id === 'tavern') {{
-                const h1Logical = {{ x: 10 * cellX, y: 29 * cellY, w: 2 * cellX, h: cellY }};
-                const h2Logical = {{ x: 10 * cellX, y: 28 * cellY, w: 2 * cellX, h: cellY }};
+                const h1Logical = {{ x: 9 * cellX, y: 29 * cellY, w: 2 * cellX, h: cellY }};
+                const h2Logical = {{ x: 9 * cellX, y: 28 * cellY, w: 2 * cellX, h: cellY }};
                 const h1 = projectedRect(h1Logical, 1, side);
                 const h2 = projectedRect(h2Logical, 2, side);
 
@@ -776,31 +785,50 @@ def run():
                 drawRaisedFacesWithDoor(group, visibleSurface, ground, side, bldg.doorCol / bldg.cols, (bldg.doorCol + (bldg.doorWidth || 1)) / bldg.cols, displayHeight);
             }}
 
-            // 4. 頂部處理：剖切時呈現 1 格厚實心 Wall Cap，完整時呈現 3/4 瓦頂
-            if (displayHeight === bldg.height) {{
-                // 完整屋頂
+            // 4. 頂部處理：
+            // (A) 切換至完整屋頂 (H4 / All) -> 繪製 3/4 全覆蓋赤陶瓦頂
+            if (displayHeight === bldg.height && !isCut) {{
                 if (bldg.id === 'tavern') {{
-                    // 2F 梯洞開孔
-                    const h2Logical = {{ x: 10 * cellX, y: 28 * cellY, w: 2 * cellX, h: cellY }};
-                    const aperture = projectedRect(h2Logical, displayHeight, side);
+                    // 大酒館 H3 2F客房樓板與梯洞真開孔
+                    const h2Logical = {{ x: 9 * cellX, y: 28 * cellY, w: 2 * cellX, h: cellY }};
+                    const aperture = projectedRect(h2Logical, 3, side);
                     const maskId = `mask-tavern-h3-${{Math.random().toString(36).substr(2, 6)}}`;
                     const upperSurface = make('g', {{
                         mask: addSolidMinusRectsMask(defs, maskId, visibleSurface, [aperture])
                     }});
-                    drawSurface(upperSurface, visibleSurface, 'url(#pat-front-wall)', '1格厚外牆');
-                    drawSurface(upperSurface, visibleInterior, roofFill, `${{bldg.shortLabel}} 2F客房/瓦頂`);
+                    // 覆蓋全屋頂
+                    drawSurface(upperSurface, visibleSurface, roofFill, `${{bldg.shortLabel}} 完整瓦頂 (H4)`);
                     group.appendChild(upperSurface);
-                    group.appendChild(make('rect', {{
-                        x: aperture.x, y: aperture.y, width: aperture.w, height: aperture.h,
-                        fill: 'none', stroke: 'var(--accent-crimson)', 'stroke-width': 2,
-                        'data-stair-void-hole': '', 'vector-effect': 'non-scaling-stroke'
-                    }}));
                 }} else {{
-                    drawSurface(group, visibleSurface, 'url(#pat-front-wall)', '1格厚外牆');
-                    drawSurface(group, visibleInterior, roofFill, bldg.label);
+                    drawSurface(group, visibleSurface, roofFill, `${{bldg.label}} 完整瓦頂`);
                 }}
+            }} else if (bldg.id === 'tavern' && displayHeight === 3) {{
+                // 大酒館 H3 2F客房樓面 (露出 2F 實木地板與梯洞開孔)
+                const h2Logical = {{ x: 9 * cellX, y: 28 * cellY, w: 2 * cellX, h: cellY }};
+                const aperture = projectedRect(h2Logical, 3, side);
+                const maskId = `mask-tavern-2f-floor-${{Math.random().toString(36).substr(2, 6)}}`;
+                const upperFloor = make('g', {{
+                    mask: addSolidMinusRectsMask(defs, maskId, visibleInterior, [aperture])
+                }});
+                drawSurface(upperFloor, visibleInterior, 'url(#pat-wood-floor)', '2F客房木地板');
+                group.appendChild(upperFloor);
+
+                // 梯洞紅色防護線
+                group.appendChild(make('rect', {{
+                    x: aperture.x, y: aperture.y, width: aperture.w, height: aperture.h,
+                    fill: 'none', stroke: 'var(--accent-crimson)', 'stroke-width': 2,
+                    'stroke-dasharray': '4 2', 'data-stair-void-hole': '', 'vector-effect': 'non-scaling-stroke'
+                }}));
+
+                // H3 1 格厚實心 Wall Cap 環繞 2F
+                const wallCapMaskId = `mask-wall-cap-h3-${{Math.random().toString(36).substr(2, 6)}}`;
+                const wallCapGroup = make('g', {{
+                    mask: addSolidMinusRectsMask(defs, wallCapMaskId, visibleSurface, [visibleInterior])
+                }});
+                drawSurface(wallCapGroup, visibleSurface, 'url(#pat-wall-cap)', 'H3 1格外牆截面');
+                group.appendChild(wallCapGroup);
             }} else if (displayHeight > 0) {{
-                // 剖切切面：1 格厚實心 Wall Cap
+                // (B) 剖切至 H1 或 H2 -> 嚴格生成 1 格厚實心 Wall Cap 截面環
                 const maskId = `mask-wall-cap-${{bldg.id}}-${{Math.random().toString(36).substr(2, 6)}}`;
                 const cutSurface = make('g', {{
                     mask: addSolidMinusRectsMask(defs, maskId, visibleSurface, [visibleInterior])
@@ -831,7 +859,7 @@ def run():
             }}, label));
         }};
 
-        // 構建整個世界（僅在切換切面或初始化時調用，不隨平移重建）
+        // 構建整個世界（切換切面或初始化時調用一次）
         const buildWorldScene = () => {{
             while (svg.firstChild && svg.firstChild.tagName !== 'title' && svg.firstChild.tagName !== 'defs') {{
                 svg.removeChild(svg.firstChild);
@@ -877,8 +905,8 @@ def run():
             drawSurface(worldGroup, {{ x: 24 * cellX, y: 24 * cellY, w: 13 * cellX, h: 8 * cellY }}, 'url(#pat-farm-tile)', '東南梯形麥田 (H0)');
 
             // 6. 具備 1 格厚實心外牆環的建築群
-            // (1) 邊境大酒館 (8×6 @ H3，1格外牆環，6×4室內，帶實木階梯與梯洞)
-            drawBuildingWith1TileWall(worldGroup, defs, {{ id: 'tavern', label: '邊境大酒館 (8x6)', shortLabel: '大酒館', col: 4, row: 25, cols: 8, rows: 6, height: 3, doorCol: 3, doorWidth: 2 }}, 'url(#pat-wood-floor)', 'url(#pat-roof-clay)');
+            // (1) 邊境大酒館 (8×6 @ H4，1格外牆環，6×4室內，帶實木階梯與梯洞)
+            drawBuildingWith1TileWall(worldGroup, defs, {{ id: 'tavern', label: '邊境大酒館 (8x6)', shortLabel: '大酒館', col: 4, row: 25, cols: 8, rows: 6, height: 4, doorCol: 3, doorWidth: 2 }}, 'url(#pat-wood-floor)', 'url(#pat-roof-clay)');
 
             // (2) 荒原守衛哨塔 (4×5 @ H4，1格外牆環，2×3室內)
             drawBuildingWith1TileWall(worldGroup, defs, {{ id: 'watchtower', label: '荒原守衛哨塔 (4x5)', shortLabel: '哨塔', col: 32, row: 4, cols: 4, rows: 5, height: 4, doorCol: 1 }}, 'url(#pat-stone-floor)', 'url(#pat-roof-clay)');
@@ -897,7 +925,8 @@ def run():
             const actors = make('g', {{ 'aria-label': '角色' }});
             drawActor(actors, 22, 19, 0, '民', 'var(--green)');
             drawActor(actors, 28, 26, 0, '匠', 'var(--orange)');
-            drawActor(actors, 10, 29, 1, 'Arya', 'var(--blue)');
+            // Arya 在階梯上
+            drawActor(actors, 9, 29, 1, 'Arya', 'var(--blue)');
             drawActor(actors, 33, 5, 3, '哨', 'var(--purple)');
             worldGroup.appendChild(actors);
 
