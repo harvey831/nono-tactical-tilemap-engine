@@ -14,7 +14,7 @@
   "surfaces": [
     {
       "surface_id": "surf_ground_h0",
-      "name": "Village Ground & Desert Sand",
+      "name": "Desert Sand & Bedrock",
       "elevation": 0,
       "type": "TERRAIN_SURFACE",
       "bounds": [
@@ -28,7 +28,7 @@
     },
     {
       "surface_id": "surf_road_h0",
-      "name": "Clay Thoroughfare & Main Plaza",
+      "name": "Main Clay Roads & Plaza",
       "elevation": 0,
       "type": "ROAD_SURFACE",
       "default_ap_cost": 1,
@@ -36,7 +36,7 @@
     },
     {
       "surface_id": "surf_farm_h0",
-      "name": "Terraced Wheat Fields",
+      "name": "Wheat Fields",
       "elevation": 0,
       "type": "FARM_SURFACE",
       "bounds": [
@@ -50,7 +50,7 @@
     },
     {
       "surface_id": "surf_ditch_h0",
-      "name": "Irrigation Ditch System",
+      "name": "Irrigation Ditch",
       "elevation": 0,
       "type": "DITCH_WATER",
       "default_ap_cost": 2,
@@ -58,7 +58,7 @@
     },
     {
       "surface_id": "surf_tavern_1f",
-      "name": "Border Tavern Ground Floor",
+      "name": "Tavern 1F (Bar & Hall)",
       "elevation": 0,
       "type": "INTERIOR_FLOOR",
       "bounds": [
@@ -72,7 +72,7 @@
     },
     {
       "surface_id": "surf_tavern_stairs_h1",
-      "name": "Tavern Stairs Step 1 (Physical)",
+      "name": "Tavern Stairs Step 1",
       "elevation": 1,
       "type": "STAIRS_PHYSICAL",
       "cells": [
@@ -91,7 +91,7 @@
     },
     {
       "surface_id": "surf_tavern_stairs_h2",
-      "name": "Tavern Stairs Step 2 (Physical)",
+      "name": "Tavern Stairs Step 2",
       "elevation": 2,
       "type": "STAIRS_PHYSICAL",
       "cells": [
@@ -110,7 +110,7 @@
     },
     {
       "surface_id": "surf_tavern_2f",
-      "name": "Tavern Second Floor (Guest Rooms)",
+      "name": "Tavern 2F (Guest Rooms)",
       "elevation": 3,
       "type": "INTERIOR_FLOOR",
       "bounds": [
