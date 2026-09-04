@@ -5,21 +5,24 @@ build_crossroads_spec.py
 ------------------------------------------------------------
 Author: 諾諾 (Nono)
 Role: AI 軟體架構師 / 協作工程師
-Target: 荒野十字關卡與戰術開闊空地 (The Wasteland Crossroads & Tactical Clearing) 40×40 規格編譯器。
-Features:
-  - 40×40 高程網格 (H0~H2)
-  - 雙向主次幹道交叉 (4格主道 + 3~4格次道)
-  - 中央風化指路石碑與翻覆板車
-  - 西北盤查木柵哨所
-  - 東北行商中繼營地 (營火、石水槽、帳篷、水井)
-  - 東南風化巨石陣開闊對衝戰場
-  - 21 項工程鐵律全面防護 (長度斷言、100% Surfaces 覆蓋、邊界檢驗)
+Target: 荒野十字關卡與戰術開闊空地 (The Wasteland Crossroads) 40×40 規格編譯器。
+對齊奴隸礦坑與邊境村落黃金標準：
+  - 40×40 (COLS=40, ROWS=40)
+  - 高程矩陣 (H0, H1, H2)
+  - Surfaces 連通分量建構 (100% 覆蓋非建築格，包含 tile 標籤)
+  - 嚴格的水平與垂直 Edges (EAST / SOUTH)
+  - 完整的建築規格 (包含 style, wall, door, window, roof)
+  - 道具 (id, sprite, cell, footprint, elevation)
 ------------------------------------------------------------
 """
 
 import os
 import sys
 import json
+from collections import deque
+
+COLS = 40
+ROWS = 40
 
 def cell(col, row):
     return [int(col), int(row)]
@@ -28,15 +31,13 @@ def cell_3d(col, row, elev):
     return [int(col), int(row), int(elev)]
 
 def generate_elevation_and_layout():
-    W, H = 40, 40
-    elev = [[0 for _ in range(W)] for _ in range(H)]
+    elev = [[0 for _ in range(COLS)] for _ in range(ROWS)]
     slope_cells = set()
 
     # 1. 西北盤查哨站高台 (H1) 與瞭望石台 (H2)
     for r in range(4, 15):
         for c in range(4, 16):
             elev[r][c] = 1
-    # 瞭望高台 H2
     for r in range(5, 9):
         for c in range(5, 9):
             elev[r][c] = 2
@@ -64,7 +65,7 @@ def generate_elevation_and_layout():
         for c in range(28, 34):
             elev[r][c] = 2
             
-    # 東南坡道：西北側平滑過渡 (cols 24~25, rows 24~25)
+    # 東南坡道：西北側平滑過渡
     elev[24][24] = 0; slope_cells.add((24, 24))
     elev[24][25] = 0; slope_cells.add((25, 24))
     elev[25][24] = 0; slope_cells.add((24, 25))
@@ -72,43 +73,20 @@ def generate_elevation_and_layout():
     # 4. 十字幹道必須維持 100% 平整 H0
     # 東西主幹道 (rows 18~21)
     for r in range(18, 22):
-        for c in range(W):
+        for c in range(COLS):
             elev[r][c] = 0
     # 南北次幹道 (cols 18~21)
     for c in range(18, 22):
-        for r in range(H):
+        for r in range(ROWS):
             elev[r][c] = 0
 
     return elev, slope_cells
 
 def build_crossroads_spec():
     elevation_rows, slope_cells = generate_elevation_and_layout()
-    W, H = 40, 40
-
-    # 道路與廣場格子
-    road_cells = set()
-    # 東西主幹道
-    for r in range(18, 22):
-        for c in range(W):
-            road_cells.add((c, r))
-    # 南北次幹道
-    for c in range(18, 22):
-        for r in range(H):
-            road_cells.add((c, r))
-            
-    # 廣場 (盤查哨站與營地硬實地表)
-    plaza_cells = set()
-    for r in range(6, 14):
-        for c in range(6, 15):
-            if (c, r) not in road_cells:
-                plaza_cells.add((c, r))
-    for r in range(7, 13):
-        for c in range(28, 35):
-            if (c, r) not in road_cells:
-                plaza_cells.add((c, r))
 
     # --------------------------------------------------------
-    # 1. 建築物定義：西北盤查木石哨所 (Guard Outpost)
+    # 1. 建築物定義：西北盤查木石哨所
     # --------------------------------------------------------
     buildings = [
         {
@@ -122,277 +100,413 @@ def build_crossroads_spec():
                 "rows": 4
             },
             "base_elevation": 1,
-            "height_units": 2,
-            "story_divider_beam": 1.0,
-            "doors_local": [cell(1, 3)],  # 南立面居中開門 (world col 8, row 11)
-            "door_height_units": 1.5,
-            "door_style": "wood",
-            "windows_local": {
-                "0": [3]  # col 3 開窗
-            },
-            "walkable_roof": False,
-            "interior": {
-                "floor_style": "wood",
-                "props": [
-                    {
-                        "id": "crate",
-                        "cell": cell(8, 9),
-                        "elevation": 1,
-                        "footprint": [1, 1]
-                    },
-                    {
-                        "id": "barrel",
-                        "cell": cell(9, 9),
-                        "elevation": 1,
-                        "footprint": [1, 1]
-                    }
-                ]
-            },
+            "floors": 1,
+            "units_per_floor": 3.0,
+            "height_units": 3.0,
+            "wall_ring_thickness": 1,
+            "doors_local": [
+                cell(1, 3) # 南立面開門 (world col 8, row 11)
+            ],
+            "door_height_units": 2.0,
+            "stair": None,
             "roof": {
-                "style": "tile",
-                "overhang_px": 8
+                "walkable": False,
+                "elevation": 4,
+                "kind": "ROOF_CAP"
+            },
+            "windows_local": {
+                "0": [3]
             },
             "facade": []
         }
     ]
 
-    # 建立建築覆蓋佔地查詢表
-    building_occupied = {}
+    all_footprint_cells = set()
     for b in buildings:
         ox, oy = b["footprint"]["origin"]
-        bc = b["footprint"]["cols"]
-        br = b["footprint"]["rows"]
-        b_elev = b["base_elevation"]
-        for dr in range(br):
-            for dc in range(bc):
-                building_occupied[(ox + dc, oy + dr)] = {
-                    "building_id": b["building_id"],
-                    "elevation": b_elev
-                }
+        cols_b = b["footprint"]["cols"]
+        rows_b = b["footprint"]["rows"]
+        for r in range(oy, oy + rows_b):
+            for c in range(ox, ox + cols_b):
+                all_footprint_cells.add((c, r))
 
     # --------------------------------------------------------
-    # 2. 地圖道具佈設 (Props)
+    # 2. 道路與廣場
+    # --------------------------------------------------------
+    road_cells_set = set()
+    for r in range(18, 22):
+        for c in range(COLS):
+            road_cells_set.add((c, r))
+    for c in range(18, 22):
+        for r in range(ROWS):
+            road_cells_set.add((c, r))
+
+    plaza_cells_set = set()
+    for r in range(6, 14):
+        for c in range(6, 15):
+            plaza_cells_set.add((c, r))
+    for r in range(7, 13):
+        for c in range(28, 35):
+            plaza_cells_set.add((c, r))
+
+    road_cells_set -= all_footprint_cells
+    plaza_cells_set -= all_footprint_cells
+    plaza_cells_set -= road_cells_set
+
+    road_cells = [cell(c, r) for c, r in sorted(road_cells_set)]
+    plaza_cells = [cell(c, r) for c, r in sorted(plaza_cells_set)]
+
+    # --------------------------------------------------------
+    # 3. Surfaces 連通分量建構（100% 覆蓋非建築格）
+    # --------------------------------------------------------
+    surfaces = []
+    surf_idx = 1
+    visited = set()
+
+    for r in range(ROWS):
+        for c in range(COLS):
+            if (c, r) in all_footprint_cells:
+                continue
+            if (c, r) in visited:
+                continue
+
+            h = elevation_rows[r][c]
+            if (c, r) in road_cells_set:
+                mat = "road"
+                tile = ["kenshi", 0, 1]
+            elif (c, r) in plaza_cells_set:
+                mat = "plaza"
+                tile = ["kenshi", 4, 0]
+            else:
+                mat = "sand"
+                if h == 2:
+                    tile = ["kenshi", 1, 0]
+                elif h == 1:
+                    tile = ["kenshi", 1, 0]
+                else:
+                    tile = ["kenshi", 0, 0]
+
+            comp_cells = []
+            queue = deque([(c, r)])
+            visited.add((c, r))
+
+            while queue:
+                qc, qr = queue.popleft()
+                comp_cells.append(cell(qc, qr))
+
+                for dc, dr in [(1, 0), (-1, 0), (0, 1), (0, -1)]:
+                    nc, nr = qc + dc, qr + dr
+                    if 0 <= nc < COLS and 0 <= nr < ROWS:
+                        if (nc, nr) not in visited and (nc, nr) not in all_footprint_cells:
+                            nh = elevation_rows[nr][nc]
+                            if (nc, nr) in road_cells_set:
+                                nmat = "road"
+                            elif (nc, nr) in plaza_cells_set:
+                                nmat = "plaza"
+                            else:
+                                nmat = "sand"
+
+                            if nh == h and nmat == mat:
+                                visited.add((nc, nr))
+                                queue.append((nc, nr))
+
+            surfaces.append({
+                "surface_id": f"s_{surf_idx:03d}_{mat}_h{h}",
+                "elevation": h,
+                "material": mat,
+                "tile": tile,
+                "cells": comp_cells
+            })
+            surf_idx += 1
+
+    # 驗證覆蓋
+    total_surf_cells = sum(len(s["cells"]) for s in surfaces)
+    assert total_surf_cells == (COLS * ROWS - len(all_footprint_cells)), f"Surfaces 覆蓋錯誤: {total_surf_cells}"
+
+    # --------------------------------------------------------
+    # 4. 拓撲邊緣 Edges (EAST & SOUTH)
+    # --------------------------------------------------------
+    edges = []
+    edge_idx = 1
+
+    # 水平邊 (EAST)
+    for r in range(ROWS):
+        for c in range(COLS - 1):
+            h1 = elevation_rows[r][c]
+            h2 = elevation_rows[r][c + 1]
+            if h1 != h2:
+                is_slope = (c, r) in slope_cells and (c + 1, r) in slope_cells
+                edges.append({
+                    "edge_id": f"edge_h_{edge_idx}",
+                    "cell_a": cell(c, r),
+                    "cell_b": cell(c + 1, r),
+                    "direction": "EAST",
+                    "elev_a": h1,
+                    "elev_b": h2,
+                    "diff": h1 - h2,
+                    "kind": "WALK_SLOPE" if is_slope else "CLIFF"
+                })
+                edge_idx += 1
+
+    # 垂直邊 (SOUTH)
+    for r in range(ROWS - 1):
+        for c in range(COLS):
+            h1 = elevation_rows[r][c]
+            h2 = elevation_rows[r + 1][c]
+            if h1 != h2:
+                is_slope = (c, r) in slope_cells and (c, r + 1) in slope_cells
+                edges.append({
+                    "edge_id": f"edge_v_{edge_idx}",
+                    "cell_a": cell(c, r),
+                    "cell_b": cell(c, r + 1),
+                    "direction": "SOUTH",
+                    "elev_a": h1,
+                    "elev_b": h2,
+                    "diff": h1 - h2,
+                    "kind": "WALK_SLOPE" if is_slope else "CLIFF"
+                })
+                edge_idx += 1
+
+    # --------------------------------------------------------
+    # 5. 道具定義 (Props)
     # --------------------------------------------------------
     props = [
-        # (A) 十字路口核心地標 (Crossroads Junction)
+        # (A) 十字路口核心地標
         {
             "id": "milestone_obelisk",
+            "sprite": "milestone_obelisk",
             "cell": cell(22, 17),
             "elevation": 0,
-            "footprint": [1, 1],
-            "description": "古老風化指路石碑"
+            "footprint": [1, 1]
         },
         {
             "id": "signpost",
+            "sprite": "signpost",
             "cell": cell(17, 22),
             "elevation": 0,
-            "footprint": [1, 1],
-            "description": "粗木三向路標"
+            "footprint": [1, 1]
         },
         {
             "id": "broken_wagon",
+            "sprite": "broken_wagon",
             "cell": cell(22, 22),
             "elevation": 0,
-            "footprint": [2, 1],
-            "description": "損壞翻覆的行商木板車"
+            "footprint": [2, 1]
         },
         {
-            "id": "sack",
+            "id": "sack_wagon_1",
+            "sprite": "sack",
             "cell": cell(24, 22),
             "elevation": 0,
             "footprint": [1, 1]
         },
         {
-            "id": "crate",
+            "id": "crate_wagon_1",
+            "sprite": "crate",
             "cell": cell(24, 23),
             "elevation": 0,
             "footprint": [1, 1]
         },
 
-        # (B) 西北盤查哨卡 (Guard Checkpoint)
+        # (B) 西北盤查哨卡
         {
-            "id": "barricade_spikes",
+            "id": "barricade_north",
+            "sprite": "barricade_spikes",
             "cell": cell(17, 15),
             "elevation": 0,
-            "footprint": [2, 1],
-            "description": "橫阻北路的帶刺木拒馬"
+            "footprint": [2, 1]
         },
         {
-            "id": "barricade_spikes",
+            "id": "barricade_west",
+            "sprite": "barricade_spikes",
             "cell": cell(15, 17),
             "elevation": 0,
-            "footprint": [2, 1],
-            "description": "扼守西路的防禦拒馬"
+            "footprint": [2, 1]
         },
         {
-            "id": "tent",
+            "id": "guard_tent",
+            "sprite": "tent",
             "cell": cell(11, 6),
             "elevation": 1,
-            "footprint": [3, 2],
-            "description": "衛兵值勤帆布帳篷"
+            "footprint": [3, 2]
         },
         {
-            "id": "campfire",
+            "id": "guard_campfire",
+            "sprite": "campfire",
             "cell": cell(12, 11),
             "elevation": 1,
-            "footprint": [1, 1],
-            "description": "哨卡警戒火堆"
+            "footprint": [1, 1]
         },
         {
-            "id": "flag_rust",
+            "id": "flag_guard",
+            "sprite": "flag_rust",
             "cell": cell(14, 16),
             "elevation": 0,
-            "footprint": [1, 1],
-            "description": "哨卡警備旗幟"
+            "footprint": [1, 1]
         },
         {
-            "id": "barrel",
+            "id": "barrel_guard_1",
+            "sprite": "barrel",
             "cell": cell(7, 13),
             "elevation": 1,
             "footprint": [1, 1]
         },
         {
-            "id": "crate",
+            "id": "crate_guard_1",
+            "sprite": "crate",
             "cell": cell(8, 13),
             "elevation": 1,
             "footprint": [1, 1]
         },
         {
-            "id": "woodpile",
+            "id": "woodpile_guard",
+            "sprite": "woodpile",
             "cell": cell(6, 12),
             "elevation": 1,
             "footprint": [1, 1]
         },
 
-        # (C) 東北中繼歇腳營地 (Traveler Camp)
+        # (C) 東北商隊營地
         {
-            "id": "tent",
+            "id": "nomad_tent",
+            "sprite": "tent",
             "cell": cell(29, 6),
             "elevation": 1,
-            "footprint": [3, 2],
-            "description": "商隊雙人歇腳帳篷"
+            "footprint": [3, 2]
         },
         {
-            "id": "campfire",
+            "id": "camp_fire_nomad",
+            "sprite": "campfire",
             "cell": cell(30, 10),
             "elevation": 1,
-            "footprint": [1, 1],
-            "description": "中繼營地石圈火堆"
+            "footprint": [1, 1]
         },
         {
-            "id": "stone_water_trough",
+            "id": "water_trough",
+            "sprite": "stone_water_trough",
             "cell": cell(26, 13),
             "elevation": 0,
-            "footprint": [2, 1],
-            "description": "路旁供馱獸飲水的長石水槽"
+            "footprint": [2, 1]
         },
         {
-            "id": "well",
+            "id": "camp_well",
+            "sprite": "well",
             "cell": cell(33, 8),
             "elevation": 1,
-            "footprint": [2, 2],
-            "description": "營地共用石水井"
+            "footprint": [2, 2]
         },
         {
-            "id": "woodpile",
+            "id": "woodpile_nomad",
+            "sprite": "woodpile",
             "cell": cell(33, 11),
             "elevation": 1,
             "footprint": [1, 1]
         },
         {
-            "id": "barrel",
+            "id": "barrel_nomad",
+            "sprite": "barrel",
             "cell": cell(28, 11),
             "elevation": 1,
             "footprint": [1, 1]
         },
         {
-            "id": "sack",
+            "id": "sack_nomad",
+            "sprite": "sack",
             "cell": cell(32, 11),
             "elevation": 1,
             "footprint": [1, 1]
         },
 
-        # (D) 東南風化巨石陣戰術空地 (Boulder Battlefield)
+        # (D) 東南風化巨石陣
         {
-            "id": "boulder_large",
+            "id": "boulder_top_1",
+            "sprite": "boulder_large",
             "cell": cell(29, 29),
             "elevation": 2,
-            "footprint": [2, 2],
-            "description": "岩丘頂部大型風化巨石"
+            "footprint": [2, 2]
         },
         {
-            "id": "boulder_large",
+            "id": "boulder_east_1",
+            "sprite": "boulder_large",
             "cell": cell(34, 26),
             "elevation": 1,
-            "footprint": [2, 2],
-            "description": "東側隘口天然巨石掩體"
+            "footprint": [2, 2]
         },
         {
-            "id": "boulder_small",
+            "id": "boulder_small_1",
+            "sprite": "boulder_small",
             "cell": cell(26, 28),
             "elevation": 1,
-            "footprint": [1, 1],
-            "description": "半身風化矮石"
+            "footprint": [1, 1]
         },
         {
-            "id": "boulder_small",
+            "id": "boulder_small_2",
+            "sprite": "boulder_small",
             "cell": cell(31, 34),
             "elevation": 1,
             "footprint": [1, 1]
         },
         {
-            "id": "boulder_small",
+            "id": "boulder_small_3",
+            "sprite": "boulder_small",
             "cell": cell(26, 33),
             "elevation": 1,
             "footprint": [1, 1]
         },
         {
-            "id": "rock_1",
+            "id": "rock_se_1",
+            "sprite": "rock_1",
             "cell": cell(23, 25),
             "elevation": 0,
             "footprint": [1, 1]
         },
         {
-            "id": "rock_2",
+            "id": "rock_se_2",
+            "sprite": "rock_2",
             "cell": cell(38, 28),
             "elevation": 0,
             "footprint": [1, 1]
         },
         {
-            "id": "rock_3",
+            "id": "rock_se_3",
+            "sprite": "rock_3",
             "cell": cell(35, 36),
             "elevation": 0,
             "footprint": [1, 1]
         },
         {
-            "id": "dead_tree",
+            "id": "tree_boulder_1",
+            "sprite": "dead_tree",
             "cell": cell(36, 32),
             "elevation": 1,
-            "footprint": [2, 2],
-            "description": "風化枯死鐵木"
+            "footprint": [2, 2]
         },
         {
-            "id": "dead_tree",
+            "id": "tree_boulder_2",
+            "sprite": "dead_tree",
             "cell": cell(25, 36),
             "elevation": 0,
             "footprint": [2, 2]
         },
 
-        # (E) 西南開闊荒野緩衝帶
+        # (E) 西南荒野
         {
-            "id": "rock_2",
+            "id": "rock_sw_1",
+            "sprite": "rock_2",
             "cell": cell(7, 28),
             "elevation": 0,
             "footprint": [1, 1]
         },
         {
-            "id": "rock_1",
+            "id": "rock_sw_2",
+            "sprite": "rock_1",
             "cell": cell(12, 32),
             "elevation": 0,
             "footprint": [1, 1]
         },
         {
-            "id": "dead_tree",
+            "id": "tree_sw",
+            "sprite": "dead_tree",
             "cell": cell(6, 34),
             "elevation": 0,
             "footprint": [2, 2]
@@ -400,124 +514,53 @@ def build_crossroads_spec():
     ]
 
     # --------------------------------------------------------
-    # 3. 演員設定 (Actors)
+    # 6. 演員設定 (Actors)
     # --------------------------------------------------------
-    actors = [
+    actors_fixture = [
         {
-            "actor_id": "guard_captain",
-            "name": "關卡守衛長",
-            "faction": "holy_nation",
-            "cell": cell_3d(10, 11, 1),
-            "facing": "south"
+            "id": "guard_captain",
+            "label": "守",
+            "color": [239, 68, 68],
+            "indoor": None,
+            "on_building": None,
+            "cells": [cell_3d(10, 11, 1)]
         },
         {
-            "actor_id": "guard_sentry",
-            "name": "十字路口哨兵",
-            "faction": "holy_nation",
-            "cell": cell_3d(17, 16, 0),
-            "facing": "south_east"
+            "id": "guard_sentry",
+            "label": "哨",
+            "color": [220, 38, 38],
+            "indoor": None,
+            "on_building": None,
+            "cells": [cell_3d(17, 16, 0)]
         },
         {
-            "actor_id": "nomad_merchant",
-            "name": "遊牧行商",
-            "faction": "nomad",
-            "cell": cell_3d(29, 9, 1),
-            "facing": "south"
+            "id": "nomad_merchant",
+            "label": "商",
+            "color": [234, 179, 8],
+            "indoor": None,
+            "on_building": None,
+            "cells": [cell_3d(29, 9, 1)]
         },
         {
-            "actor_id": "bounty_hunter",
-            "name": "巨石伏擊賞金獵人",
-            "faction": "mercenary",
-            "cell": cell_3d(28, 29, 2),
-            "facing": "north_west"
+            "id": "bounty_hunter",
+            "label": "獵",
+            "color": [56, 189, 248],
+            "indoor": None,
+            "on_building": None,
+            "cells": [cell_3d(28, 29, 2)]
         }
     ]
 
     # --------------------------------------------------------
-    # 4. 表面組裝 (Surfaces: 100% 覆蓋所有非建築格子)
-    # --------------------------------------------------------
-    surfaces = []
-    covered_cells = set()
-
-    for r in range(H):
-        for c in range(W):
-            if (c, r) in building_occupied:
-                continue
-
-            elev = elevation_rows[r][c]
-            
-            # 地表類型判斷
-            if (c, r) in road_cells:
-                kind = "road"
-                base_tile = "road_dirt"
-            elif (c, r) in plaza_cells:
-                kind = "plaza"
-                base_tile = "plaza_stone"
-            elif elev == 2:
-                kind = "sand"
-                base_tile = "sand_h2"
-            elif elev == 1:
-                kind = "sand"
-                base_tile = "sand_h1"
-            else:
-                kind = "sand"
-                base_tile = "sand_h0"
-
-            surfaces.append({
-                "cell": cell(c, r),
-                "elevation": elev,
-                "kind": kind,
-                "base_tile": base_tile
-            })
-            covered_cells.add((c, r))
-
-    # 斷言：100% 覆蓋
-    total_non_bld = W * H - len(building_occupied)
-    assert len(covered_cells) == total_non_bld, f"Surfaces coverage error: {len(covered_cells)} != {total_non_bld}"
-
-    # --------------------------------------------------------
-    # 5. 立面邊緣 (Edges) 計算
-    # --------------------------------------------------------
-    edges = []
-    for r in range(H):
-        for c in range(W):
-            h_cur = elevation_rows[r][c]
-            # 檢查東邊相鄰
-            if c + 1 < W:
-                h_east = elevation_rows[r][c + 1]
-                if h_cur != h_east:
-                    edges.append({
-                        "from": cell(c, r),
-                        "to": cell(c + 1, r),
-                        "h_left": h_cur,
-                        "h_right": h_east,
-                        "drop": abs(h_cur - h_east)
-                    })
-            # 檢查南邊相鄰
-            if r + 1 < H:
-                h_south = elevation_rows[r + 1][c]
-                if h_cur != h_south:
-                    edges.append({
-                        "from": cell(c, r),
-                        "to": cell(c, r + 1),
-                        "h_top": h_cur,
-                        "h_bottom": h_south,
-                        "drop": abs(h_cur - h_south)
-                    })
-
-    # --------------------------------------------------------
-    # 6. 組裝規格主體
+    # 7. 組裝 Dictionary
     # --------------------------------------------------------
     spec = {
-        "spec_version": "2.1.0",
-        "map_id": "chunk_crossroads_40x40",
-        "title": "荒野十字關卡與戰術開闊空地",
-        "subtitle": "The Wasteland Crossroads & Tactical Clearing",
-        "author": "諾諾 (Nono)",
+        "chunk_id": "chunk_crossroads_40x40",
         "grid": {
+            "cols": COLS,
+            "rows": ROWS,
             "cell_px": 32,
-            "cols": W,
-            "rows": H
+            "world_origin": [1, 1]
         },
         "projection_presentation_only": {
             "rise_ratio": 0.72,
@@ -525,18 +568,48 @@ def build_crossroads_spec():
             "side_spread_cells": 6
         },
         "elevation_rows": elevation_rows,
-        "road_cells": [cell(c, r) for c, r in sorted(list(road_cells))],
-        "plaza_cells": [cell(c, r) for c, r in sorted(list(plaza_cells))],
+        "road_cells": road_cells,
+        "plaza_cells": plaza_cells,
         "field_cells": [],
-        "buildings": buildings,
-        "props": props,
-        "actors": actors,
+        "bridge_cells": [],
+        "authored_cliffs": [],
         "surfaces": surfaces,
         "edges": edges,
+        "buildings": buildings,
+        "props": props,
+        "actors_fixture": actors_fixture,
         "tiles": {
-            "sand": {"row": 0, "col": 0},
-            "road": {"row": 1, "col": 0},
-            "plaza": {"row": 2, "col": 0}
+            "sand": [
+                ["kenshi", 0, 0],
+                ["kenshi", 1, 0],
+                ["kenshi", 2, 0],
+                ["kenshi", 3, 0]
+            ],
+            "plaza": ["kenshi", 4, 0],
+            "field": ["kenshi", 5, 0],
+            "cliff_face": ["kenshi", 6, 0],
+            "cliff_face_base": ["kenshi", 7, 0],
+            "cliff_side": ["kenshi", 6, 0],
+            "pit_floor": ["kenshi", 9, 3],
+            "pit_wall": ["kenshi", 10, 3],
+            "face_stone": ["kenshi", 1, 2],
+            "wood_floor": ["kenshi", 11, 0],
+            "wall_cap": ["kenshi", 12, 0],
+            "step": ["kenshi", 13, 0],
+            "roof_deck": ["kenshi", 14, 0],
+            "door_2u": ["kenshi", 15, 0, 32, 46]
+        },
+        "styles": {
+            "stone": {
+                "wall": ["kenshi", 1, 2],
+                "door": ["kenshi", 11, 2, 32, 46],
+                "window": ["kenshi", 14, 2, 32, 24],
+                "roof": {
+                    "all": ["kenshi", 4, 2]
+                },
+                "floor": ["kenshi", 11, 0],
+                "cap": ["kenshi", 12, 0]
+            }
         }
     }
 
@@ -544,7 +617,7 @@ def build_crossroads_spec():
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(spec, f, ensure_ascii=False, indent=2)
 
-    print(f"Successfully generated {out_path} (W={W}, H={H}, props={len(props)}, actors={len(actors)}, surfaces={len(surfaces)})")
+    print(f"SUCCESS: Generated {out_path} (surfaces={len(surfaces)}, edges={len(edges)}, props={len(props)})")
 
 if __name__ == "__main__":
     build_crossroads_spec()
