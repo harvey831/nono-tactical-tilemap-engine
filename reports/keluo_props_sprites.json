@@ -166,5 +166,41 @@
   230,
   32,
   32
+ ],
+ "boulder_large": [
+  0,
+  290,
+  64,
+  56
+ ],
+ "boulder_small": [
+  72,
+  290,
+  40,
+  36
+ ],
+ "barricade_spikes": [
+  120,
+  290,
+  64,
+  40
+ ],
+ "milestone_obelisk": [
+  192,
+  290,
+  32,
+  56
+ ],
+ "stone_water_trough": [
+  232,
+  290,
+  56,
+  32
+ ],
+ "broken_wagon": [
+  296,
+  290,
+  64,
+  44
  ]
 }
