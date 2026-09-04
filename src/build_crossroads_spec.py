@@ -35,26 +35,20 @@ def generate_elevation_and_layout():
     slope_cells = set()
 
     # 1. 西北盤查哨站高台 (H1) 與瞭望石台 (H2)
-    for r in range(4, 15):
-        for c in range(4, 16):
+    # 統一為整齊規整的石造防禦要塞基座 (cols 5..15, rows 5..13: H1)
+    for r in range(5, 14):
+        for c in range(5, 16):
             elev[r][c] = 1
+    # 核心瞭望高台 (cols 5..8, rows 5..8: H2)
     for r in range(5, 9):
         for c in range(5, 9):
             elev[r][c] = 2
 
-    # 西北坡道：南側向 H0 下滑 (rows 13~14, cols 10~13: H0)
-    for c in range(10, 14):
-        elev[14][c] = 0
-        slope_cells.add((c, 14))
-
     # 2. 東北商隊營地緩丘 (H1)
+    # 規整台地 (cols 26..35, rows 5..13: H1)
     for r in range(5, 14):
-        for c in range(27, 36):
+        for c in range(26, 36):
             elev[r][c] = 1
-    # 東北坡道：西側向主幹道下滑 (cols 27, rows 9~12: H0)
-    for r in range(9, 13):
-        elev[r][27] = 0
-        slope_cells.add((27, r))
 
     # 3. 東南巨石陣風化平頂岩丘 (H1) 與核心石台 (H2)
     for r in range(24, 38):
@@ -65,7 +59,7 @@ def generate_elevation_and_layout():
         for c in range(28, 34):
             elev[r][c] = 2
             
-    # 東南坡道：西北側平滑過渡
+    # 東南平滑過渡點
     elev[24][24] = 0; slope_cells.add((24, 24))
     elev[24][25] = 0; slope_cells.add((25, 24))
     elev[25][24] = 0; slope_cells.add((24, 25))
@@ -142,12 +136,17 @@ def build_crossroads_spec():
             road_cells_set.add((c, r))
 
     plaza_cells_set = set()
-    for r in range(6, 14):
-        for c in range(6, 15):
+    # (A) 西北石造哨站：整個要塞台地 (cols 5..15, rows 5..13) 均鋪設石磚 (plaza)
+    # 確保南側立面與四周邊界 100% 統一為石造防禦堡壘面 (face_stone)，0 鋸齒錯位、0 材質分裂
+    for r in range(5, 14):
+        for c in range(5, 16):
             plaza_cells_set.add((c, r))
-    for r in range(7, 13):
+
+    # (B) 東北商隊營地：水井與飲水石槽核心生活區鋪設石面廣場
+    for r in range(7, 10):
         for c in range(28, 35):
             plaza_cells_set.add((c, r))
+
 
     road_cells_set -= all_footprint_cells
     plaza_cells_set -= all_footprint_cells
@@ -384,8 +383,8 @@ def build_crossroads_spec():
         {
             "id": "water_trough",
             "sprite": "stone_water_trough",
-            "cell": cell(26, 13),
-            "elevation": 0,
+            "cell": cell(28, 9),
+            "elevation": 1,
             "footprint": [2, 1]
         },
         {
@@ -471,7 +470,7 @@ def build_crossroads_spec():
             "id": "rock_se_3",
             "sprite": "rock_3",
             "cell": cell(35, 36),
-            "elevation": 0,
+            "elevation": 1,
             "footprint": [1, 1]
         },
         {
@@ -485,7 +484,7 @@ def build_crossroads_spec():
             "id": "tree_boulder_2",
             "sprite": "dead_tree",
             "cell": cell(25, 36),
-            "elevation": 0,
+            "elevation": 1,
             "footprint": [2, 2]
         },
 

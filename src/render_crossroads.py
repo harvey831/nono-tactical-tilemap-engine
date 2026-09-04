@@ -618,6 +618,15 @@ def main():
     )
     frame_all.crop(crop_props_box).resize(((crop_props_box[2] - crop_props_box[0]) * 2, (crop_props_box[3] - crop_props_box[1]) * 2), resample=resample_nearest).save(os.path.join(out_dir, "crossroads_props_crop.png"))
 
+    crop_camp_box = (
+        int(MARGIN_X + 24 * CELL),
+        int(MARGIN_TOP + 4 * CELL),
+        int(MARGIN_X + 37 * CELL),
+        int(MARGIN_TOP + 16 * CELL)
+    )
+    frame_all.crop(crop_camp_box).resize(((crop_camp_box[2] - crop_camp_box[0]) * 2, (crop_camp_box[3] - crop_camp_box[1]) * 2), resample=resample_nearest).save(os.path.join(out_dir, "crossroads_camp_crop.png"))
+
+
     # 3. 疊加圖層
     print("正在渲染 crossroads_02_grid_overlay.png...")
     render_view(cam_center, tm, pm, actor_sprites, context, cut=None, grid_overlay=True).save(os.path.join(out_dir, "crossroads_02_grid_overlay.png"))
