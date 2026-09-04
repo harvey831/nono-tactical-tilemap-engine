@@ -10,7 +10,7 @@
   const ELEV = S.elevation_rows;
   const key = (c, r) => c + ',' + r;
   const setOf = (arr) => new Set(arr.map(([c, r]) => key(c, r)));
-  const ROAD = setOf(S.road_cells), PLAZA = setOf(S.plaza_cells), FIELD = setOf(S.field_cells);
+  const ROAD = setOf(S.road_cells), PLAZA = setOf(S.plaza_cells), FIELD = setOf(S.field_cells || []), PIT_FLOOR = setOf(S.pit_floor_cells || []);
   const WATER = setOf(S.water_cells || []), BRIDGE = setOf(S.bridge_cells || []), DITCH = setOf(S.ditch_cells || []);   // R39 水系／R45 溝
   // R44：水體共用一個水面。BED 是河床（深淺用），ELEV 的水格改成水體的水面高度（幾何用）
   const BED = ELEV.map((row) => row.slice());
@@ -170,7 +170,7 @@
   };
   // R15：南向立面每級一片；k≤0 坑壁石材、k>0 岩壁（最底一級帶地基）
   // R41：面的材質跟著擁有它的頂面走
-  const topMaterial = (c, r) => BRIDGE.has(key(c, r)) ? 'bridge' : WATER.has(key(c, r)) ? 'water' : PLAZA.has(key(c, r)) ? 'stone' : (FIELD.has(key(c, r)) || (elevAt(c, r) !== null && elevAt(c, r) < 0)) ? 'earth' : 'sand';
+  const topMaterial = (c, r) => BRIDGE.has(key(c, r)) ? 'bridge' : WATER.has(key(c, r)) ? 'water' : PLAZA.has(key(c, r)) ? 'stone' : (FIELD.has(key(c, r)) || PIT_FLOOR.has(key(c, r)) || (elevAt(c, r) !== null && elevAt(c, r) < 0)) ? 'earth' : 'sand';
   const faceRef = (c, r, k, hBottom, sideFace) => {
     const m = topMaterial(c, r);
     if (m === 'bridge') return T.bridge_face;
@@ -217,6 +217,7 @@
     }
     if (PLAZA.has(k)) return T.plaza;
     if (FIELD.has(k)) return T.field;
+    if (PIT_FLOOR.has(k)) return T.pit_floor;
     return T.sand[(((c * 73856093) ^ (r * 19349663)) & 0xffff) % T.sand.length];   // 非線性雜湊，線性式會出斜向條紋
   };
 
