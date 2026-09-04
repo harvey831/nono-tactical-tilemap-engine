@@ -1700,8 +1700,8 @@
     {
       "building_id": "chieftain_stronghold",
       "label": "酋長大帳",
-      "name": "蠻荒大酋長石骨大帳",
-      "style": "stone",
+      "name": "蠻荒大酋長原木骨骸大帳",
+      "style": "timber",
       "footprint": {
         "origin": [
           9,
@@ -2122,7 +2122,7 @@
       39
     ]
   ],
-  "plaza_cells": [
+  "wood_floor_cells": [
     [
       5,
       4
@@ -2604,6 +2604,7 @@
       10
     ]
   ],
+  "plaza_cells": [],
   "pit_floor_cells": [
     [
       7,
@@ -7146,10 +7147,10 @@
     {
       "surface_id": "s_02",
       "elevation": 2,
-      "material": "plaza",
+      "material": "wood_floor",
       "tile": [
         "kenshi",
-        4,
+        11,
         0
       ],
       "cells": [
@@ -7222,10 +7223,10 @@
     {
       "surface_id": "s_03",
       "elevation": 1,
-      "material": "plaza",
+      "material": "wood_floor",
       "tile": [
         "kenshi",
-        4,
+        11,
         0
       ],
       "cells": [
@@ -8326,10 +8327,10 @@
     {
       "surface_id": "s_06",
       "elevation": 1,
-      "material": "plaza",
+      "material": "wood_floor",
       "tile": [
         "kenshi",
-        4,
+        11,
         0
       ],
       "cells": [
@@ -8482,10 +8483,10 @@
     {
       "surface_id": "s_07",
       "elevation": 2,
-      "material": "plaza",
+      "material": "wood_floor",
       "tile": [
         "kenshi",
-        4,
+        11,
         0
       ],
       "cells": [
@@ -13090,64 +13091,118 @@
   ],
   "actors_fixture": [
     {
-      "actor_id": "goblin_chieftain",
+      "id": "goblin_chieftain",
+      "label": "酋",
       "name": "格魯克·碎顱大酋長",
-      "color": "#e02020",
-      "cell": [
-        11,
-        8
+      "color": [
+        224,
+        32,
+        32
       ],
-      "elevation": 1
+      "indoor": null,
+      "on_building": null,
+      "cells": [
+        [
+          11,
+          8,
+          1
+        ]
+      ]
     },
     {
-      "actor_id": "goblin_shaman",
+      "id": "goblin_shaman",
+      "label": "巫",
       "name": "薩滿·疫骨",
-      "color": "#9020e0",
-      "cell": [
-        29,
-        8
+      "color": [
+        144,
+        32,
+        224
       ],
-      "elevation": 1
+      "indoor": null,
+      "on_building": null,
+      "cells": [
+        [
+          29,
+          8,
+          1
+        ]
+      ]
     },
     {
-      "actor_id": "goblin_guard_1",
+      "id": "goblin_guard_1",
+      "label": "衛",
       "name": "哥布林隘口衛兵 A",
-      "color": "#e08020",
-      "cell": [
-        23,
-        26
+      "color": [
+        224,
+        128,
+        32
       ],
-      "elevation": 0
+      "indoor": null,
+      "on_building": null,
+      "cells": [
+        [
+          23,
+          26,
+          0
+        ]
+      ]
     },
     {
-      "actor_id": "goblin_guard_2",
+      "id": "goblin_guard_2",
+      "label": "衛",
       "name": "哥布林隘口衛兵 B",
-      "color": "#e08020",
-      "cell": [
-        26,
-        26
+      "color": [
+        224,
+        128,
+        32
       ],
-      "elevation": 0
+      "indoor": null,
+      "on_building": null,
+      "cells": [
+        [
+          26,
+          26,
+          0
+        ]
+      ]
     },
     {
-      "actor_id": "goblin_archer_tower",
+      "id": "goblin_archer_tower",
+      "label": "哨",
       "name": "高台哨手",
-      "color": "#e08020",
-      "cell": [
-        30,
-        31
+      "color": [
+        224,
+        128,
+        32
       ],
-      "elevation": 1
+      "indoor": null,
+      "on_building": null,
+      "cells": [
+        [
+          30,
+          31,
+          1
+        ]
+      ]
     },
     {
-      "actor_id": "prisoner_merchant",
+      "id": "prisoner_merchant",
+      "label": "囚",
       "name": "落難商隊掌櫃",
-      "color": "#2080e0",
-      "cell": [
-        9,
-        21
+      "color": [
+        32,
+        128,
+        224
       ],
-      "elevation": 0
+      "indoor": null,
+      "on_building": null,
+      "cells": [
+        [
+          9,
+          21,
+          0
+        ]
+      ]
     }
   ]
 }

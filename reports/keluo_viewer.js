@@ -10,7 +10,7 @@
   const ELEV = S.elevation_rows;
   const key = (c, r) => c + ',' + r;
   const setOf = (arr) => new Set(arr.map(([c, r]) => key(c, r)));
-  const ROAD = setOf(S.road_cells), PLAZA = setOf(S.plaza_cells), FIELD = setOf(S.field_cells || []), PIT_FLOOR = setOf(S.pit_floor_cells || []);
+  const ROAD = setOf(S.road_cells), PLAZA = setOf(S.plaza_cells), FIELD = setOf(S.field_cells || []), PIT_FLOOR = setOf(S.pit_floor_cells || []), WOOD_FLOOR = setOf(S.wood_floor_cells || []);
   const WATER = setOf(S.water_cells || []), BRIDGE = setOf(S.bridge_cells || []), DITCH = setOf(S.ditch_cells || []);   // R39 水系／R45 溝
   // R44：水體共用一個水面。BED 是河床（深淺用），ELEV 的水格改成水體的水面高度（幾何用）
   const BED = ELEV.map((row) => row.slice());
@@ -81,9 +81,9 @@
   // ---- 狀態 ----
   const canvas = document.getElementById('plm-canvas');
   const ctx = canvas.getContext('2d');
-  const root = canvas.parentElement;
-  const posText = root.querySelector('[data-status-pos]');
-  const stateText = root.querySelector('[data-status-state]');
+  const root = canvas.parentElement || document.body;
+  const posText = root.querySelector('[data-status-pos]') || { textContent: '' };
+  const stateText = root.querySelector('[data-status-state]') || { textContent: '' };
   let cut = null, mode = 'camera', zoom = 1, panX = 0, panY = 0;
   let showGrid = false, showLabels = false, showSurfaces = false;
   let cssW = 800, cssH = 600, dpr = 1;
@@ -170,12 +170,13 @@
   };
   // R15：南向立面每級一片；k≤0 坑壁石材、k>0 岩壁（最底一級帶地基）
   // R41：面的材質跟著擁有它的頂面走
-  const topMaterial = (c, r) => BRIDGE.has(key(c, r)) ? 'bridge' : WATER.has(key(c, r)) ? 'water' : PLAZA.has(key(c, r)) ? 'stone' : (FIELD.has(key(c, r)) || PIT_FLOOR.has(key(c, r)) || (elevAt(c, r) !== null && elevAt(c, r) < 0)) ? 'earth' : 'sand';
+  const topMaterial = (c, r) => BRIDGE.has(key(c, r)) ? 'bridge' : WATER.has(key(c, r)) ? 'water' : PLAZA.has(key(c, r)) ? 'stone' : WOOD_FLOOR.has(key(c, r)) ? 'wood' : (FIELD.has(key(c, r)) || PIT_FLOOR.has(key(c, r)) || (elevAt(c, r) !== null && elevAt(c, r) < 0)) ? 'earth' : 'sand';
   const faceRef = (c, r, k, hBottom, sideFace) => {
     const m = topMaterial(c, r);
     if (m === 'bridge') return T.bridge_face;
     if (m === 'water') return sideFace ? T.pit_wall_side : T.pit_wall;   // R41 改：水下的面是土岸
     if (m === 'stone') return T.face_stone;
+    if (m === 'wood') return sideFace ? T.cliff_side : (k === Math.max(hBottom, 0) + 1 ? T.cliff_face_base : T.cliff_face);
     if (m === 'earth' || k <= 0) return sideFace ? T.pit_wall_side : T.pit_wall;
     if (sideFace) return T.cliff_side;
     return k === Math.max(hBottom, 0) + 1 ? T.cliff_face_base : T.cliff_face;
@@ -218,6 +219,7 @@
     if (PLAZA.has(k)) return T.plaza;
     if (FIELD.has(k)) return T.field;
     if (PIT_FLOOR.has(k)) return T.pit_floor;
+    if (WOOD_FLOOR.has(k)) return T.wood_floor;
     return T.sand[(((c * 73856093) ^ (r * 19349663)) & 0xffff) % T.sand.length];   // 非線性雜湊，線性式會出斜向條紋
   };
 
@@ -497,7 +499,10 @@
     const stairsBelow = stairBase < visibleFloor;
     if (stairsBelow) drawSteps();
     // 樓板下面的演員在樓板之前畫：樓板跳過洞格，洞裡自然透視看到他（畫序，不是遮罩）
-    const belowFloor = indoorActors.filter((a) => a.cells[0][2] < b.base + visibleFloor);
+    const belowFloor = indoorActors.filter((a) => {
+      const cells = getActorCells(a);
+      return cells.length ? cells[0][2] < b.base + visibleFloor : false;
+    });
     belowFloor.forEach(drawActor);
     // 樓面／屋頂
     for (const [c, r] of b.cells) {
@@ -600,22 +605,29 @@
     ctx.drawImage(img, Math.round(bx - img.width / 2), Math.round(by - img.height));
   };
   // 演員只有兩種不畫：比剖面高、或剖面正好切過身體。被屋頂／樓板蓋住是畫序的事
+  const getActorCells = (a) => a.cells || (a.cell ? [[a.cell[0], a.cell[1], a.elevation !== undefined ? a.elevation : 0]] : []);
   const actorVisible = (a) => {
+    const cells = getActorCells(a);
+    if (!cells.length) return false;
     if (cut === null) return true;
-    if (a.cells.some(([, , h]) => h === cut)) return false;
-    return a.cells[0][2] <= cut;
+    if (cells.some(([, , h]) => h === cut)) return false;
+    return cells[0][2] <= cut;
   };
   const drawActor = (a) => {
     if (!actorVisible(a)) return;
     drawActorBody(a);
   };
   const drawActorBody = (a) => {
-    const [cc, cr, ch] = a.cells[0];
-    const col = `rgb(${a.color.join(',')})`;
-    const visibleCells = a.cells;
+    const cells = getActorCells(a);
+    if (!cells.length) return;
+    const [cc, cr, ch] = cells[0];
+    const colRgb = Array.isArray(a.color) ? a.color.join(',') : null;
+    const col = colRgb ? `rgb(${colRgb})` : (a.color || '#ef4444');
+    const colAlpha = colRgb ? `rgba(${colRgb},.35)` : 'rgba(239,68,68,.35)';
+    const visibleCells = cells;
     for (const [c, r, h] of visibleCells) {
       const [x, y] = proj(c, r, h);
-      ctx.fillStyle = `rgba(${a.color.join(',')},.35)`; ctx.fillRect(x + 3, y + 3, CELL - 6, CELL - 6);
+      ctx.fillStyle = colAlpha; ctx.fillRect(x + 3, y + 3, CELL - 6, CELL - 6);
       ctx.strokeStyle = col; ctx.lineWidth = 2; ctx.strokeRect(x + 3, y + 3, CELL - 6, CELL - 6);
     }
     for (let i = 0; i < visibleCells.length; i += 1) for (let j = i + 1; j < visibleCells.length; j += 1) {
@@ -629,8 +641,8 @@
       ctx.beginPath(); pts.forEach(([x, y], k) => (k ? ctx.lineTo(x, y) : ctx.moveTo(x, y))); ctx.closePath();
       ctx.fillStyle = 'rgba(242,201,76,.55)'; ctx.fill(); ctx.strokeStyle = '#f2c94c'; ctx.stroke();
     }
-    const n = a.cells.length;
-    const offs = a.cells.map(([c, r]) => [c - cc, r - cr]);
+    const n = cells.length;
+    const offs = cells.map(([c, r]) => [c - cc, r - cr]);
     const avx = offs.reduce((s, o) => s + o[0], 0) / n, avy = offs.reduce((s, o) => s + o[1], 0) / n;
     const xs = offs.map((o) => o[0]), ys = offs.map((o) => o[1]);
     const fills = n === (Math.max(...xs) - Math.min(...xs) + 1) * (Math.max(...ys) - Math.min(...ys) + 1);
@@ -638,7 +650,9 @@
     const [sx, sy] = PV((cc + 0.5 + damping * avx) * CELL, (cr + 0.5 + damping * avy) * CELL, ch);
     const rad = n === 1 ? 11 : 15;
     ctx.beginPath(); ctx.arc(sx, sy, rad, 0, Math.PI * 2); ctx.fillStyle = col; ctx.fill(); ctx.strokeStyle = '#fff'; ctx.lineWidth = 2; ctx.stroke();
-    ctx.font = '11px "Noto Sans TC",sans-serif'; ctx.fillStyle = '#000'; ctx.fillText(a.label, sx - 6, sy + 4);
+    ctx.font = '11px "Noto Sans TC",sans-serif'; ctx.fillStyle = '#000';
+    const lbl = a.label || (a.name ? a.name.slice(0, 1) : (a.id ? a.id.slice(0, 1) : '?'));
+    ctx.fillText(lbl, sx - 6, sy + 4);
   };
   const drawOverlays = () => {
     if (showGrid) {
@@ -680,7 +694,9 @@
     }]); });
     S.actors_fixture.forEach((a) => {
       if (a.indoor) return;                                              // 室內演員由建築在正確層次畫
-      objects.push([Math.max(...a.cells.map((c) => c[1])), 2, () => drawActor(a)]);
+      const cells = getActorCells(a);
+      if (!cells.length) return;
+      objects.push([Math.max(...cells.map((c) => c[1])), 2, () => drawActor(a)]);
     });
     objects.sort((a, b) => a[0] - b[0] || a[1] - b[1]);
     let oi = 0;
@@ -743,7 +759,8 @@
     if (t === 'grid') showGrid = !showGrid; if (t === 'labels') showLabels = !showLabels; if (t === 'surfaces') showSurfaces = !showSurfaces;
     btn.classList.toggle('active'); request();
   }));
-  root.querySelector('[data-reset]').addEventListener('click', resetPan);
+  const resetBtn = root.querySelector('[data-reset]');
+  if (resetBtn) resetBtn.addEventListener('click', resetPan);
   // 可程式化視角：驗證用。goto(col,row,zoom,cut)：把世界格 (col,row) 放到畫面中心
   window.PLM_VIEW = {
     goto: (col, row, z = 3, cutValue = null) => {
@@ -753,7 +770,8 @@
     },
     state: () => ({ zoom, cut, panX, panY, cssW, cssH, camCol: camWorldX() / CELL }),
   };
-  root.querySelector('[data-layer="all"]').classList.add('active');
+  const defLayer = root.querySelector('[data-layer="all"]');
+  if (defLayer && defLayer.classList) defLayer.classList.add('active');
   window.addEventListener('resize', resize);
   Promise.all(pending).then(() => { resize(); resetPan(); });
 })();

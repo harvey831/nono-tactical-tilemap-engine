@@ -104,14 +104,14 @@ def build_goblin_camp_spec():
     elevation_rows, slope_cells = generate_elevation_and_layout()
 
     # --------------------------------------------------------
-    # 1. 建築物定義：哥布林大酋長骨骸要塞
+    # 1. 建築物定義：哥布林大酋長原木骨骸大帳
     # --------------------------------------------------------
     buildings = [
         {
             "building_id": "chieftain_stronghold",
             "label": "酋長大帳",
-            "name": "蠻荒大酋長石骨大帳",
-            "style": "stone",
+            "name": "蠻荒大酋長原木骨骸大帳",
+            "style": "timber",
             "footprint": {
                 "origin": cell(9, 5),
                 "cols": 4,
@@ -149,7 +149,7 @@ def build_goblin_camp_spec():
                 all_footprint_cells.add((c, r))
 
     # --------------------------------------------------------
-    # 2. 地表材質分區 (Road / Field / Plaza)
+    # 2. 地表材質分區 (Road / Pit Floor / Wood Floor)
     # --------------------------------------------------------
     road_cells_set = set()
     # 入谷泥濘主路 (cols 23..26, rows 16..39)
@@ -163,24 +163,24 @@ def build_goblin_camp_spec():
         for c in range(7, 29):
             pit_floor_cells_set.add((c, r))
 
-    plaza_cells_set = set()
-    # 西北酋長高台地面鋪石 (cols 5..16, rows 4..11)
+    wood_floor_cells_set = set()
+    # 西北酋長高台原木鋪面 (cols 5..16, rows 4..11)
     for r in range(4, 12):
         for c in range(5, 17):
-            plaza_cells_set.add((c, r))
-    # 東北薩滿祭壇地面鋪石 (cols 26..33, rows 6..10)
+            wood_floor_cells_set.add((c, r))
+    # 東北薩滿祭壇原木鋪面 (cols 26..33, rows 6..10)
     for r in range(6, 11):
         for c in range(26, 34):
-            plaza_cells_set.add((c, r))
+            wood_floor_cells_set.add((c, r))
 
     road_cells_set -= all_footprint_cells
     pit_floor_cells_set -= all_footprint_cells
-    plaza_cells_set -= all_footprint_cells
+    wood_floor_cells_set -= all_footprint_cells
     pit_floor_cells_set -= road_cells_set
-    plaza_cells_set -= road_cells_set
+    wood_floor_cells_set -= road_cells_set
 
     road_cells = [cell(c, r) for c, r in sorted(road_cells_set)]
-    plaza_cells = [cell(c, r) for c, r in sorted(plaza_cells_set)]
+    wood_floor_cells = [cell(c, r) for c, r in sorted(wood_floor_cells_set)]
     pit_floor_cells = [cell(c, r) for c, r in sorted(pit_floor_cells_set)]
 
     # --------------------------------------------------------
@@ -201,9 +201,9 @@ def build_goblin_camp_spec():
             if (c, r) in road_cells_set:
                 mat = "road"
                 tile = ["kenshi", 0, 1]
-            elif (c, r) in plaza_cells_set:
-                mat = "plaza"
-                tile = ["kenshi", 4, 0]
+            elif (c, r) in wood_floor_cells_set:
+                mat = "wood_floor"
+                tile = ["kenshi", 11, 0]
             elif (c, r) in pit_floor_cells_set:
                 mat = "pit_floor"
                 tile = ["kenshi", 9, 3]
@@ -226,7 +226,7 @@ def build_goblin_camp_spec():
                         if (nc, nr) not in all_footprint_cells and (nc, nr) not in visited:
                             if elevation_rows[nr][nc] == h:
                                 n_mat = "road" if (nc, nr) in road_cells_set else (
-                                    "plaza" if (nc, nr) in plaza_cells_set else (
+                                    "wood_floor" if (nc, nr) in wood_floor_cells_set else (
                                         "pit_floor" if (nc, nr) in pit_floor_cells_set else "sand"
                                     )
                                 )
@@ -529,46 +529,58 @@ def build_goblin_camp_spec():
     # --------------------------------------------------------
     actors_fixture = [
         {
-            "actor_id": "goblin_chieftain",
+            "id": "goblin_chieftain",
+            "label": "酋",
             "name": "格魯克·碎顱大酋長",
-            "color": "#e02020",
-            "cell": cell(11, 8),
-            "elevation": 1
+            "color": [224, 32, 32],
+            "indoor": None,
+            "on_building": None,
+            "cells": [cell_3d(11, 8, 1)]
         },
         {
-            "actor_id": "goblin_shaman",
+            "id": "goblin_shaman",
+            "label": "巫",
             "name": "薩滿·疫骨",
-            "color": "#9020e0",
-            "cell": cell(29, 8),
-            "elevation": 1
+            "color": [144, 32, 224],
+            "indoor": None,
+            "on_building": None,
+            "cells": [cell_3d(29, 8, 1)]
         },
         {
-            "actor_id": "goblin_guard_1",
+            "id": "goblin_guard_1",
+            "label": "衛",
             "name": "哥布林隘口衛兵 A",
-            "color": "#e08020",
-            "cell": cell(23, 26),
-            "elevation": 0
+            "color": [224, 128, 32],
+            "indoor": None,
+            "on_building": None,
+            "cells": [cell_3d(23, 26, 0)]
         },
         {
-            "actor_id": "goblin_guard_2",
+            "id": "goblin_guard_2",
+            "label": "衛",
             "name": "哥布林隘口衛兵 B",
-            "color": "#e08020",
-            "cell": cell(26, 26),
-            "elevation": 0
+            "color": [224, 128, 32],
+            "indoor": None,
+            "on_building": None,
+            "cells": [cell_3d(26, 26, 0)]
         },
         {
-            "actor_id": "goblin_archer_tower",
+            "id": "goblin_archer_tower",
+            "label": "哨",
             "name": "高台哨手",
-            "color": "#e08020",
-            "cell": cell(30, 31),
-            "elevation": 1
+            "color": [224, 128, 32],
+            "indoor": None,
+            "on_building": None,
+            "cells": [cell_3d(30, 31, 1)]
         },
         {
-            "actor_id": "prisoner_merchant",
+            "id": "prisoner_merchant",
+            "label": "囚",
             "name": "落難商隊掌櫃",
-            "color": "#2080e0",
-            "cell": cell(9, 21),
-            "elevation": 0
+            "color": [32, 128, 224],
+            "indoor": None,
+            "on_building": None,
+            "cells": [cell_3d(9, 21, 0)]
         }
     ]
 
@@ -591,7 +603,8 @@ def build_goblin_camp_spec():
         "elevation_rows": elevation_rows,
         "buildings": buildings,
         "road_cells": road_cells,
-        "plaza_cells": plaza_cells,
+        "wood_floor_cells": wood_floor_cells,
+        "plaza_cells": [],
         "pit_floor_cells": pit_floor_cells,
         "field_cells": [],
         "water_cells": [],
