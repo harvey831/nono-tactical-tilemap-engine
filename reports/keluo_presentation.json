@@ -185,6 +185,60 @@
     20
    ]
   },
+  "timber_watchtower": {
+   "wall": [
+    "kenshi",
+    0,
+    2
+   ],
+   "base": false,
+   "door": [
+    "kenshi",
+    15,
+    0,
+    32,
+    46
+   ],
+   "window": [
+    "kenshi",
+    13,
+    2,
+    32,
+    24
+   ],
+   "roof": {
+    "all": [
+     "kenshi",
+     14,
+     0
+    ]
+   },
+   "cap": [
+    "kenshi",
+    6,
+    2
+   ],
+   "floor": [
+    "kenshi",
+    11,
+    0
+   ],
+   "step": [
+    "kenshi",
+    13,
+    0
+   ],
+   "deck": [
+    "kenshi",
+    14,
+    0
+   ],
+   "eave": [
+    60,
+    30,
+    20
+   ]
+  },
   "stone": {
    "wall": [
     "kenshi",

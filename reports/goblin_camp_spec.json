@@ -1696,7 +1696,37 @@
       1
     ]
   ],
-  "buildings": [],
+  "buildings": [
+    {
+      "building_id": "watchtower_gorge",
+      "label": "峽谷木造哨塔",
+      "name": "峽谷隘口雙層木造哨塔",
+      "style": "timber_watchtower",
+      "footprint": {
+        "origin": [
+          31,
+          30
+        ],
+        "cols": 2,
+        "rows": 2
+      },
+      "base_elevation": 2,
+      "floors": 1,
+      "units_per_floor": 3.0,
+      "height_units": 3.0,
+      "wall_ring_thickness": 0,
+      "doors_local": [],
+      "door_height_units": 2.0,
+      "stair": null,
+      "roof": {
+        "walkable": true,
+        "elevation": 5,
+        "kind": "DECK"
+      },
+      "windows_local": {},
+      "facade": []
+    }
+  ],
   "road_cells": [
     [
       23,
@@ -9904,10 +9934,6 @@
           29
         ],
         [
-          31,
-          30
-        ],
-        [
           30,
           31
         ],
@@ -9926,14 +9952,6 @@
         [
           33,
           29
-        ],
-        [
-          32,
-          30
-        ],
-        [
-          31,
-          31
         ],
         [
           30,
@@ -9958,10 +9976,6 @@
         [
           33,
           30
-        ],
-        [
-          32,
-          31
         ],
         [
           31,
@@ -10234,6 +10248,34 @@
         [
           37,
           37
+        ]
+      ]
+    },
+    {
+      "surface_id": "s_watchtower_gorge_deck",
+      "elevation": 5,
+      "material": "wood_floor",
+      "tile": [
+        "kenshi",
+        11,
+        0
+      ],
+      "cells": [
+        [
+          31,
+          30
+        ],
+        [
+          32,
+          30
+        ],
+        [
+          31,
+          31
+        ],
+        [
+          32,
+          31
         ]
       ]
     }
@@ -12923,19 +12965,6 @@
       ]
     },
     {
-      "id": "watchtower_gorge",
-      "sprite": "watchtower",
-      "cell": [
-        30,
-        30
-      ],
-      "elevation": 2,
-      "footprint": [
-        4,
-        2
-      ]
-    },
-    {
       "id": "flag_gorge",
       "sprite": "flag_rust",
       "cell": [
@@ -13413,7 +13442,7 @@
         32
       ],
       "indoor": null,
-      "on_building": null,
+      "on_building": "watchtower_gorge",
       "cells": [
         [
           32,

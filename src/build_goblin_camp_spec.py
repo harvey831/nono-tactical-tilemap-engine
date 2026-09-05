@@ -101,9 +101,36 @@ def build_goblin_camp_spec():
     elevation_rows, slope_cells = generate_elevation_and_layout()
 
     # --------------------------------------------------------
-    # 1. 建築物定義：野蠻氏族無文明磚石屋舍 (純 savage tents/props)
+    # 1. 建築物定義：東南隘口雙層高架木造哨塔 (具備 Elev 5 實體甲板層格)
     # --------------------------------------------------------
-    buildings = []
+    buildings = [
+        {
+            "building_id": "watchtower_gorge",
+            "label": "峽谷木造哨塔",
+            "name": "峽谷隘口雙層木造哨塔",
+            "style": "timber_watchtower",
+            "footprint": {
+                "origin": cell(31, 30),
+                "cols": 2,
+                "rows": 2
+            },
+            "base_elevation": 2,
+            "floors": 1,
+            "units_per_floor": 3.0,
+            "height_units": 3.0,
+            "wall_ring_thickness": 0,
+            "doors_local": [],
+            "door_height_units": 2.0,
+            "stair": None,
+            "roof": {
+                "walkable": True,
+                "elevation": 5,
+                "kind": "DECK"
+            },
+            "windows_local": {},
+            "facade": []
+        }
+    ]
 
     all_footprint_cells = set()
     for b in buildings:
@@ -209,6 +236,26 @@ def build_goblin_camp_spec():
             })
             surf_idx += 1
 
+    # (B) 建築頂部可站立甲板 Surfaces (Walkable Building Decks)
+    for b in buildings:
+        roof = b.get("roof", {})
+        if roof.get("walkable"):
+            ox, oy = b["footprint"]["origin"]
+            bw = b["footprint"]["cols"]
+            bh = b["footprint"]["rows"]
+            deck_elev = roof.get("elevation", b["base_elevation"] + b["height_units"])
+            deck_cells = []
+            for r in range(oy, oy + bh):
+                for c in range(ox, ox + bw):
+                    deck_cells.append(cell(c, r))
+            surfaces.append({
+                "surface_id": f"s_{b['building_id']}_deck",
+                "elevation": deck_elev,
+                "material": "wood_floor",
+                "tile": ["kenshi", 11, 0],
+                "cells": deck_cells
+            })
+
     # --------------------------------------------------------
     # 4. 水平與垂直 Edges 建構
     # --------------------------------------------------------
@@ -267,13 +314,6 @@ def build_goblin_camp_spec():
             "cell": cell(25, 27),
             "elevation": 0,
             "footprint": [2, 1]
-        },
-        {
-            "id": "watchtower_gorge",
-            "sprite": "watchtower",
-            "cell": cell(30, 30),
-            "elevation": 2,
-            "footprint": [4, 2]
         },
         {
             "id": "flag_gorge",
@@ -543,7 +583,7 @@ def build_goblin_camp_spec():
             "name": "高台哨手",
             "color": [224, 128, 32],
             "indoor": None,
-            "on_building": None,
+            "on_building": "watchtower_gorge",
             "cells": [cell_3d(32, 31, 5)]
         },
         {

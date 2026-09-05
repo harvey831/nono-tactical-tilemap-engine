@@ -407,8 +407,8 @@
     }
   };
   const drawBuilding = (b, indoorActors = []) => {
-    const st = S.styles[b.style];                                       // R32：這棟的材質組
-    if (cut !== null && cut < b.base) return;
+    const st = (S.styles && S.styles[b.style]) || (S.styles && S.styles['timber']) || (S.styles && S.styles['stone']);                                       // R32：這棟的材質組
+    if (!st || (cut !== null && cut < b.base)) return;
     const H = b.H, floors = b.floors, floorH = H / floors;
     const localCut = cut === null ? null : cut - b.base;
     const isCut = localCut !== null && localCut >= 0 && localCut < H;

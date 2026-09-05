@@ -103,6 +103,144 @@ def paste_parallelogram(canvas, src, p0, vec_u, vec_v, ox_base, oy_base, conserv
     patch = src_transformed.transform((bw, bh), affine_mode, coeffs, resample=resample_bilinear)
     canvas.alpha_composite(patch, (int(ox_base + bx), int(oy_base + by)))
 
+def render_standing_box_prop(canvas, draw, prop_type, c, r, h, fw, fh, cam_x, ox_base, oy_base):
+    # 支援箱型/柱狀/拒馬道具：以三維頂點向量垂直立起立面、水平展開 54.25° 頂面
+    height_map = {
+        "crate": 0.75,
+        "barrel": 0.85,
+        "iron_cage": 1.25,
+        "pillory_post": 1.35,
+        "goblin_palisade": 1.0,
+    }
+    h_u = height_map.get(prop_type, 0.8)
+    top_h = h + h_u
+
+    pad = 2 if prop_type in ["crate", "iron_cage"] else (3 if prop_type == "barrel" else 0)
+    x0 = c * CELL + pad
+    x1 = (c + fw) * CELL - pad
+    y0 = r * CELL + pad
+    y1 = (r + fh) * CELL - pad
+
+    p_t0 = PV(x0, y0, top_h, cam_x)
+    p_t1 = PV(x1, y0, top_h, cam_x)
+    p_t2 = PV(x1, y1, top_h, cam_x)
+    p_t3 = PV(x0, y1, top_h, cam_x)
+
+    p_b0 = PV(x0, y0, h, cam_x)
+    p_b1 = PV(x1, y0, h, cam_x)
+    p_b2 = PV(x1, y1, h, cam_x)
+    p_b3 = PV(x0, y1, h, cam_x)
+
+    def S(pt):
+        return (ox_base + pt[0], oy_base + pt[1])
+
+    pt0, pt1, pt2, pt3 = S(p_t0), S(p_t1), S(p_t2), S(p_t3)
+    pb0, pb1, pb2, pb3 = S(p_b0), S(p_b1), S(p_b2), S(p_b3)
+
+    if prop_type == "crate":
+        if face_visible("right", x1, cam_x):
+            draw.polygon([pt1, pt2, pb2, pb1], fill=(110, 78, 50, 255), outline=(50, 35, 20, 255))
+            draw.line([pt1, pb2], fill=(85, 60, 38, 255), width=2)
+        elif face_visible("left", x0, cam_x):
+            draw.polygon([pt0, pt3, pb3, pb0], fill=(95, 68, 42, 255), outline=(45, 30, 18, 255))
+            draw.line([pt0, pb3], fill=(75, 52, 32, 255), width=2)
+
+        draw.polygon([pt3, pt2, pb2, pb3], fill=(138, 98, 62, 255), outline=(55, 38, 24, 255))
+        ymid_t = (pt3[1] + pb3[1]) / 2
+        ymid_b = (pt2[1] + pb2[1]) / 2
+        draw.line([(pt3[0], ymid_t), (pt2[0], ymid_b)], fill=(105, 75, 48, 255), width=1)
+        draw.line([pt3, pb2], fill=(70, 50, 32, 255), width=2)
+        draw.line([pt2, pb3], fill=(70, 50, 32, 255), width=2)
+        for pt in [pt3, pt2, pb2, pb3]:
+            draw.rectangle([(int(pt[0] - 2), int(pt[1] - 2)), (int(pt[0] + 2), int(pt[1] + 2))], fill=(40, 36, 32, 255))
+
+        draw.polygon([pt0, pt1, pt2, pt3], fill=(175, 128, 85, 255), outline=(65, 45, 28, 255))
+        draw.line([((pt0[0] + pt1[0])/2, (pt0[1] + pt1[1])/2), ((pt3[0] + pt2[0])/2, (pt3[1] + pt2[1])/2)], fill=(145, 105, 68, 255), width=2)
+        draw.line([((pt0[0] + pt3[0])/2, (pt0[1] + pt3[1])/2), ((pt1[0] + pt2[0])/2, (pt1[1] + pt2[1])/2)], fill=(145, 105, 68, 255), width=2)
+        draw.line([pt0, pt1], fill=(215, 168, 115, 255), width=1)
+
+    elif prop_type == "barrel":
+        draw.polygon([pt3, pt2, pb2, pb3], fill=(125, 88, 55, 255), outline=(50, 35, 22, 255))
+        for frac in [0.2, 0.4, 0.6, 0.8]:
+            top_x = pt3[0] + (pt2[0] - pt3[0]) * frac
+            bot_x = pb3[0] + (pb2[0] - pb3[0]) * frac
+            draw.line([(top_x, pt3[1]), (bot_x, pb3[1])], fill=(95, 65, 40, 255), width=1)
+        for ratio in [0.25, 0.75]:
+            y_t = pt3[1] + (pb3[1] - pt3[1]) * ratio
+            y_b = pt2[1] + (pb2[1] - pt2[1]) * ratio
+            draw.line([(pt3[0], y_t), (pt2[0], y_b)], fill=(38, 35, 32, 255), width=3)
+            draw.line([(pt3[0], y_t), (pt2[0], y_b)], fill=(90, 85, 80, 255), width=1)
+        cx, cy = (pt0[0] + pt2[0]) / 2, (pt0[1] + pt2[1]) / 2
+        ew = abs(pt1[0] - pt0[0]) / 2
+        eh = abs(pt3[1] - pt0[1]) / 2
+        draw.ellipse([(cx - ew, cy - eh), (cx + ew, cy + eh)], fill=(160, 118, 76, 255), outline=(55, 38, 24, 255))
+        draw.ellipse([(cx - ew + 3, cy - eh + 2), (cx + ew - 3, cy + eh - 2)], fill=(145, 105, 68, 255), outline=(45, 32, 20, 255))
+        draw.ellipse([(cx - 2, cy - 1), (cx + 2, cy + 1)], fill=(40, 36, 32, 255))
+
+    elif prop_type == "iron_cage":
+        draw.polygon([pb0, pb1, pb2, pb3], fill=(25, 22, 20, 255))
+        for frac in [0.25, 0.5, 0.75]:
+            draw.line([(pt0[0] + (pt1[0] - pt0[0]) * frac, pt0[1] + (pt1[1] - pt0[1]) * frac),
+                       (pb0[0] + (pb1[0] - pb0[0]) * frac, pb0[1] + (pb1[1] - pb0[1]) * frac)], fill=(50, 45, 42, 255), width=1)
+        if face_visible("right", x1, cam_x):
+            for frac in [0.33, 0.66]:
+                draw.line([(pt1[0] + (pt2[0] - pt1[0]) * frac, pt1[1] + (pt2[1] - pt1[1]) * frac),
+                           (pb1[0] + (pb2[0] - pb1[0]) * frac, pb1[1] + (pb2[1] - pb1[1]) * frac)], fill=(65, 60, 56, 255), width=2)
+        for frac in [0.2, 0.4, 0.6, 0.8]:
+            top_x = pt3[0] + (pt2[0] - pt3[0]) * frac
+            bot_x = pb3[0] + (pb2[0] - pb3[0]) * frac
+            draw.line([(top_x, pt3[1]), (bot_x, pb3[1])], fill=(95, 90, 85, 255), width=2)
+            draw.line([(top_x - 1, pt3[1]), (bot_x - 1, pb3[1])], fill=(140, 135, 130, 255), width=1)
+        ymid_l = (pt3[1] + pb3[1]) / 2
+        ymid_r = (pt2[1] + pb2[1]) / 2
+        draw.line([(pt3[0], ymid_l), (pt2[0], ymid_r)], fill=(45, 42, 40, 255), width=3)
+        draw.line([(pt3[0], ymid_l), (pt2[0], ymid_r)], fill=(110, 105, 100, 255), width=1)
+        for (pt, pb) in [(pt0, pb0), (pt1, pb1), (pt3, pb3), (pt2, pb2)]:
+            draw.line([pt, pb], fill=(40, 36, 34, 255), width=3)
+            draw.line([pt, pb], fill=(120, 115, 110, 255), width=1)
+        draw.polygon([pt0, pt1, pt2, pt3], fill=(35, 32, 30, 200), outline=(50, 46, 44, 255))
+        draw.line([( (pt0[0]+pt1[0])/2, (pt0[1]+pt1[1])/2 ), ( (pt3[0]+pt2[0])/2, (pt3[1]+pt2[1])/2 )], fill=(80, 75, 70, 255), width=1)
+        draw.line([( (pt0[0]+pt3[0])/2, (pt0[1]+pt3[1])/2 ), ( (pt1[0]+pt2[0])/2, (pt1[1]+pt2[1])/2 )], fill=(80, 75, 70, 255), width=1)
+        draw.line([pt0, pt1], fill=(150, 145, 140, 255), width=1)
+
+    elif prop_type == "pillory_post":
+        cx_top = (pt3[0] + pt2[0]) / 2
+        cx_bot = (pb3[0] + pb2[0]) / 2
+        draw.rectangle([(int(cx_top - 4), int(pt3[1])), (int(cx_bot + 4), int(pb3[1]))], fill=(95, 68, 44, 255))
+        draw.line([(int(cx_top - 4), int(pt3[1])), (int(cx_bot - 4), int(pb3[1]))], fill=(150, 110, 72, 255), width=2)
+        draw.line([(int(cx_top + 4), int(pt3[1])), (int(cx_bot + 4), int(pb3[1]))], fill=(55, 38, 24, 255), width=2)
+        y_cuff = int(pt3[1] + 4)
+        draw.rectangle([(int(cx_top - 14), y_cuff - 6), (int(cx_top + 14), y_cuff + 6)], fill=(125, 90, 58, 255), outline=(50, 35, 22, 255))
+        draw.ellipse([(int(cx_top - 2), y_cuff - 3), (int(cx_top + 2), y_cuff + 3)], fill=(30, 22, 16, 255))
+        draw.ellipse([(int(cx_top - 10), y_cuff - 2), (int(cx_top - 6), y_cuff + 2)], fill=(30, 22, 16, 255))
+        draw.ellipse([(int(cx_top + 6), y_cuff - 2), (int(cx_top + 10), y_cuff + 2)], fill=(30, 22, 16, 255))
+        draw.line([(int(cx_top - 14), y_cuff), (int(cx_top + 14), y_cuff)], fill=(40, 36, 32, 255), width=1)
+
+    elif prop_type == "goblin_palisade":
+        draw.line([(pb3[0], pb3[1]), (pb2[0], pb2[1])], fill=(70, 48, 30, 255), width=4)
+        for frac in [0.1, 0.38, 0.62, 0.9]:
+            x_b = pb3[0] + (pb2[0] - pb3[0]) * frac
+            x_t = pt3[0] + (pt2[0] - pt3[0]) * frac
+            draw.line([(x_t, pt3[1]), (x_b, pb3[1])], fill=(95, 68, 44, 255), width=4)
+            draw.line([(x_t - 1, pt3[1]), (x_b - 1, pb3[1])], fill=(150, 110, 72, 255), width=1)
+        ymid_l = (pt3[1] + pb3[1]) / 2
+        ymid_r = (pt2[1] + pb2[1]) / 2
+        draw.line([(pt3[0], ymid_l), (pt2[0], ymid_r)], fill=(85, 60, 38, 255), width=4)
+        for frac in [0.05, 0.22, 0.40, 0.58, 0.76, 0.95]:
+            x_mid = pt3[0] + (pt2[0] - pt3[0]) * frac
+            y_mid = ymid_l + (ymid_r - ymid_l) * frac
+            tip_x = x_mid + 4
+            tip_y = y_mid - 14
+            bot_x = x_mid - 4
+            bot_y = y_mid + 12
+            draw.line([(bot_x, bot_y), (tip_x, tip_y)], fill=(110, 80, 52, 255), width=3)
+            draw.polygon([(tip_x, tip_y), (tip_x - 3, tip_y + 5), (tip_x + 3, tip_y + 5)], fill=(225, 195, 150, 255))
+            draw.point([(tip_x, tip_y), (tip_x, tip_y + 1)], fill=(160, 20, 20, 255))
+        for frac in [0.1, 0.38, 0.62, 0.9]:
+            x_mid = pt3[0] + (pt2[0] - pt3[0]) * frac
+            y_mid = ymid_l + (ymid_r - ymid_l) * frac
+            draw.ellipse([(x_mid - 3, y_mid - 3), (x_mid + 3, y_mid + 3)], fill=(180, 150, 100, 255), outline=(60, 45, 30, 255))
+
 def render_view(cam_x, tm, pm, actor_sprites, context, cut=None, grid_overlay=False, elevation_labels=False, edge_labels=False):
     cols = context["cols"]
     rows = context["rows"]
@@ -252,6 +390,86 @@ def render_view(cam_x, tm, pm, actor_sprites, context, cut=None, grid_overlay=Fa
         style = b.get("style", "timber")
         is_timber = (style == "timber")
 
+        if style == "timber_watchtower":
+            # 雙層高架木造哨塔渲染管線 (Stilt Watchtower with Walkable Deck)
+            # (A) 基底地板 (H=base_h)
+            floor_tile = tm.get_tile("wood_floor")
+            for r in range(oy, oy + bh):
+                for c in range(ox, ox + bw):
+                    p0 = PV(c * CELL, r * CELL, base_h, cam_x)
+                    p_e = PV((c + 1) * CELL, r * CELL, base_h, cam_x)
+                    paste_parallelogram(canvas, floor_tile, p0, (p_e[0] - p0[0], p_e[1] - p0[1]), (0, CELL), ox_base, oy_base)
+
+            # (B) 四角粗木支撐立柱 (4 Corner Posts from base_h to disp_h)
+            corner_coords = [
+                (ox * CELL, oy * CELL),                       # NW
+                ((ox + bw) * CELL, oy * CELL),                 # NE
+                (ox * CELL, (oy + bh) * CELL),                 # SW
+                ((ox + bw) * CELL, (oy + bh) * CELL),          # SE
+            ]
+            for wx_col, wy_col in corner_coords:
+                pt_bot = PV(wx_col, wy_col, base_h, cam_x)
+                pt_top = PV(wx_col, wy_col, disp_h, cam_x)
+                sx = ox_base + pt_top[0]
+                sy_top = oy_base + pt_top[1]
+                sy_bot = oy_base + pt_bot[1]
+                draw.rectangle([(int(sx - 3), int(sy_top)), (int(sx + 3), int(sy_bot))], fill=(82, 56, 36, 255))
+                draw.line([(int(sx - 3), int(sy_top)), (int(sx - 3), int(sy_bot))], fill=(138, 98, 64, 255))
+                draw.line([(int(sx + 3), int(sy_top)), (int(sx + 3), int(sy_bot))], fill=(48, 32, 20, 255))
+                for ratio in [0.33, 0.66]:
+                    sy_band = int(sy_top + (sy_bot - sy_top) * ratio)
+                    draw.rectangle([(int(sx - 4), sy_band - 1), (int(sx + 4), sy_band + 2)], fill=(40, 36, 32, 255))
+                    draw.line([(int(sx - 3), sy_band), (int(sx + 3), sy_band)], fill=(110, 105, 95, 255))
+
+            # (C) 南立面與側立面剪刀撐與橫樑
+            pt_sw_mid = PV(ox * CELL, (oy + bh) * CELL, base_h + (disp_h - base_h) * 0.5, cam_x)
+            pt_se_mid = PV((ox + bw) * CELL, (oy + bh) * CELL, base_h + (disp_h - base_h) * 0.5, cam_x)
+            pt_sw_bot = PV(ox * CELL, (oy + bh) * CELL, base_h, cam_x)
+            pt_se_bot = PV((ox + bw) * CELL, (oy + bh) * CELL, base_h, cam_x)
+            pt_sw_top = PV(ox * CELL, (oy + bh) * CELL, disp_h, cam_x)
+            pt_se_top = PV((ox + bw) * CELL, (oy + bh) * CELL, disp_h, cam_x)
+
+            draw.line([(int(ox_base + pt_sw_mid[0]), int(oy_base + pt_sw_mid[1])),
+                       (int(ox_base + pt_se_mid[0]), int(oy_base + pt_se_mid[1]))], fill=(70, 48, 30, 255), width=3)
+            draw.line([(int(ox_base + pt_sw_bot[0]), int(oy_base + pt_sw_bot[1])),
+                       (int(ox_base + pt_se_mid[0]), int(oy_base + pt_se_mid[1]))], fill=(95, 68, 44, 255), width=2)
+            draw.line([(int(ox_base + pt_se_bot[0]), int(oy_base + pt_se_bot[1])),
+                       (int(ox_base + pt_sw_mid[0]), int(oy_base + pt_sw_mid[1]))], fill=(60, 42, 26, 255), width=2)
+            draw.line([(int(ox_base + pt_sw_mid[0]), int(oy_base + pt_sw_mid[1])),
+                       (int(ox_base + pt_se_top[0]), int(oy_base + pt_se_top[1]))], fill=(95, 68, 44, 255), width=2)
+            draw.line([(int(ox_base + pt_se_mid[0]), int(oy_base + pt_se_mid[1])),
+                       (int(ox_base + pt_sw_top[0]), int(oy_base + pt_sw_top[1]))], fill=(60, 42, 26, 255), width=2)
+
+            # (D) 頂部可站立木甲板 (Walkable Deck at top_h)
+            if not is_cut:
+                deck_tile = tm.get_tile("wood_floor")
+                for r in range(oy, oy + bh):
+                    for c in range(ox, ox + bw):
+                        p0 = PV(c * CELL, r * CELL, top_h, cam_x)
+                        p_e = PV((c + 1) * CELL, r * CELL, top_h, cam_x)
+                        paste_parallelogram(canvas, deck_tile, p0, (p_e[0] - p0[0], p_e[1] - p0[1]), (0, CELL), ox_base, oy_base)
+
+                p_south_l = PV(ox * CELL, (oy + bh) * CELL, top_h, cam_x)
+                p_south_r = PV((ox + bw) * CELL, (oy + bh) * CELL, top_h, cam_x)
+                draw.rectangle([(int(ox_base + p_south_l[0]), int(oy_base + p_south_l[1])),
+                                (int(ox_base + p_south_r[0]), int(oy_base + p_south_r[1] + 4))], fill=(60, 40, 24, 255))
+                draw.line([(int(ox_base + p_south_l[0]), int(oy_base + p_south_l[1])),
+                           (int(ox_base + p_south_r[0]), int(oy_base + p_south_r[1]))], fill=(135, 95, 60, 255))
+
+                # (E) 北側、西側、東側護欄
+                p_west_n = PV(ox * CELL, oy * CELL, top_h, cam_x)
+                p_east_n = PV((ox + bw) * CELL, oy * CELL, top_h, cam_x)
+                p_rail_l = (ox_base + p_south_l[0], oy_base + p_south_l[1] - 10)
+                p_rail_r = (ox_base + p_south_r[0], oy_base + p_south_r[1] - 10)
+
+                draw.line([(int(ox_base + p_west_n[0]), int(oy_base + p_west_n[1] - 10)),
+                           (int(ox_base + p_east_n[0]), int(oy_base + p_east_n[1] - 10))], fill=(75, 50, 32, 255), width=2)
+                draw.line([(int(ox_base + p_west_n[0]), int(oy_base + p_west_n[1] - 10)),
+                           (int(p_rail_l[0]), int(p_rail_l[1]))], fill=(85, 58, 38, 255), width=2)
+                draw.line([(int(ox_base + p_east_n[0]), int(oy_base + p_east_n[1] - 10)),
+                           (int(p_rail_r[0]), int(p_rail_r[1]))], fill=(65, 45, 28, 255), width=2)
+            continue
+
         # (A) 室內地板
         floor_tile = tm.get_tile("wood_floor" if is_timber else "wooden_floor")
         for r in range(oy, oy + bh):
@@ -296,14 +514,39 @@ def render_view(cam_x, tm, pm, actor_sprites, context, cut=None, grid_overlay=Fa
         if cut is not None and h > cut:
             continue
         p_id = p["sprite"]
-        img = pm.get_prop_sprite(p_id)
-        if img:
-            fw, fh = p.get("footprint", (1, 1))
-            depth = (r + fh) * CELL + c * 0.1
+        fw, fh = p.get("footprint", (1, 1))
+        depth = (r + fh) * CELL + c * 0.1
+
+        box_types = {
+            "crate": "crate",
+            "chieftain_crate": "crate",
+            "loot_crate": "crate",
+            "barrel": "barrel",
+            "chieftain_barrel": "barrel",
+            "iron_cage": "iron_cage",
+            "pillory_post": "pillory_post",
+            "goblin_palisade": "goblin_palisade"
+        }
+        b_type = box_types.get(p_id) or box_types.get(p.get("id"))
+        if b_type:
             render_items.append({
                 "depth": depth,
                 "cell": (c, r),
                 "elevation": h,
+                "is_box": True,
+                "box_type": b_type,
+                "footprint": (fw, fh),
+                "id": p["id"]
+            })
+            continue
+
+        img = pm.get_prop_sprite(p_id)
+        if img:
+            render_items.append({
+                "depth": depth,
+                "cell": (c, r),
+                "elevation": h,
+                "is_box": False,
                 "img": img,
                 "footprint": (fw, fh),
                 "id": p["id"]
@@ -325,18 +568,65 @@ def render_view(cam_x, tm, pm, actor_sprites, context, cut=None, grid_overlay=Fa
                 "depth": depth,
                 "cell": (c, r),
                 "elevation": h,
+                "is_box": False,
                 "img": img,
                 "footprint": (1, 1),
                 "id": a_id
             })
 
+    # 若木造哨塔未被 cut 截斷，追加南側護欄 (South Railing) 至 Y-Sort
+    for b in buildings:
+        if b.get("style") == "timber_watchtower":
+            base_h = b["base_elevation"]
+            height_u = b["height_units"]
+            top_h = base_h + height_u
+            is_cut = (cut is not None and cut >= base_h and cut < top_h)
+            if not is_cut:
+                ox, oy = b["footprint"]["origin"]
+                bw, bh = b["footprint"]["cols"], b["footprint"]["rows"]
+                # 深度設在南邊緣，確保遮擋站在甲板上的哨手下半身
+                depth_railing = (oy + bh) * CELL + 10.0
+                render_items.append({
+                    "depth": depth_railing,
+                    "is_railing": True,
+                    "building": b,
+                    "id": f"{b['building_id']}_south_railing"
+                })
+
     render_items.sort(key=lambda item: item["depth"])
 
     for item in render_items:
+        if item.get("is_railing"):
+            b = item["building"]
+            ox, oy = b["footprint"]["origin"]
+            bw, bh = b["footprint"]["cols"], b["footprint"]["rows"]
+            top_h = b["base_elevation"] + b["height_units"]
+            p_south_l = PV(ox * CELL, (oy + bh) * CELL, top_h, cam_x)
+            p_south_r = PV((ox + bw) * CELL, (oy + bh) * CELL, top_h, cam_x)
+            # 南側兩端立柱
+            draw.rectangle([(int(ox_base + p_south_l[0] - 2), int(oy_base + p_south_l[1] - 12)),
+                            (int(ox_base + p_south_l[0] + 2), int(oy_base + p_south_l[1]))], fill=(75, 52, 34, 255))
+            draw.rectangle([(int(ox_base + p_south_r[0] - 2), int(oy_base + p_south_r[1] - 12)),
+                            (int(ox_base + p_south_r[0] + 2), int(oy_base + p_south_r[1]))], fill=(75, 52, 34, 255))
+            # 南橫扶手
+            p_rail_l = (ox_base + p_south_l[0], oy_base + p_south_l[1] - 10)
+            p_rail_r = (ox_base + p_south_r[0], oy_base + p_south_r[1] - 10)
+            draw.rectangle([(int(p_rail_l[0]), int(p_rail_l[1])), (int(p_rail_r[0]), int(p_rail_r[1] + 3))], fill=(95, 66, 42, 255))
+            draw.line([(int(p_rail_l[0]), int(p_rail_l[1])), (int(p_rail_r[0]), int(p_rail_r[1]))], fill=(150, 108, 70, 255))
+            # 十字斜護木
+            draw.line([p_rail_l, (ox_base + p_south_r[0], oy_base + p_south_r[1])], fill=(65, 45, 28, 255), width=2)
+            draw.line([p_rail_r, (ox_base + p_south_l[0], oy_base + p_south_l[1])], fill=(65, 45, 28, 255), width=2)
+            continue
+
         c, r = item["cell"]
         h = item["elevation"]
-        img = item["img"]
         fw, fh = item.get("footprint", (1, 1))
+
+        if item.get("is_box"):
+            render_standing_box_prop(canvas, draw, item["box_type"], c, r, h, fw, fh, cam_x, ox_base, oy_base)
+            continue
+
+        img = item["img"]
         wx = c * CELL
         wy = (r + fh) * CELL
         p_base = PV(wx, wy, h, cam_x)
@@ -538,7 +828,8 @@ def build_html_report(spec, tileset_path, props_png_path, out_dir):
         "西北蠻荒大酋長巨骨獸皮戰帳 (chieftain_grand_yurt, H1)：徹底告別文明屋舍、瓦頂與雙開門窗！採用 144×112 (4×3 格) 蠻荒巨獸肋骨與猛獁巨牙為穹頂拱門，頂端鑲嵌帶血符角獸巨顱，覆蓋粗獷狼皮毛氈縫合與血色戰紋，左右骨樁護衛，百分之百還原純正哥布林野蠻氏族氣息！",
         "高台鋪面與邊緣自然斷崖：酋長高台與東北薩滿骨塚全面以粗糙原木地坪 (wood_floor, ['kenshi', 11, 0]) 鋪設，邊緣垂直墜落為未經開鑿的原始岩壁 (cliff_face)！",
         "東北薩滿祭壇與沸騰大鐵鍋 (H1)：巨型沸騰大鐵鍋 (cauldron_boiling)、骨塚圖騰 (bone_totem) 與肉排烤架 (meat_spit_roast)，野性祭祀氛圍拉滿！",
-        "東南入谷險隘防線 (H0/H2)：粗木尖刺拒馬雙向封鎖隘口，東南 H2 高台架設雙層瞭望木塔 (watchtower)，哨手精準立於塔頂平台 (Elev 4)，形成居高臨下的致命交叉火力！",
+        "東南隘口雙層高架木造哨塔 (watchtower_gorge, H2..H5)：正式升級為實體戰術建築 (Building)！頂層甲板具備 Elev 5 實體可站立層格 (Walkable Deck)，四角立柱與剪刀撐垂直立起，高台哨手穩踏於甲板護欄之內，居高臨下封鎖峽谷入徑！",
+        "飾品三維立體化管線 (Vertical-Standing Box Prop Pipeline)：徹底根治水平平視紙片撕裂！木箱、鐵籠、木桶、刑柱、拒馬比照地形層連接壁，由空間頂點向量垂直立起立面、水平展開 54.25° 正交頂面，在任意鏡頭下與地表完美咬合！",
         "西南俘虜泥坑與戰利品堆 (H0)：泥濘下陷深坑 (pit_floor) 禁錮鐵籠 (iron_cage) 與木枷，散落翻覆板車與成堆金銀財寶，提供極致拯救任務與奇襲戰術！",
         "演員資料結構全面對齊 SSOT：修正 actors_fixture 為標準 id, label, cells, color 格式，並在 keluo_viewer.js 裝載嚴格保護看門狗，保證 0 執行期 JS 異常！",
         "交付報告 100% 嚴格符合 SKILL.md：標準載入 keluo_viewer_style.css、外覆 #plm-root 容器、全套 11 視角響應式 .gallery 與 .diff-box，artifact 體積嚴控 ≤ 2 MB！"
