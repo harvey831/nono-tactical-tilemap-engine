@@ -502,10 +502,10 @@ def build_html_report(spec, tileset_path, props_png_path, out_dir):
 
     diff_points = [
         "地圖尺度標準化 40×40 (1280×1280 px)：深邃環形山谷幾何，西南入谷主徑 (4格寬) 連通中央盆地，全線可通行！",
-        "西北蠻荒大酋長原木骨骸大帳 (H1)：徹底告別文明石築與石板鋪面，採用蠻荒 log/timber 圓木壁體、厚實原木骨架屋頂與 rough timber platforms！",
+        "西北蠻荒大酋長巨骨獸皮戰帳 (chieftain_grand_yurt, H1)：徹底告別文明屋舍、瓦頂與雙開門窗！採用 144×112 (4×3 格) 蠻荒巨獸肋骨與猛獁巨牙為穹頂拱門，頂端鑲嵌帶血符角獸巨顱，覆蓋粗獷狼皮毛氈縫合與血色戰紋，左右骨樁護衛，百分之百還原純正哥布林野蠻氏族氣息！",
         "高台鋪面與邊緣自然斷崖：酋長高台與東北薩滿骨塚全面以粗糙原木地坪 (wood_floor, ['kenshi', 11, 0]) 鋪設，邊緣垂直墜落為未經開鑿的原始岩壁 (cliff_face)！",
         "東北薩滿祭壇與沸騰大鐵鍋 (H1)：巨型沸騰大鐵鍋 (cauldron_boiling)、骨塚圖騰 (bone_totem) 與肉排烤架 (meat_spit_roast)，野性祭祀氛圍拉滿！",
-        "東南入谷險隘防線 (H0/H2)：粗木尖刺拒馬雙向封鎖隘口，東南 H2 高台架設雙層瞭望木塔 (watchtower)，形成居高臨下的致命交叉火力！",
+        "東南入谷險隘防線 (H0/H2)：粗木尖刺拒馬雙向封鎖隘口，東南 H2 高台架設雙層瞭望木塔 (watchtower)，哨手精準立於塔頂平台 (Elev 4)，形成居高臨下的致命交叉火力！",
         "西南俘虜泥坑與戰利品堆 (H0)：泥濘下陷深坑 (pit_floor) 禁錮鐵籠 (iron_cage) 與木枷，散落翻覆板車與成堆金銀財寶，提供極致拯救任務與奇襲戰術！",
         "演員資料結構全面對齊 SSOT：修正 actors_fixture 為標準 id, label, cells, color 格式，並在 keluo_viewer.js 裝載嚴格保護看門狗，保證 0 執行期 JS 異常！",
         "交付報告 100% 嚴格符合 SKILL.md：標準載入 keluo_viewer_style.css、外覆 #plm-root 容器、全套 11 視角響應式 .gallery 與 .diff-box，artifact 體積嚴控 ≤ 2 MB！"
@@ -518,7 +518,7 @@ def build_html_report(spec, tileset_path, props_png_path, out_dir):
         {"title": "拓撲邊界標籤圖 (goblin_camp_04_edge_labels.png)", "src": "goblin_camp_04_edge_labels.png"},
         {"title": "左側視角鏡頭 (goblin_camp_cam_left.png)", "src": "goblin_camp_cam_left.png"},
         {"title": "右側視角鏡頭 (goblin_camp_cam_right.png)", "src": "goblin_camp_cam_right.png"},
-        {"title": "酋長原木骨骸大帳特寫 (goblin_camp_chieftain_crop.png)", "src": "goblin_camp_chieftain_crop.png"},
+        {"title": "酋長巨骨獸皮戰帳特寫 (goblin_camp_chieftain_crop.png)", "src": "goblin_camp_chieftain_crop.png"},
         {"title": "薩滿骨壇與大鐵鍋特寫 (goblin_camp_shaman_crop.png)", "src": "goblin_camp_shaman_crop.png"},
         {"title": "入谷隘口與拒馬防線特寫 (goblin_camp_chokepoint_crop.png)", "src": "goblin_camp_chokepoint_crop.png"},
         {"title": "俘虜深坑與掠奪贓物特寫 (goblin_camp_loot_crop.png)", "src": "goblin_camp_loot_crop.png"},

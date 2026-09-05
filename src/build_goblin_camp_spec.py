@@ -104,40 +104,9 @@ def build_goblin_camp_spec():
     elevation_rows, slope_cells = generate_elevation_and_layout()
 
     # --------------------------------------------------------
-    # 1. 建築物定義：哥布林大酋長原木骨骸大帳
+    # 1. 建築物定義：野蠻氏族無文明磚石屋舍 (純 savage tents/props)
     # --------------------------------------------------------
-    buildings = [
-        {
-            "building_id": "chieftain_stronghold",
-            "label": "酋長大帳",
-            "name": "蠻荒大酋長原木骨骸大帳",
-            "style": "timber",
-            "footprint": {
-                "origin": cell(9, 5),
-                "cols": 4,
-                "rows": 4
-            },
-            "base_elevation": 1,
-            "floors": 1,
-            "units_per_floor": 3.0,
-            "height_units": 3.0,
-            "wall_ring_thickness": 1,
-            "doors_local": [
-                cell(1, 3) # 南立面開門 (world col 10, row 8)
-            ],
-            "door_height_units": 2.0,
-            "stair": None,
-            "roof": {
-                "walkable": False,
-                "elevation": 4,
-                "kind": "ROOF_CAP"
-            },
-            "windows_local": {
-                "0": [3]
-            },
-            "facade": []
-        }
-    ]
+    buildings = []
 
     all_footprint_cells = set()
     for b in buildings:
@@ -318,6 +287,13 @@ def build_goblin_camp_spec():
         },
 
         # (B) 西北酋長高台 (Chieftain Terrace, Elev 1 & 2)
+        {
+            "id": "chieftain_grand_yurt",
+            "sprite": "chieftain_grand_yurt",
+            "cell": cell(8, 5),
+            "elevation": 1,
+            "footprint": [4, 3]
+        },
         {
             "id": "chieftain_totem",
             "sprite": "bone_totem",
@@ -535,7 +511,7 @@ def build_goblin_camp_spec():
             "color": [224, 32, 32],
             "indoor": None,
             "on_building": None,
-            "cells": [cell_3d(11, 8, 1)]
+            "cells": [cell_3d(10, 8, 1)]
         },
         {
             "id": "goblin_shaman",
@@ -571,7 +547,7 @@ def build_goblin_camp_spec():
             "color": [224, 128, 32],
             "indoor": None,
             "on_building": None,
-            "cells": [cell_3d(30, 31, 1)]
+            "cells": [cell_3d(30, 31, 5)]
         },
         {
             "id": "prisoner_merchant",
