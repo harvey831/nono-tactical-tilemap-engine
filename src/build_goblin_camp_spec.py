@@ -67,30 +67,27 @@ def generate_elevation_and_layout():
         for c in range(28, COLS):
             elev[r][c] = 1
 
-    # 3. 西北酋長要塞高台 (cols 5..16, rows 4..11: H1)
+    # 3. 西北酋長要塞高台 (cols 5..16, rows 4..11: 100% 平整 H1 原木高台)
     for r in range(4, 12):
         for c in range(5, 17):
             elev[r][c] = 1
-    # 酋長背後險峻石峰 (cols 5..8, rows 4..7: H2)
-    for r in range(4, 8):
-        for c in range(5, 9):
+    # 酋長西北外側背景險峻石峰 (cols 0..4, rows 0..4: H2)
+    for r in range(0, 4):
+        for c in range(0, 5):
             elev[r][c] = 2
 
     # 4. 東北薩滿祭壇高台 (cols 24..35, rows 4..11: H1)
     for r in range(4, 12):
         for c in range(24, 36):
             elev[r][c] = 1
-    # 東北祭壇險峻望峰 (cols 32..35, rows 4..7: H2)
+    # 東北祭壇險峻望峰 (cols 34..36, rows 4..7: H2)
     for r in range(4, 8):
-        for c in range(32, 36):
+        for c in range(34, 37):
             elev[r][c] = 2
 
-    # 5. 東南峭壁高架瞭望峰 (cols 28..32, rows 29..33: H1, 峰頂 H2)
-    for r in range(29, 34):
-        for c in range(28, 33):
-            elev[r][c] = 1
-    for r in range(30, 33):
-        for c in range(29, 32):
+    # 5. 東南峭壁高架瞭望高台 (cols 28..37, rows 28..37: 10×10 完整堅實 H2 岩石平台)
+    for r in range(28, 38):
+        for c in range(28, 38):
             elev[r][c] = 2
 
     # 峽谷通道 (cols 22..27, rows 25..39) 絕對保持 H0 平整
@@ -274,9 +271,9 @@ def build_goblin_camp_spec():
         {
             "id": "watchtower_gorge",
             "sprite": "watchtower",
-            "cell": cell(29, 30),
+            "cell": cell(30, 30),
             "elevation": 2,
-            "footprint": [2, 2]
+            "footprint": [4, 2]
         },
         {
             "id": "flag_gorge",
@@ -323,10 +320,10 @@ def build_goblin_camp_spec():
             "footprint": [1, 1]
         },
         {
-            "id": "lookout_rock_h2",
+            "id": "chieftain_rock_nw",
             "sprite": "boulder_large",
             "cell": cell(5, 5),
-            "elevation": 2,
+            "elevation": 1,
             "footprint": [2, 2]
         },
 
@@ -341,7 +338,7 @@ def build_goblin_camp_spec():
         {
             "id": "shaman_totem",
             "sprite": "bone_totem",
-            "cell": cell(31, 7),
+            "cell": cell(30, 7),
             "elevation": 1,
             "footprint": [1, 1]
         },
@@ -495,7 +492,7 @@ def build_goblin_camp_spec():
             "id": "rock_gorge_2",
             "sprite": "boulder_small",
             "cell": cell(33, 33),
-            "elevation": 1,
+            "elevation": 2,
             "footprint": [1, 1]
         }
     ]
@@ -547,7 +544,7 @@ def build_goblin_camp_spec():
             "color": [224, 128, 32],
             "indoor": None,
             "on_building": None,
-            "cells": [cell_3d(30, 31, 5)]
+            "cells": [cell_3d(32, 31, 5)]
         },
         {
             "id": "prisoner_merchant",
