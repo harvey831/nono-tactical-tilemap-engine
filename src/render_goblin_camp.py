@@ -27,8 +27,8 @@ from PIL import Image, ImageDraw, ImageChops, ImageFilter, ImageFont
 CELL = 32
 ROW_H = 48
 
-RISE = 23.04          # 32 * 0.72
-SIDE_SHIFT = 3.84     # 32 * 0.12
+RISE = 40.0          # 32 * 1.25
+SIDE_SHIFT = 4.8      # 32 * 0.15
 SIDE_SPREAD = 192.0   # 32 * 6
 
 MARGIN_X = 40
@@ -262,15 +262,17 @@ def render_view(cam_x, tm, pm, actor_sprites, context, cut=None, grid_overlay=Fa
     ox_base = MARGIN_X
     oy_base = MARGIN_TOP
 
-    # 1. 建築腳印排除
-    bld_cells = {}
+    # 1. 建築腳印排除 (實體封閉建築才排除地表，高架透空建築如 timber_watchtower 保持地表完整)
+    bld_solid_cells = {}
     for b in buildings:
+        if b.get("style") == "timber_watchtower":
+            continue
         ox, oy = b["footprint"]["origin"]
         bw = b["footprint"]["cols"]
         bh = b["footprint"]["rows"]
         for r in range(oy, oy + bh):
             for c in range(ox, ox + bw):
-                bld_cells[(c, r)] = b
+                bld_solid_cells[(c, r)] = b
 
     # 2. 地形 surfaces 繪製（由北到南 row 由小到大）
     cell_to_surface = {}
@@ -280,7 +282,7 @@ def render_view(cam_x, tm, pm, actor_sprites, context, cut=None, grid_overlay=Fa
 
     for r in range(rows):
         for c in range(cols):
-            if (c, r) in bld_cells:
+            if (c, r) in bld_solid_cells:
                 continue
 
             sf = cell_to_surface.get((c, r))
@@ -292,7 +294,7 @@ def render_view(cam_x, tm, pm, actor_sprites, context, cut=None, grid_overlay=Fa
                 h = cut
 
             # 南立面 (South face)
-            if r < rows - 1 and (c, r + 1) not in bld_cells:
+            if r < rows - 1 and (c, r + 1) not in bld_solid_cells:
                 h_south = elevation_rows[r + 1][c]
                 if cut is not None and h_south > cut:
                     h_south = cut
@@ -326,7 +328,7 @@ def render_view(cam_x, tm, pm, actor_sprites, context, cut=None, grid_overlay=Fa
                         draw.line([(int(cx - 3), int(cy_top + 1)), (int(cx + 1), int(cy_top + 1))], fill=(110, 105, 95, 255))
 
             # 東西向立面 (East / West side faces)
-            if c < cols - 1 and (c + 1, r) not in bld_cells:
+            if c < cols - 1 and (c + 1, r) not in bld_solid_cells:
                 h_east = elevation_rows[r][c + 1]
                 if cut is not None and h_east > cut:
                     h_east = cut
@@ -352,7 +354,7 @@ def render_view(cam_x, tm, pm, actor_sprites, context, cut=None, grid_overlay=Fa
                         draw.point([(int(sx_top - 2), int(sy_top + 8))], fill=(35, 24, 15, 255))
                         draw.point([(int(sx_top - 2), int(sy_top + 24))], fill=(35, 24, 15, 255))
 
-            if c > 0 and (c - 1, r) not in bld_cells:
+            if c > 0 and (c - 1, r) not in bld_solid_cells:
                 h_west = elevation_rows[r][c - 1]
                 if cut is not None and h_west > cut:
                     h_west = cut
@@ -392,21 +394,21 @@ def render_view(cam_x, tm, pm, actor_sprites, context, cut=None, grid_overlay=Fa
 
         if style == "timber_watchtower":
             # 雙層高架木造哨塔渲染管線 (Stilt Watchtower with Walkable Deck)
-            # (A) 基底地板 (H=base_h)
-            floor_tile = tm.get_tile("wood_floor")
-            for r in range(oy, oy + bh):
-                for c in range(ox, ox + bw):
-                    p0 = PV(c * CELL, r * CELL, base_h, cam_x)
-                    p_e = PV((c + 1) * CELL, r * CELL, base_h, cam_x)
-                    paste_parallelogram(canvas, floor_tile, p0, (p_e[0] - p0[0], p_e[1] - p0[1]), (0, CELL), ox_base, oy_base)
-
-            # (B) 四角粗木支撐立柱 (4 Corner Posts from base_h to disp_h)
             corner_coords = [
                 (ox * CELL, oy * CELL),                       # NW
                 ((ox + bw) * CELL, oy * CELL),                 # NE
                 (ox * CELL, (oy + bh) * CELL),                 # SW
                 ((ox + bw) * CELL, (oy + bh) * CELL),          # SE
             ]
+            # (A) 基底立柱石基座 (Stone Pier Footings at base_h)
+            for wx_col, wy_col in corner_coords:
+                pt_bot = PV(wx_col, wy_col, base_h, cam_x)
+                sx = ox_base + pt_bot[0]
+                sy_bot = oy_base + pt_bot[1]
+                draw.rectangle([(int(sx - 6), int(sy_bot - 2)), (int(sx + 6), int(sy_bot + 4))],
+                               fill=(85, 75, 65, 255), outline=(45, 38, 30, 255))
+                draw.line([(int(sx - 5), int(sy_bot - 1)), (int(sx + 5), int(sy_bot - 1))],
+                          fill=(135, 125, 115, 255))
             for wx_col, wy_col in corner_coords:
                 pt_bot = PV(wx_col, wy_col, base_h, cam_x)
                 pt_top = PV(wx_col, wy_col, disp_h, cam_x)
@@ -517,24 +519,14 @@ def render_view(cam_x, tm, pm, actor_sprites, context, cut=None, grid_overlay=Fa
         fw, fh = p.get("footprint", (1, 1))
         depth = (r + fh) * CELL + c * 0.1
 
-        box_types = {
-            "crate": "crate",
-            "chieftain_crate": "crate",
-            "loot_crate": "crate",
-            "barrel": "barrel",
-            "chieftain_barrel": "barrel",
-            "iron_cage": "iron_cage",
-            "pillory_post": "pillory_post",
-            "goblin_palisade": "goblin_palisade"
-        }
-        b_type = box_types.get(p_id) or box_types.get(p.get("id"))
-        if b_type:
+        img = pm.get_prop_sprite(p_id)
+        if img:
             render_items.append({
                 "depth": depth,
                 "cell": (c, r),
                 "elevation": h,
-                "is_box": True,
-                "box_type": b_type,
+                "is_box": False,
+                "img": img,
                 "footprint": (fw, fh),
                 "id": p["id"]
             })

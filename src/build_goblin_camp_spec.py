@@ -609,8 +609,8 @@ def build_goblin_camp_spec():
             "world_origin": [1, 1]
         },
         "projection_presentation_only": {
-            "rise_ratio": 0.72,
-            "side_shift_ratio": 0.12,
+            "rise_ratio": 1.25,
+            "side_shift_ratio": 0.15,
             "side_spread_cells": 6
         },
         "elevation_rows": elevation_rows,
