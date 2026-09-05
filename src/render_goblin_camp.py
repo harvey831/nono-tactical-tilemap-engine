@@ -160,11 +160,32 @@ def render_view(cam_x, tm, pm, actor_sprites, context, cut=None, grid_overlay=Fa
                     h_south = cut
                 if h > h_south:
                     p0 = PV(c * CELL, (r + 1) * CELL, h, cam_x)
-                    vec_u = (CELL, 0)
-                    vec_v = (0, (h - h_south) * RISE)
+                    p1 = PV((c + 1) * CELL, (r + 1) * CELL, h, cam_x)
+                    p_bot = PV(c * CELL, (r + 1) * CELL, h_south, cam_x)
+                    vec_u = (p1[0] - p0[0], p1[1] - p0[1])
+                    vec_v = (p_bot[0] - p0[0], p_bot[1] - p0[1])
                     # 依材質選擇立面貼圖 (stone 使用 face_stone，其他使用 cliff_face)
                     face_mat = "face_stone" if sf["material"] == "plaza" else "cliff_face"
                     paste_parallelogram(canvas, tm.get_tile(face_mat), p0, vec_u, vec_v, ox_base, oy_base)
+
+                    # 角隅封邊包柱 (Corner Bevel/Pillar)：若東側亦為落差，封死南崖面東端斷面防漏底
+                    h_east_val = elevation_rows[r][c + 1] if c < cols - 1 else 0
+                    if cut is not None and h_east_val > cut:
+                        h_east_val = cut
+                    if h > h_east_val:
+                        p1_bot = PV((c + 1) * CELL, (r + 1) * CELL, h_south, cam_x)
+                        cx = ox_base + p1[0]
+                        cy_top = oy_base + p1[1]
+                        cy_bot = oy_base + p1_bot[1]
+                        # 轉角柱正面
+                        draw.rectangle([(int(cx - 4), int(cy_top)), (int(cx), int(cy_bot))], fill=(85, 68, 52, 255))
+                        draw.line([(int(cx - 4), int(cy_top)), (int(cx - 4), int(cy_bot))], fill=(130, 110, 85, 255))
+                        draw.line([(int(cx), int(cy_top)), (int(cx), int(cy_bot))], fill=(50, 40, 30, 255))
+                        # 轉角柱側壁 (East profile)
+                        draw.rectangle([(int(cx), int(cy_top)), (int(cx + 2), int(cy_bot))], fill=(50, 40, 30, 255))
+                        # 柱頂包角鐵件
+                        draw.rectangle([(int(cx - 4), int(cy_top)), (int(cx + 2), int(cy_top + 3))], fill=(40, 36, 32, 255))
+                        draw.line([(int(cx - 3), int(cy_top + 1)), (int(cx + 1), int(cy_top + 1))], fill=(110, 105, 95, 255))
 
             # 東西向立面 (East / West side faces)
             if c < cols - 1 and (c + 1, r) not in bld_cells:
@@ -180,6 +201,18 @@ def render_view(cam_x, tm, pm, actor_sprites, context, cut=None, grid_overlay=Fa
                     vec_v = (p_bot[0] - p0[0], p_bot[1] - p0[1])
                     face_mat = "face_stone" if sf["material"] == "plaza" else "cliff_face"
                     paste_parallelogram(canvas, tm.get_tile(face_mat), p0, vec_u, vec_v, ox_base, oy_base)
+
+                    # 若為木地板台地，於東側落差繪製實木收邊邊框 (Fascia Rim Beam)
+                    if sf["material"] == "wood_floor":
+                        sx_top = ox_base + p0[0]
+                        sy_top = oy_base + p0[1]
+                        sx_bot = ox_base + p_y[0]
+                        sy_bot = oy_base + p_y[1]
+                        draw.rectangle([(int(sx_top - 3), int(sy_top)), (int(sx_bot), int(sy_bot))], fill=(92, 64, 40, 255))
+                        draw.line([(int(sx_top - 3), int(sy_top)), (int(sx_bot - 3), int(sy_bot))], fill=(145, 105, 68, 255))
+                        draw.line([(int(sx_top), int(sy_top)), (int(sx_bot), int(sy_bot))], fill=(55, 38, 24, 255))
+                        draw.point([(int(sx_top - 2), int(sy_top + 8))], fill=(35, 24, 15, 255))
+                        draw.point([(int(sx_top - 2), int(sy_top + 24))], fill=(35, 24, 15, 255))
 
             if c > 0 and (c - 1, r) not in bld_cells:
                 h_west = elevation_rows[r][c - 1]
