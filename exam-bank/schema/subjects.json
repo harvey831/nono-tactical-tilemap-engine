@@ -1,0 +1,47 @@
+{
+  "exam_name": "專門職業及技術人員高等考試醫事放射師考試",
+  "exam_short": "醫事放射師國考",
+  "questions_per_subject": 80,
+  "questions_per_sitting": 480,
+  "sittings_per_year": 2,
+  "option_keys": ["A", "B", "C", "D"],
+  "_note": "科目名稱依考選部命題大綱。珂洛在本機抓題時請以實際題本封面為準覆核，若考選部改科目名稱請同步更新本檔並在 CHANGELOG 註記。",
+  "subjects": [
+    {
+      "code": "A",
+      "slug": "basic-medicine",
+      "name": "基礎醫學（包括解剖學、生理學、病理學）",
+      "short": "基礎醫學"
+    },
+    {
+      "code": "B",
+      "slug": "physics-safety",
+      "name": "醫學物理與輻射安全",
+      "short": "醫學物理與輻射安全"
+    },
+    {
+      "code": "C",
+      "slug": "equipment",
+      "name": "放射線設備學（包括磁振造影及超音波）",
+      "short": "放射線設備學"
+    },
+    {
+      "code": "D",
+      "slug": "diagnostic",
+      "name": "放射診斷原理與技術學",
+      "short": "放射診斷"
+    },
+    {
+      "code": "E",
+      "slug": "therapy",
+      "name": "放射治療原理與技術學",
+      "short": "放射治療"
+    },
+    {
+      "code": "F",
+      "slug": "nuclear-medicine",
+      "name": "核子醫學診斷與治療原理及技術學",
+      "short": "核子醫學"
+    }
+  ]
+}

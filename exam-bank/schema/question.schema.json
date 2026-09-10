@@ -1,0 +1,106 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/harvey831/nono-tactical-tilemap-engine/exam-bank/schema/question.schema.json",
+  "title": "醫事放射師國考題目 (單題)",
+  "description": "題庫以 JSONL 儲存：一行一題，UTF-8，無 BOM。檔名慣例 data/bank/{年度}-{場次}-{科目代碼}.jsonl",
+  "type": "object",
+  "required": ["id", "year", "session", "subject", "number", "stem", "options", "answer"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[0-9]{2,3}-[12]-[A-F]-[0-9]{3}$",
+      "description": "{民國年}-{場次}-{科目代碼}-{三位題號}，例如 113-1-B-042"
+    },
+    "year": {
+      "type": "integer",
+      "minimum": 83,
+      "maximum": 200,
+      "description": "民國年（考選部題本標示年度）"
+    },
+    "session": {
+      "type": "integer",
+      "enum": [1, 2],
+      "description": "第一次 / 第二次考試"
+    },
+    "subject": {
+      "type": "string",
+      "enum": ["A", "B", "C", "D", "E", "F"],
+      "description": "科目代碼，見 schema/subjects.json"
+    },
+    "number": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 80,
+      "description": "該科題號 1-80"
+    },
+    "stem": {
+      "type": "string",
+      "minLength": 1,
+      "description": "題幹全文（保留原始標點；換行以 \\n 表示）"
+    },
+    "options": {
+      "type": "object",
+      "required": ["A", "B", "C", "D"],
+      "additionalProperties": false,
+      "properties": {
+        "A": {"type": "string", "minLength": 1},
+        "B": {"type": "string", "minLength": 1},
+        "C": {"type": "string", "minLength": 1},
+        "D": {"type": "string", "minLength": 1}
+      }
+    },
+    "answer": {
+      "type": "string",
+      "enum": ["A", "B", "C", "D", "#"],
+      "description": "考選部公告之標準答案。'#' 表示一律給分（送分題）"
+    },
+    "answer_note": {
+      "type": ["string", "null"],
+      "description": "更正答案或送分之說明（考選部『測驗式試題答案更正』公告內容）"
+    },
+    "answer_revised": {
+      "type": "boolean",
+      "default": false,
+      "description": "是否為公告更正後的答案（非初版答案）"
+    },
+    "topics": {
+      "type": "array",
+      "items": {"type": "string"},
+      "default": [],
+      "description": "知識點標籤，例如 ['CT', '影像重建', 'Hounsfield']。可由 NONO 批次標註"
+    },
+    "difficulty": {
+      "type": ["number", "null"],
+      "minimum": -3,
+      "maximum": 3,
+      "default": null,
+      "description": "難度 b（logit 尺度，0 為中等）。null = 未估計，出題時以 0 起算"
+    },
+    "has_figure": {
+      "type": "boolean",
+      "default": false,
+      "description": "題目含圖。純文字題庫無法作答，出題時預設排除"
+    },
+    "figures": {
+      "type": "array",
+      "items": {"type": "string"},
+      "default": [],
+      "description": "圖片相對路徑（相對於 exam-bank/data/）"
+    },
+    "source": {
+      "type": ["string", "null"],
+      "description": "來源檔名，例如 113_1_醫事放射師_醫學物理與輻射安全.pdf"
+    },
+    "ingested_at": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "匯入時間 (ISO 8601)"
+    },
+    "needs_review": {
+      "type": "boolean",
+      "default": false,
+      "description": "自動抽取時判定為可疑，需人工校對（例如選項數不對、題幹過短）"
+    }
+  }
+}

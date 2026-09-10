@@ -72,6 +72,17 @@ python src/render_chunk_0_0_v2.py
 
 ---
 
+## 🩻 附屬工具：醫放師國考題庫 (`exam-bank/`)
+
+與地圖引擎無關的獨立子專案，是 NONO 基地的第二條線：醫事放射師國考歷屆試題題庫與自適應出題引擎。
+純 Python 標準庫、無外部相依，可直接放進同步資料夾執行。
+
+* 題庫格式與能力模型 → [`exam-bank/README.md`](exam-bank/README.md)
+* 抓題流程（本機執行）→ [`exam-bank/HANDOFF_KELUO.md`](exam-bank/HANDOFF_KELUO.md)
+* NONO 出題技能書 → [`skills/nono-exam-tutor/SKILL.md`](skills/nono-exam-tutor/SKILL.md)
+
+---
+
 ## 📜 開源協議 (License)
 
 * **演算法與代碼 (Code)**：採用 [MIT License](LICENSE) 開源。

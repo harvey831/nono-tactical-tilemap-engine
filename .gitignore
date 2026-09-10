@@ -4,3 +4,12 @@ __pycache__/
 *.tmp
 .DS_Store
 Thumbs.db
+
+# exam-bank：個人作答紀錄不進公開 repo，留在本機 NONO基地/cloud
+exam-bank/progress/*.jsonl
+exam-bank/progress/*.json
+!exam-bank/progress/.gitkeep
+
+# exam-bank：考選部原始 PDF 只在本機暫存，不入庫（正規化後的 JSONL 才入庫）
+exam-bank/data/raw/*
+!exam-bank/data/raw/.gitkeep
