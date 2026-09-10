@@ -1,0 +1,531 @@
+=== PDF PAGE 1 ===
+109年第二次專技高考醫師第一階段考試、牙醫師藥師考試分階段考
+試、醫事檢驗師、醫事放射師、物理治療師、職能治療師、呼吸治療
+師、獸醫師考試、109年專技高考助產師考試
+代　　號：3309
+類科名稱：醫事放射師
+科目名稱：放射線器材學（包括磁振學與超音波學）
+考試時間：1小時 座號：___________
+  ※本科目測驗試題為單一選擇題，請就各選項中選出一個正確或最適當的答案，複選作答者，該題不予計分!
+  ※注意：本試題可以使用電子計算器   　　　　　　　  
+ 
+1.下圖為近代改良的 X 光球管設計（ stator tube ），與傳統 X 光球管相比，其主要改善下列那個功能？
+ 
+A.轉速
+B.準直系統
+C.散熱
+D.旋轉角度
+2.若數位 X 光攝影系統的空間解析度為 2.5 lp/mm ，所得到的影像其最小可解析之物體為多少 mm ？
+ 
+A.0.2
+B.0.4
+C.2.5
+D.5
+3.在診斷 X 光機中，下列何者的條件搭配可得到最低的量子斑駁（ quantum mottle ）？
+ 
+A.高 mAs ，高 kVp ，影像接受器感光速度快
+B.高 mAs ，低 kVp ，影像接受器感光速度慢
+C.低 mAs ，高 kVp ，影像接受器感光速度快
+D.低 mAs ，低 kVp ，影像接受器感光速度慢
+4.在數位放射攝影（ digital radiography ）中，若縮小畫素（ pixel ）的尺寸，則下列何者正確？
+ 
+A.對比解析度（ contrast resolution ）變佳
+B.空間解析度（ spatial resolution ）變差
+C.填滿因子（ fill factor ）變小
+D.可降低病人的劑量
+
+=== PDF PAGE 2 ===
+5.下列何者不是電腦放射攝影（ computed radiography, CR ）的影像雜訊來源？
+ 
+A.磷光體結構
+B.電子雜訊
+C.雷射強度控制
+D.掃描速度
+6.邊緣發散函數（ edge spread function ）主要是用來表示下列何者？  
+ 
+A.對比解析度
+B.雜訊比
+C.空間解析度
+D.時間解析度
+7.影像增強管（ image intensifier tube ）是利用何種裝置，使電子到達輸出磷光面時具有高動能，且將輸入磷光面
+之影像縮小？
+ 
+A.倍增電極
+B.靜電式聚焦鏡
+C.電子槍
+D.陰極射線管
+8.關於增感屏 - 底片之乳房攝影，其增感屏與底片之相對位置下列何者正確？
+ 
+A.底片介於 X 光管與增感屏之間
+B.增感屏介於底片與 X 光管之間
+C.使用單層乳膠底片，乳膠面反向增感屏
+D.底片置於二個增感屏之間
+9.有關主動式矩陣液晶顯示器，主要利用下列何種元件來控制每個像素之液晶排列方式？
+ 
+A.場效電晶體
+B.薄膜電晶體
+C.二極體
+D.可變電阻
+10.關於 X 光血管攝影檢查需要注射對比劑來增強血管的影像對比度，下列敘述何者最正確？
+ 
+A.對比劑通常使用原子序低的材料來增加康普吞效應
+B.對比劑通常使用原子序高的材料來增加康普吞效應
+C.對比劑通常使用原子序低的材料來增加光電效應
+D.對比劑通常使用原子序高的材料來增加光電效應
+11.有關 X 光管的管電流設定的問題，下列敘述何者正確？
+ 
+A.由陽極的溫度決定管電流大小
+B.可藉由改變陰極燈絲電流來調整 X 光管的管電流
+C.制動輻射（ bremsstrahlung radiation ）的光子數量不會因管電流之設定而有所影響
+D.管電流設定影響特性輻射（ characteristic radiation ）的光子能量
+12.有關 CT 的輻射劑量通常會使用 CTDI （ computed tomography dose index ）做參考報告，關於 CTDI 的敘述，下列
+
+=== PDF PAGE 3 ===
+何者正確？
+ 
+A.是假體的劑量
+B.是病人器官的實際照射劑量
+C.是病人器官的平均照射劑量
+D.是病人被照射表面的劑量
+13.有關多層螺旋電腦斷層掃描（ multiple-slice helical CT ），若維持掃描設定的相同條件，只改變 pitch 的設定，
+則下列何者可以降低病患的輻射劑量？
+ 
+A.0.5 ： 1
+B.1.0 ： 1
+C.1.5 ： 1
+D.2.0 ： 1
+14.若 X 光管從 100 kVp 增加到 120 kVp ，則 X 光的光子數量有何改變  ？
+ 
+A.大約會增加 0.833 倍數的數量
+B.大約會增加 1.20 倍數的數量
+C.大約會增加 1.44 倍數的數量
+D.不會改變
+15.下列何者較不適合做為 X 光管陽極靶的材料？
+ 
+A.calcium
+B.molybdenum
+C.rhodium
+D.tungsten
+16.若多切片 CT （ multi-slice CT ）的多行偵測器陣列（ multidetector array ）共有 16 行偵測器，每一行的寬均為 1.25
+mm ， X 光管每 0.5 秒旋轉一圈，切片數與切片厚度擷取方式為 4×2.5 mm ， X 光照射時間為 25 秒，當 pitch = 0.8
+時，則 X 光照射期間病人身體長軸被照射到的長度為多少 cm ？
+ 
+A.40
+B.50
+C.80
+D.100
+17.下列何項影像設備是評估骨質疏鬆（ osteoporosis ）  的最主要臨床設備？
+ 
+A.magnetic resonance imaging
+B.computed tomography
+C.dual-energy X-ray absorptiometry
+D.ultrasound
+18.相較於增感屏 - 底片影像接收器， CCD 系統有較低之病人輻射劑量的原因為何？
+ A.CCD 系統在較低之 X 光曝露有較佳之反應
+B.CCD 系統對比解析度較佳
+C.CCD 系統光反應速度較快
+
+=== PDF PAGE 4 ===
+D.CCD 尺寸較小，可得到較小之像素
+19.X 光造影用之柵板（ grid ）選擇因子，下列敘述何者錯誤？
+ 
+A.病人劑量隨著柵板比（ grid ratio ）增加而增加
+B.高的柵板比（ grid ratio ）用於高 kVp 造影
+C.病人的劑量在高 kVp 時會低於在低 kVp 時
+D.柵板比（ grid ratio ）增加，主射束穿透比率會較低於散射輻射穿透比率
+20.一位病人執行上腸胃道透視攝影檢查，每張數位影像的矩陣大小為 512×512 ，影像灰階為 256 ，總共攝影 10 張
+影像，此系列影像容量約為多少 MB （ megabyte ）？  
+ 
+A.20,971,520
+B.2,621,440
+C.2,560
+D.2.5
+21.有關數位減贅血管攝影（ digital subtraction angiography ）中之 K 緣減贅技術（ K-edge subtraction ）的敘述，下
+列何者正確？
+ 
+A.適用於任何物質之造影
+B.利用時間間隔差異，提升影像對比
+C.K 緣吸收能量相近，減贅後可提升影像對比度
+D.利用面罩模式（ mask mode ）進行影像相減之技術
+22.測試組織直線衰減係數（ linear attenuation coefficient ）與 CT 值的關係，及水的 CT 值是否為 0 ，是下列那個 CT
+影像品質保證項目？
+ 
+A.線性度（ linearity ）
+B.空間解析度（ spatial resolution ）與對比解析度（ contrast resolution ）
+C.雜訊（ noise ）與均勻性（ uniformity ）
+D.病人劑量
+23.若 X 光乳房攝影（ mammography ）使用片匣（ cassette ）當作影像接收器（ image receptor ）時，下列何者為目
+前一般片匣內的組合？
+ 
+A.單層感光乳劑底片（ single emulsion film ）搭配 2 個螢光增感屏（ intensifying screen ）
+B.雙層感光乳劑底片（ double emulsion film ）搭配 2 個螢光增感屏（ intensifying screen ）
+C.雙層感光乳劑底片（ double emulsion film ）搭配一個螢光增感屏（ intensifying screen ）
+D.單層感光乳劑底片（ single emulsion film ）搭配一個螢光增感屏（ intensifying screen ）
+24.有關超音波的敘述，下列何者錯誤？
+ 
+A.三維超音波影像，僅使用一維陣列探頭來成像
+B.腹部掃描，主要是使用曲面探頭來進行
+C.線性陣列探頭通常搭配較高頻操作以用於表淺組織掃描
+D.相位陣列探頭可用於心臟掃描
+25.超音波聲束合成器（ beam former ）的功能，不包括下列何者？
+ A.進行影像複合優化處理
+
+=== PDF PAGE 5 ===
+B.產生激發訊號驅動超音波換能器
+C.超音波訊號的接收放大
+D.調控系統的脈衝重複頻率（ pulse repetition frequency ）
+26.下列何者是非線性超音波傳遞產生的主要原因？
+ 
+A.聲速與音壓的相關性
+B.衰減效應
+C.聲速與硬度的相關性
+D.過大系統增益
+27.有關功率都卜勒超音波的敘述，下列何者正確？
+ 
+A.影像雜訊較彩色都卜勒多
+B.較彩色都卜勒靈敏度更高
+C.提供血流速度
+D.提供血流方向
+28.一都卜勒位移為 0.92 kHz 且其相對應流速為 50 cm/s ，若都卜勒角度不變，且都卜勒偏移變為 1.84 kHz ，則其相
+對應流速為多少 cm/s ？
+ 
+A.25
+B.50
+C.100
+D.200
+29.下圖中那一個超音波探頭量測到最大的都卜勒偏移？
+（大箭號代表血流流速向右，虛線箭號代表各探頭超音波發射方向）
+ 
+A.A
+B.B
+C.C
+D.D
+
+=== PDF PAGE 6 ===
+30.若超音波脈衝時間長度（ pulse duration ）為 1 μs ，且其責任因子（ duty factor ）為 0.008 ，則脈衝重複週期
+（ pulse repetition period ）為多少 μs ？
+ 
+A.100
+B.125
+C.250
+D.800
+31.下列何者會影響音波在組織中傳遞的反射係數？
+ 
+A.超音波頻率
+B.系統探頭類型
+C.組織密度
+D.入射波強度
+32.有關超音波換能器匹配層（ matching layer ）的敘述，下列何者正確？
+ 
+A.其聲阻抗是壓電元件的 2 倍
+B.其功能是改善聲波傳輸進入組織
+C.可增加超音波在換能器表面的反射
+D.在改善聲波傳輸方面，單層匹配層優於多層匹配層
+33.磁振造影中，若 RF 脈衝的頻寬（ bandwidth ）與梯度磁場均變為原來的 2 倍，在其他條件不變下，則對於切面
+厚度（ slice thickness ）有何影響？
+ 
+A.變為原來的 1/4 倍
+B.和原來一樣
+C.變為原來的 2 倍
+D.變為原來的 4 倍
+34.關於磁振造影中射頻線圈（ RF coil ）與取樣系統接收訊號的時間，下列敘述何者錯誤？
+ 
+A.通常在頻率編碼（ frequency encoding ）梯度磁場達到最大值時接收訊號
+B.在頻率編碼（ frequency encoding ）梯度的上升時間內一定無法接收訊號
+C.在相位編碼（ phase encoding ）梯度磁場作用時不接收訊號
+D.在切面選擇編碼（ slice selection encoding ）梯度磁場作用時不接收訊號
+35.下列那個磁振造影脈衝波序所產生的特定吸收率（ specific absorption rate, SAR ）最小？
+ 
+A.spin echo
+B.fast spin echo
+C.echo planar imaging
+D.multiple spin echo
+36.下列那一個不是磁振造影相位陣列線圈（ phased array coil ）的特點？
+ 
+A.能縮短 echo time （ TE ）
+B.能增加影像的訊雜比（ SNR ）
+C.能增加影像擷取的照野（ FOV ）
+D.線圈數越多，配合平行造影（ parallel imaging ），造影時間越短
+
+=== PDF PAGE 7 ===
+37.具有較高主磁場的磁振造影機之特性，不包含下列何者？
+ 
+A.較高之影像訊雜比（ signal-to-noise ratio ）
+B.較長之 T2 relaxation time
+C.較高之頻譜解析度（ spectral resolution ）
+D.較明顯之化學平移假影（ chemical shift artifact ）
+38.圖為美國放射學院（ ACR ） MRI 認證假體（ phantom ）中的第 11 切面，其可用來測量下列何種項目？
+ 
+A.影像強度均勻性（ image intensity uniformity ）
+B.切面厚度正確性（ slice thickness accuracy ）
+C.低對比解析度（ low contrast resolution ）
+D.高對比解析度（ high contrast resolution ）
+39.造成磁振造影拉鍊假影（ zipper artifact ）的原因為何？
+ 
+A.沒有均勻的主磁場
+B.沒有好的射頻屏蔽
+C.沒有均勻的梯度磁場
+D.掃描中病人的移動
+40.腦部磁振能譜（ MRS ）技術，若以標準 tetramethylsilane （ TMS ）為 0 ppm ，則位於 2 ppm 的尖峰為何？
+ 
+A.N-acetyl aspartate
+B.creatine
+C.lactate
+D.choline
+41.若 1.5 T 磁振頻譜（ MRS ）中水和脂肪的化學位移為 3.5 ppm ，則 3 T 磁振頻譜（ MRS ）中水和脂肪的化學位移
+為多少 ppm ？
+ 
+A.1.75
+B.3.5
+C.5.0
+D.7.0
+42.磁振造影中，若梯度大小（ gradient amplitude ）為 1 G/cm ，上升時間（ rise time ）為 0.2 s ，則扭轉速率（ slew
+rate ）為多少 mT/(m ． s) ？
+ A.0.2  
+B.2
+
+=== PDF PAGE 8 ===
+C.5
+D.50
+43.MRI 中，磁場屏蔽（ shielding ）線圈位於何處 ?
+ 
+A.射頻線圈與梯度線圈之間
+B.發射射頻線圈與接收射頻線圈之間
+C.主磁場線圈外側
+D.梯度線圈與主磁場線圈之間
+44.MRI 中，使用射頻屏蔽的主要目的為何？
+ 
+A.減少射頻對放射師的傷害
+B.減少射頻對病人的傷害
+C.減少檢查室外環境射頻對 MR 訊號的影響
+D.減少檢查室內射頻外洩至室外
+45.MRI 中，射頻屏蔽所用的材料為何？
+ 
+A.銅
+B.鎢
+C.鉬
+D.鐵
+46.磁振造影時噪音之產生，與下列何者有最直接的關係？
+ 
+A.磁鐵
+B.梯度線圈
+C.射頻發射線圈
+D.射頻接收線圈
+47.下列關於超導磁鐵（ superconducting magnet ）的敘述，何者錯誤？
+ 
+A.當溫度高於臨界溫度時，超導材料會失去其電阻
+B.超導磁鐵是利用電生磁的原理
+C.超導磁鐵會比永久磁鐵產生較大的雜散磁場（ fringe field ）
+D.超導磁鐵能比永久磁鐵產生較大的主磁場 
+48.根據醫用直線加速器之輻射醫療曝露品質保證作業操作程序書，每日品質保證作業項目包含下列那些？①定
+位雷射  ②光學距離指示器  ③光子輸出劑量  ④電子輸出劑量
+ 
+A.僅①②③
+B.①②③④
+C.僅③④
+D.僅①②
+49.在直線加速器的治療機頭中，包含下列那些元件？① X 光靶  ②光學定位系統  ③游離腔  ④準直儀
+ A.①②③④
+B.僅①③④
+C.僅②④
+
+=== PDF PAGE 9 ===
+D.僅①②③
+50.有關速調管（ klystron ）的敘述，下列何者正確？
+ 
+A.為微波放大器
+B.該元件連接電子槍
+C.不需透過微波振盪器來驅動
+D.可產生 X 光
+51.在直線加速器中，有關散射薄片（ scattering foil ）的敘述，下列何者錯誤？
+ 
+A.電子射束會直接撞擊散射薄片
+B.由薄的低原子序金屬薄片所組成
+C.總能量中有極少的分率會轉換為制動輻射
+D.使大部分電子發生散射
+52.遠隔放射治療設備，包含下列那些？①超高壓治療儀  ②范德格雷夫加速器  ③貝它加速器  ④60Co 治療儀
+ 
+A.①②③④
+B.僅②④
+C.僅①③④
+D.僅①②③
+53.放射治療模擬攝影機無法複製治療機的何種放射物理特性？
+ 
+A.幾何性質
+B.機械性質
+C.光學性質
+D.主射束能量性質
+54.電腦斷層模擬攝影機主要產生下列何種影像來進行治療計畫？
+ 
+A.一般 2D X 光影像
+B.數位重組影像（ DRR, digitally reconstructed radiograph ）
+C.2D CT 影像
+D.3D CT 影像
+55.測量輻射劑量時，空氣游離腔的讀值因正負電壓反接導致讀值不同時，這種效應稱為下列何者？
+ 
+A.極化效應（ polarization effect ）
+B.極性效應（ polarity effect ）
+C.極端效應（ extreme effect ）
+D.極磁效應（ electromagnetic pole effect ）
+56.法墨（ Farmer ）空氣游離腔，在測量絕對劑量時，需做溫度壓力修正的原因為何？
+ 
+A.修正溫度造成的體積改變
+B.修正壓力造成的腔體變形
+C.修正溫度壓力造成的電壓改變
+D.修正腔體的電荷讀數
+57.下列何者用於近接治療的放射性核種，通常不是來自於人工產製？
+ 
+
+=== PDF PAGE 10 ===
+A.137Cs
+B.226Ra
+C.198Au
+D.103Pd
+58.下圖所示病人將接受下列何種治療？
+ 
+A.LDR 插種治療
+B.放射性種子植入治療
+C.HDR 插種治療
+D.永久性插種治療
+59.下圖頭架適用於下列何種治療技術？
+ 
+A.IMRT
+B.IGRT
+C.SRS
+D.SBRT
+60.有關質子治療的被動式射束擴散（ passive beam spreading ），下列敘述何者錯誤？
+ 
+A.質子經過散射箔片（ scattering foil ）後，經過準直儀，使中心區域的側向劑量分布均勻度達到 5% 內
+B.雙散射箔片適用於較大照野，第一片箔片厚度均勻，第二片厚度不均勻
+C.需使用客製化檔塊來形塑治療照野
+D.使用高原子序物質作為射程補償器（ range compensators ）
+61.關於 X 光影像導引與直線加速器的治療 X 光的比較，下列何者錯誤？
+ A.前者比後者的波長長
+B.前者與後者的自旋量（ spin ）相同
+C.前者比後者的重量大
+
+=== PDF PAGE 11 ===
+D.前者比後者的電磁波頻率小
+62.將近接治療射源排列於模型（ mold ）表面，以治療表面腫瘤的治療模式稱為：
+ 
+A.surface mold
+B.interstitial therapy
+C.intracavitary therapy
+D.intraluminal therapy
+63.根據 ICRU38 號報告，近接治療的中等劑量率（ MDR ）定義是多少 Gy/min ？
+ 
+A.0.00017 ～ 0.0067
+B.0.0067 ～ 0.033
+C.0.033 ～ 0.2
+D.0.2 ～ 0.4
+64.有關 Cerrobend 鉛合金的敘述，下列那些正確？①在 20℃ 時，其密度為 9.4 g/cm3 ②不含鎘時，其熔點為
+95℃ ③含鎘時，其熔點為 70℃ ④在室溫時比鉛硬
+ 
+A.僅①③
+B.僅①②④
+C.僅②③④
+D.①②③④
+65.下列那些因子，會影響組織空氣比（ TAR ）？①射束能量  ②照野大小  ③ SSD ④照野形狀
+ 
+A.僅③④
+B.僅①③
+C.僅①②④
+D.①②③④
+66.下列何種射源不會在劑量校正儀（ dose calibrator ）的品管校正時使用？
+ 
+A.57Co
+B.99mTc
+C.137Cs
+D.131I
+67.量測一個核種，其對稱能窗為 15% ，能量量測範圍為 147 keV ～ 171 keV ，該核種可能為何？
+ 
+A.99mTc
+B.123I
+C.201Tl
+D.57Co
+68.下列何者不是 PMT 的元件構造？
+ A.光陰極（ photocathode ）
+B.二次發射極（ dynode ）
+C.波高分析器（ PHA ）
+
+=== PDF PAGE 12 ===
+D.高壓供應器（ high voltage supply ）
+69.下列何者偵測輻射主要是使用游離氣體的方式進行測量？
+ 
+A.閃爍攝影機
+B.劑量校正儀
+C.熱發光偵測器
+D.膠片佩章
+70.下列何者為系統靈敏度（ system sensitivity ）的單位表示？
+ 
+A.minutes/(counts‧μCi)
+B.μCi/(minutes‧counts)
+C.counts/(minutes‧μCi)
+D.(counts‧μCi)/minutes
+71.有關單頭（ single-headed ）、雙頭（ two-headed ）與三頭（ three-headed ） SPECT 之比較，下列敘述何者錯誤？
+ 
+A.就頭部掃描而言，三頭 SPECT 靈敏度比單頭 SPECT 高
+B.就腎皮質掃描而言，固定式平行雙頭 SPECT 掃描時間只需要單頭 SPECT 的一半
+C.就心肌灌注掃描而言，固定式平行雙頭 SPECT 優於固定式垂直雙頭 SPECT
+D.雙頭 SPECT 與三頭 SPECT 掃描之影像解析度相同
+72.模擬一個直徑 20 公分之水假體，分別放入 1 單位活度的201Tl 、99mTc 、131I 進行 SPECT 掃描，切面影像之
+profiles 如圖，201Tl 、99mTc 、131I 分別對應那條 profile ？
+ 
+A.a, b, c
+B.b, a, c
+C.c, a, b
+D.c, b, a
+73.有關核子醫學影像中，常規單光子發射電腦斷層（ conventional SPECT ）與平面投影（ planar projection ）之比
+較，下列敘述何者錯誤？
+ A.常規單光子發射電腦斷層的雜訊較多
+B.常規單光子發射電腦斷層的解析度較佳
+
+=== PDF PAGE 13 ===
+C.常規單光子發射電腦斷層的對比度較佳
+D.兩者之解析度皆會因物體到準直儀的距離之變化而改變
+74.下列那一種閃爍晶體（ scintillation crystal ）在光子能量 511 keV 的輻射強度下，其線性衰減係數值最小？
+ 
+A.BGO
+B.LYSO
+C.GSO
+D.NaI （ Tl ）
+75.閃爍晶體蛻變時間（ decay time ）的長短與相同時間內所能偵測到的入射光子數及靈敏度有何關係？
+ 
+A.蛻變時間越短，所能測到的光子數越少，晶體靈敏度越低
+B.蛻變時間越長，所能測到的光子數越多，晶體靈敏度越高
+C.蛻變時間越短，所能測到的光子數越少，晶體靈敏度越高
+D.蛻變時間越長，所能測到的光子數越少，晶體靈敏度越低
+76.下圖為 PET 攝影機的訊號偵測示意圖，編號③圖稱為何？
+ 
+A.真實偶合事件（ true coincidence event ）
+B.單光子事件（ single photon event ）
+C.散射偶合事件（ scatter coincidence event ）
+D.隨機偶合事件（ random coincidence event ）
+77.若閃爍偵檢器面積小於欲造影的器官（如肺臟）大小，選用下列何種準直儀可以包含整個器官成像？
+ 
+A.slant-hole collimator
+B.pinhole collimator
+C.converging collimator
+D.diverging collimator
+78.下列何者可以計讀並顯示放射性核種及核醫藥物之放射活度？
+ 
+A.GM counter
+B.proportional counter
+C.dose calibrator
+D.NaI （ Tl ）  detector
+79.將一線射源置放於旋轉中心軸，量測 SPECT 之解析度，測得之 profile 數據如下表，像素（ pixel ）大小為  2
+
+=== PDF PAGE 14 ===
+mm ，計算其 FWHM 為何（ mm ）？
+ 
+A.5.9
+B.7.7
+C.9.7
+D.11.2
+80.承上題，若此加馬攝影機之大小為 43 cm×43 cm ，當裝置平行孔準直儀，放大率設為 1.0 時，依奈奎斯特取樣
+理論（ Nyquist sampling theorem ）計算，為了不失真，矩陣大小最小應設為多少？
+ 
+A.64×64
+B.128×128
+C.256×256
+D.512×512

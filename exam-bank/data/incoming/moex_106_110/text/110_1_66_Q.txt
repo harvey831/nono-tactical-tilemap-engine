@@ -1,0 +1,527 @@
+=== PDF PAGE 1 ===
+110年第一次專門職業及技術人員高等考試醫師牙醫師藥師考試分階
+段考試、醫事檢驗師、醫事放射師、物理治療師考試
+代　　號：6309
+類科名稱：醫事放射師
+科目名稱：核子醫學診療原理與技術學
+考試時間：1小時 座號：___________
+  ※本科目測驗試題為單一選擇題，請就各選項中選出一個正確或最適當的答案，複選作答者，該題不予計分!
+  ※注意：本試題可以使用電子計算器   　　　　　　　  
+ 
+1.有關123I-sodium iodide 之敘述，下列何者最適當？
+ 
+A.123I 為加速器製造核種，以電子捕獲（ electron capture ）衰變釋出 139 keV 光子
+B.可以顯影甲狀腺與副甲狀腺
+C.用於甲狀腺檢查時，要注意是否曾使用含碘對比劑
+D.適用於所有類型的甲狀腺癌檢查
+2.有關迴旋加速器製造放射性核種的敘述，下列何者最適當？
+ 
+A.迴旋加速器可以加速質子、氘粒子或 α 粒子
+B.111In 、124I 、133Xe 都是迴旋加速器製造核種
+C.迴旋加速器製造核種通常都是中子不足，行 β‒、 EC 衰變
+D.以迴旋加速器製造核種的核子反應不會釋出中子
+3.製造放射性124I 之核反應，下列何者正確？
+ 
+A.121Sb （ α, 2n ）124I
+B.122Te （ d, 2n ）124I
+C.124Te （ p, n ）124I
+D.123Te （ d, n ）124I
+4.腎功能造影時所使用之99mTc-MAG 3 製劑  ，其中 G3 代表之結構為何？
+ 
+A.3 個 glucose
+B.3 個 glycine
+C.3 個 glutamine
+D.3 個 galactose
+5.關於放射性133Xe 的敘述，下列何者錯誤？
+ 
+A.半衰期為 3.5 天
+B.加馬射線之能量為 81 keV
+C.5% 133Xe 與 95% CO2混合的氣體可作 lung ventilation 造影
+D.將133Xe 氣體溶於生理食鹽水可作腦血流造影
+6.下列孳生器中何者子核半衰期最長？
+ A.99Mo-99mTc
+
+=== PDF PAGE 2 ===
+B.62Zn-62Cu
+C.81Rb-81mKr
+D.82Sr-82Rb
+7.11C-choline 為11C-methyl iodide 與下列何者進行反應而得？
+ 
+A.2-(dimethylamino)-ethanol
+B.2-(dimethylamino)-methanol
+C.2-(diethylamino)-ethanol
+D.2-(diethylamino)-methanol
+8.關於99mTc 還原標幟之核醫藥物，下列敘述何者錯誤？
+ 
+A.標幟時氧氣的存在不利於99mTc 還原的進行，可利用氮氣填充減低氧氣含量
+B.可先用弱配位基如酒石酸等形成配位後，再與第二個配位基行螯合轉換形成穩定錯合物
+C.還原時由99mTcO4
+- (+7) 還原成99mTcO2 (+4) 後再與配位基形成錯合物
+D.使用的還原劑可為氯化亞錫、酒石酸亞錫、四氫硼化鈉或硫酸亞鐵等
+9.下列腫瘤造影製劑，何者作用機制與其他三者不同？
+ 
+A.11C-methionine
+B.11C-acetate
+C.18F-FET
+D.18F-FDOPA
+10.68Ge 與68Ga 在68Ge/ 68Ga 孳生器中，達到何種平衡狀態？
+ 
+A.暫態平衡
+B.永久平衡
+C.不平衡
+D.不連續平衡
+11.下列何者最適合評估腫瘤 somatostatin 受體的表現量？
+ 
+A.111In-pentetrotide
+B.111In-DTPA
+C.18F-FDOPA
+D.99mTc-ECD
+12.基因療法中，將治療基因與報導基因結合後轉染於腫瘤，再利用與報導基因匹配的報導探針得到的分子影
+像，無法幫助醫師了解下列何種特性？
+ 
+A.治療基因之表現量
+B.治療基因於體內之分布
+C.治療基因之確切療效
+D.治療基因表現的時間長短
+
+=== PDF PAGE 3 ===
+13.有關18F-FDG 的生物代謝敘述，何者錯誤？
+ 
+A.進入細胞的機制與葡萄糖相同
+B.受細胞內的六碳醣激酶（ hexokinase ）催化轉變成18F-FDG-6-phosphate
+C.磷酸化的18F-FDG 在心肌細胞內不會被進一步代謝
+D.缺血心肌（ ischemic myocardium ）對18F-FDG 的攝取較正常心肌低
+14.有關99mTc-MAG3 的敘述，下列何者錯誤？
+ 
+A.臨床用途與123I-hippuran 相同
+B.用於評估腎絲球過濾率（ GFR ）
+C.需要加熱製備
+D.給利尿劑會促進正常腎臟排除99mTc-MAG3
+15.下列何種試劑常作為雙官能基螯合劑，將99mTc 標幟於單株抗體上？
+ 
+A.DTPA （ diethylenetriaminepentaacetic acid ）
+B.DMSA （ dimercaptosuccinic acid ）
+C.MDP （ methylene diphosphonate ）
+D.citric acid
+16.對於131I-NaI 的臨床應用，下列何者使用的劑量最高？
+ 
+A.甲狀腺造影
+B.甲狀腺攝取率測量
+C.治療甲狀腺癌骨轉移
+D.治療甲狀腺機能亢進
+17.發生急性心肌梗塞 24 ～ 72 小時之間，利用核醫心臟檢查預期的結果為：
+ 
+A.99mTc-pyrophosphate 心肌檢查病灶處呈現熱區，201Tl 心肌血流檢查病灶處呈現冷區
+B.99mTc-pyrophosphate 心肌檢查病灶處呈現熱區，201Tl 心肌血流檢查病灶處呈現熱區
+C.99mTc-pyrophosphate 心肌檢查病灶處呈現冷區，201Tl 心肌血流檢查病灶處呈現熱區
+D.99mTc-pyrophosphate 心肌檢查病灶處呈現冷區，201Tl 心肌血流檢查病灶處呈現冷區
+18.關於心肌缺氧過程之敘述，下列何者錯誤？
+ 
+A.胸痛出現於心電圖的變化之前
+B.心電圖的變化出現於左心室收縮功能的變化之後
+C.左心室舒張功能的變化先於收縮功能的變化，局部功能的變化先於整體功能的變化
+D.心肌血流的變化先於心臟舒張及收縮功能的變化
+19.單光子斷層心肌灌注掃描（ SPECT MPI ）影像採集完畢在進行重建的步驟之前，必須將投影影像先以電影播
+放（ cinematic display ）的方式仔細審視，主要是為了下列那些目的？①觀察心臟大小及肺臟攝取  ②觀察各
+個角度可能的衰減作用  ③觀察病人是否有心律不整  ④觀察是否有異物或移動
+ A.①②③
+B.①②④
+
+=== PDF PAGE 4 ===
+C.①③④
+D.②③④
+20.有關 dipyridamole 進行壓力相心肌灌注掃描的敘述，下列何者錯誤？
+ 
+A.於 4 分鐘左右將所有的  dipyridamole 由靜脈注射入
+B.若受檢者情況不佳，可以適量減少 dipyridamole 的量
+C.受檢者在檢查前 24 小時內不宜喝咖啡
+D.dipyridamole 乃血管擴張劑
+21.以99mTc-HMPAO 進行腦血流灌注檢查，配製藥物後何時注射，可獲得較佳影像品質？  
+ 
+A.30 分鐘內
+B.40 ～ 60 分鐘
+C.70 ～ 100 分鐘
+D.110 ～ 140 分鐘
+22.下列何種放射藥物可以通過正常的血腦障壁（ blood-brain barrier ）？
+ 
+A.99mTc-MAA
+B.99mTc-ECD
+C.99mTc-MAG3
+D.99mTc-DTPA
+23.關於早期巴金森氏病患者99mTc-TRODAT-1 SPECT 之影像，下列敘述何者正確？
+ 
+A.尾核（ caudate nucleus ）的退化較殼核（ putamen ）明顯
+B.左右基底核呈現對稱的退化
+C.由基底核之殼核（ putamen ）先退化
+D.基底核退化較嚴重側和病人症狀為同側
+24.路易氏體失智症（ Lewy body dementia ）患者，在腦血流灌注或葡萄糖代謝影像的那個區域常出現低攝取活
+性？
+ 
+A.枕葉（ occipital lobe ）
+B.丘腦（ thalamus ）
+C.顳葉（ temporal lobe ）
+D.基底核（ basal ganglia ）
+25.下列何者不是運動壓力相心臟灌流檢查的禁忌症？
+ 
+A.主動脈瓣狹窄
+B.急性主動脈剝離
+C.氣喘
+D.控制不良高血壓  >220 mmHg
+26.下列何種核子醫學神經系統檢查最適合用於輔助腦死診斷？
+ A.99mTc-ECD brain SPECT
+B.99mTc-TRODAT-1 SPECT
+
+=== PDF PAGE 5 ===
+C.cisternography
+D.123I-ioflupane SPECT
+27.用於心肌灌注造影的心臟加壓藥物中，下列何種藥物加壓的機轉和運動最接近？
+ 
+A.dipyridamole
+B.adenosine
+C.dobutamine
+D.nitrate
+28.有關腫瘤缺氧（ hypoxia ）正子造影應用於腫瘤治療之敘述，下列何者錯誤？
+ 
+A.腫瘤缺氧程度愈高代表其輻射抗性較低
+B.腫瘤缺氧程度愈高代表其腫瘤可能會有高糖解代謝（ glycolytic metabolism ）
+C.腫瘤缺氧程度愈高代表其腫瘤可能會有抗凋亡（ anti-apoptotic ）現象
+D.腫瘤缺氧程度愈高代表其腫瘤可能會有新生血管能力（ angiogenesis ）之增強效應
+29.核醫骨骼造影發現有異常高的肝臟活性攝取，最可能是核醫藥物製備時流洗液（ eluate ）的成分中何者含量異
+常所致？
+ 
+A.氧化錫
+B.氧化鋁
+C.鉬離子
+D.鎝離子
+30.使用18F-FDG 正子造影追蹤放射線治療 6 個月後的病人，其原照射治療區域出現局部活性攝取增加，其最可能
+的原因為何？
+ 
+A.tumor recurrence
+B.normal finding
+C.radiation necrosis
+D.scar tissue
+31.下列何者不是201Tl-thallous chloride 檢查之用途？
+ 
+A.心肌灌注造影
+B.心肌梗塞
+C.腦瘤
+D.甲狀腺機能亢進
+32.下列何者可用於偵測淋巴瘤與肝癌？
+ 
+A.32P-sodium orthophosphate
+B.67Ga-citrate
+C.133Xe gas
+D.123I-ioflupane
+33.下列何項腫瘤標記主要適用於攝護腺癌的檢測？
+ A.CA 125
+
+=== PDF PAGE 6 ===
+B.CA 15-3
+C.CEA
+D.PSA
+34.核醫骨骼掃描目前最常使用的藥物是99mTc-MDP ，下列敘述何者錯誤？
+ 
+A.其結構為 diphosphonate ，包含 P-O-P 鍵
+B.在注射藥劑後 2 ～ 3 小時造影，約有 50 ～ 60% 的同位素活性存在骨頭，其餘藥物已經由腎臟排出
+C.腎臟功能不好的患者，造影時軟組織的同位素活性會較高
+D.該藥物的物理半衰期為 6 小時
+35.有關18F-FDG 藥物的特性，下列何者錯誤？
+ 
+A.物理半衰期 110 分鐘
+B.在活體內會進入細胞的葡萄糖代謝途徑
+C.在細胞內被進一步代謝成二氧化碳和水
+D.攝取多寡和細胞的醣解速率相關
+36.18F-FDG 正子造影常用 standard uptake value （ SUV ）來做定量，下列有關18F-FDG PET 檢查的 SUV 描述，何者
+錯誤？
+ 
+A.身體組成會有差異
+B.檢查時血糖值會影響
+C.是一個絕對定量參數
+D.掃描開始時間有影響
+37.生理性18F-FDG 攝取不常見於下列那個器官？
+ 
+A.唾液腺
+B.聲帶
+C.心臟
+D.肺臟
+38.核子醫學檢查測量 ERPF 時，所使用的放射性製劑是下列何者？
+ 
+A.99mTc-MAG3
+B.99mTc-DMSA
+C.99mTc-MAA
+D.99mTc-phytate
+39.有關99mTc-MAG3 核醫藥物的敘述，下列何者正確？
+ 
+A.主要是經由腎絲球過濾排出血漿
+B.進行99mTc-MAG3 腎臟影像時，膀胱壁的暴露劑量低於腎臟
+C.99mTc-MAG3 的腎萃取分率（ extraction fraction ）大於99mTc-DTPA
+D.適合用於評估腎絲球過濾率（ GFR ）
+40.下列何種核醫造影藥物最適用於檢查兒童急性腎盂腎炎？
+ 
+
+=== PDF PAGE 7 ===
+A. 99mTc-DTPA
+B.99mTc-DMSA
+C.99mTc-GH （ glucoheptonate ）
+D.99mTc-MAG3
+41.下列何種藥物不適用於腎血管性高血壓的核醫腎臟造影？
+ 
+A.aspirin
+B.enalapril
+C.furosemide
+D.captopril
+42.有關副甲狀腺雙同位素製劑相減影像法的敘述，下列何者正確？
+ 
+A.123I-NaI 影像扣除99mTc-pertechnetate 影像
+B.99mTc-pertechnetate 影像扣除99mTc-MIBI 影像
+C.99mTc-MIBI 影像扣除123I-NaI 影像
+D.99mTc-pertechnetate 影像扣除131I-NaI 影像
+43.使用利尿劑的99mTc-MAG3 核醫腎臟造影檢查（如下圖），下列何者正確？
+
+=== PDF PAGE 8 ===
+ 
+A.正常的腎臟血流量，通暢的尿液排出
+B.正常的腎臟血流量，阻塞的尿液排出
+C.異常的腎臟血流量，阻塞的尿液排出
+D.異常的腎臟血流量，通暢的尿液排出
+44.因神經內分泌瘤會大量表現體抑素受體，因此同位素標幟  DOTATOC 之核醫造影可用於神經內分泌瘤之診
+斷、分期及復發， DOTATOC 之分子結構為下列何者？
+ A.
+
+=== PDF PAGE 9 ===
+B.
+C.
+D.
+45.臨床甲狀腺閃爍攝影影像結果如圖，最可能為何？
+
+=== PDF PAGE 10 ===
+（ RT: right ， SSN: suprasternal notch ， ANT: anterior ， LAO: left anterior oblique ， RAO: right anterior oblique ）
+ 
+A.異位性甲狀腺
+B.甲狀腺發育不良
+C.單一甲狀腺結節
+D.多發性甲狀腺結節
+46.前列腺特定膜抗原（ prostate-specific membrane antigen, PSMA ）是一種前列腺癌細胞跨膜蛋白，有關  PSMA 之
+核醫診療敘述，下列何者最可能？
+ 
+A.PSMA PET/CT 所採用的核種為177Lu ；而 PSMA-based radioligand therapy 所採用的核種為68Ga
+B.PSMA PET/CT 所採用的核種為177Lu ；而 PSMA-based radioligand therapy 所採用的核種為18F
+C.PSMA PET/CT 所採用的核種為90Y ；而 PSMA-based radioligand therapy 所採用的核種為18F
+D.PSMA PET/CT 所採用的核種為68Ga 或  18F ；而 PSMA-based radioligand therapy 所採用的核種為177Lu
+47.腎性高血壓患者之腎臟造影，下列敘述何者錯誤？
+ 
+A.病人在檢查前需攝取足夠的水分
+B.病人在服用 ACEI （ angiotensin converting enzyme inhibitors ）後有可能發生嚴重的低血壓
+C.檢查過程中需持續監測病人的血壓及脈搏
+D.已使用 ACEI （ angiotensin converting enzyme inhibitors ）治療病人，在進行此檢查時不需停止服用 ACEI
+48.靜脈注射111In-oxine 標幟 WBC 於人體內，會出現生理性器官分布，下列何者生理性分布最少？
+ A.肝臟
+B.腸道
+C.脾臟
+
+=== PDF PAGE 11 ===
+D.骨髓
+49.下列造影藥物何者可輔助99mTc-MDP 骨頭掃描來診斷骨髓炎？
+ 
+A.99mTc-MAA
+B.67Ga-citrate
+C.133Xe
+D.99mTc-MAG3
+50.核醫影像資料儲存系統中，一個字元（ word ）可儲存多少個位元數（ bit ）？
+ 
+A.8
+B.256
+C.1,024
+D.65,536
+51.正子電腦斷層影像經三維重建後，可將每一角度射束路徑上之最大計數或最大強度像素呈現在二維影像上之
+技術為何？
+ 
+A.MPR （ multi-planner reformation ）
+B.MIP （ maximum intensity projection ）
+C.SSD （ shaded surface display ）
+D.VR （ volume rendering ）
+52.有關正子電腦斷層掃描造影程序之敘述，下列何者錯誤？
+ 
+A.每位病患須經過穿透式掃描（ transmission scan ）和射出式掃描（ emission scan ）程序
+B.每日掃描病患前須進行空白掃描（ blank scan ）以作為衰減校正之均勻度參考
+C.空白掃描（ blank scan ）須放置射源假體進行掃描，以評估系統靈敏度
+D.PET 掃描儀通常利用桿狀射源（68Ge ）進行穿透式掃描（ transmission scan ）
+53.下列何種放射製劑最適合偵測肝臟海綿狀血管瘤（ cavernous hemangioma ）？
+ 
+A.99mTc-sulfur colloid
+B.99mTc-DISIDA
+C.99mTc-phytate
+D.99mTc-red blood cells
+54.99mTc-annexin V 和下列何種分子有高親和性，可用以觀察細胞凋亡（ apoptosis ）？
+ 
+A.fructose
+B.phenyalanine
+C.phosphatidylserine
+D.triglycerol
+55.使用密閉式重複呼吸裝置進行133Xe 肺通氣掃描，下列敘述何者正確？
+ A.133Xe 經活性碳濾器吸附後可重複使用
+B.須更換裝置內的二氧化碳吸附劑與乾燥劑
+
+=== PDF PAGE 12 ===
+C.攝影室必須維持在正壓環境
+D.工作人員須配戴呼吸面罩，以防止吸入133Xe
+56.有關唾液腺造影檢查的敘述，下列何者錯誤？
+ 
+A.造影前患者應禁食至少 8 小時
+B.注射藥物後即進行動態連續造影
+C.口服稀釋檸檬汁會造成正常檢查者的口腔活性增高
+D.造影前不宜給與檢查者過氯酸鹽（ perchlorate ）
+57.下列何者是67Ga-citrate 血漿清除（ plasma clearance ）較慢的主因？
+ 
+A.67Ga 在體內發生 transchelation
+B.67Ga 物理半衰期較長
+C.67Ga 核種能量較高
+D.血管壁上有 citrate 的接受體（ receptor ）
+58.關於放射免疫分析的敘述，下列何者錯誤？
+ 
+A.RIA 是 Yallow 及 Berson 於研究甲狀腺疾病時發明的
+B.IRMA 比 RIA 更靈敏與方便，目前以 IRMA 為主
+C.RIA 所使用的放射量很低，但仍須注意安全
+D.RIA 因為使用放射性物質，必須於輻射安全法規下為之
+59.下列那兩條件是競爭結合型放射免疫分析法可以推出數學式的條件？
+ 
+A.抗原抗體的反應為零級反應與均勻相
+B.抗原抗體的反應為一級反應與均勻相
+C.抗原抗體的反應為二級反應與均勻相
+D.抗原抗體的反應為一級反應與非均勻相
+60.下列那種物質含碘？
+ 
+A.tyrosine
+B.T4
+C.TRH （ thyrotropin-releasing hormone ）
+D.TSH （ thyroid stimulating hormone ）
+61.臨床放射免疫分析試劑都有所謂的可定量範圍，當檢體檢驗結果超過定量範圍時，下列處置何者最適切？
+ 
+A.將檢體稀釋後重測發報告，並記載兩次結果於報告上
+B.以標示檢體超過定量範圍發報告
+C.為求時效以定量曲線推算發報告
+D.增加檢體量重測後發報告
+62.下列那個項目不適合利用放射免疫分析測定？
+ 
+A.游離鈣
+B.甲狀腺素
+C.質醛酮（ aldosterone ）
+D.B 型肝炎表面抗原
+
+=== PDF PAGE 13 ===
+63.地板擦拭拭紙量測在 well counter 測得結果為 2,439 cpm ，假設其偵測效率為 32% ，背景值為 280 cpm ，請計算這
+個擦拭拭紙的 dpm 為何？
+ 
+A.5,547
+B.6,747
+C.4,337
+D.7,214
+64.有關131I 治療甲狀腺惡性腫瘤，下列何者不屬於放射碘輻射之直接副作用？
+ 
+A.腸胃不適
+B.唾液腺腫大
+C.嚴重毛髮脫落
+D.溢淚
+65.有關標靶放射性核種治療（ targeted radionuclide therapy ），下列核種何者最適合治療散播性腹膜轉移癌
+（ peritoneal carcinomatosis ）或微轉移病灶？
+ 
+A.211At
+B.90Y
+C.67Cu
+D.131I
+66.下列何者為胜肽受體放射核種治療（ peptide receptor radionuclide therapy ）的劑量限制器官（ dose-limiting
+organ ）？
+ 
+A.腦
+B.膀胱
+C.肺臟
+D.腎臟
+67.下列何種放射藥物可以用來治療淋巴癌？
+ 
+A.90Y-Zevalin
+B.131I-MIBG
+C.32P-sodium orthophosphate
+D.89Sr-SrCl2
+68.有關 α 衰變的敘述，下列何者錯誤？
+ 
+A.原子核內的質子或中子數目為偶數者相較於為奇數者，產生 α 衰變的機率較高
+B.α 粒子為氦的原子核
+C.產生 α 衰變的放射核種可作為核醫學影像檢查
+D.元素產生 α 衰變後質子數減少 2 ，質量數減少 4
+69.下列何種方法可以有效地對單光子電腦斷層掃描（ SPECT ）進行散射校正？
+ A.偵測器校正
+B.能窗技術
+
+=== PDF PAGE 14 ===
+C.濾波器技術
+D.影像後處理技術
+70.下列那一種射源常用於單光子電腦斷層掃描（ SPECT ）之衰減校正？
+ 
+A.68Ge
+B.153Gd
+C.111In
+D.125I
+71.直線衰減係數（ linear attenuation coefficient ）與下列何種閃爍晶體的特性有關？
+ 
+A.stopping power
+B.energy resolution
+C.decay constant
+D.light output
+72.停經後婦女接受18F-FDG PET 造影出現卵巢的活性攝取增加，最可能的原因為下列何者？
+ 
+A.a normal finding
+B.malignancy
+C.pregnancy
+D.ovulating ovary
+73.201Tl-TlCl 物理半衰期為 73 小時，有效半衰期為 55 小時，其在人體內代謝之半衰期為多少天？
+ 
+A.5
+B.10
+C.15
+D.20
+74.下列充氣式偵檢器之工作區域中，何者對於輻射之偵測靈敏度最高？
+ 
+A.再結合區
+B.游離腔區
+C.限制比例區
+D.蓋革區
+75.核醫藥物造成之組織輻射損傷，與下列那些因素有關？①核醫藥物的活度  ②核種的半衰期  ③核醫藥物代
+謝物於體內的分布  ④標靶器官的位置
+ 
+A.僅①③
+B.僅②④
+C.僅①③④
+D.①②③④
+76.下列何者為等價劑量（ dose equivlant ）之單位？
+ A.戈雷（ Gy ）
+B.貝克（ Bq ）
+
+=== PDF PAGE 15 ===
+C.侖琴（ R ）
+D.西弗（ Sv ）
+77.某甲狀腺功能亢進病患接受131I 治療，其接受了 0.5 mGy 的 β-ray 及 0.01 mGy 的 γ-ray ，已知甲狀腺的組織加權因
+數為 0.03 ，試求其甲狀腺之有效劑量為多少？
+ 
+A.15.3 μSv
+B.15.3 mSv
+C.0.51 mSv
+D.18 μSv
+78.10 mCi 的99mTc 經 60 小時後，其總衰變次數約為多少？
+ 
+A.3.7×108
+B.8.0×1012
+C.1.2×1013
+D.8.0×1013
+79.在動態核醫影像處理過程中，會在標的器官圈選有興趣的區域（ region of interest ），產生一條曲線，此曲線
+在平面直角座標系統中的 x–y 分別代表什麼？
+ 
+A.time vs. time
+B.time vs. activity
+C.activity vs. time
+D.activity vs. activity
+80.下列用於核醫造影儀的晶體中，何者相對光輸出（ relative light output ）最高？
+ 
+A.NaI (Tl)
+B.BGO
+C.LSO
+D.GSO

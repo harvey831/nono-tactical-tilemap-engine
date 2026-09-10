@@ -1,0 +1,578 @@
+=== PDF PAGE 1 ===
+ 
+106年第二次醫師考試分階段考試（第一階段考試）、牙醫師藥師考
+試分階段考試、藥師、醫事檢驗師、醫事放射師、物理治療師、職能
+治療師、呼吸治療師、獸醫師考試、106年助產師考試
+代  號：3309 
+類科名稱：醫事放射師 
+科目名稱：放射線器材學（包括磁振學與超音波學）
+考試時間：1小時 座號：___________ 
+  ※本科目測驗試題為單一選擇題，請就各選項中選出一個正確或最適當的答案，複選作答者，該題不予計分! 
+  ※注意：本試題可以使用電子計算器             
+1. 執行一多切面螺旋（multislice spiral ）CT 檢查時，使用 12 mm 寬的 X光射束，在20 秒內得到 8個切面，若X光
+管每0.5 秒轉一圈，且每轉一圈病床移動 6 mm ，則z軸涵蓋範圍為多少公分？ 
+ 
+A. 6 
+B. 12  
+C. 18  
+D. 24  
+2. 電腦放射攝影（CR ）必須使用雷射（laser ）讀取影像，雷射光的功能為： 
+ 
+A. 提供能量給在束縛帶（conduction band ）的電子，使電子能到達傳導帶（valence band ） 
+B. 增加傳導帶（valence band ）電子的動能，產生更多的二次電子（secondary electron ） 
+C. 提供能量給在暫穩態（metastable state ）的電子，使電子能到達傳導帶  
+D. 進行硬拷貝（hard-copy ） 
+3. 鉬濾片（molybdenum filters ）屬於下列何種濾片？ 
+ 
+A. 單一鋁濾片（single aluminium filter ） 
+B. 單一鉛濾片（single lead filter ） 
+C. K-陡邊濾片（K-edge filter ） 
+D. L-陡邊濾片（L-edge filter ） 
+4. 若X光影像 FOV 的大小為43 cm × 36 cm ，如果空間解析度（spatial resolution ）為2.5 lp/mm ，則影像矩陣 
+（image matrix ）的大小為： 
+ 
+A. 1,075 × 900  
+B. 2,150 × 1,800  
+C. 1,720 × 1,440  
+D. 860 × 720  
+5. 當X光管與底片距離（source-to-image receptor distance, SID ）增加時，X光機足跟效應（heel effect ）的產
+生會有何改變？ 
+ 
+A. 越明顯  
+B. 越不明顯  
+C. 依不同 X光機機型而改變  
+D. 足跟效應與 SID 無關  
+6. 使用一平 JX光柵（parallel grid ），柵高（height of the grid strip ）為2.4 mm 且鉛條間寬（grid strip 
+
+=== PDF PAGE 2 ===
+interspace width ）為300 µm，已知 SID （source-to-image receptor distance ）為120 cm ，則影像接受器中央 
+軸到截止距離（distance to cutoff ）為多少 cm ？ 
+ 
+A. 5 
+B. 10  
+C. 15  
+D. 20  
+7. 有關數位減贅血管攝影（digital subtraction angiography ）的影像相減模式，下列敘述何者錯誤？ 
+ 
+A. 面罩減贅（mask subtraction ）：分別在對比劑使用前、後各進行一次攝影，再用影像處理方式相減  
+B. 能量減贅（energy subtraction ）：使用不同 X光能量進行照射，其能量為110 kV 上下  
+C. 時間減贅（temporal subtraction ）：比較不同時間的影像變化，以兩個相連時段的影像相減  
+D. 混合減贅（hybrid subtraction ）：結合時間減贅及能量減贅兩種模式  
+8. 若X光機攝影時發生過度曝光（over exposure ），此現象會使光度範圍落在軟片特性曲線的那一區間？ 
+ 
+A. fog  
+B. base  
+C. toe  
+D. shoulder  
+9. X光機操作於 75 kVp ，100 mAs 條件下，於X光源至攝像距離 100 cm 處測得曝露為360 mR ，試問在固定操作 
+條件下要降低曝露為90 mR ，則須加鋁濾器的厚度為何？（已知鋁濾器的半值層厚度為3.2 mm ） 
+ 
+A. 2.8 mm  
+B. 3.2 mm  
+C. 3.8 mm  
+D. 6.4 mm  
+10. 第四代 CT 之偵檢器設計為固定式，其主要目的為降低下列何者假影（artifact ）產生？ 
+ 
+A. partial volume artifact  
+B. metal artifact  
+C. cupping artifact  
+D. ring artifact  
+11. 放大乳房攝影術（magnification mammography ）常用下列何種方法來降低散射（scatter radiation ）？  
+ 
+A. 鉬濾器（Mo filter ） 
+B. 銠濾器（Rh filter ） 
+C. 空氣間隔法（air-gap ） 
+D. 柵板（grid ） 
+12. 投射掃描放射攝影（scanned projection radiography ）適用於下列何者？ 
+ 
+A. 電腦斷層影像系統（computed tomographic imaging system ） 
+B. 單光子發射斷層影像系統（single photon emission computed tomographic imaging system ） 
+C. 正子發射斷層影像系統（positron emission tomographic imaging system ） 
+D. 磁共振影像（magnetic resonance image ） 
+
+=== PDF PAGE 3 ===
+13. 螢光（fluorescence ）物質與磷光（phosphorescence ）物質之區分為吸收能量後射出光線延遲時間之長短，
+此時間劃分點為何？ 
+ 
+A. 10 -4秒 
+B. 10 -6秒 
+C. 10 -8秒 
+D. 10 -9秒 
+14. 目前臨床使用 MV 級cone beam CT 主要在放射治療時的影像對位，其產生輻射劑量大約是： 
+ 
+A. 0.2 cGy  
+B. 2 cGy  
+C. 20 cGy  
+D. 200 cGy  
+15. 臨床使用的雙源電腦斷層（dual-source CT ），其主要應用是： 
+ 
+A. cardiac imaging  
+B. angiography  
+C. perfusion  
+D. mammography  
+16. 下圖是用來進行 X光成像系統的何種測試？ 
+  
+ 
+ 
+ 
+A. tube current linearity  
+B. spatial resolution  
+C. half-value layer  
+D. effective focal spot size  
+17. 有一臺 X光機，固定濾片厚度為0.5 mm 鋁，外加濾片厚度為2.0 mm 鋁。已知攝影參數如下圖所示，X光源至 
+攝像距離 110 cm 處，其X光射束品質（beam quality ）的半值層厚度為3.6 mm 鋁，測得曝露為300 mGy ，若
+所有攝像條件不變下，降低曝露為150 mGy 時，則須另加鋁濾片的厚度為何？ 
+
+=== PDF PAGE 4 ===
+ 
+ 
+ 
+A. 1.8 mm  
+B. 2.5 mm  
+C. 3.6 mm  
+D. 7.2 mm  
+18. 依據美國放射線醫學會（ACR ）及乳房攝影品質標準法（MQSA ）所規定之品質保證程序中，乳房攝影 X光設 
+備之壓迫力（compression ）測試之標準值為？ 
+ 
+A. 壓迫力不超過 40 磅；自動和手動模式皆能壓迫達 25 ～40 磅，並能持續 15 秒 
+B. 壓迫力不超過 40 磅；自動和手動模式皆能壓迫達 25 ～40 磅，並能持續 60 秒 
+C. 壓迫力不超過 80 磅；自動和手動模式皆能壓迫達 25 ～80 磅，並能持續 15 秒 
+D. 壓迫力不超過 80 磅；自動和手動模式皆能壓迫達 25 ～80 磅，並能持續 60 秒 
+19. 下圖為電腦斷層掃描儀進行那一種品質保證測試？ 
+  
+ 
+ 
+ 
+A. 檢查床與機架對位（position accuracy ） 
+B. 水假體影像均勻度及訊雜比評估（image homogeneity and signal-to-noise ratio ） 
+C. 電腦斷層值（CT number ）準確度  
+D. 劑量評估（CT dose ） 
+20. 臨床上執行腹部 X光檢查，相關攝影參數間的關係，下列敘述何者正確？ 
+ 
+A. X光的量與射源距離平方成正比  
+B. X光的量與管電壓平方成正比  
+
+=== PDF PAGE 5 ===
+C. X光的量與管電壓成正比  
+D. X光的量與管電流時間乘積平方成正比  
+21. 有關減少動態模糊（motion blur ），下列何者錯誤？ 
+ 
+A. 使用最短可能造影時間  
+B. 提供束縛之工具，減少病人移動  
+C. 使用小的射源至影像接收器距離（SID ） 
+D. 使用小的物體至影像接收器距離（OID ） 
+22. 單相全波整流、三相六脈衝及高頻單相全波整流等三型 X光機，若均操作於相同管電壓（kVp ）及相同的管電 
+流（mAs ）時，三者 X光輸出在 X光強度（總量）及X光的等效能量（effective energy ）方面有何區別？ 
+ 
+A. 三者不論是 X光強度或等效能量均相同  
+B. 單相全波整流機種 X光強度最低，但等效能量最高  
+C. 三相六脈衝機種 X光強度最高，等效能量介於單相全波整流及高頻單相全波整流兩機種之間  
+D. 高頻單相全波整流機種，不論是 X光強度及等效能量皆高於其他兩機種  
+23. 當DR 的像素大小為100 µm時，其空間解析度為多少 lp / mm ？ 
+ 
+A. 0.5  
+B. 5 
+C. 15  
+D. 50  
+24. 當X光攝影系統的管電壓增加時，X光機輸出 X光的 É（quantity ）及品質（quality ）分別會做何改變？ 
+ 
+A. 增加，Ø變 
+B. 下降，變低  
+C. 增加，變高  
+D. 增加，變低  
+25. 若二介質的聲阻抗（media impedance ）分別為40 和60 rayls ，則強度傳輸係數（intensity transmission 
+coefficient ）為多少？ 
+ 
+A. 0.04  
+B. 0.48  
+C. 0.56  
+D. 0.96  
+26. 超音波陰影假影（shadowing artifacts ），主要是由下列何者造成？ 
+ 
+A. 高衰減（high attenuation ） 
+B. 速度誤差（speed error ） 
+C. 多重反射（multiple reflection ） 
+D. 脈衝長度（pulse length ） 
+27. 超音波穿透軟組織 1 cm 厚度所需之脈衝超音波往返時間（pulse round-trip travel time ）為多少 µs？  
+ 
+A. 6.5  
+B. 13  
+
+=== PDF PAGE 6 ===
+C. 39  
+D. 65  
+28. 都卜勒超音波應用都卜勒效應量測組織移動速度或血流速度，主要是利用下列何種參數之改變？ 
+ 
+A. 回波振幅（amplitude ） 
+B. 回波強度（intensity ） 
+C. 回波頻率（frequency ） 
+D. 回波方向（direction ） 
+29. 若在一長且直的血管中，血管流動阻力（flow resistance ）變成二倍，則血流體積流率（volumetric flow 
+rate ）為何？ 
+ 
+A. 減半  
+B. 不變  
+C. 變大二倍  
+D. 變小四分之一  
+30. 臨床上要使用超音波影像來評估熱燒灼治療後的組織壞死區域，您會建議下列何項影像技術？ 
+ 
+A. 空間複合影像（spatial compounding ） 
+B. M模式影像（M-mode ） 
+C. 灰階 B模式影像（B-mode ） 
+D. 彈性影像（elastography ） 
+31. 下列那個都卜勒角度會形成最大的都卜勒偏移？ 
+ 
+A. -45  
+B. 0 
+C. 45  
+D. 90  
+32. 下列何者不是都卜勒偏移之主要影響因子？ 
+ 
+A. 都卜勒角度  
+B. 工作頻率  
+C. 反射物速度  
+D. 振幅  
+33. 依據美國食品和藥物管理局（FDA ）的規定（2003 或2004 年），磁振造影所產生的射頻曝露之比吸收率 
+（specific absorption rate, SAR ），對於全身之平均的限值為： 
+ 
+A. 0.4 W/kg  
+B. 2 W/kg  
+C. 4 W/kg  
+D. 8 W/kg  
+34. 若梯度振幅（gradient amplitude ）為20 mT/m ，上升時間（rise time ）為0.2 s ，則扭轉速率（slew rate ）
+為： 
+A. 0.8 （mT ．s2）/ m 
+
+=== PDF PAGE 7 ===
+ 
+B. 4（mT ．s）/ m 
+C. 100 mT / （m．s） 
+D. 500 mT / （m．s2) 
+  
+35. 磁振造影中，屏蔽線圈（shielding coil ）的用途為： 
+ 
+A. 修正心跳假影  
+B. 降低雜散磁場（fringe field ） 
+C. 修正主磁場的均勻度 
+D. 修正呼吸假影  
+36. 磁振造影主磁場 B0增加時，下列敘述何者正確？ 
+ 
+A. 在所有其它掃描參數都相同的情況下，訊雜比（SNR ）減少  
+B. 氫原子核平行（spin-up ）磁偶矩和反平行（spin-down ）磁偶矩的能量差增加  
+C. 16 O原子核拉莫頻率（Larmor frequency ）減少  
+D. 12 C原子核 T1 弛緩時間增加  
+37. 在傳統梯度回聲軸向（axial ）腎臟磁振造影中，有一黑色帶出現在腎臟的右邊，下列敘述何者正確？ 
+ 
+A. 這是來自反摺假影（aliasing artifact ） 
+B. 這是來自呼吸假影  
+C. 頻率編碼梯度在 R-L方向  
+D. 相位編碼梯度在 R-L方向  
+38. 一般而言，磁振造影所使用的體積線圈（volume coil ）與表面線圈（surface coil ）相比，下列敘述何者最為
+正確？ 
+ 
+A. 體積線圈提供較高的訊雜比及空間均勻度 
+B. 表面線圈提供較高的訊雜比及空間均勻度 
+C. 體積線圈提供較高的訊雜比，表面線圈提供較高的空間均勻度 
+D. 表面線圈提供較高的訊雜比，體積線圈提供較高的空間均勻度 
+39. 下列有關磁振造影之敘述，何者錯誤？ 
+ 
+A. 呼吸假影常出現在相位編碼梯度方向  
+B. 心跳假影常出現在相位編碼梯度方向  
+C. 化學位移假影常出現在頻率編碼梯度方向  
+D. 反摺假影（aliasing artifact ）是因為射頻屏蔽有滲漏而造成  
+40. 若其它條件不變，關於磁振造影掃描時間，下列敘述何者正確？ 
+ 
+A. 使用呼吸監控（respiratory gating ）可以縮短掃描時間    
+B. 激發次數（NEX ）增加 2倍，會使掃描時間增加 2倍 
+C. 使用流體補償（flow compensation ）可以縮短掃描時間  
+D. 使用大偏轉角（flip angle ）可以縮短掃描時間  
+41. 射頻屏蔽（RF shielding ）通常是使用那種材質製作？ 
+A. 銅（copper ） 
+
+=== PDF PAGE 8 ===
+ 
+B. 鐵（iron ） 
+C. 鈷（cobalt ） 
+D. 鎳（nickel ） 
+42. 在醫用磁振造影儀器中，利用多個小的表面線圈以提升訊雜比，提供更快速詳盡的掃描，這是屬於那一種線 
+圈？ 
+ 
+A. 勻場線圈（shim coils ） 
+B. 直角相位線圈（quadrature coils ） 
+C. 相位陣列線圈（phased array coils ） 
+D. 螺線管線圈（solenoid coils ） 
+43. 下列那一項不會影響比吸收率（specific absorption rate, SAR ）？  
+ 
+A. 射頻脈衝特性（RF pulse characteristics ） 
+B. 脈衝序列參數（pulse sequence parameters ） 
+C. 受試者身高  
+D. 受試者體重  
+44. 磁振造影儀器中脈衝控制單元（pulse control unit ）主要是控制那兩個系統？ 
+ 
+A. 主磁場與梯度磁場線圈  
+B. 梯度磁場線圈與射頻線圈  
+C. 射頻線圈與勻場線圈  
+D. 主磁場與勻場線圈  
+45. 下列關於電阻式電磁鐵（resistive electromagnets ）的敘述，何者錯誤？ 
+ 
+A. 電阻式電磁鐵能產生磁場是因為在線圈上有電子流動  
+B. 電阻式電磁鐵線圈上的電流增加，所產生的磁場也會增加  
+C. 電阻式電磁鐵所產生的磁場和電流同方向  
+D. 線圈上的電阻使電磁鐵無法產生很高的磁場  
+46. 關於磁場屏蔽的敘述，下列何者正確？ 
+ 
+A. 磁場屏蔽的主要目的是讓磁場更均勻 
+B. 磁場屏蔽可以使影像有更高的訊雜比（SNR ） 
+C. 磁場屏蔽可以使影像有更高的解析度（resolution ） 
+D. 磁場屏蔽希望能將檢查室外的磁場降低至 5G 以下  
+47. 一般體外放射治療固定裝置之熱塑面膜，用熱水加熱軟化塑型後，約多久時間自然冷卻後可自患者身上拆下 
+而不變形？ 
+ 
+A. 10 分鐘  
+B. 30 分鐘  
+C. 60 分鐘  
+D. 90 分鐘  
+48. 有關質子射束的布拉格峰（Bragg peak ），下列敘述何者錯誤？ 
+A. 布拉格峰發生在質子能量最高的地方  
+
+=== PDF PAGE 9 ===
+ 
+B. 在布拉格峰處，質子的阻擋本領最大  
+C. 在布拉格峰處，質子單位長度的能量損失最大  
+D. 要選擇適當能量，使得布拉格峰落在腫瘤之處  
+49. 加馬刀使用之放射核種最多為多少顆？ 
+ 
+A. 101 顆 
+B. 201 顆 
+C. 210 顆 
+D. 無上限  
+50. 套管游離腔（thimble chamber ）氣壓與靈敏度（sensitivity ）為何種關係？ 
+ 
+A. 無關  
+B. 成反比  
+C. 成正比  
+D. 成平方正比  
+51. 下圖為放射治療時固定病患之用，其名稱為： 
+  
+ 
+ 
+ 
+A. Alpha Cradle  
+B. ployurethane foam cast  
+C. Vac -Lok system  
+D. thermoplastic  
+52. 臨床上用於標定近接治療用射源的井型游離腔（well type ion chambers ）幾何效率約為： 
+ 
+A. 4π 
+B. 2π 
+C. 1π 
+D. 0.5 π 
+53. 用於後荷式近接治療的 192 Ir 射源種粒，射源長度與直徑大小約為： 
+A. 
+
+=== PDF PAGE 10 ===
+ 
+0.3 mm × 0.5 mm  
+B. 3 mm × 0.5 mm  
+C. 3 mm × 5 mm  
+D. 30 mm × 5 mm  
+54. 經直線加速器的加速管（accelerator tube ）加速的電子，聚焦後直徑約為多少 mm ？ 
+ 
+A. 0.3  
+B. 3 
+C. 30  
+D. 300  
+55. 下列何者不是重粒子放射治療的一種？ 
+ 
+A. 中子射束  
+B. 質子射束  
+C. 137 Cs 光子射束  
+D. 負π粒子射束  
+56. 重粒子中的 π介子（pi meson ），其質量約為質子（proton ）的幾倍？ 
+ 
+A. 273  
+B. 173  
+C. 0.15  
+D. 0.10  
+57. Virtual simulation 軟體程式可提供下列那些功能？①outlining of external contours  ②outlining of target 
+volumes  ③outlining of DVH  ④review of multiple treatment planning  
+ 
+A. ①②③  
+B. ①②④  
+C. 僅①②  
+D. 僅③④  
+58. 下列何者不是 GafChromic film 的特性？ 
+ 
+A. tissue equivalent  
+B. linear sensitometric response  
+C. require processing after irradiation  
+D. large dynamic range  
+59. 下列何組射源之半值層厚度相同？①Ra-226  ②Rn-222  ③Cs-137  ④Ir-192  
+ 
+A. ①②  
+B. ③④  
+C. ①③  
+D. ②④  
+60. 根據 ICRU 19 號報告的定義，放射核種之暴露率常數（exposure rate constant ）Γδ，與 specific γ-ray 
+constant Γ的敘述何者正確？ 
+
+=== PDF PAGE 11 ===
+ 
+A. Γδ有考慮來自射源的 x光成分的暴露率  
+B. 同一射源之 Γδ值比Γ小一些  
+C. Γδ值可由測量準確求得  
+D. Γ值可由測量準確求得  
+61. 
+遠隔治療機所產生的半影區與下列那些因子有關？①射源直徑 ②焦斑大小 ③SSD  ④SDD 
+ 
+ 
+A. 
+僅①② 
+ 
+B. 
+僅③④ 
+ 
+C. 
+僅①③ 
+ 
+D. 
+①②③④ 
+ 
+62. 磁控管（magnetron ）與速調管（klystron ）的峰值功率（peak power ），分別為何？ 
+ 
+A. 2 MW ，5 MW  
+B. 10 MW ，25 MW  
+C. 50 W ，100 W  
+D. 200 W ，400 W  
+63. 
+下列那些設備可用於控制遠隔放射治療的輻射照野？①鉛 ②Cerrobend 鉛合金 ③MLC  ④雷射 
+系統  
+ 
+A. 
+僅①② 
+ 
+B. 
+僅②③ 
+ 
+C. 
+僅①②③ 
+ 
+D. 
+僅①③④ 
+ 
+64. 下列何種放射治療用加速器不屬於環形加速器？ 
+ 
+A. 迴旋加速器  
+B. 電子加速器  
+C. 汎德瓦夫產生器  
+D. 同步輻射加速器  
+65. 放射治療用質子射束的能量最接近下列何區間（MeV ）？  
+ 
+A. 4～6 
+B. 10 ～30  
+C. 150 ～250  
+D. 500 ～1,000  
+
+=== PDF PAGE 12 ===
+66. 下圖為碘化鈉晶體閃爍偵檢器之構造圖，裝置 ①的作用為何？ 
+  
+ 
+ 
+ 
+A. 去除散射光子  
+B. 活化碘化鈉晶體  
+C. 增加入射 γ射線的能量  
+D. 將可見光轉換成電子訊號  
+67. 放射核種衰變可以 Bernoulli process 視之，若發生機率 << 1，N0（放射核種起始粒子數目）是很大數值，則
+會呈現下列何種分布？ 
+ 
+A. Poisson distribution  
+B. Gaussian distribution  
+C. normal distribution  
+D. uniform distribution  
+68. 下列何者不是影響正子發射斷層掃描（positron emission tomography, PET ）空間解析度（spatial 
+resolution ）的因素？ 
+ 
+A. 晶體材料  
+B. 晶體大小與形狀 
+C. 正子射程  
+D. 影像擷取時間  
+69. 關於下圖 PET 造影的資料收取模式（acquisition mode ），下列敘述何者錯誤？ 
+
+=== PDF PAGE 13 ===
+  
+ 
+ 
+A. 此為2D 資料收取模式  
+B. 使用鉛隔可減少環形晶體外的散射事件，因此解析度較佳  
+C. 使用鉛隔會阻擋入射的光子數，因此敏感度較差  
+D. 使用鉛隔時，資料收取時間較無鉛隔來的短  
+70. 空間解析度（spatial resolution ）是指閃爍攝影機分辨組織或器官內相鄰兩個點的能力，解析度越高表示能夠
+分辨較接近的兩個點，也就是影像會較細緻。下列何者能增加平行式準直儀的解析度？ 
+ 
+A. 增加準直儀孔徑大小  
+B. 增加準直儀鉛隔有效長度  
+C. 增加射源至準直儀的距離  
+D. 減少準直儀孔壁厚度  
+71. 照野（field ）為32 cm× 50 cm 的gamma camera ，下列何者 pixel size 最小？ 
+ 
+A. Nyquist frequency 為1 cycle / cm  
+B. Nyquist frequency 為2 cycle / cm  
+C. Nyquist frequency 為4 cycle / cm  
+D. Nyquist frequency 為8 cycle / cm  
+72. 有關半導體偵檢器（semiconductor detectors ）與氣體游離腔（ionization chamber ）的比較，何者錯誤？ 
+ 
+A. 能量解析度半導體偵檢器優於氣體游離腔  
+B. 訊號靈敏度半導體偵檢器優於氣體游離腔  
+C. 輻射阻擋本領能力（stopping power ）氣體游離腔優於半導體偵檢器  
+D. 氣體游離腔的製作成本較半導體偵檢器便宜  
+73. 下列有關加馬攝影機（gamma camera ）的敘述，何者錯誤？ 
+ 
+A. 準直儀（collimator ）功能主要使用來決定入射 gamma ray 能量大小  
+B. 偵檢晶體（crystal ）功能主要將輻射光子轉換成可見螢光  
+C. 光電倍增管（PMT ）越多，影像解析度越好，但儀器價格越貴  
+D. 影像矩陣越大（matrix size ），其像素（pixels ）數目就越多  
+
+=== PDF PAGE 14 ===
+74. 下列會放出正子的同位素中，其正子射程（positron range ）的大小排列順序為？ 
+ 
+A. C-11 > N-13 > O-15 > F-18  
+B. N-13 > F-18 > O-15 > C-11  
+C. F-18 > C-11 > N-13 > O-15  
+D. O-15 > N-13 > C-11 > F-18  
+75. 用於臨床的 PET 與SPECT 相較，下列敘述何者錯誤？ 
+ 
+A. PET 成本較 SPECT 機器高  
+B. PET 解析度較 SPECT 差 
+C. 兩者影像重建原理相同  
+D. PET 靈敏度較 SPECT 高 
+76. 下列那個因素不會影響 PET 的靈敏度？ 
+ 
+A. 晶體厚度  
+B. 同位素種類  
+C. 偵檢器環的數目  
+D. 晶體的偵檢效率  
+77. 下列有關偵檢器之敘述，何者錯誤？ 
+ 
+A. crystal 厚度愈厚，其靈敏度（sensitivity ）愈差  
+B. crystal 是將光子轉換成可見光  
+C. PMT 是將可見光轉換成電子  
+D. crystal 厚度愈薄，其解析度（resolution ）愈佳  
+78. 在PET 造影中常使用的放射元素 11 C、13 N、15 O、18 F，其半衰期（half-life ）的大小排列順序為何？ 
+ 
+A. 11 C > 13 N > 15 O > 18 F 
+B. 15 O > 11 C > 13 N > 18 F 
+C. 15 O < 13 N < 11 C < 18 F 
+D. 11 C < 18 F < 13 N < 15 O 
+79. 99m Tc 的造影檢查，若能窗（energy windows ）設定為30% ，則所收集的能量範圍為多少 keV ？ 
+ 
+A. 98 ～140  
+B. 140 ～182  
+C. 98 ～182  
+D. 119 ～161  
+80. Butterworth filter 利用那兩個參數，來控制函數形狀？ 
+ 
+A. gamma 、brightness  
+B. order 、cutoff frequency  
+C. gamma 、slope  
+D. upper cutoff frequency 、lower cutoff frequency  

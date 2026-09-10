@@ -1,0 +1,521 @@
+=== PDF PAGE 1 ===
+110年第一次專門職業及技術人員高等考試醫師牙醫師藥師考試分階
+段考試、醫事檢驗師、醫事放射師、物理治療師考試
+代　　號：4309
+類科名稱：醫事放射師
+科目名稱：放射線診斷原理與技術學
+考試時間：1小時 座號：___________
+  ※本科目測驗試題為單一選擇題，請就各選項中選出一個正確或最適當的答案，複選作答者，該題不予計分!
+  ※注意：本試題禁止使用電子計算器   　　　　　　　  
+ 
+1.骨質密度儀（ dual energy X ray absorptiometry, DXA ）測出骨密度（ bone mineral density ）最常用的單位為何？
+ 
+A.kg/cm2
+B.g/cm2
+C.g/cm3     
+D.kg/m2
+2.下列有關光柵的 bucky factor 與 grid ratio 或 kVp 之關係，何者錯誤？
+ 
+A.kVp 越高， bucky factor 越高
+B.grid ratio 越高， bucky factor 越高
+C.bucky factor 越高，所需之曝射條件越高
+D.bucky factor 定義為「無 grid 劑量」除以「有 grid 劑量」的比值
+3. 下列疾病的 X 光素片診斷方式，何者較可能不是應用空氣／液體介面的原理診斷出來？
+ 
+A.肺部膿瘍／站立式胸部 X 光  
+B. 胸部膿胸／站立式胸部 X 光  
+C. 鼻竇積水／鼻竇檢查（ sinuses X-ray ）
+D. 腸阻塞／平躺式腹部素片
+4.有關柵板（ grid ）之敘述，  下列何者錯誤？
+ 
+A.柵板（ grid ）會吸收主射線以及散射射線
+B. 柵比（ grid ratio ）越高，柵板吸收主射線以及散射越多
+C. 柵比（ grid ratio ）的定義為鉛條高度（ h ）除以鉛條寬度（ D ），也就是  h/D
+D.巴克因素（ bucky factor ）的定義為使用柵板（ grid ）與未使用柵板的劑量比值
+5.有關膝關節攝影呈現 intercondylar notch 的敘述，下列何者錯誤？
+ 
+A.可以呈現膝關節的 loose body
+B.檢查者膝關節呈 90 度彎曲
+C.膝關節下方需要放置保護墊以維持膝關節的穩定
+D. 影像接收器擺置於膝關節及保護墊中間
+6.有關骶髂關節（ sacroiliac joint ） postero-anterior 的攝影，下列敘述何者正確？
+ A.受檢者平躺， X 光與影像接受器的角度為  向尾側（ caudal ）呈 15 ～ 30 度  
+B.受檢者站立， X 光與影像接受器的角度  為向頭側（ cranial ）呈 15 ～ 30 度  
+C.因為性別不同， X 光與影像接受器的角度  略有不同
+
+=== PDF PAGE 2 ===
+D.  postero-anterior projection 比 antero-posterior projection 會導致生殖器官接受較多的輻射劑量
+7.Swimmer's lateral projeciton 可以清楚呈現下列那一項構造？
+ 
+A.第三頸椎／第四頸椎椎間盤
+B. 第七頸椎
+C. 第一頸椎／第二頸椎
+D.  第五神經孔（ neuroforamen ）
+8.下列那些攝影條件可以增加影像的光密度（ optical density ）？①增加 mAs ②增加 SID ③增加 kV ④增加光
+柵比（ grid ratio ）
+ 
+A.①②
+B.①③
+C.②③
+D.③④
+9.下列那些攝影技術可提高影像對比度？①增加 kV ②增加照野  ③增加 OID ④增加 grid ratio
+ 
+A.①②
+B.③④
+C.②③
+D.①④
+10.若某一影像之攝影條件為 100 mA ， 2s ， 70 kVp ，於 90 公分的 SID 下為 400 mR ，若將其調至 180 公分時，其新的
+mR 將會有多少？
+ 
+A.100
+B.200
+C.400
+D.800
+11.下列關於姿勢術語的敘述何者正確？
+ 
+A.描述病人解剖學方位時皆以病人站姿為原則
+B.Fowler's 可描述 X 射線之投影方向
+C.後前投射表示身體後方貼近影像接收器
+D.子宮輸卵管造影術採用 Sims' position
+12.關於腹部攝影的敘述，下列何者最正確？
+ 
+A.腹部直立（ erect ） AP 攝影，主要目的為診斷骨盆發炎
+B.若腎臟為攝影重點，病人應採 PA ，以利 X 光的良好穿透
+C.曝露時間應選在吸飽氣時為宜
+D.KUB 中心線在腸骨（ iliac crest ）處，下界必須包括恥骨聯合的一半
+13.下列何種攝影方法最不適合用於檢查頭顱之鞍部或鞍背？
+ A.lateral projection
+B.Towne method
+C.Waters method
+
+=== PDF PAGE 3 ===
+D.Haas method
+14.進行靜脈注射泌尿道攝影（ IVU ）時，有一側腎臟在 30 分鐘仍然只看到的腫大的腎盂，下列何種處置最適
+當？
+ 
+A.再打多一點造影劑
+B.可以延遲攝影以確定輸尿管阻塞的位置
+C.加照膀胱排空後斜位照
+D.加壓於輸尿管再照
+15.有關水溶性造影劑使用在消化道攝影，下列何者錯誤？
+ 
+A.懷疑腸胃穿孔
+B.懷疑胎便性腸阻塞
+C.有吸入（ aspiration ）之風險時，宜使用高張性造影劑
+D.稀釋後口服可使用在 CT 上
+16.下列那條血管不屬於 circle of Willis 的一部分？
+ 
+A.external carotid artery
+B.internal carotid artery
+C.posterior communicating artery
+D.anterior cerebral artery
+17.下列那兩條血管通常匯集至門靜脈？
+ 
+A.hepatic and superior mesenteric veins
+B.superior mesenteric and splenic veins
+C.splenic and renal veins
+D.hepatic and splenic veins
+18.血管攝影術中的術語 DSA ，其中的 “S” 指的是下列何者？
+ 
+A.subtraction
+B.spot
+C.system
+D.Seldinger
+19.IVP 的病人由平躺改為站立，腎臟移動至少超過幾公分以上可診斷為游離腎？
+ 
+A.1
+B.3
+C.5
+D.7
+20.預防復發性肺部血栓，建議於下腔靜脈放置下列何種醫療器材？
+ 
+A.filter 
+B.stent
+C.microsphere
+D.balloon
+
+=== PDF PAGE 4 ===
+21.正常解剖位置，下列那一條血管通常由左鎖骨下動脈分枝？
+ 
+A.右總頸動脈
+B.左總頸動脈
+C.右椎動脈
+D.左椎動脈
+22.子宮輸卵管攝影（ HSG ）之施行時段，是在病患月經開始後多久較適合？
+ 
+A.1 ～ 5 日
+B.7 ～ 10 日
+C.11 ～ 15 日
+D.16 ～ 26 日
+23.有關  PICC （ peripherally inserted central catheter) 之敘述，下列何者錯誤？
+ 
+A.可使用於注射化療藥物
+B.可使用於須注射大量抗生素之患者
+C.可用於全靜脈營養（ total parenteral nutrition, TPN ）治療
+D.結束後應在傷口至少壓迫 4 小時以止血
+24.下列何者屬於 vascular interventional procedure ？
+ 
+A.PTCD （ percutaneous transhepatic cholangiography and drainage ）
+B.PCN （ percutaneous nephrostomy ）
+C.PICC （ peripherally inserted central catheter ）
+D.ERCP （ endoscopic retrograde cholangiopancreatography ）
+25.在血管攝影檢查前，下列何者為最重要的血液檢查？
+ 
+A.bilirubin level
+B.creatinine level
+C.platelet level
+D.alpha-fetoprotein level    
+26.上消化道鋇劑攝影時，如欲呈現胃底部的雙對比效應，患者可採取下列何種姿勢？
+ 
+A.left decubitus
+B.right decubitus
+C.prone
+D.supine
+27.關於 X- 光導引放置胃造瘻術，引流管大多放置在胃部何處？
+ 
+A.fundus
+B.body
+C.pyloris
+D.antrum
+28.附圖中之腦部血管攝影是從那一條血管注射造影劑？
+
+=== PDF PAGE 5 ===
+ 
+A.椎動脈（ vertebral artery ）
+B.內頸動脈（ internal carotid artery ）
+C.外頸動脈（ external carotid artery ）
+D.中腦膜動脈（ middle meningeal artery ）
+29.下列那一項不是乳房攝影需要壓迫（ compression ）的原因？
+ 
+A.減少移動現象
+B.乳房組織均勻分布在影像上
+C.降低劑量
+D.讓乳房遠離影像接收器
+30.Temporal bone HRCT （ high resolution computed tomography ）檢查，通常影像切面厚度為下列那一項？
+ 
+A.0.05 ～ 0.2 mm
+B.0.5 ～ 1 mm
+C.2 ～ 3 mm
+D.4 ～ 5 mm
+31.若疑有頸椎骨折，下列那一項是最不建議的檢查？  
+ 
+A.C spine flexion and extension views
+B.C spine AP and lateral views
+C.C spine CT
+D.C spine MRI
+32.下圖影像主要進行下列那一項的 CT 品質保證？
+ 
+A.影像顯示器評估  
+B.低對比偵測度評估
+C.空間解析度評估
+D.切面厚度準確性評估
+
+=== PDF PAGE 6 ===
+33.下列何者為進行電腦斷層均勻度測試的方法？
+ 
+A.以裝有空氣、聚乙烯、水、壓克力、以及骨頭的「五燈獎假體」（ five pins performance phantom ）分別量測
+其 CT 值
+B.在直徑 20 公分的水假體上找五個 ROI （ region of interest ）  量測其平均值
+C.在直徑 20 公分的水假體中心畫出一個 ROI （ region of interest ）量測其標準差
+D.在直徑 20 公分的水假體中心畫出一個 ROI （ region of interest ）量測其平均值
+34.有關進行電腦斷層攝影中，檢查床移動準確性（ bed indexing ）品質保證測驗時，下列敘述何者錯誤？
+ 
+A.檢查床上必須淨空，不能放置任何物體  
+B.檢查床必須前進與後退分別量測
+C.在裝機完成後，必須每年量測一次
+D.其目的在於確認檢查床進出時移動的準確性
+35.肝臟電腦斷層攝影檢查注射造影劑後，下列那一項病灶最會增加密度？
+ 
+A.肝囊腫（ hepatic cyst ）
+B.肝管結石（ intrahepatic stone ）
+C.肝血腫（ hepatic hematoma ）
+D.血管瘤（ hemangioma ）
+36.CT 品質保證項目不包括下列那一項？
+ 
+A.檢查床移動的精確性
+B.CT 值的準確性
+C.低對比解析度
+D.輻射劑量分布
+37.下列那一項是電腦斷層攝影掃描中，最不可能提供的資訊？
+ 
+A.腫瘤大小
+B.腫瘤位置
+C.腫瘤與周邊組織的關係
+D.腫瘤之病理組織基因類型
+38.下圖為 chest CT 影像，升主動脈（ ascending aorta ）位於下列那一個編號？
+ A.1
+
+=== PDF PAGE 7 ===
+B.2
+C.3
+D.4
+39.有關濾器反投影法（ filtered-back projection ）的敘述，下列何者錯誤？
+ 
+A.為 CT 影像重建最傳統的方式
+B.CT 值隨 X 光射束強度改變而改變
+C.資料經由對數處理
+D.為一種數學運算的函數
+40.電腦斷層攝影中，有關最大亮度投影（ maximum intensity projection, MIP ），下列何者錯誤？
+ 
+A.凸顯高亮度組織
+B.能有效分辨血管壁鈣化與血管內血栓
+C.顯著的表現病灶深度
+D.最常用於電腦斷層血管攝影
+41.下列何者是使用寬的骨窗值（ wide bone window ）和骨算法（ bone algorithm ）評估顳骨的原因？
+ 
+A.高密度骨和低密度空氣
+B.高密度骨和高密度空氣
+C.低密度骨和低密度空氣
+D.低密度骨和高密度空氣
+42.電腦斷層攝影中，水的 CT 值設為 0 HU ，空氣的 CT 值設定為多少 HU ？
+ 
+A.-1000
+B.-200
+C.-100
+D.100
+43.附圖中箭號所指那一項最正確？
+ 
+A.腸液外漏
+B.尿液外漏
+C.膽汁外漏
+D.胃液外漏
+44.下列電腦斷層攝影的假影，何者為 sampling frequency 不足所造成？
+ A.beam-hardening artifacts
+B.partial volume artifacts
+
+=== PDF PAGE 8 ===
+C.aliasing artifacts
+D.ring artifacts
+45.有關磁振造影之 magic angle artifact 的敘述，下列何者錯誤？
+ 
+A.含膠原蛋白（ collagen ）的組織結構與主磁埸呈 55 度角時產生
+B.常發生在長 TE 的影像
+C.改變 TE 可以改善此假影
+D.此假影造成訊號升高
+46.磁振造影之 chemical shift artifact 的改善方式，下列何者不適當？
+ 
+A.增加 bandwidth （ BW ）
+B.使用 STIR （ short tau inversion recovery ）技術
+C.使用更高磁場磁振造影儀
+D.使用 chemical saturation
+47.下列有關磁振造影訊號產生的敘述，何者正確？
+ 
+A.人體中所有的元素都可以產生訊號
+B.人體組織中碳元素（12C ）可以產生訊號
+C.在 3T 的磁場中，其旋進頻率（ Larmor frequency ）為接近 128 MHz
+D.偶極 — 偶極力（ dipole-dipole interaction ）會存在兩分子之間
+48.下列有關磁振造影傅立葉轉換（ Fourier transform ）的敘述，何者錯誤？
+ 
+A.可將在頻域（ frequency domain ）上的訊號轉至時域（ time domain ）上
+B.所採集到的原始訊號（ k-space ）呈現共軛對稱
+C.將原始訊號經轉換後，再進行傅立葉反轉換可得回原始訊號
+D.經轉換後的影像中，每一個像素點皆可對應到 k-space 中的一點
+49.有關磁振造影成像技術中 3D gradient recalled echo （ 3D GRE ）的優缺點敘述，下列何者正確？
+ 
+A.透過在切面選擇梯度磁場（ slice selection gradient ）加入一個額外的頻率編碼步驟來達成
+B.其掃描時間 =TR × NEX （訊號平均的次數） × Ny （ Y 方向上的採樣數）
+C.其重建的影像必須是正方體（ isotropic ）的採樣體素（ voxel ）
+D.相較於 2D 成像技術，其訊噪比較高
+50.成人腦部單體素磁振頻譜（ single voxel MRS ）中，下列何者不是正常的代謝物質？
+ 
+A.NAA
+B.lactate
+C.creatine
+D.choline
+51.磁振造影測量擴散係數（ apparent diffusion coefficient ）時，常使用的 b-value 或 b-factor 的單位是下列何者？
+ 
+A.sec/mm2
+B.mT/m
+C.mm/sec
+D.%
+
+=== PDF PAGE 9 ===
+52.相對於 contrast enhanced  MR angiography ，下列何者是 time-of-flight MR angiography 的優點？  
+ 
+A.成像時間較短
+B.可提供所有血流方向訊息
+C.不容易受靜脈訊號污染
+D.可和亞急性血塊分辨
+53.關於質子磁振頻譜之頻峰的敘述，下列何者錯誤？
+ 
+A.水分子的頻峰會在 4.7 ppm
+B.頻峰寬度正比於 T2 長度
+C.有些物質可能呈現兩個或多個頻峰
+D.磁場愈大頻峰愈高
+54.附圖為何種 MR 影像？
+ 
+ 
+A.DWI （ diffusion weighted imaging ）
+B.PWI （ perfusion weighted imaging ）
+C.ADC （ apparent diffusion coefficient ） map
+D.FLAIR （ fluid attenuated inversion recovery)
+55.磁振造影中照野範圍（ field of view ）與下列何者呈正相關？
+ 
+A.取樣頻寬
+B.梯度磁場強度
+C.TR
+D.TE
+56.下列有關磁振造影中，使用造影劑 Gd-DTPA 作用的敘述，那一項最正確？
+ 
+A.縮短 T1 使得在 T1 加權影像時訊號增強
+B.縮短 T2 使得在 T2 加權影像時訊號增強
+C.延長 T2* 使得在 GRE 影像時訊號增強
+D.延長 T1 使得在 T2 加權影像時訊號增強
+57.腦脊髓液（ CSF ）在下列那一項目中為高訊號？
+ 
+A.T1 加權影像
+B.T2 加權影像
+C.T2 FLAIR
+D.擴散影像 DWI （ b ＝ 1000 ）
+58.在 MRI 中使用 STIR （ short tau inversion recovery ），最常用來壓抑下列何者之信號？
+ 
+
+=== PDF PAGE 10 ===
+A.水
+B.脂肪組織
+C.肌肉組織
+D.血液
+59.附圖中，箭號所指處為下列何種假影？
+ 
+A.aliasing
+B.truncation
+C.phase-encoded motion
+D.chemical shift
+60.下列有  關腎臟超音波掃描的敘述，何者正確？
+ 
+A.兩側腎臟的位置為左低右高
+B.腎臟結石為高回音性
+C. 腎臟為後腹腔構造，不會隨呼吸而移動
+D. 腎結石引起的水腎呈現高回音性，更容易發現腎結石
+61.下列那一項超音波徵象與肝硬化較無關？
+ 
+A.脾腫大
+B.腹水
+C.總膽管擴張
+D.脾靜脈擴張
+62.腎臟超音波影像如附圖，最有可能的診斷為何？
+
+=== PDF PAGE 11 ===
+ 
+A.renal cyst
+B.renal cell carcinoma
+C.hydronephrosis
+D.angiomyolipoma
+63.甲狀腺超音波掃描，使用下列那一種探頭較適當？
+ 
+A.線型 linear ， 3.5MHz
+B.線型 linear ， 7.5MHz
+C.凸型 convex ， 3.5MHz
+D.扇型 sector ， 7.5 MHz
+64.比較正常的總頸動脈（ CCA ）、外頸動脈（ ECA ）、內頸動脈（ ICA ）都卜勒頻譜阻抗（ resistance ），下列
+何者正確？
+ 
+A.CCA 與 ECA 為高阻抗， ICA 為低阻抗
+B.CCA 為高阻抗， ECA 與 ICA 為低阻抗
+C.CCA 為低阻抗， ECA 與 ICA 為高阻抗
+D.CCA 與 ICA 為低阻抗， ECA 為高阻抗
+65.附圖為腹部都卜勒超音波圖，箭號所指為下列何者？
+ 
+A.門靜脈的鏡像假影
+B.肝靜脈
+C.肝靜脈的鏡像假影
+D.門靜脈
+
+=== PDF PAGE 12 ===
+66.附圖為橫向膀胱彩色都卜勒超音波掃描，箭號所指為何？
+ 
+A.twinkling artifact
+B.edge artifact
+C.flash artifact
+D.jet phenomenon
+67.38 歲男性病人，因左側睪丸腫塊就診，超音波影像如附圖，最可能為下列何者？
+ 
+A.lipoma （脂肪瘤）
+B.cyst （囊腫）
+C.spermatocele （精子囊腫）
+D.seminoma （精原細胞瘤）
+68.下列那一項與超音波在生物組織中產生的熱能最相關？
+ 
+A.吸收作用
+B.聲阻抗
+C.音波速度
+D.反射與折射
+69.下列有關超音波在組織中的敘述，何者錯誤？
+ 
+A.高頻率超音波較低頻率超音波易產生吸收和散射
+B.低頻率超音波穿透力較強
+C.高頻率超音波所顯示的細微構造較低頻率超音波為佳
+D.對於瘦小兒童的深部組織，一般使用 3.5 MHz 的探頭
+70.新生兒脊椎超音波檢查如附圖，箭號所指為何？
+
+=== PDF PAGE 13 ===
+ 
+ 
+A.馬尾（ cauda equina ）
+B.脊髓圓錐（ conus medullaris ）
+C.腦脊髓液
+D.神經根
+71.超音波檢查時，正常成人餘尿應該在多少毫升以下，超過時即應考慮為不正常？
+ 
+A.200
+B.150
+C.100
+D.50
+72.附圖為肝臟超音波影像，箭號所指為何？
+ 
+A.門靜脈
+B.下腔靜脈
+C.肝動脈
+D.肝內膽管
+73.下列有關經陰道超音波掃描的敘述，何者錯誤？
+ 
+A.通常使用頻率較高（約 5 至 10 MHz ）
+B.對於子宮的解析度較經腹部超音波掃描為高
+C.膀胱必須脹滿
+D.可呈現卵巢影像
+74.在電腦斷層掃描中， CTDI volume （ CTDIvol）與 weighted CTDI （ CTDIW）之間的關係為何？
+ A.CTDIvol = CTDIW / pitch
+B.CTDIvol = CTDIW / dose rate
+C.CTDIvol = CTDIW / gantry rotation time
+
+=== PDF PAGE 14 ===
+D.CTDIvol = CTDIW / scan time
+75.下列有關乳房攝影中壓迫（ compression ）之敘述，何者錯誤？
+ 
+A.根據法規規定，壓迫力每年應校驗一次
+B.壓迫力係指乳房 X 光攝影儀之壓迫板對病人造成之最大壓迫力道
+C.根據法規規定，力道介於 11.4 至 20.4 公斤（  25 至 45 磅）之間
+D.壓迫的目的為減少組織厚度、降低散射輻射、減少病人劑量
+76.下列有關各種輻射源屏蔽之敘述，何者錯誤 ?
+ 
+A.α 粒子因其穿透力弱，人體皮膚的死層可完全阻止
+B.β 粒子的屏蔽可先利用低原子序物質，再放置高原子序物質
+C.γ 射線具有很強的穿透力，故通常使用密度較低的物質阻擋
+D.X 射線通常使用密度較高的物質阻擋
+77.從事放射線工作者一年的法定 effective dose 上限為多少 mSv ？
+ 
+A.5
+B.15
+C.50
+D.150
+78.一 CT 影像如圖 (a) ，經過影像強化後得圖 (b) ，強化方式為 windowing technique ，若轉換特性曲線圖之輸入影像
+灰度值為橫軸，輸出影像灰度值為縱軸，則下列何種轉換特性曲線可得圖 (b) ？
+ A.
+B.
+C.
+
+=== PDF PAGE 15 ===
+D.
+79.下列何種數位影像的空間解析度最高？
+ 
+A.數位乳房攝影
+B.電腦斷層攝影
+C.數位 X 光攝影
+D.磁振造影
+80.資料加密可分為公鑰（ public key ）與私鑰（ private key ）加密法，在公鑰加密方法中，加密與解密所需的密
+碼組合分別為何？
+ 
+A.公鑰／公鑰
+B.公鑰／私鑰
+C.私鑰／公鑰
+D.私鑰／私鑰

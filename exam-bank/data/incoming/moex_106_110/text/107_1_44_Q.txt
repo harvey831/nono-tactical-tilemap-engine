@@ -1,0 +1,568 @@
+=== PDF PAGE 1 ===
+ 
+107年第一次專門職業及技術人員高等考試醫師牙醫師藥師考試分階
+段考試、醫事檢驗師、醫事放射師、物理治療師、職能治療師、呼吸
+治療師、獸醫師考試、107年專門職業及技術人員高等考試藥師考試
+代  號：4309 
+類科名稱：醫事放射師 
+科目名稱：放射線診斷原理與技術學 
+考試時間：1小時 座號：___________ 
+  ※本科目測驗試題為單一選擇題，請就各選項中選出一個正確或最適當的答案，複選作答者，該題不予計分! 
+  ※注意：本試題禁止使用電子計算器             
+1. 下列關於近端肱骨的攝影的敘述何者最正確？ 
+ 
+A. 常規攝影時取旋中姿勢（neutral rotation ） 
+B. 旋外姿勢（external rotation ）最適合拍攝此部位嚴重外傷病人  
+C. Lawrence method 即採旋中姿勢（neutral rotation ）的一種非外傷性的肩關節攝影術  
+D. 拍攝非外傷性側位肩關節時宜採旋內姿勢（internal rotation ） 
+2. 下列何種姿勢呈現心臟之放大率最小？ 
+ 
+A. RAO 60°  
+B. PA  
+C. LAO 60°  
+D. RAO 45°  
+3. 就單一張影像而言，下列何者所需要的記憶體空間（以byte 計）最大？ 
+ 
+A. digital mammography （8×10 英吋） 
+B. digital radiography （8×10 英吋） 
+C. computed tomography  
+D. magnetic resonance image  
+4. 下列何種腹部攝影方式最適用於評估氣腹（pneumoperitoneum ）？  
+ 
+A. supine AP projection  
+B. prone AP projection  
+C. left decubitus position  
+D. right semi-decubitus position  
+5. 下列那一項有關足部縱弓（longitudinal arches ）X光素片攝影的敘述最正確？ 
+ 
+A. 病人平躺採雙足的側面攝影  
+B. 中心線與跟骨長軸平行  
+C. 採前後位及側面荷重攝影（weight-bearing projection ） 
+D. 採plantodorsal projection  
+6. 下列有關 X光管陽極（X-ray anode ）的敘述，何者最正確？ 
+ 
+A. 鎢為較適合的材料  
+B. 固定式設計比可旋式好  
+C. 95% 的能量轉換為X光 
+D. 為熱離子發射  
+7. 下列有關 X光攝影準直儀的描述，何者最正確？ 
+
+=== PDF PAGE 2 ===
+ 
+A. 主要功能為調整管電壓  
+B. 與病人的有效輻射劑量無關  
+C. 可減少散射 X光 
+D. 一般使用雷射光定位  
+8. 施行靜脈注射尿路攝影（intravenous urography ），如欲進行輸尿管壓迫（ureteric compression ），其解開 
+的時機通常緊接在下列那個攝影時間之前？ 
+ 
+A. 1分鐘  
+B. 5分鐘  
+C. 15 分鐘  
+D. 排尿後  
+9. 若懷疑成年患者胸骨（sternum ）骨折，下列選項中何者為最佳擺位？ 
+ 
+A. 右前斜位（RAO ） 
+B. 右後斜位（RPO ） 
+C. 前後位（AP ） 
+D. 左後斜位（LPO ） 
+10. 下列對於補償濾板（compensatory filter ）的敘述何者正確？ 
+ 
+A. 迴旋標型濾板（boomerang ）嵌於準值儀下，常用於肺部的攝影補償之用  
+B. 水槽型濾板（trough ）緊貼病人後方，常用於肩部及胸骨攝影補償之用  
+C. 楔形濾板（wedge ）嵌於準值儀下或置於被照體，常用於足部攝影補償之用  
+D. 領結型濾板（bow-tie ）緊貼於病人前方，常用於股骨的攝影補償之用  
+11. 下列有關放射攝影時應用 X光管之射束跟效應（heel effect ）的敘述，何者正確？ 
+ 
+A. 胸椎（thoracic spine ）攝影時陽極應朝向頭部  
+B. 小腿（tibia and fibula ）攝影時陽極應朝向膝蓋  
+C. 前臂（forearm ）攝影時陽極應朝向手肘  
+D. 腰椎（lumbar spine ）攝影時陽極應朝向腳部 
+12. 下列何者為影響影像變形（distortion ）的最主要因素？ 
+ 
+A. mAs  
+B. kVp  
+C. 焦斑尺寸（focal spot size ） 
+D. 中心線與被照體的對應關係（alignment ） 
+13. 此圖為數位透視攝影的示意圖，注入造影劑前先照一張影像（mask image ），當造影劑注入後，連續照了影 
+像2～6。當用影像 5減去影像 2，影像 6減去影像 4，這種 DSA （digital subtraction angiography ）與下列那些 
+項目有關？①時間減贅（temporal subtraction ） ②能量減贅（energy subtraction ） ③遮罩模式（mask 
+mode ） ④時間差模式（time-interval difference mode ） 
+  
+
+=== PDF PAGE 3 ===
+ 
+ 
+ 
+A. ①②  
+B. ②③  
+C. ③④  
+D. ①④  
+14. 進行成人的胸椎傳統脊髓攝影（conventional myelography ）時，通常使用的造影劑劑量約為多少？ 
+ 
+A. 3 mL  
+B. 5 mL  
+C. 10 mL  
+D. 20 mL  
+15. 在施行血管攝影時，最常使用下列何種對比劑？ 
+ 
+A. 空氣  
+B. 鋇劑 
+C. 含碘對比劑  
+D. 二氧化碳 
+16. 一般在施行 celiac angiography 時，可看到下列那一條血管？ 
+ 
+A. 腎上腺動脈（adrenal artery ） 
+B. 下腸繫膜動脈（inferior mesenteric artery ） 
+C. 肝動脈（hepatic artery ） 
+D. 腎動脈（renal artery ） 
+17. 一般中等身材身高的人，進行上消化道攝影檢查時，十二指腸球（duodenal bulb ）通常位於何處？ 
+ 
+A. T9  
+B. T11  
+C. L2  
+D. L5  
+18. 下列何種檢查屬於 vascular interventional procedure ？ 
+ 
+A. transjugular intrahepatic portosystemic shunt  
+B. percutaneous vertebroplasty  
+
+=== PDF PAGE 4 ===
+C. colonic stenting  
+D. percutaneous nephrostomy  
+19. 下列何種檢查，將所有造影劑注射完所需時間最長？ 
+ 
+A. cerebral angiography  
+B. IVC venography  
+C. lymphography  
+D. hysterosalpingography  
+20. 施行 thoracic aortography 時，為能完整取得主動脈弓（aortic arch ）影像，應採下列何種 projection ？ 
+ 
+A. AP  
+B. LAO 45 度 
+C. RAO 45 度 
+D. lateral horizontal  
+21. 在男性排尿膀胱尿道攝影，下列那一項最適合呈現尿道？ 
+ 
+A. RAO 30 度 
+B. RPO 30 度 
+C. AP  
+D. PA  
+22. 一位 68 歲的男性病患，因嘔吐物混有血液並且解大量黑便來院求診，臨床醫師診斷是急性的上消化道出血，
+則最有可能在下列那一條動脈的血管攝影影像發現出血點？ 
+ 
+A. 腹腔動脈（celiac artery ） 
+B. 下腸繫膜動脈（inferior mesenteric artery ） 
+C. 股動脈（femoral artery ） 
+D. 髂內動脈（internal iliac artery ） 
+23. 所謂腎下垂（nephroptosis ）是指躺著與站立時的腎臟高度，至少相差多少以上？ 
+ 
+A. 2公分  
+B. 5公分  
+C. 8公分  
+D. 11 公分  
+24. 下列有關骨質密度的敘述何者正確？ 
+ 
+A. T計分（T score ）是與同性別同年齡的平均值比較的結果  
+B. 兒童的骨質密度最好以 Z 計分（Z score ）來表示  
+C. 60 歲女性的 T 計分（T score ）為 -2，表示她有骨質疏鬆症（osteoporosis ） 
+D. 骨質密度（bone mineral density ）檢查結果的單位為公克／立方公分  
+25. transjugular intrahepatic portosystemic shunt （TIPS ）主要是建立那兩條血管之間的分流（shunt ）？  
+ 
+A. 肝動脈 -肝靜脈  
+B. 肝動脈 -門靜脈  
+C. 肝靜脈 -門靜脈  
+D. 門靜脈 -總膽管  
+26. 在施行經皮穿腎引流術（PCN ）時，若發生下列何種併發症，可能須施行血管栓塞術？ 
+
+=== PDF PAGE 5 ===
+ 
+A. 假性腎動脈瘤（renal arterial pseudoaneurysm ） 
+B. 氣胸（pneumothorax ） 
+C. 急性腎盂炎（acute pyelonephritis ） 
+D. 尿液外漏（urine extravasation ） 
+27. 下列關於乳房攝影檢查的敘述，何者錯誤？ 
+ 
+A. 纖維－腺體型（fibro-glandular ）乳房常發生於較年輕之女性（15 ～30 歲之間） 
+B. 纖維－脂肪型（fibro-fatty ）乳房應比纖維－腺體型乳房（fibro-glandular ）之輻射曝露高  
+C. 纖維－脂肪型（fibro-fatty ）乳房通常見於年齡較大之女性  
+D. 纖維－腺體型（fibro-glandular ）乳房通常可見於孕婦之乳房  
+28. 嬰兒電腦斷層檢查，如果需給予鎮靜劑，下列時間點何者最正確？ 
+ 
+A. 餵奶後馬上給予  
+B. 先給予瀉劑  
+C. 餵奶後空腹 8小時以上  
+D. 餵奶後空腹 2至4小時  
+29. 在看電腦斷層軸向影像（axial image ）時，看片者之左邊通常為病人影像之： 
+ 
+A. 右邊  
+B. 左邊  
+C. 前面  
+D. 後面  
+30. 在64 排電腦斷層掃描時，若每一排偵檢器為0.625 mm ，使用 X光寬度為20 mm ，每旋轉一周檢查床前進 20 
+mm ，則其 beam pitch 為多少？ 
+ 
+A. 1 
+B. 2 
+C. 3 
+D. 4 
+31. 一般 CT 的X光管中使用小的 focal spot 可以改進下列何者？ 
+ 
+A. patient dose  
+B. image contrast  
+C. spatial resolution  
+D. imaging time  
+32. 下列何人與 Allan MacLeod Cormack 因發明 CT 儀共同獲得諾貝爾獎（Nobel Prize ）？  
+ 
+A. Hounsfield  
+B. Robert Ledley  
+C. Tesla  
+D. Roentgen  
+33. 電腦斷層攝影中，水的 CT number 設定為多少 HU ？ 
+ 
+A. 100  
+B. 50  
+C. 0 
+
+=== PDF PAGE 6 ===
+D. -50  
+34. 降低下列參數可以減少電腦斷層攝影的輻射曝露劑量，何者除外？ 
+ 
+A. kVp  
+B. mAs  
+C. DLP  
+D. pitch  
+35. 頭部電腦斷層血管攝影呈現如下圖，下列有關影像重組那一項最正確？ 
+  
+ 
+ 
+ 
+A. volume rendering  
+B. surface shaded display  
+C. maximum intensity projection  
+D. curve planar reconstruction  
+36. 一位肝腫瘤患者，施行電腦斷層動態攝影（dynamic scan ），在注射造影劑後，可邊打造影劑邊偵測主動脈 
+CT number 變化，以決定動態掃描時機，此技術為下列何者？ 
+ 
+A. fixed delay  
+B. manual mode  
+C. bolus-tracking  
+D. drip infusion  
+37. 下圖中之影像箭號所示最可能為何？ 
+  
+
+=== PDF PAGE 7 ===
+ 
+ 
+  
+ 
+A. stomach  
+B. spleen  
+C. duodenal bulb  
+D. esophagus  
+38. 下列有關 modulation transfer function （MTF ）的描述何者正確？ 
+ 
+A. 可用來代表 in-plane spatial resolution  
+B. MTF 通常隨著 spatial frequency （lp/mm ）的增加而增加  
+C. MTF 的高低與影像切面的厚度有關  
+D. MTF 的高低與 pitch 有關  
+39. 下列關於 dose length product （DLP ）的計算，何者正確？ 
+ 
+A. DLP = CTDI weighted  × scan length  
+B. DLP = CTDI volume  × scan length  
+C. DLP = CTDI weighted  / scan length  
+D. DLP = CTDI volume  / scan length  
+40. CT 中使用 bow-tie filter 的主要目的為下列何者？ 
+ 
+A. 減少射束之半值層 
+B. 使射束更均勻 
+C. 減少掃描時間  
+D. 可使用更小的焦點  
+41. 下列何者能最有效減少 CT 影像之部分體積假影（partial volume artifact ）？  
+ 
+A. thicker slice  
+B. thinner slice  
+C. longer scanning time  
+D. faster scanning  
+42. 急性梗塞性腦中風，在極早期（hyperacute ）時的 CT 無法呈現，以下那一種 MRI 波序最敏感？ 
+ 
+A. T1WI （T1 weighted image ） 
+B. T2WI （T2 weighted image ） 
+C. FLAIR （fluid attenuated inversion recovery ） 
+D. DWI （diffusion weighted image ） 
+43. 下列有關頸椎磁振造影檢查的敘述，何者最正確？ 
+
+=== PDF PAGE 8 ===
+ 
+A. 頸椎比腰椎更易有假影（artifact ）發生  
+B. 可在腹背側加上前置飽和（spatial presaturation ）來減少 CSF 流動假影  
+C. 傳統 T1 加權影像比 fast spin echo T2 加權影像更易偵測脊髓內微小病變  
+D. 橫切面使用梯度回音（gradient echo ）脈序時，可以更清楚看到神經孔的情形  
+44. 下圖為MRI 的脈衝波序簡圖，下列有關圖中 A及B的敘述何者正確？ 
+ 
+ 
+ 
+A. A為TR ，B為TE  
+B. A為T1 ，B為T2  
+C. A為TR ，B為TI  
+D. A為TE 1，B為TE 2 
+45. 在1.5T 的MRI 中使用反轉回復技術進行抑制脂肪的訊號時，下列何者最接近反轉時間應設定的數值？ 
+ 
+A. 140 毫秒  
+B. 200 毫秒  
+C. 2500 毫秒  
+D. 3200 毫秒  
+46. 在磁振造影中，使receiving bandwidth 增加會造成： 
+ 
+A. 訊雜比（SNR ）增加  
+B. 訊雜比（SNR ）降低  
+C. 增加產生aliasing artifact 之機會  
+D. 視野（field of view ）變小  
+47. 下圖箭號所指為何種假影？ 
+
+=== PDF PAGE 9 ===
+ 
+ 
+ 
+A. partial volume artifact ，in phase  
+B. chemical shift artifact ，out phase  
+C. motion artifact ，in phase  
+D. truncation artifact ，out phase  
+48. shim coil 的主要作用為何？ 
+ 
+A. 美觀  
+B. 均勻有效磁場  
+C. 接受訊號  
+D. 發射訊號  
+49. 下圖為膝關節矢狀面 T2-weighted MRI ，箭號所指處為下列何種假影？ 
+  
+ 
+ 
+ 
+A. aliasing  
+B. truncation  
+C. magnetic susceptability  
+
+=== PDF PAGE 10 ===
+D. motion  
+50. 下列有關磁振造影 fast spin echo 技術的優點，何者最正確？ 
+ 
+A. 可擴大檢查FOV  
+B. 可縮短檢查時間  
+C. 可抑制皮下脂肪  
+D. 可增強血腫之磁感率（magnetic susceptibility ） 
+51. 在MRI 中使用 3D acquisition 時，其空間編碼之梯度磁場應如何施加？ 
+ 
+A. 在slice selection 方向施加一個 phase encoding gradient  
+B. 在slice selection 方向施加一個 frequency encoding gradient  
+C. 在slice selection 方向施加一個 slice selection gradient  
+D. 和空間編碼之梯度磁場無關  
+52. 在MRI 中所謂的反褶假影（aliasing artifact ）的成因為何？ 
+ 
+A. 渦電流（eddy current ）所引起的  
+B. 磁場磁化率（susceptibility ）的差異所造成  
+C. 因為脂肪和水自旋頻率的差異所引起的  
+D. 取樣不足（undersampling ）的緣故 
+53. 正常成人腦部的質子磁振頻譜（proton MR spectroscopy ）不會測得下列何種代謝物質？ 
+ 
+A. N-乙醯天門冬胺酸（NAA ） 
+B. 膽鹼（choline ） 
+C. 肌酸（creatine ） 
+D. 乳酸（lactate ） 
+54. 下列有關各組織 T2 值的長短排序，何者正確？ 
+ 
+A. 灰質＜白質＜CSF ＜edema  
+B. CSF ＜edema ＜灰質＜白質  
+C. 白質＜灰質＜edema ＜CSF  
+D. 灰質＜白質＜edema ＜CSF  
+55. 磁振造影時可用下列那一項方法來減少 cross-talk artifact ？ 
+ 
+A. 減少相鄰切面間的距離  
+B. 使用交錯（interleaved ）的激發順序（excitation order ） 
+C. 縮短重複時間（TR ） 
+D. 縮短回波時間（TE ） 
+56. 在1.5T 的MRI 磁場中，氫原子在脂肪與水中的拉莫頻率之差異為何？ 
+ 
+A. 5.25 ppm  
+B. 64 MHz  
+C. 42.6 MHz  
+D. 220 Hz  
+57. 一般縱向（longitudinal ）超音波圖的左側，是受檢者的何方向？ 
+ 
+A. 頭端（cranial ） 
+B. 腳端（caudal ） 
+
+=== PDF PAGE 11 ===
+C. 左方（left ） 
+D. 右方（right ） 
+58. 對於一個表淺可觸摸到的病灶，最適合的超音波探頭為何？ 
+ 
+A. 線型探頭  
+B. 凸型探頭  
+C. 扇型探頭  
+D. 腔內探頭  
+59. 下列關於甲狀腺的敘述，何者錯誤？ 
+ 
+A. 超音波掃描通常使用 7.5 ～10 MHz 之線性探頭  
+B. 甲狀腺位於氣管兩側  
+C. 正常甲狀腺超音波掃描回音較胸鎖乳突肌低  
+D. 甲狀腺位於頸總動脈之內側 
+60. 臨床上使用的超音波掃描，音波頻率提高，會使下列何者增加？ 
+ 
+A. 週期  
+B. 衰減（attenuation ） 
+C. 空間脈衝長度（spatial pulse length ） 
+D. 穿透深度  
+61. 下列有關肝臟囊腫（cyst ）的敘述，何者正確？ 
+ 
+A. 不會經由感染而獲得  
+B. 超音波影像中，囊腫後方回音會增強 
+C. 超音波影像中，囊腫邊緣不清晰 
+D. 單純囊腫（simple cyst ）中會含有膽汁  
+62. 下列關於脾臟病灶的超音波掃描敘述，何者錯誤？ 
+ 
+A. 脾臟內呈現高回音，懷疑腫瘤  
+B. 脾臟腫大可作超音波評估門脈高壓  
+C. 正常脾臟輪廓為規則平滑  
+D. 脾靜脈通常直徑少於 10 公釐  
+63. 大腸癌之病人接受腹部超音波掃描如下圖，箭號所指最可能位於那個位置？ 
+  
+
+=== PDF PAGE 12 ===
+ 
+ 
+ 
+A. Segment 1  
+B. Segment 2  
+C. Segment 3  
+D. Segment 4  
+64. 下圖為頸動脈之都卜勒頻譜，箭號所指為何？ 
+  
+ 
+ 
+ 
+A. 乾淨音窗（window ）代表速率一致  
+B. wall filter 太高  
+C. aliasing effect  
+D. twinkling effect  
+65. 下圖為一體檢無症狀病人之腹部超音波圖，箭號所指最可能病灶位置為何？ 
+  
+
+=== PDF PAGE 13 ===
+ 
+ 
+ 
+A. 肝臟  
+B. 腎臟  
+C. 胰臟 
+D. 膽囊 
+66. 超音波的 second harmonic imaging 所使用的成像頻率是基頻（fundamental frequency ）的多少？ 
+ 
+A. 0.5 倍 
+B. 2倍 
+C. 4倍 
+D. 與基頻無關  
+67. 下列有關音波在介質中之傳導速度，何者正確？ 
+ 
+A. air < water < bone  
+B. air < bone < water  
+C. water < air < bone  
+D. water < bone < air  
+68. 下列有關肝臟分節系統（Couinaud's segment ）的敘述，何者錯誤？ 
+ 
+A. 主要以肝靜脈和門靜脈區分肝葉  
+B. 共有 8個分節（segment ） 
+C. 肝臟方葉（quadrate lobe ）屬於第四分節（segment IV ） 
+D. 以右肝靜脈將肝臟分為左葉和右葉  
+69. 下圖為一肝臟超音波影像，箭號所示之高回音區稱為： 
+  
+
+=== PDF PAGE 14 ===
+ 
+ 
+ 
+A. acoustic shadowing  
+B. posterior acoustic enhancement  
+C. mirror image artifact  
+D. reverberation  
+70. 在正常成人的腹部超音波掃描中，下列那一項回音最高？ 
+ 
+A. 肝臟  
+B. 腎臟皮質  
+C. 胰臟 
+D. 脾臟  
+71. 在超音波掃描中，囊腫（cyst ）有下列那些性質？①高音波衰減 ②低音波衰減 ③有反射聲波 ④無反射 
+聲波  
+ 
+A. ①④  
+B. ②③  
+C. ②④  
+D. ①③  
+72. 10 歲男孩突然陰囊劇痛，睪丸彩色超音波掃描如下圖，其診斷最可能為下列何者？ 
+  
+ 
+ 
+
+
+=== PDF PAGE 15 ===
+ 
+A. 兩側均正常  
+B. 左側睪丸扭轉 
+C. 右側睪丸扭轉 
+D. 兩側睪丸扭轉 
+73. CT 品保測試時，使用胸部 CT 的技術條件與軀幹假體，測得的 CTDI W（weighted CTDI ）是20 mGy 。平時臨 
+床掃描時所用的 pitch 是0.8 ，掃描長度是 30 cm 。請問此檢查的CTDI vol （volumetric CTDI ）是多少？ 
+ 
+A. 16 mGy  
+B. 20 mGy  
+C. 24 mGy  
+D. 25 mGy  
+74. 關於電腦斷層腹部掃描的劑量描述下列何者最正確？ 
+ 
+A. 常用 computed tomography dose index （CTDI ）來代表病人的總劑量  
+B. 病人體表的劑量大於中心的劑量  
+C. 病人中心的劑量大於體表的劑量  
+D. 常用 20 公分筆型游離腔量測  
+75. 假設一台 X光機每天照 12 張骨盆影像，照相條件為80 kVp 、120 mAs ，並照射胸腔影像 40 張，條件為80 
+kVp 、10 mAs ，每週工作五天，則此 X光機的工作負荷約為下列何者（mA ‧min/week ）？  
+ 
+A. 153  
+B. 137  
+C. 120  
+D. 103  
+76. 失真壓縮（lossy compression ）最適用於那些領域？①乳房攝影（mammography ） ②遠距放射學 
+（teleradiology ） ③電腦輔助診斷（computer-aided diagnosis ） ④影像存取（image archiving ） 
+ 
+A. ①④  
+B. ②④  
+C. ②③  
+D. ①③  
+77. 下列何種數位影像需要使用到較高解析度的螢幕，才足以呈現影像品質？ 
+ 
+A. 超音波影像  
+B. 磁振造影影像  
+C. 乳房攝影影像  
+D. 電腦斷層影像  
+78. averaging filter 也是下述那一種 filter ？ 
+ 
+A. sharpening filter  
+B. non-linear filter  
+C. high-pass filter  
+D. low-pass filter  
+79. 下圖箭號所指最可能的解剖部位為何？ 
+  
+
+=== PDF PAGE 16 ===
+ 
+ 
+ 
+A. 肺動脈 （pulmonary artery ） 
+B. 肺靜脈（pulmonary vein ） 
+C. 升主動脈 （ascending aorta ） 
+D. 上腔靜脈（superior vena cava ） 
+80. 承上題附圖，箭號所指最可能之診斷為何？ 
+ 
+A. 主動脈剝離（aortic dissection ） 
+B. 壁內血栓（intramural thrombus ） 
+C. 主動脈硬化性潰瘍（penetrating artherosclerotic ulcer ） 
+D. 上腔靜脈症候群（superior vena cava syndrome ） 

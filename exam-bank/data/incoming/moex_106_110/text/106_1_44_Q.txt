@@ -1,0 +1,545 @@
+=== PDF PAGE 1 ===
+ 
+106 年第一次專門職業及技術人員高等考試醫師牙醫師藥師考試分階段考試 年第一次專門職業及技術人員高等考試醫師牙醫師藥師考試分階段考試 年第一次專門職業及技術人員高等考試醫師牙醫師藥師考試分階段考試 年第一次專門職業及技術人員高等考試醫師牙醫師藥師考試分階段考試、、 、、藥師 藥師 藥師 藥師、、 、、醫事檢驗 醫事檢驗 醫事檢驗 醫事檢驗 
+師師 師師、、 、、醫事放射師 醫事放射師 醫事放射師 醫事放射師、、 、、物理治療師 物理治療師 物理治療師 物理治療師、、 、、職能治療師 職能治療師 職能治療師 職能治療師、、 、、呼吸治療師 呼吸治療師 呼吸治療師 呼吸治療師、、 、、獸醫師考試 獸醫師考試 獸醫師考試 獸醫師考試 
+代  號： 4309 
+類科名稱：醫事放射師 
+科目名稱：放射線診斷原理與技術學 
+考試時間：1小時 座號：___________ 
+  ※本科目測驗試題為單一選擇題，請就各選項中選出一個正確或最適當的答案，複選作答者，該題不予計分 ! 
+  ※注意：本試題禁止使用電子計算器             
+1. 二側蛙腿前後投照（AP bilateral frog-leg projection ）的骨盆腔照相，可用於下列那些狀況？①先天性髖部脫臼 ②外傷造成脫
+臼 ③可顯示整個骨盆  
+ 
+A. ①②  
+B. ①③  
+C. ②③  
+D. 僅③ 
+2. 下列何者最常採用高管電壓攝影技術以降低黑白對比（contrast ）？  
+ 
+A. skull 
+B.forearm 
+C.chest 
+D.shoulder 
+3. 下列何者不是乳房磁振造影之優點？ 
+ 
+A. 可涵蓋整個乳房  
+B. 可測出病灶的血管性  
+C. 可偵測顯微鈣化 
+D. 對曾作乳房美容者為較佳的檢查工具  
+4. 使用頭部 Schuller 攝影方法主要是用來觀察下列何種構造？ 
+ 
+A. 蝶骨  
+B. 上眼眶 
+C. 鼻骨  
+D. 顳頷關節  
+5. 拍攝下頷骨（mandible ）軸側位時（axiolateral ），下列敘述何者正確？ 
+ 
+A. 頭部轉正側位時，最易看出下頷枝（ramus ） 
+B. 頭部轉向檢查台45 度時，最易看出下頷體部（body ） 
+C. 頭部轉向檢查台30 度時，最易看出下頷頦（mentum ） 
+D. 頭部轉向檢查台5度時，最易看出下頷頦（mentum ）及體部（body ） 
+6. 下圖為胸部電腦斷層攝影，白色箭號所顯示解剖構造為： 
+  
+
+=== PDF PAGE 2 ===
+  
+ 
+A. 左鎖骨下動脈（left subclavian artery ) 
+B. 氣管（trachea ） 
+C. 主動脈（aorta ） 
+D. 食道（esoghagus ） 
+7. 與傳統 X光素片攝影比較，數位 X光攝影系統有下列那一項特性？ 
+ 
+A. 較佳的 X光感測度（sensitivity ） 
+B. 較小的照野範圍（field size ） 
+C. 較窄的動態範圍（dynamic range ） 
+D. 越高的空間解析度（spatial resolution ） 
+8. 下列何者為腹部攝影時最常採用的界標（landmark ）？  
+ 
+A. xyphoid process 
+B.iliac crest 
+C.umbilicus 
+D.greater trochanter 
+9. 下列何者不屬於後腹膜腔器官？ 
+ 
+A. 升結腸  
+B. 胰臟 
+C. 膽囊 
+D. 降結腸  
+10. 在腹部攝影時，下列那一項最為正確？ 
+ 
+A. 深吸氣後停止呼吸  
+B. 完全吐氣後停止呼吸  
+C. 自然停止呼吸  
+D. 不用停止呼吸  
+11. 下列何者是檢查第二頸椎（C2 ）至第七頸椎（C7 ）之椎間關節突關節（zygapophyseal joint ）之最佳攝影方法？ 
+ 
+A. 前後軸位（AP axial ） 
+B. 側位（lateral position ） 
+C. 前後斜位（AP oblique ） 
+D. 前後位張口（AP "open mouth" ） 
+12. 下列何種非侵襲性攝影方式最適合用於呈現心臟冠狀動脈的狹窄狀況？ 
+A. 傳統放射攝影  
+
+=== PDF PAGE 3 ===
+ 
+B. 數位放射攝影  
+C. 電腦斷層攝影  
+D.SPECT 
+13. 與傳統血管攝影術比較，DSA （digital subtraction angiography ）技術的最大優點為： 
+ 
+A. 提高解析度  
+B. 不受檢查部位移動影響  
+C. 避免血管影像的細節被重疊的骨骼遮蓋  
+D. 減少病患所接受的輻射劑量  
+14. Seldinger 技術的正確步驟應如何排列？①從母針開口放入導引鋼線 ②導引鋼線找到標的血管後套入導管 ③以手指輕按血管 
+上方以免導引鋼線被拖出 ④以手指定位動脈部位 ⑤穿過動脈後回抽子針可見血液噴出 ⑥以子母針（compound needle ）
+穿進動脈  
+ 
+A. ④①⑤⑥③②  
+B. ③②④①⑥⑤  
+C. ③②⑥①④⑤  
+D. ④⑥⑤①③②  
+15. 下列有關食道攝影檢查的敘述，何者最不正確？ 
+ 
+A. 不需 NPO 
+B. 檢查食道癌的黏膜病變需使用高密度鋇劑（200% ～250% W/V ）雙重對比技術  
+C. 檢查食道穿孔需使用高密度鋇劑（200% ～250% W/V ）單一對比技術  
+D. 可採用 toe-touch maneuver 檢查是否有食道逆流  
+16. 施行腮腺之唾液腺造影檢查，會由 Stensen’s duct 的開口處注入對比劑，此開口處位於口腔的何處？ 
+ 
+A. 面對上顎骨第二門牙（incisor ） 
+B. 面對上顎骨第二臼齒（molar ） 
+C. 面對下顎骨第二門牙（incisor ） 
+D. 面對下顎骨第二臼齒（molar ） 
+17. 下列何種 interventional procedure 最常用於治療主動脈瘤（aortic aneurysm ）？  
+ 
+A. percutaneous transluminal angioplasty （PTA ） 
+B.percutaneous transluminal stent-graft placement 
+C. transjugular intrahepatic portosystemic shunt （TIPS ） 
+D. transcatheter arterial embolization （TAE ） 
+18. 病患因腹部外傷或其他原因，進行靜脈注射泌尿道攝影（IVU ）時無法施行腹部壓迫，則下列相關敘述何者正確？ 
+ 
+A. 不需壓迫，採用頭低腳高之姿勢接受檢查 
+B. 絕對需要壓迫，請醫師於檢查室監看病患情況  
+C. 降低壓迫之壓力  
+D. 不需壓迫，使用二倍之對比劑  
+19. 下列何者為myelography 檢查之禁忌？ 
+ 
+A. 顱內腫瘤  
+B. 脊髓腫瘤  
+C. 椎間盤突出  
+D. 坐骨神經痛  
+20. 進行雙重對比大腸攝影時病人採仰躺，如欲呈現大腸之脾曲（splenic flexure ）時，應採何體位？ 
+ 
+A. 左側抬高（RPO ） 
+B. 平躺（AP ） 
+C. 右側抬高（LPO ） 
+D. 頭低腳高（Trendelenburg position ） 
+21. 下列有關乳房攝影基本擺位技術 MLO （mediolateral oblique ）view 何者錯誤？ 
+ 
+A. tube 打90 度 
+B. 影像包含鎖骨下緣（含腋下部分）到乳房下緣，將乳房皺褶（inframammary fold ）包含在內 
+C. 胸大肌（pectoral muscle ）顯現在影像中  
+D. 避免假影  
+22. 進行膝關節關節攝影時檢查半月板（meniscus ），應每隔多少角度攝影一張？ 
+ 
+A. 5度 
+B. 10 度 
+C. 20 度 
+D. 30 度 
+23. 有關下腔靜脈濾網（IVC filter ）的敘述，何者正確？ 
+ 
+A. 適用於腦部重複發生阻塞性中風（embolic stroke ）的病患  
+B. 經由傳統血管攝影的方法，穿刺股動脈（femoral artery ）將濾網置入  
+C. 濾網置放的位置必須高於腎靜脈（renal vein ），以免發生腎靜脈栓塞  
+
+=== PDF PAGE 4 ===
+D. 即使濾網放置適當且正確，經過一段時間也可能被血塊或脂肪栓子（fat emboli ）阻塞  
+24. 有關子宮輸卵管造影（hysterosalpingography ）的敘述，下列何者正確？ 
+ 
+A. 最常見的臨床適應症是婦女骨盆腔發炎  
+B. 水溶性顯影劑因為顯影較不清楚，目前已較少使用  
+C. 注射顯影劑時，氣球導管應該位在子宮頸開口處  
+D. 若看見顯影劑充滿子宮之後，沿著輸卵管流入腹膜腔，表示輸卵管破裂，應馬上停止檢查 
+25. 施行腹部動脈血管攝影時，最常穿刺那一條血管？ 
+ 
+A. brachial artery 
+B.femoral artery 
+C.axillary artery 
+D.radial artery 
+26. 下列何者不是經皮穿肝膽道攝影（percutaneous transhepatic cholangiography ）主要的併發症？ 
+ 
+A. 肝臟出血  
+B. 氣胸  
+C. 急性胰臟炎  
+D. 膽汁溢流  
+27. 下列何種檢查最適合用於評估肛門或直腸的排便功能？ 
+ 
+A. lower gastrointestinal series 
+B.defecography 
+C.small bowel series 
+D.fistulography 
+28. 使用電腦斷層導引執行肺部腫瘤切片時，最常見的急性併發症為何？ 
+ 
+A. 肺炎  
+B. 肺積水  
+C. 肺癌細胞轉移  
+D. 氣胸  
+29. 下列何者是電腦斷層對比劑最常用的元素？ 
+ 
+A. 鐵（iron ） 
+B. 碘（iodine ） 
+C. 鋇（barium ） 
+D. 釓（gadolinium ） 
+30. 最大亮度投影（maximum intensity projection ，MIP ）最常應用在： 
+ 
+A. CT 血管影像  
+B. 去脂肪影像  
+C. CT 骨骼影像  
+D. CT 胃腸影像  
+31. 電腦斷層設備中偵測器（detectors ）排列成環狀分布在整個 gantry 中，是屬於第幾代設計？ 
+ 
+A. 1 
+B.2 
+C.3 
+D.4 
+32. 改變 window width 主要可以改變電腦斷層影像的： 
+ 
+A. 明暗  
+B. 解析度  
+C. 對比  
+D. 切片厚度  
+33. 下列那一項是診斷急性主動脈剝離症的最佳檢查方法？ 
+ 
+A. 高解析度電腦斷層攝影（HRCT ） 
+B. 電腦斷層血管攝影  
+C. 低劑量肺部電腦斷層攝影  
+D. 肺部通氣 -灌注攝影  
+34. 若其他參數不變，下列有關電腦斷層螺距（pitch ）的敘述何者最正確？ 
+ 
+A. 螺距越小，病人接受的輻射劑量越小  
+B. 螺距越小，檢查範圍（coverage ）越長  
+C. 螺距越大，undersampling 風險越高  
+D. 螺距越大，檢查檯移動速度（table speed ）越慢  
+35. 頭部外傷病人電腦斷層攝影呈現如下圖，下列有關箭號的敘述何者最正確？ 
+  
+
+=== PDF PAGE 5 ===
+  
+ 
+A. 硬腦膜上血腫  
+B. 硬腦膜下血腫  
+C. 蜘蛛網膜下血腫  
+D. 頭皮下血腫  
+36. 下圖為未注射對比劑的肝臟影像，最可能為那一項異常？ 
+  
+ 
+A. fatty liver 
+B.hemochromatosis 
+C.focal nodular hyperplasia 
+D.liver hemangioma 
+37. 下圖影像為電腦斷層攝影何種假影所造成的？ 
+  
+  
+ 
+A. metal artifact 
+B.partial volume artifact 
+C.photon starvation 
+D.aliasing artifact 
+38. 下列有關 cardiac CT 的描述，何者錯誤？ 
+ 
+A. pitch 越小，影像品質越好  
+B. 心搏率每分鐘在 100 次以上時，較不適合進行檢查 
+C. prospective gating 需要與心電圖同步 
+D. prospective 造成的輻射劑量通常較 retrospective 高 
+
+=== PDF PAGE 6 ===
+39. 下列有關腸胃道檢查鋇劑的給予方式，何者錯誤？ 
+ 
+A. 口服  
+B. 灌腸  
+C. 靜脈注射  
+D. 鼻胃管灌食  
+40. 空氣的 CT 值為： 
+ 
+A. 0 
+B.100 
+C.-100 
+D.-1000 
+41. 頭部外傷的病人，CT 影像如下圖，箭號所指的是：  
+  
+  
+ 
+A. 硬腦膜上血腫（epidural hematoma ，EDH ） 
+B. 硬腦膜下血腫（subdural hematoma ，SDH ） 
+C. 硬腦膜下積水（subdural effusion ，SDE ） 
+D. 挫傷性腦內出血（contusion intracerebral hemorrhage ，ICH ） 
+42. 經過椎間盤切除手術後的病人，欲分辨術後結疤或椎間盤突出復發時，下列何者最正確？ 
+ 
+A. 注射對比劑電腦斷層掃描  
+B. 不注射對比劑電腦斷層掃描  
+C. 注射對比劑磁振造影  
+D. 不注射對比劑磁振造影  
+43. 下列有關磁振造影灌注（MR perfusion ）影像的敘述，何者最正確？ 
+ 
+A. 通常使用 T1 加權影像  
+B. 通常利用磁感效應（magnetic susceptibility effect ） 
+C. 效果和磁場大小無關  
+D. 和注射藥物濃度無關  
+44. 下列何者為主要的水抑制（water suppression ）磁振造影技術？ 
+ 
+A. FLAIR （fluid-attenuated inversion recovery ） 
+B. STIR （short tau inversion recovery ） 
+C. FSE （fast spin echo ） 
+D. GRE （gradient recalled echo ） 
+45. 下圖為MRI 中磁矩 M（magnetization ）隨時間變化之關係圖。下列敘述何者正確？ 
+
+=== PDF PAGE 7 ===
+  
+ 
+A. A應為M0(1-e-T1/T2 ) 
+B.B應為M0 e -T2/TE  
+C. A應為M0(1-e-TR/T1 ) 
+D.B應為M0(1-e-TE/T2 ) 
+46. 下圖為磁振影像，箭號所指之腎上腺腫瘤在梯度回音技術（gradient-echo techniques ）之聚相（In Phase ）及失相（Out of 
+Phase ）影像中的變化，顯示此腫瘤含有何種成分？ 
+  
+  
+ 
+A. 蛋白質  
+B. 脂肪  
+C. 水 
+D. 鈣化 
+47. 1特斯拉（Tesla ）等於多少高斯（Gauss ）？  
+ 
+A. 1,000 
+B.10,000 
+C.100,000 
+D.1,000,000 
+48. 下列何者為MRI 之T1 weighted image 之造影條件？ 
+ 
+A. 短TR ，短TE 
+B. 短TR ，長TE 
+C. 長TR ，短TE 
+D. 長TR ，長TE 
+49. 有關急性腦梗塞在擴散加權磁振造影（diffusion-weighted imaging ）上的表現，下列敘述何者正確？ 
+ 
+A. 病灶處因擴散係數（ADC ）下降，而呈現明亮訊號  
+B. 病灶處因擴散係數（ADC ）上升，而呈現明亮訊號  
+C. 病灶處因擴散係數（ADC ）下降，而呈現暗黑訊號  
+D. 病灶處因擴散係數（ADC ）上升，而呈現暗黑訊號  
+50. 有關二維梯度回音脈衝序列（2D gradient echo pulse sequence ）磁振影像上的血流訊號，下列敘述何者正確？ 
+ 
+A. 因為沒有依序接受到 90 度和 180 度的射頻脈衝（RF pulse ），所以通常是暗的  
+B. 因為沒有 180 度再聚焦射頻脈衝（refocusing RF pulse ），去相效應（dephasing effect ）會使信號喪失，所以通常是暗的  
+C. 因為每次掃描一張，流進掃描面的血液都未經飽和（unsaturated ），其淨磁矩較大，所以通常是亮的  
+D. 因為TE 較長，去相效應（dephasing effect ）引起的信號喪失較少，所以通常是亮的  
+51. 下列何者是 MRI 中快速自旋回音（fast spin echo ）脈衝序列的缺點？ 
+
+=== PDF PAGE 8 ===
+ 
+A. 對移動假影較敏感  
+B. 成像速度較慢  
+C. 對鐵磁性（ferromagnetic susceptibility ）所造成之磁場均勻度比較敏感  
+D. 無法避免磁矩轉移（magnetization transfer ）效果  
+52. 在 1.5T 的磁場中，氫原子核的磁旋比（gyromagnetic ratio ( ϒ)）為多少？ 
+ 
+A. 64 MHz 
+B.42.6 MHz 
+C.64 MHz/ Tesla 
+D.42.6 MHz/ Tesla 
+53. 下列那一項最適合用來減少磁振造影之 chemical shift artifact ？ 
+ 
+A. 脂肪抑制技術  
+B. 增強射頻脈衝  
+C. 採用 surface coil 
+D. EPI 技術  
+54. 在反轉回復波序（inversion recovery sequence ）中，反轉時間正好是某組織 A的零點（null point ）時，會造成組織 A的訊號做 
+何變化？ 
+ 
+A. 增強 
+B. 最強 
+C. 減弱  
+D. 消失  
+55. 下列何種 MRI 技術是利用化學位移的特性所產生？ 
+ 
+A. T2* images 
+B.in-phase and out-phase images 
+C.FLAIR 
+D.SPGR 
+56. 磁振造影之擴散造影（diffusion imaging ）通常是採用何種技術？ 
+ 
+A. 傳統自旋回音（conventional spin echo ） 
+B. 快速自旋回音（fast spin echo ） 
+C. 梯度回音（gradient echo ） 
+D. 回音平面造影（echo planar imaging ） 
+57. 進行頸部血管都卜勒超音波檢查，若血管內血流出現彩色訊號減少時，下列改善的方式中，何者最不正確？ 
+ 
+A. 適當加大都卜勒增益值 
+B. 增加濾波閾值（threshold ） 
+C. 使用適當探頭頻率  
+D. 調整探頭方向或掃描位置，儘量減少音束與血管長軸之間的夾角  
+58. 下列何種頻率的探頭最適用於一般正常體型成年人之腹部超音波檢查？ 
+ 
+A. 3.5 MHz 
+B.5 MHz 
+C.6.5 MHz 
+D.7 MHz 
+59. 超音波在下列何種介質行進時，其音波阻抗（acoustic impedance ）最大？ 
+ 
+A. 空氣  
+B. 血液  
+C. 軟組織  
+D. 骨骼  
+60. 超音波探頭發出之聲波，速度為4,000 m/sec ，若其波長為0.2 cm ，則其頻率為多少 Hz ？ 
+ 
+A. 20 kHz 
+B.200 kHz 
+C.2 MHz 
+D.20 MHz 
+61. 下列有關腎臟超音波影像的敘述，何者並非正常成人的腎臟應符合的標準？ 
+ 
+A. 腎長度（renal length ）： 10 ～12 cm 
+B. 腎寬度（renal width ）： 8～10 cm 
+C. 腎皮質回音較腎竇低  
+D. 會因呼吸位移 3～7 cm 
+62. 大腸癌病人，定期追蹤肝臟超音波掃描如下圖，箭號所指最可能為何？ 
+  
+  
+
+=== PDF PAGE 9 ===
+  
+ 
+A. 局部結節性增生（focal nodular hyperplasia ） 
+B. 肝內轉移癌  
+C. 肝內血管瘤  
+D. 肝膿瘍  
+63. 下圖中箭頭所指的是下列何者？ 
+  
+  
+ 
+A. 門靜脈  
+B. 肝動脈  
+C. 總膽管  
+D. 下腔靜脈  
+64. 下圖中箭號所指的區域代表： 
+  
+
+=== PDF PAGE 10 ===
+  
+ 
+A. 回音增強（acoustic enhancement ） 
+B. 音影（acoustic shadows ） 
+C. 餘音假影（ring-down artifacts ） 
+D. 體內異物（foreign body ） 
+65. 超音波檢查中，測量排尿後膀胱內的餘尿，一般使用的公式為：膀胱的左右徑 ×上下徑 ×前後徑 ×常數。該「常數」應為下列何 
+者？ 
+ 
+A. 0.7 
+B.0.5 
+C.0.3 
+D.1.0 
+66. 超音波掃描所使用的顯影劑通常是由下列何種成分組成？ 
+ 
+A. microbubble 
+B.gadolinium 
+C.iron 
+D.iodide 
+67. 下列有關醫用超音波之特性，何者錯誤？ 
+ 
+A. 屬於壓力波（pressure wave ） 
+B. 經由壓電晶體（piezoelectric crystal ）可以產生與偵測超音波  
+C. 物質的密度愈高，其音波傳導速度愈慢  
+D. 音波在介質中的傳導速度和使用的音波頻率無關  
+68. 對於表淺構造（如甲狀腺）之超音波掃描，下列何種頻率之探頭最適當？ 
+ 
+A. 3.5 MHz 
+B.5 MHz 
+C.7.5 MHz 
+D.20 MHz 
+69. 下圖為上腹部超音波影像，箭號所指之低回音構造為何？ 
+  
+  
+   
+ 
+A. inferior vena cava 
+B.superior mesenteric artery 
+C.superior mesenteric vein 
+
+=== PDF PAGE 11 ===
+D.splenic vein 
+70. 下列何者不是乳房超音波掃描的適應症？ 
+ 
+A. 懷孕婦女的乳房檢查 
+B. 發現可觸摸之乳房腫塊  
+C. 小於 30 歲無症狀女性之乳房檢查 
+D. 偵測乳房微小鈣化點  
+71. 下圖為超音波影像，箭號所指處最可能為下列何者？ 
+  
+  
+ 
+A. 結石（stone ） 
+B. 血管平滑肌脂肪瘤（angiomyolipoma ） 
+C. 水囊（cyst ） 
+D. 過渡細胞癌（transitional cell carcinoma ） 
+72. 下列有關 IVC 超音波掃描的敘述，何者錯誤？ 
+ 
+A. 外型比腹主動脈較易變形  
+B. 可用能量都卜勒（power Doppler ）超音波掃描偵測血流方向  
+C. 可用都卜勒超音波掃描偵測血栓  
+D. 可用灰階超音波掃描偵測血栓  
+73. 下列那些項目會影響對比解析度（contrast resolution ）？ ①物體的對比 ②物體的尺寸 ③影像的雜訊 ④影像的空間解析度  
+ 
+A. 僅①④  
+B. 僅③④  
+C. ①②③④  
+D. 僅①②③  
+74. 下例何者最適合用於評估電腦斷層影像的 Z軸解析度？ 
+ 
+A. pixel size 
+B. slice sensitivity profile （SSP ） 
+C. low-contrast detectability （LCD ） 
+D. computed tomography dose index （CTDI ） 
+75. 下列何者最不適合用來評估 kVp 的準確性？ 
+ 
+A. 膠片（film ） 
+B. 濾波二極體（filtered photodiodes ） 
+C. 示波器（oscilloscope ） 
+D. 游離腔（filtered ion chambers ） 
+76. 數位Ｘ光攝影（digital radiography, DR ）的影像接受器上，每個像素內對輻射敏感的面積比，被稱為填滿因子（fill factor ）。 
+當DR 以縮小像素尺寸以提高解析度時，則每個像素的：①填滿因子 ②靈敏度 會如何變化？  
+A. ①增加；②增加  
+
+=== PDF PAGE 12 ===
+ 
+B. ①增加；②減少  
+C. ①不變；②增加  
+D. ①減少；②減少  
+77. 在一張醫學影像中，最大信號強度和最小信號強度所包含的範圍為這張影像的： 
+ 
+A. dynamic range 
+B.static range 
+C.spatial resolution 
+D.frequency resolution 
+78. 在顯示工作站中，下列何者會影響影像顯示的特性，並以 cd/m 2表示？ 
+ 
+A. 觀看者受視力（human perception ） 
+B. 顯示器明亮度（luminance ） 
+C. 雜訊（noise ） 
+D. 顯示器解像力（resolution ）   
+79. 下圖為56 歲女性之電腦斷層影像，平時有高血壓，突然發生半身無力，意識障礙，則最正確的診斷為下列何者？ 
+  
+  
+ 
+A. 基底核出血性中風（basal ganglion hemorrhage ） 
+B. 蜘蛛網膜下腔出血性中風（subarachnoid hemorrhage ，SAH ） 
+C. 梗塞性中風（brain infarction ） 
+D. 腦瘤出血（tumor bleeding ） 
+80. 承上題，這樣的病人下一步應再做何種檢查才能做適當治療？   
+ 
+A. 數位贅減血管攝影（digital subtraction angiography ，DSA ） 
+B. CT-血管攝影（CT-angiography ，CTA ） 
+C. MR-血管攝影（MR-angiography ，MRA ） 
+D. 不須再做其他檢查，即可做治療  

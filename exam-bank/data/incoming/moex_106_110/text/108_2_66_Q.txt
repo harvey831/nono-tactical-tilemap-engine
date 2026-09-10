@@ -1,0 +1,465 @@
+=== PDF PAGE 1 ===
+108 年第二次專技高考醫師第一階段考試、牙醫師藥師考試分階段考
+試、醫事檢驗師、醫事放射師、物理治療師、職能治療師、呼吸治療
+師、獸醫師考試、108年專技高考助產師考試
+代 號： 6309 
+類科名稱：醫事放射師 
+科目名稱： 核子醫學診療原理與技術學 
+考試時間：1小時 座號： ___________ 
+    ※本科目測驗試題為單一選擇題，請就各選項中選出一個正確或最適當的答案，複選作答者，該題不予計分! 
+    ※注意：本試題可以使用電子計算器 
+1.下列何者不是 123 I-MIBG 檢查的用途？ 
+A.心臟交感神經傳導 
+B.嗜鉻細胞瘤（ pheochromocytoma ）
+C.神經母細胞瘤（ neuroblastoma ）
+D.腎上腺皮質異常 
+2.心肌在壓力（ stress ）與靜止（ rest）狀態下，核醫檢查都呈現極低血流灌注的區域，下列何種放射藥物攝取可 
+能會增加？ 
+A.201 Tl-TlCl
+B.99m Tc-pyrophosphate 
+C.123 I-MIBG 
+D.82 Rb-RbCl
+3.有關放射性 碘標誌藥物之敘述，下列何者錯誤？ 
+A.可能不需要 氧化劑 
+B.標誌場所排風需要活性 碳濾層 
+C.必須使用含還原劑的放射性 碘化鈉原料 
+D.可能使用含有機錫之前驅物原料 
+4.核子醫學部門裝設的劑量校正儀（ dose calibrator ），主要是用來檢測放射藥物的： 
+A.放射化學純度 
+B.放射核種純度 
+C.化學純度 
+D.放射活度 
+5.以迴旋加速器生 產的醫用放射性核種，最常見的衰變模式包括下列何者？ 
+A.β-衰變 
+B.中子衰變 
+C.電子捕獲衰變 
+D.α衰變 
+6.下列何種放射藥物與腫瘤造影檢 查無關？ 
+A.201 Tl-thallous chloride 
+B.131 I-sodium iodide 
+
+=== PDF PAGE 2 ===
+C.111 In-pentetreotide 
+D.99m Tc-Technegas 
+7.在無載體（ carrier-free ）狀況下，下列醫用放射性同位素之比活度（ specific activity ）何者最低？ 
+A.11 C
+B.123 I
+C.18 F
+D.201 Tl
+8.下列何種放射藥物會同時被甲 狀腺腺瘤與副甲狀腺腺瘤攝取？ 
+A.131 I-NaI 
+B.99m Tc-sestamibi
+C.99m Tc-pertechnetate 
+D.123 I-IMP 
+9.99m Tc-DTPA 製劑中 99m Tc 之氧化態是如何？ 
+A.在酸性溶液中是 Tc 3+，在鹼性及中性溶液中是 Tc 4+
+B.在酸性溶液中是 Tc 3+，在鹼性及中性溶液中是 Tc 5+
+C.在酸性溶液中是 Tc 4+，在鹼性及中性溶液中是 Tc 5+
+D.在酸性溶液中是 Tc 2+，在鹼性及中性溶液中是 Tc 4+
+10.利用 57 Co 及58 Co 兩種同位素標幟維生素 B12 進行 Schilling 試驗，受檢病患在同時服用兩種藥物後再採集檢體分 
+析，該兩種經 Co 同位素標誌藥物成分的主要差異為何？ 
+A.氯化亞錫（ stannous chloride ）
+B.內因子（ intrinsic factor ）
+C.碘化鈉（sodium iodide ）
+D.內毒素（ endotoxin ）
+11.下列有關 99m Tc-MAA （99m Tc-macroaggregated albumin ）用於肺臟掃描的敘述，何者正確？ 
+A.為褐色懸浮注射液 
+B.理想顆粒粒徑 為10 ～90 微米（ μm）
+C.用於肺換氣（ ventilation ）掃描檢查
+D.臨床使用 MAA 微粒數量沒有限制 
+12.99m Tc-HMPAO 的藥理特性與下列那一種放射藥物最相近？ 
+A.99m Tc-ECD 
+B.99m Tc-MDP 
+C.99m Tc-MAA 
+D.99m Tc-MIBI 
+13.關於 cadmium zinc telluride （CZT ）偵檢器，下列敘述何者正確？ 
+A.相較於 NaI （Tl）閃爍偵檢器，有較好的能量解析度 
+B.相較於相同厚度下的 NaI （Tl）閃爍偵檢器，有較差的固有效率（ intrinsic efficiency ）
+C.相較於 HPGe 半導體偵檢器，有較好的能量解析度 
+
+=== PDF PAGE 3 ===
+D.需要光電倍增管（ PMT ）將訊號轉為電子訊號 
+14.下列有關乳癌患者接受淋巴閃爍攝影（ lymphoscintigraphy ）的敘述，何者正確？ 
+A.最常被使用的藥物 為99m Tc-sestamibi
+B.可定位出前哨淋巴結（ sentinel lymph node ）
+C.放射藥物經由靜脈注射入受檢者體 內
+D.乳房有 內部結節腫瘤時，淋巴結會呈現熱區（ hot area ）
+15.下列何種放射藥物不能用於膽道系統的核醫檢查？
+A.99m Tc-DISIDA 
+B.99m Tc-sulfur colloid 
+C.99m Tc-HIDA 
+D.99m Tc-mebrofenin 
+16.99 Mo/99m Tc 孳生器於星期二上午 8：00 淘洗（ milking ）後，於隔天上午 8：00 再次淘洗。已知 99 Mo 之半衰期為
+66.7 小時， 99m Tc 之半衰期為6小時，且每次淘洗均可將 99m Tc 完全洗出，洗出溶液中， 99m Tc 的莫耳分率為
+何？ 
+A.0.46 
+B.0.28 
+C.0.19 
+D.0.13 
+17.下列何種放射藥物的腦部 SPECT 檢查不適合用於失智症的診斷？ 
+A.99m Tc-sestamibi
+B.99m Tc-ECD 
+C.99m Tc-HMPAO 
+D.123 I-IMP 
+18.關於進行負荷－休息心肌灌注造影檢查前的準備工作，下列敘述何者錯誤？ 
+A.請病人禁食至少 4小時 
+B.記錄病人過去心臟疾病相關病史 
+C.乙型阻斷劑（ beta-blocker ）或鈣離子阻斷劑應停用 24 小時以上 
+D.若病人有嚴重氣喘或房室傳導阻滯，則不適合運動負荷，應該改用 dipyridamole 來進行藥物負荷 
+19.下列何項檢查最適合用來評估化學治療對癌症患者所造成的心臟毒性？ 
+A.201 Tl-TlCl心肌灌注掃描 
+B.67 Ga-citrate scan 
+C.18 F-FDG PET 
+D.心臟平衡性血池造影（ multiple gated acquisition, MUGA ）
+20.某位病患進行核醫心肌灌注檢查結果，在壓力相影像（ stress image ）和休息相影像（ rest image ）皆出現在左 
+心室的前中膈壁（ anteroseptal wall）有灌注缺損，依此判斷最有可能是下列那條冠狀動脈阻塞？ 
+A.右冠 狀動脈（ right coronary artery ）
+B.左前下行動脈（ left anterior descending artery ）
+
+=== PDF PAGE 4 ===
+C.左旋動脈（ left circumflex artery ）
+D.右冠 狀動脈（ right coronary artery ）和左旋動脈（ left circumflex artery ）
+21.有關核醫腦血流灌注檢查的取像設定，下列何者最佳？ 
+A.360 度取像，以每4度一張影像，每張影像 20 秒，影像矩陣採 128 × 128 
+B.360 度取像，以每6度一張影像，每張影像 10 秒，影像矩陣採 1024 × 1024 
+C.360 度取像，以每2度一張影像，每張影像 60 秒，影像矩陣採 64 × 64 
+D.360 度取像，以每6度一張影像，每張影像 5秒，影像矩陣採 512 × 512 
+22.有關進行核醫腦血流灌注檢查的敘述，下列何者正確？ 
+A.檢查前受檢者需禁食 6小時以上 
+B.放射藥物注射後，受檢者最好安靜讀書 
+C.放射藥物注射後，受檢者必須要閉上眼睛 10 分鐘 
+D.要先置好靜脈管道，間隔至少 10 分鐘以上，放射藥物才由此靜脈管道注射入受檢者 
+23.123 I-MIBG 心臟造影可用來評估心臟交感神經元的完整性，下列那些情況已被證實會造成 MIBG 在心肌攝取的 
+下降？ ①原因不明之擴張型心肌病變 ②缺血性心臟病 ③糖尿病引起之自律神經失常 ④二尖瓣閉鎖不 
+全
+A.①②③ 
+B.②③④ 
+C.①②④ 
+D.①③④ 
+24.下列何種心肌灌注斷層檢查，放射藥物可再分布（ redistribution ），適合評估心肌存活（ viability ）？ 
+A.13 N-ammonia 
+B.82 Rb-RbCl 
+C.201 Tl-TlCl 
+D.99m Tc-sestamibi 
+25.藥物壓力心肌灌注斷層檢查時， 201 Tl-TlCl或99m Tc-sestamibi開始施打時間為dipyridamole （Persantine ）施打 
+結束的： 
+A.前1分鐘 
+B.前2分鐘 
+C.後2分鐘 
+D.後5分鐘 
+26.進行核醫腦脊髓液分流管暢通檢查（cerebrospinal fluid shunt study ）時，放射藥物注射到下列何處？ 
+A.皮下組織 
+B.脊椎管 內（intrathecal）
+C.靜脈 
+D.腦脊髓液分流管貯液 囊（shunt reservoir ）
+27.併用下 列何種物質可以提高腦血流灌注 SPECT 診斷短暫性腦缺血發作（ transient ischemic attack, TIA ）的敏感 
+度？ 
+
+=== PDF PAGE 5 ===
+A.Persantine （dipyridamole ）
+B.Lasix 
+C.Acetazolamide 
+D.Aminophylline 
+28.有關 99m Tc-methylene diphosphonate （MDP ）骨骼造影，影像若出現胃及甲狀腺是因為：
+A.胃及甲 狀腺有病灶
+B.標誌不完全，藥劑中有大量 99m Tc-pertechnetate 
+C.同位素藥劑中含有還原劑 
+D.標誌不完全，藥劑中有大量 99m Tc-TcO 2
+29.有關 18 F-NaF 正子同位素骨骼造影藥物， 下列敘述何者錯誤？ 
+A.是骨基質（ bone matrix ）內氫氧離子的類似物， F-18 氟離子和氫氧離子交換而被攝取在骨基質內
+B.18 F-NaF 攝取效率較 99m Tc-MDP 高
+C.正子掃描儀之空間解析度較高 
+D.只會被轉移性骨骼病變攝取，區分退化性或轉移性骨骼病變特異性高 
+30.下列乳癌腋下淋巴結分期之敘述，何者錯誤？ 
+A.腋下淋巴轉移是早期乳癌患者最重要預後因子 
+B.前哨淋巴結定位法（ sentinel lymph node mapping ）屬非侵犯性檢查
+C.18 F-FDG PET 可以取代前哨淋巴結定位法 
+D.甲基藍染色劑也可用來定位前哨淋巴結 
+31.缺氧是大多數腫瘤放射治療及化療的抵抗因子，下列何者錯誤？ 
+A.在乳癌，嚴重的缺 氧在較小的腫瘤是罕見的，但是約有 30% 較大或晚期腫瘤會有嚴重的缺氧產生
+B.缺氧可以增加醣解速率，但是不能完全根據 18 F-FDG 攝取來推測缺氧
+C.18 F-choline 是目前缺氧PET 造影應用最多的藥物 
+D.可以根據腫瘤缺 氧PET 造影的結果，制定適當的治療方式以克服缺氧所引起的治療抗性 
+32.99m Tc-methylene diphosphonate （99m Tc-MDP ）骨骼造影如出現腹部活性瀰漫性增加，下列原因何者最可能？ 
+A.轉移性腹水 
+B.Free 99m Tc 存在藥劑中 
+C.膀胱 滲漏
+D.腸胃道出血 
+33.鎵-67 衰變射出 γ射線分別為93 keV 、185 keV 、300 keV 和394 keV ，造影時若使用低能量準直儀則影像會有什 
+麼結果？ 
+A.解析度變好 
+B.背景 值變高 
+C.鉛隔穿透減少 
+D.病灶偵測感度上升 
+34.18 F-FDG 正子造影對於下列何種腫瘤偵測率較好？ 
+A.分化良好的甲 狀腺癌 
+
+=== PDF PAGE 6 ===
+B.毛玻璃 狀的肺腺癌 
+C.局部後期食道癌 
+D.攝護腺癌 
+35.下列關於 99m Tc-MIBI 乳癌造影檢查的敘述何者錯誤？ 
+A.注射的活性約介於 20 ～30 mCi
+B.造影前不需禁食 
+C.注射後 4小時待背景活性降低後再執行造影 
+D.通常執行前位造影（ anterior ）及側位（ lateral）造影 
+36.下列何者最可能是利用細胞膜合成（ membrane synthesis ）特性的腫瘤造影劑？ 
+A.11 C-choline 
+B.18 F-FET 
+C.11 C-methionine 
+D.18 F-FDG 
+37.下列何者於 99m Tc-MDP 骨骼造影較不會呈現冷區？ 
+A.血流不足 
+B.慢性骨髓炎 
+C.骨骼完全破壞 
+D.局部放射治療後 
+38.99m Tc-MAG3 主要是藉由下列何種方式清除？ 
+A.主動運輸 
+B.腎小管分泌 
+C.腎絲球過濾 
+D.滯留於腎髓質 
+39.一位 5歲病患需進行核醫直接膀胱攝影（ direct radionuclide cystography ），需灌注多少生理食鹽水（ 0.9% 
+NaCl）與放射性示蹤劑混合液至病患的膀胱中？ 
+A.280 ml
+B.70 ml
+C.140 ml
+D.210 ml
+40.關於甲狀腺造影之敘述，下列何者錯誤？ 
+A.給予 99m Tc-pertechnetate 後20 分鐘進行影像擷取
+B.給予 99m Tc-pertechnetate 後4小時進行影像擷取
+C.給予 123 I-sodium iodide capsule 後4小時進行影像擷取
+D.給予 123 I-sodium iodide capsule 後24 小時進行影像擷取
+41.對於臨床有甲狀腺機能亢進症狀，但是其 24 小時之甲狀腺攝取率 ≦2 % 時，應考慮可能為下列何種疾病？ 
+A.亞急性甲 狀腺炎 
+B.格雷夫氏症（ Graves' disease ）
+
+=== PDF PAGE 7 ===
+C.甲狀腺機能低下 
+D.甲狀腺機能亢進 
+42.腎上腺皮質激素是屬於下列何類？ 
+A.蛋白質 
+B.醣類
+C.脂質 
+D.兒茶 酚胺 
+43.圖a為正常的腎圖，計數值（counts ）在注射示蹤劑後快速的上升，達到峰值後開始排出（ wash out）。圖 b的
+腎圖曲線其高峰延後，為下列何者狀況？ 
+A.Dilated non -obstructed pattern 
+B.Blunted response pattern 
+C.Obstructed pattern 
+D.Golden pattern 
+44.如圖是核醫膀胱輸尿管影像，圖 a是將放射性示蹤劑藥物直接灌注於膀胱中，經 2分鐘後，得到圖 b影像，則圖 
+b代表下列何種狀況？ 
+A.放射性示蹤劑經由膀胱逆流至腎臟 
+B.膀胱結石 
+C.輸尿管結石 
+D.腎臟皮質肥厚 
+
+=== PDF PAGE 8 ===
+45.甲狀腺放射碘吸收檢查，病患受檢前 1個月內不宜接受下列治療或檢查，惟何者除外？ 
+A.接受含 碘對比劑之電腦斷層造影 
+B.未曾中斷服用大量未標明成分之咳嗽藥水或維他命 
+C.服用甲 狀腺素補充劑 
+D.接受以對比劑加 強之磁振造影 
+46.利用核醫腎血流檢查評估病患是否有腎動脈狹窄問題時，下列何種方法可增加診斷率？ 
+A.注射顯影劑加 強解析度 
+B.使用血管張力素轉化 酶抑制劑（如 captopril）以比較患側與正常腎臟之差異 
+C.使用利尿劑比較使用前後腎圖（ renography ）之差異 
+D.使用利尿劑檢視腎臟之排泄能力變化 
+47.下列何者是較合理的甲狀腺放射碘吸收（％ RAIU ）計算公式？ 
+〔M：甲狀腺每分鐘之放射計數； N：腿部每分鐘之放射計數； O：標準（或甲狀腺假體置放含放射碘膠囊）
+每分鐘之放射計數； P：標準（或甲狀腺假體置放含放射碘膠囊）起始每分鐘之放射計數； Q：給予受檢者服 
+用放射碘膠囊之起始每分鐘之放射計數〕 
+A.％RAIU=(M-N-O)×(P-Q)×100 ％
+B.％RAIU=(M-N)/O-(P-Q)×100 ％
+C.％RAIU= 〔(M-N)/O 〕×(P/Q)×100 ％
+D.％RAIU=(M-N)×(O-P)/Q ×100 ％
+48.下列何者最適合偵測第二型多巴胺受體（ dopamine-2-receptor, D2R ）？ 
+A.18 F-FMAU 
+B.18 F-FESP 
+C.18 F-FDOPA 
+D.18 F-FLT 
+49.肺栓塞（ pulmonary embolism ）在合併99m Tc-MAA 肺灌注與 133 Xe 肺換氣掃描下的結果多為下列何者？ 
+A.正常的肺換氣影像及不正常的肺灌注影像 
+B.正常的肺灌注影像及不正常的肺換氣影像 
+C.兩種影像皆不正常 
+D.兩種影像皆正常 
+50.嬰幼兒接受胃食道逆流閃爍攝影檢查，給予的放射藥物與途徑，下列何者正確？ 
+A.99m Tc-sulfur colloid 以生理食鹽水稀釋，經靜脈注射 
+B.99m Tc-sulfur colloid 以配方奶或母乳稀釋，經口服吞嚥
+C.99m Tc-DTPA 以生理食鹽水稀釋，經鼻胃管注入 
+D.99m Tc-DTPA 以配方奶或母乳稀釋，經靜脈注射 
+51.下列為在梅克爾憩室（ Meckel diverticulum ）核醫攝影時給予 pentagastrin 的原因？ 
+A.抑制胃酸分泌 
+B.促進胃黏膜攝取 99m Tc-pertechnetate 
+C.促進腸道蠕動 
+
+=== PDF PAGE 9 ===
+D.加速排除血液中的放射活性 
+52.下列何種放射藥物可用以偵測感染病灶？
+A.18 F-FDG 及67 Ga-citrate 
+B.111 In-oxine WBC 及99m Tc-sulfur colloid 
+C.67 Ga-citrate 及123 I-MIBG 
+D.111 In-oxine WBC 及123 I-MIBG 
+53.膽道閃爍攝影使用的 99m Tc-IDA 類放射藥物，是從臨床上何種藥物衍生而來？ 
+A.lidocaine 
+B.furosemide 
+C.dipyridamole 
+D.morphine 
+54.下列何種情況肺栓塞的可能性最大？ 
+A.肺灌注影像正常，但肺通氣影像有一個肺段性缺損（ segmental defect）
+B.肺灌注影像與通氣影像有多個吻合的缺損 
+C.肺灌注影像有一個肺段性缺損（ segmental defect），但肺通氣影像正常 
+D.肺灌注影像有多個肺段性缺損（ segmental defects ），但肺通氣影像正常 
+55.使用 99m Tc-DTPA 氣霧化成小懸浮粒子（ aerosol particles ）進 行肺通氣掃描時，實際上約有多少藥物進入肺 
+部？ 
+A.2％～ 5％
+B.10 ％～ 15 ％
+C.30 ％～ 40 ％
+D.50 ％以上 
+56.下圖肺灌注造影，下方箭頭所指處有放射活性降低現象，主要是因為下列何種臟器所造成？ 
+A.胃
+B.脾臟 
+C.肝臟 
+D.心臟 
+
+=== PDF PAGE 10 ===
+57.使用 99m Tc-MAA 進行肺臟灌注造影（ lung perfusion imaging ），若患者有明顯心臟右－左分流（ right to left 
+shunting ），則可能發現： 
+A.膀胱尿液有放射活性積聚 
+B.肺臟呈現局部放射活性灌注缺損 
+C.心肌呈現放射活性灌注缺損 
+D.腦部呈現放射活性積聚 
+58.對核子醫學部門而言，下列何項與檢驗品質之相關性最低？ 
+A.檢體的使用量 
+B.試劑價格 
+C.儲存檢體冰箱的 溫度
+D.微量吸管的精密度 
+59.某位病患於星期一早晨接受 99m Tc-TcO 4
+- 3 mCi注射進行甲狀腺造影；攝影後接著採血準備 T4的放射免疫分析 
+檢查，如果於星期二進行放射免疫分析檢查，下列處理方式何者最適當？ 
+A.仍無法檢驗，血液中仍有殘存的 99m Tc 活性 
+B.可以，但應同時測量 99m Tc 的殘量，予以扣除 
+C.留待下週再進行採血檢驗 
+D.無妨，推算 99m Tc 的殘量低，且加馬計數器設有能窗可將 99m Tc 剔除 
+60.以三明治法（ immunoradiometric assay, IRMA ）的 B型肝炎表面抗原（ HbsAg ）檢測時，其閾值(cutoff value) 
+為230 cpm ，某檢體的計測結果為1,520 cpm ，下列敘述何者正確？ 
+A.HbsAg 為positive 
+B.HbsAg 為negative 
+C.HbsAg 無法判別 
+D.重新再做一次 
+61.放射免疫分析檢測時所使用的井型偵檢器，其配備不需要下列何者？ 
+A.偵測晶體 
+B.準直儀 
+C.光電倍增管 
+D.放大器 
+62.對於腫瘤標記 CA 125 在卵巢癌應用的敘述，下列何者正確？ 
+A.可做 為女性早期卵巢癌的診斷工具 
+B.在第一期和第二期的卵 巢癌患者，可明顯見到血中 CA 125 濃度上升 
+C.對於第三期和第四期的卵 巢癌患者，其 CA 125 反而歸於正常 
+D.血中 CA 125 檢測常出現偽陽性反應，且會受到其他婦科疾病影響 
+63.核醫造影劑主要使用 99m Tc 標誌藥物。下列有關 99m Tc 優點的敘述，何者錯誤？ 
+A.為90% γ射線， 10% β粒子 
+B.物理半衰期 為6小時 
+C.其γ射線能量為140 keV 
+
+=== PDF PAGE 11 ===
+D.高比活度 
+64.68 Zn 可經下列何種核子反應產生67 Ga ？
+A.68 Zn(p, n)  67 Ga 
+B.68 Zn(p, 2n)  67 Ga 
+C.68 Zn(n, p)  67 Ga 
+D.68 Zn(p, a)  67 Ga 
+65.99m Tc-pentetate （DTPA ）與 99m Tc-glucoheptonate （GHP ）均可用於腎臟造影檢查，下列敘述何者正確？ 
+A.99m Tc-DTPA 經由腎小管分泌與腎絲球過濾排出 
+B.99m Tc-GHP 單獨由腎絲球過濾排出 
+C.兩者都是高分子量、脂溶性化合物 
+D.兩者都可用於腦部造影 
+66.某甲狀腺功能亢進病患接受 131 I治療，已知該病患甲狀腺組織之碘生物半衰期估計為4.4 天，計算 131 I於該病患 
+之有效半衰期為多少天？ 
+A.6.25 
+B.2.86 
+C.3.75 
+D.7.20 
+67.有關使用放射碘治療良性甲狀腺疾病，下列敘述何者錯誤？ 
+A.適用於葛瑞夫茲（ Graves’disease ）症、毒性結節（ toxic nodular goiter ）或普洛姆氏症（ Plummers’disease ）
+之治療 
+B.禁止用於未成年之病患（例如兒童或 青少年） 
+C.有可能造成永久性甲 狀腺功能不足 
+D.治療前須先進行 24 小時碘吸收測試及甲狀腺掃描 
+68.下列何種核醫治療藥物可用來治療肝癌？ 
+A.90 Y-anti-CD20 
+B.90 Y-microspheres 
+C.32 P-sodium phosphate 
+D.89 Sr-SrCl2
+69.57 Co 能峰為122 keV ，於閃爍攝影機的能譜測量中，測得其 FWHM 為30 keV ，該攝影機的能量解析度為多少？ 
+A.25 ％
+B.10 ％
+C.2.5 ％
+D.1.0 ％
+70.單光子電腦斷層造影（ SPECT ）的解析式影像重建原理為何？ 
+A.反投影原理 
+B.成對 產生原理 
+C.對數反比原理 
+
+=== PDF PAGE 12 ===
+D.距離平方反比原理 
+71.核醫造影之資料搜集若採 frame mode ，則下列敘述何者錯誤？ 
+A.收集相同資料和 list mode 相比， frame mode 所需之記憶空間較少 
+B.收集相同資料和 list mode 相比， frame mode 所需之時間較短 
+C.造影一旦完成，影像就完成，而不能再依時間分成不同影像 
+D.收到的資料是依時間順序儲存 
+72.PET 系統偵測到的訊號包括 true coincidence 、random coincidence 及scatter coincidence ，其中對於 random 
+coincidence rate 的定義何者正確？（假設每一支 detector 的偵測效率皆相同， Rs：single channel noncoincidence 
+rate, R t：random coincidence count rate, t：coincidence resolving time ）
+A.Rt=2×t×R s
+B.Rt=2×t×R s×R s
+C.Rs=2×t×R t
+D.Rs=2×t×R t×R t
+73.關於 NaI(Tl) 無機閃爍體（ inorganic scintillator ）的敘述，下列何者正確？ 
+A.NaI(Tl) 無機閃爍體之鉈（Tl）含量為2% ，可視為一雜質 
+B.微量的 鉈（Tl）充當碘化鈉（NaI ）晶體結構的雜質（ impurity ）或稱激活劑（ activator ），因而在微量的鉈
+存在下能有效地和 γ射線作用產生可見光光子 
+C.鉈（Tl）的基態（ ground state ）與激態（ excited state ）均位於禁帶間隙（ forbidden gap ），而活化劑的基態 
+靠近導電帶（ conduction band ），活化劑的激態靠近價帶（ valence band ）
+D.NaI(Tl) 閃爍偵檢器僅能進行計數，不能做能譜分析 
+74.深部等效劑量（ Hd）定義為體外全身暴露在組織深度多少公分處的等效劑量？ 
+A.0.1 
+B.0.3 
+C.1.0 
+D.1.3 
+75.核反應器（ reactor ）所產生的放射核種，通常有下列何種特性？ 
+A.中子數不足 
+B.中子數過多 
+C.質量數不足 
+D.質子數過多 
+76.下列何種放射性同位素（ 1 mCi活度）之輻射可藉約 10 mm 壓克力板有效阻擋？
+A.68 Ga 
+B.111 In 
+C.89 Sr 
+D.123 I
+77.核醫輻射工作場所排放含放射性物質之廢氣或廢水，對輻射工作場所外地區中一般人體外暴露造成之劑量， 
+於1小時內不超過 X毫西弗， 1年內不超過 Y毫西弗， X與Y分別為多少？ 
+
+=== PDF PAGE 13 ===
+A.X＝0.0002 、Y＝0.005 
+B.X＝0.002 、Y＝0.05 
+C.X＝0.02 、Y＝0.5 
+D.X＝0.2 、Y＝5
+78.137 Cs 尖峰能量為667 keV ，今使用加馬閃爍攝影機（ gamma camera ）測量其 energy spectrum ，得知 FWHM 為53 
+keV ，計算該設備對 137 Cs 的percent energy resolution 為多少 %？
+A.0.08 
+B.8
+C.1.3 
+D.12.5 
+79.附圖為系統靈敏度、空間解析度與射源至準直儀距離的關係圖。（ I）藍色表示針孔準直儀，（ II ）綠色表示 
+收斂準直儀，（ III ）紫色表示高解析平行孔準直儀，（ IV ）紅色表示全功能平行孔準直儀。假設射源距離準 
+直儀 5公分，則系統靈敏度的比較，下列何者正確？ 
+A.I＞II ＞III ＞IV 
+B.IV ＞III ＞II ＞I
+C.II ＞IV ＞III ＞I
+D.I＞III ＞IV ＞II 
+80.承上題，射源距離準直儀 5公分處，空間解析度的比較，下列何者最小（ mm ）？ 
+A.I
+B.IV 
+C.III 
+D.II 

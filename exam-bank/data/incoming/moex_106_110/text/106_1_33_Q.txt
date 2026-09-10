@@ -1,0 +1,526 @@
+=== PDF PAGE 1 ===
+ 
+106 年第一次專門職業及技術人員高等考試醫師牙醫師藥師考試分階段考試 年第一次專門職業及技術人員高等考試醫師牙醫師藥師考試分階段考試 年第一次專門職業及技術人員高等考試醫師牙醫師藥師考試分階段考試 年第一次專門職業及技術人員高等考試醫師牙醫師藥師考試分階段考試、、 、、藥師 藥師 藥師 藥師、、 、、醫事檢驗 醫事檢驗 醫事檢驗 醫事檢驗 
+師師 師師、、 、、醫事放射師 醫事放射師 醫事放射師 醫事放射師、、 、、物理治療師 物理治療師 物理治療師 物理治療師、、 、、職能治療師 職能治療師 職能治療師 職能治療師、、 、、呼吸治療師 呼吸治療師 呼吸治療師 呼吸治療師、、 、、獸醫師考試 獸醫師考試 獸醫師考試 獸醫師考試 
+代  號： 3309 
+類科名稱：醫事放射師 
+科目名稱：放射線器材學（包括磁振學與超音波學）
+考試時間：1小時 座號：___________ 
+  ※本科目測驗試題為單一選擇題，請就各選項中選出一個正確或最適當的答案，複選作答者，該題不予計分 ! 
+  ※注意：本試題可以使用電子計算器             
+1. 螺旋式 CT （spiral / helical CT ）對X光管的需求中，並不包括下列何者？ 
+ 
+A. 高熱容（heat capacity ） 
+B. 陽極冷卻率（anode-cooling rate ）需高  
+C. 陽極盤直徑需大  
+D. 較大的靶角（target angle ） 
+2. 射束寬是 10 mm ，掃描時間是 23 秒，螺距比是 1.8 : 1 ，而X光掃描一圈所花費時間為2秒，則掃描距離為多少？ 
+ 
+A. 82.8 cm 
+B.41.4 cm 
+C.20.7 cm 
+D.4.14 cm 
+3. 下列那一種影像接收器（image receptor ），需使用光纖（fiber ）作為耦合元件（coupling element ），將捕獲元件（capture 
+element ）的訊號傳送到收集元件（collection element ）？  
+ 
+A. CsI + CCD 
+B.CsI + a-Si + TFT 
+C.image-intensifier tube + TV camera + ADC 
+D.amorphous selenium + TFT 
+4. 在數位放射攝影（digital radiography ）系統中，每一個畫素（pixel ）均必須有電路元件：電容器（capacitor ）與電晶體 
+（transistor ），請問下列組合能產生數位影像的有那些？①computed radiography  ②scanned projection radiography  
+③GdOS + a-Si+ TFT  ④CsI + CCD  ⑤amorphous selenium + TFT 
+ 
+A. ①②  
+B. ②③⑤  
+C. ②③④  
+D. ③④⑤  
+5. X光透視攝影，當螢光影像對比（contrast ）過低時，可利用什麼方法加以改善？ 
+ 
+A. 增加柵比（grid ratio ） 
+B. 加長透視攝影時間  
+C. 增加 X光管的 kVp 值 
+D. 改善 X光射束品質  
+6. 單相電源 60 赫茲在三相十二脈衝下，1個脈衝（pulse ）的時間約為多少毫秒（ms ）？  
+ 
+A. 8 
+B.3 
+C.1.4 
+D.0.7 
+7. 若所使用增感屏之厚度越厚時，下列描述何者正確？ 
+ 
+A. DQE 值上升  
+B. 空間解析度變好  
+C. MTF 值上升  
+D. intensifier factor 降低  
+8. 40 keV X-ray 最容易與下列何者發生 K緣吸收（K-edge absorption ）作用？（ Eb 為K-shell electron binding energy ） 
+ 
+A. barium （Eb ＝37 keV ） 
+B. molybdenum （Eb ＝19 keV ） 
+C. calcium （Eb ＝4 keV ） 
+D. aluminum （Eb ＝1.6 keV ） 
+9. 假設 20 keV 的X光和軟組織（Z＝7.4 ）發生光電效應的相對機率為1，則 40 keV 的X光和軟組織（Z＝7.4 ）發生光電效應的相對 
+機率為何？ 
+ 
+A. 1/2 
+B.2 
+C.1/4 
+D.1/8 
+10. 螺旋式 CT （spiral CT ）藉由下列何種影像後處理方式方能在身體長軸的任意位置產生切片？ 
+
+=== PDF PAGE 2 ===
+ 
+A. maximum intensity projection 
+B.filtered backprojection 
+C.data interpolation 
+D.multiplanar reformation 
+11. 下列何者不是用來描述 CT 的影像品質？ 
+ 
+A. 像素值 
+B. 空間解析度  
+C. 對比解析度  
+D. 雜訊  
+12. 若數位影像的動態範圍為16 位元，數位影像後處理（digital image postprocessing ）的那一項功能，可以使得所有的灰階均可 
+能被辨識？  
+ 
+A. 放大（magnification ） 
+B. 窗值與窗幅（window level and window width ） 
+C. 畫素位移（pixel shift ） 
+D. 減贅（subtraction ） 
+13. 下列有關 X光機接地線的敘述何者錯誤？ 
+ 
+A. 從控制台的外殼接一條電線至交流電源兩端之一端，即完成接地工程  
+B. 接地通常以綠線作為標示  
+C. 接地是為了安全措施  
+D. 接地工程好壞以歐姆值多少計，歐姆值越小越好  
+14. 一般在 X-ray 血管攝影（angiography ）會使用對比顯影劑（contrast agent ）的注射增加影像品質，有好奇的病患問你物理機 
+制，下列何項是適合的答案？ 
+ 
+A. Rayleigh scattering effect 
+B.photoelectric effect 
+C.Compton scattering effect 
+D. 對比顯影劑通常使用原子序（atomic number ）低的材料  
+15. 下列何種光束常用於激發影像板（imaging plate ）中之磷光體？ 
+ 
+A. 紅光雷射  
+B. 藍光雷射  
+C. 高頻雷射  
+D. 紫外光  
+16. 有關 CT 值（CT number ）的敘述，下列何者正確？ 
+ 
+A. 空氣的 CT 值為0 
+B. CT number ＝（ µ水－µ組織 ）⁄µ水× K ，µ為線性衰減係數  
+C. CT 值與衰減係數會隨著 X光管管電壓不同而有些差異  
+D. 常數 K（constant K ），在HU （Hounsfield units ）計算中，K＝6,000 
+17. X光乳房攝影的 craniocaudal view ，如下圖，若病人擺位許可，陰極應擺放在那一側較為適當？ 
+
+=== PDF PAGE 3 ===
+  
+ 
+A. A側 
+B. B側 
+C. C側 
+D. D側 
+18. 電腦斷層掃描（computed tomography, CT ）使用的 bowtie filter 的主要優點是： 
+ 
+A. 降低病人輻射劑量  
+B. 提高影像空間解析度 spatial resolution 
+C. 降低光子散射  
+D. 提高偵檢器的效率  
+19. 數位 X光攝影系統的空間解析度為3.5 lp/mm 。試問所得到之影像最小可解析之物體為多少 mm ？ 
+ 
+A. 0.14 
+B.0.28 
+C.3.50 
+D.7.00 
+20. 通常在乳房攝影技術中選擇管電壓在 25 ～32 kVp 之間，其原因為何？ 
+ 
+A. 降低輻射劑量  
+B. 增加康普吞散射之機率  
+C. 利用光電效應以增加組織間吸收之差異  
+D. 提高 X射線之穿透率  
+21. 傳統透視 X光機所使用之影像增強管（image intensifier tube ），其對於通量增益（flux gain ）定義為： 
+ 
+A. 通量增益＝輸入 X光的光子數／輸出可見光的光子數  
+B. 通量增益＝輸出可見光的光子數／輸入 X光的光子數  
+C. 通量增益＝輸入 X光的光子數 × 輸出可見光的光子數  
+D. 通量增益＝輸出可見光的光子數／輸入 X光的光子數 2 
+22. 多切面電腦斷層掃描儀通常有兩個準直儀，對於病人前準直儀（prepatient collimator ）及偵檢器前準直儀（predetector 
+collimator ）的功能敘述，何者錯誤？ 
+ 
+A. 病人前準直儀會影響病人的輻射劑量  
+B. 病人前準直儀定義射束寬度  
+C. 偵檢器前準直儀提高影像對比  
+D. 偵檢器前準直儀定義射束寬度  
+23. 下列何者不是多平面重組（multiplanar reformation ）的演算法？ 
+ 
+A. 濾波反投影（filtered backprojection ） 
+B. 最大強度投影（maximum intensity projection ） 
+C. 表面陰影顯示（shaded surface display ） 
+D. 體積陰影顯示（shaded volume display ） 
+
+=== PDF PAGE 4 ===
+24. 對數位透視攝影（digital fluoroscopy ）而言，為了使訊問時間（interrogation time ）與消除時間（extinction time ）能小於 1 
+ms ，高壓產生器必須採用那一種？ 
+ 
+A. 單相全波整流（single-phase full-waverectified ）X光產生器  
+B. 三相（three-phase ）6脈衝 △-Y連接 X光產生器  
+C. 三相（three-phase ）12 脈衝 △-Y‧△連接 X光產生器  
+D. 高頻（high-frequency ）X光產生器  
+25. 超音波都卜勒偏移（Doppler shift, kHz, f d），源頻率（source frequency, kHz, f 0），反射速度（reflector speed, cm/s, v ）， 
+聲傳遞速度（propagation sound speed, cm/s, c ），公式是： 
+ 
+A. fd＝2 × f 0× v / c  
+B. fd＝2 × f 0 × c / v  
+C. fd＝4 × f 0× v / c  
+D. fd＝4 × f 0× c / v  
+26. 下列何角度會造成最大的都卜勒偏移（Doppler shift ）？  
+ 
+A. 90°  
+B.60°  
+C.30°  
+D.0°  
+27. 若超音波換能器發射一脈衝後，經65 µs換能器接收到回波，試問回波產生的軟組織深度是多少公分？ 
+ 
+A. 1 
+B.3 
+C.5 
+D.7 
+28. 在進行臨床超音波掃描時，若要獲得較佳的影像解析度，應該採取何種策略？ 
+ 
+A. 減少脈衝循環數（pulse repetition cycles ） 
+B. 使用較大頻寬（bandwidth ）探頭  
+C. 使用較小頻寬（bandwidth ）探頭  
+D. 提升系統激發能量（energy ） 
+29. 超音波入射至組織實質部分，往往會在影像上產生斑紋雜訊（speckle noise ），斑紋雜訊產生的機制是？ 
+ 
+A. 電子設備干擾  
+B. 多重反射（reverberation ） 
+C. 繞射  
+D. 散射  
+30. 穿透深度為15 cm ，三個焦點且每幅畫面有 200 條掃描線，則最大畫面率為： 
+ 
+A. 5.5 
+B.8.5 
+C.10.5 
+D.15 
+31. 彩色都卜勒功率成像（Doppler power presentation ）表示血流何種資訊？ 
+ 
+A. 速度  
+B. 方向  
+C. 存在  
+D. 流量  
+32. 超音波影像導引高強度聚焦型超音波（high-intensity focused ultrasound ）手術是未來很熱門的臨床應用。當高強度聚焦型超 
+音波手術設備開啟，我們時常發現超音波影像中會出現假影，這類假影通常是？ 
+ 
+A. 多重反射（reverberation ） 
+B. 回音增強（enhancement ） 
+C. 電子干擾（electronic interference ） 
+D. 斑紋雜訊（speckle noise ） 
+33. 磁振造影時，在病人胸前放置橡皮管（bellows ）的用意何在？ 
+ 
+A. 做為定位的指標  
+B. 用來固定病人  
+C. 偵測胸腔壁運動  
+D. 偵測心跳  
+34. 磁振造影中梯度磁場為一向量，下列敘述何者錯誤？ 
+ 
+A. 梯度磁場向量的方向和梯度線圈的材質無關  
+B. 梯度磁場向量的大小和梯度線圈的圈數有關  
+C. 梯度磁場向量的方向和主磁場垂直  
+D. 梯度磁場向量的方向和流經線圈的電流方向有關  
+35. 磁振造影中，關於傳統梯度回聲（gradient echo ）和自旋回聲（spin echo ）脈衝序列的比較，下列敘述何者錯誤？ 
+
+=== PDF PAGE 5 ===
+ 
+A. 梯度回聲可達到的最短 TR 值比自旋回聲小  
+B. 掃描參數相同時，自旋回聲的掃描時間比梯度回聲短  
+C. 梯度回聲比自旋回聲有較大的磁化假影（susceptibility artifact ） 
+D. 梯度回聲可達到的最短 TE 值比自旋回聲小  
+36. 在臨床磁振造影中，使用 8通道之相位陣列線圈（phased array coil ）與鳥籠線圈（birdcage coil ）進行頭部造影時，若造影參 
+數相同，其所需造影時間下列何者最為正確？ 
+ 
+A. 造影時間相同  
+B. 8通道線圈為8倍 
+C. 8通道線圈為根號 8倍 
+D. 8通道線圈為1/8 倍 
+37. 下列關於臨床磁振造影儀造影時所發射出之射頻輻射的敘述，何者錯誤？ 
+ 
+A. 主磁場強度（B0）為兩倍時，射頻輻射之能量應為四倍  
+B. 主磁場強度（B0）為兩倍時，射頻輻射之頻率應為兩倍  
+C. 主磁場強度（B0）為兩倍時，若要達到同樣的偏折角度（flip angle ），射頻輻射之功率可維持不變  
+D. 主磁場強度（B0）增高時，激發射頻輻射磁場（B1）在人體內之空間分布較不均勻 
+38. 在臨床磁振造影系統中，控制梯度線圈開關及射頻發射時間等的硬體設備為： 
+ 
+A. 梯度線圈（gradient coil ） 
+B. 射頻發射線圈 （RF transmit coil ） 
+C. 脈衝控制單元（pulse control unit ） 
+D. 影像處理器（image processor ） 
+39. 醫用磁振造影檢查中，給予受試者耳塞減少噪音影響，請問此噪音是由磁振造影儀器中那一種系統所產生的？ 
+ 
+A. 主磁場（main magnetic field ） 
+B. 梯度磁場（gradient magnetic fields ） 
+C. 射頻脈衝（RF pulse ） 
+D. 勻場系統（shim system ） 
+40. 傳統的自旋回音序列（spin echo sequence ）造影下，在90 度射頻脈衝（RF pulse ）前，先給予 180 度射頻脈衝，請問這兩個 
+射頻脈衝之間的時間稱之為？ 
+ 
+A. TR （repetition time ） 
+B. TE （echo time ） 
+C. TI （inversion time ） 
+D.1/2TR 
+41. 特定吸收率（specific absorption rate, SAR ）是依據磁振造影那一種系統所制訂的規範？ 
+ 
+A. 主磁場（main magnetic field ） 
+B. 梯度磁場（gradient magnetic fields ） 
+C. 射頻脈衝（RF pulse ） 
+D. 勻場系統（shim system ） 
+42. 若磁場強度B0 = 2T 時，線性梯度強度Gx ＝2 G/cm ，下列那一區域所產生的 time-varying field bioeffects 較明顯？ 
+ 
+A. 在X＝0 cm 處的梯度磁場  
+B. 在X＝1 cm 處的梯度磁場  
+C. 在X＝2 cm 處的梯度磁場  
+D. 在X＝- 0.5 cm 處的梯度磁場  
+43. 關於超導 MRI 的描述，下列何者為真？ 
+ 
+A. 超導線圈需要在 -4oF的環境下維持恆定的超導性  
+B. 超導磁場淬息（quench ）時，會造成檢查室的氧濃度增加  
+C. 超導線圈的材質為鈮鈦合金（niobium-titanium ） 
+D. 開放式磁振造影（open MRI ）無法使用超導螺旋線圈  
+44. MRI 射頻發射線圈（RF transmitters ）所發出的射頻，具有什麼特性？ 
+ 
+A. 頻率大於紫外線的頻率  
+B. 波長小於 γ射線  
+C. 在真空中的速度和 X射線一樣  
+D. 能量大於 10 keV 
+45. 關於 MRI 磁場屏蔽的敘述，下列何者錯誤？ 
+ 
+A. 主動式磁場屏蔽需要電流  
+B. 主動式磁場屏蔽需要液態氦 
+C. 大部分超導磁鐵系統採用主動式磁場屏蔽 
+D. 主動式磁場屏蔽安裝在牆壁上  
+46. 關於電阻式電磁鐵所構成的磁振造影系統，下列敘述何者錯誤？ 
+A. 需要大量的電力供應  
+B. 關閉電源即無磁場  
+
+=== PDF PAGE 6 ===
+ C. 消磁再上磁需要昂貴經費  
+D. 與相同磁場強度之永久磁鐵系統相較，重量較輕  
+47. 下列關於傳統模擬攝影機等中心點的敘述，何者錯誤？ 
+ 
+A. 位在準直儀的旋轉軸上  
+B. 位在治療機頭的旋轉軸上  
+C. 為準直儀與治療機頭旋轉軸線的相交點  
+D. 與射源的距離固定在 100 公分處  
+48. 典型的接觸治療（contact therapy ）機器的射源至體表之距離（source to surface distance, SSD ）是設定在： 
+ 
+A. 2公分以下  
+B. 4公分以上至 10 公分  
+C. 4公分以上至 40 公分  
+D. 4公分以上至 100 公分  
+49. 直線加速器的修整器（trimmer ）功能類似下列何者？ 
+ 
+A. 光學定位系統（optical localization system ） 
+B. 監測游離腔（monitoring ionization chamber ） 
+C. 整平濾片（flattening filter ） 
+D. 照野擋塊（jaws ） 
+50. 外推腔（extrapolation chamber ）適合測量何種劑量？ 
+ 
+A. α劑量  
+B. β劑量  
+C. γ劑量  
+D. 人員劑量  
+51. 放射治療模擬攝影機房間所配置的雷射燈光，可以檢測患者水平（horizontal ）方位並垂直於等中心軸（isocenter axis ）的雷 
+射定位燈應裝置於何處？ 
+ 
+A. 天花板上  
+B. 患者左右二側牆壁上  
+C. 患者左右 45° 斜側牆壁上  
+D. 患者左右 45° 斜側旋轉臂上  
+52. 放射治療中，用於修正因體表輪廓高低起伏造成體內劑量不均勻的物體為： 
+ 
+A. 多葉式準直儀（MLC ） 
+B. 組織補償器（compensator ） 
+C. 微型多葉式準直儀（micro-MLC ） 
+D. 電腦治療計畫系統（treatment planning ） 
+53. 依半衰期長短排列，下列何者正確？ 
+ 
+A. Ra-226 ＞Rn-222 ＞Co-60 ＞Cs-137 
+B. Ra-226 ＞Co-60 ＞Rn-222 ＞Cs-137 
+C. Ra-226 ＞Cs-137 ＞Rn-222 ＞Co-60 
+D. Ra-226 ＞Cs-137 ＞Co-60 ＞Rn-222 
+54. 相同活度下，下列那一個近接治療射源所需的半值層最大（以mm lead 為單位）？  
+ 
+A. Co-60 
+B.Ir-192 
+C.I-125 
+D.Pd-103 
+55. 當電子射束（6 MeV ＜E＜20 MeV ）打到水假體時，下列敘述何者錯誤？ 
+ 
+A. 表面劑量隨著能量增加而變小  
+B. 最大劑量的所在處，隨能量增加而變深  
+C. 電子射束的有效治療深度，隨著能量增加而變大  
+D. 中央的深度劑量隨著照野增加而變大  
+56. 低熔點鉛合金材料的等效厚度約為純鉛厚度的多少倍？ 
+ 
+A. 1.37 
+B.1.21 
+C.1.08 
+D.0.83 
+57. 若以 portable X 光機執行模擬攝影作業，則無法正確取得 Co-60 治療機的何種參數？①SSD  ②SAD  ③SFD 
+ 
+A. 僅① 
+B. 僅② 
+C. 僅③ 
+D. ①②③  
+58. 有關 PET / CT 的敘述，何者錯誤？ 
+
+=== PDF PAGE 7 ===
+ 
+A. PET 影像解析度約 4 mm 
+B. PET 偵測的光子能量比 CT 產生的光子能量大  
+C. PET 與CT 共用一組偵檢器環  
+D. 進行影像融合（image fusion ）可行性高  
+59. 下列何種器具用於治療 uterus, cervix 處之腫瘤？ 
+ 
+A. nasopharyngeal applicators 
+B.rectal applicators 
+C.Fletcher-Suit applicators 
+D.endobronchial applicators 
+60. 下圖為何種射源？ 
+  
+ 
+A. Ra-226 （dumbbell ） 
+B. I-125 seed （model 6711 ） 
+C. Pd-103 seed （model 200 ） 
+D. I-125 seed （model 6702 ） 
+61. linac, betatron, microtron 這些設備，其治療能量為何種數量級？ 
+ 
+A. contact 
+B.superficial 
+C.orthovoltage 
+D.megavoltage 
+62. 下列有關加速器的敘述，那些正確：①betatron 可產生X光射束與電子射束 ②cyclotron 可產生質子束 
+③microtron 為電子加速器 ④D-T generators 可產生中子束  
+ 
+A. 僅①④  
+B. 僅②③  
+C. 僅②③④  
+D. ①②③④  
+63. 下列有關 IMRT 的敘述，何者錯誤？ 
+ 
+A. 需搭配 MLC 
+B. 為順向式治療計畫  
+C. 照野內的通量有可能不同  
+D. 靶區的劑量為堆疊而成  
+64. 下列何種治療射束產生器所產生的射束能量通常小於 1 MeV ？ 
+ 
+A. orthovoltage therapy unit 
+B. 60 Co therapy unit  
+C.linear accelerator 
+D.betatron 
+65. 執行放射治療模擬攝影等中心（isocenter ）定位時，靶至皮膚距離（target-to-skin distance, TSD ）、靶至等中心距離 
+（target-to-axis distance, TAD ）、腫瘤深度（d）的關係為何？ 
+ 
+A. TAD ＝TSD ＋ d 
+B. TAD ＝TSD － d 
+C. TAD ＝TSD × d 
+
+=== PDF PAGE 8 ===
+D. TAD ＝TSD ÷ d 
+66. 什一（1/10 ）值層（tenth value layer, TVL ）與半值層（half value layer, HVL ）兩者間的關係為何？ 
+ 
+A. 1 HVL ＝3.32 TVL 
+B. 1 HVL ＝0.301 TVL 
+C. 1 HVL ＝0.693 TVL 
+D. 1 HVL ＝1.443 TVL 
+67. 正子發射斷層掃描中，來自於兩個不同射源位置的加馬射線，在偶合時間窗（coincidence time window ）內同時被偵測到，此
+種事件稱為： 
+ 
+A. 真實偶合事件（true coincidence ） 
+B. 散射偶合事件（scatter coincidence ） 
+C. 隨機偶合事件（random coincidence ） 
+D. 多重偶合事件（multiple coincidence ） 
+68. 下表為常見正子（PET ）放射性核種所放出 β+能量之比較表，下列何種放射性核種具有最長之正子射程？ 
+    
+ 
+A. 13 N 
+B. 18 F 
+C. 62 Cu  
+D. 82 Rb  
+69. 最常用來使用在 PET 掃描儀器作為衰減修正（attenuation correction ）的正子放射性核種為下列何者？ 
+ 
+A. 82 Rb  
+B. 68 Ge  
+C. 235 U 
+D. 111 In  
+70. 透明膠（transparent gel ）是介於 NaI （Tl ）閃爍晶體和光電倍增管的窗間的物質，其功能為何？ 
+ 
+A. 讓光維持原來行進方向  
+B. 讓光可以順利反射  
+C. 減少光產量 
+D. 增加阻抗  
+71. 光電倍增管的光陰極其用途為下列何者？ 
+ 
+A. 把加馬光子轉成電子  
+B. 把加馬光子轉成可見光子  
+C. 把可見光子轉成光電子  
+D. 電子增益  
+72. 對於濾波反投影（filtered backprojection, FBP ）影像重建法，其濾波器（filter ）的特性，下列何者描述正確？ 
+ 
+A. 對於計數總量高的影像，應採用較高截止頻率（cutoff frequency ）的濾波器  
+B. 濾波器之截止頻率（cutoff frequency ）越高，其影像越模糊  
+C. 影像太過模糊時，增加截止頻率（cutoff frequency ）可降低影像之對比度  
+D. 欲降低雜訊的方式，可增加濾波器之截止頻率（cutoff frequency ） 
+73. 下列有關光電倍增管（photomultiplier tubes ）之敘述，何者錯誤？ 
+ 
+A. 為一真空密封管，內含有光陰極（photocathode ）、倍極（dynode ）、陽極（anode ） 
+B. 將可見光轉換成電子脈衝訊號並由陰極輸出  
+C. 光電倍增管需要連接高壓電系統  
+D. 如果有 10 個倍極，大約可產生210 到410 之電子數  
+74. 平行孔準直儀的靈敏度會因下列何者增加而增加？ 
+ 
+A. 鉛隔厚度（septum thickness ） 
+B. 孔徑尺寸（bore size ） 
+C. 射源到準直儀之距離（distance ） 
+D. 入射光子的能峰（photopeak ） 
+75. 關於 PET 中偶合事件的偵測（coincidence detection ）何者錯誤？ 
+ 
+A. 成對光子中，只有一個光子被偵測到，稱之為單一事件（singles event ） 
+B. 散射事件（scatter events ）會降低影像對比  
+
+=== PDF PAGE 9 ===
+C. 散射事件（scatter events ）中，被偵測到的兩個光子來自兩個不同互毀事件  
+D. 劑量越高，隨機事件（random events ）越多  
+76. 下列關於 SPECT 的敘述，何者錯誤？ 
+ 
+A. 使用多偵測頭攝影機掃描，可以縮短攝影時間  
+B. 使用連續式資料取得方式掃描，可以縮短攝影時間  
+C. 相對於平面造影有更佳的影像對比度及深度資訊（depth information ） 
+D. 使用圓環式軌道（circular orbit ）掃描，可以增加解析度  
+77. 下列何者是劑量校正器每天都需校驗的項目？ 
+ 
+A. 準確性（accuracy ） 
+B. 一致性（constancy ） 
+C. 線性度（linearity ） 
+D. 幾何因子（geometry ） 
+78. 關於 PET 與SPECT 的比較，下列敘述何者正確？ 
+ 
+A. PET 所產生影像的解析度較 SPECT 差，但靈敏度較佳  
+B. PET 所使用的核種相對於其穩定同位素有較高的 proton / neutron 比例值 
+C. 目前臨床上使用的 SPECT 其閃爍晶體的密度遠高於 PET 常使用的晶體  
+D. 現行使用於 PET 上的核種由核反應器產生，取得不便且昂貴 
+79. 核子醫學腦部造影最適合使用何種準直儀？ 
+ 
+A. 平行式準直儀（parallel collimator ） 
+B. 發散型準直儀（diverging collimator ） 
+C. 針孔型準直儀（pinhole collimator ） 
+D. 扇形射束準直儀（fan-beam collimator ） 
+80. 下圖裝置名稱為何？ 
+  
+  
+ 
+A. survey meter 
+B.dose calibrator 
+C.pocket dosimeter 
+D. NaI （Tl ）scintillation detector 
