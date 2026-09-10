@@ -1,0 +1,418 @@
+[
+ {
+  "id": "111-1-B-032",
+  "kind": "一律給分",
+  "accepted": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "notice": "第32題，一律給分。。",
+  "original_answer": "A",
+  "answer_table_len": 80
+ },
+ {
+  "id": "111-2-F-002",
+  "kind": "一律給分",
+  "accepted": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "notice": "第2題一律給分",
+  "original_answer": "D",
+  "answer_table_len": 80
+ },
+ {
+  "id": "112-1-A-022",
+  "kind": "一律給分",
+  "accepted": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "notice": "第22題一律給分",
+  "original_answer": "C",
+  "answer_table_len": 80
+ },
+ {
+  "id": "112-2-B-046",
+  "kind": "部分給分",
+  "accepted": [
+   "B",
+   "D"
+  ],
+  "notice": "第46題答B或D者均給分",
+  "original_answer": "B",
+  "answer_table_len": 80
+ },
+ {
+  "id": "112-2-C-011",
+  "kind": "一律給分",
+  "accepted": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "notice": "第11題一律給分",
+  "original_answer": "A",
+  "answer_table_len": 80
+ },
+ {
+  "id": "112-2-D-011",
+  "kind": "一律給分",
+  "accepted": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "notice": "第11題一律給分",
+  "original_answer": "A",
+  "answer_table_len": 80
+ },
+ {
+  "id": "112-2-E-026",
+  "kind": "部分給分",
+  "accepted": [
+   "B",
+   "C"
+  ],
+  "notice": "第26題答B或C者均給分",
+  "original_answer": "B",
+  "answer_table_len": 80
+ },
+ {
+  "id": "112-2-F-045",
+  "kind": "部分給分",
+  "accepted": [
+   "B",
+   "C"
+  ],
+  "notice": "第45題答B或C者均給分",
+  "original_answer": "C",
+  "answer_table_len": 80
+ },
+ {
+  "id": "113-1-D-002",
+  "kind": "一律給分",
+  "accepted": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "notice": "第2題一律給分",
+  "original_answer": "A",
+  "answer_table_len": 80
+ },
+ {
+  "id": "113-2-B-077",
+  "kind": "一律給分",
+  "accepted": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "notice": "第77題一律給分",
+  "original_answer": "C",
+  "answer_table_len": 80
+ },
+ {
+  "id": "113-2-C-069",
+  "kind": "一律給分",
+  "accepted": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "notice": "第69題一律給分",
+  "original_answer": "D",
+  "answer_table_len": 80
+ },
+ {
+  "id": "113-2-D-016",
+  "kind": "部分給分",
+  "accepted": [
+   "A",
+   "B",
+   "C"
+  ],
+  "notice": "第16題答A或B或C或AB或AC或BC或ABC者均給分",
+  "original_answer": "A",
+  "answer_table_len": 80
+ },
+ {
+  "id": "113-2-E-040",
+  "kind": "部分給分",
+  "accepted": [
+   "A",
+   "D"
+  ],
+  "notice": "第40題答A或D或AD者均給分",
+  "original_answer": "D",
+  "answer_table_len": 80
+ },
+ {
+  "id": "114-1-D-036",
+  "kind": "部分給分",
+  "accepted": [
+   "B",
+   "C"
+  ],
+  "notice": "第36題答B或C者均給分",
+  "original_answer": "B",
+  "answer_table_len": 80
+ },
+ {
+  "id": "114-1-E-029",
+  "kind": "部分給分",
+  "accepted": [
+   "A",
+   "D"
+  ],
+  "notice": "第29題答A或D或AD者均給分",
+  "original_answer": "A",
+  "answer_table_len": 80
+ },
+ {
+  "id": "114-2-A-021",
+  "kind": "部分給分",
+  "accepted": [
+   "C",
+   "D"
+  ],
+  "notice": "第21題答C或D或CD者均給分",
+  "original_answer": "D",
+  "answer_table_len": 80
+ },
+ {
+  "id": "114-2-B-014",
+  "kind": "部分給分",
+  "accepted": [
+   "B",
+   "C"
+  ],
+  "notice": "第14題答B或C者均給分",
+  "original_answer": "C",
+  "answer_table_len": 80
+ },
+ {
+  "id": "114-2-B-020",
+  "kind": "部分給分",
+  "accepted": [
+   "A",
+   "B"
+  ],
+  "notice": "第20題答A或B者均給分",
+  "original_answer": "A",
+  "answer_table_len": 80
+ },
+ {
+  "id": "114-2-B-025",
+  "kind": "一律給分",
+  "accepted": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "notice": "第25題一律給分",
+  "original_answer": "C",
+  "answer_table_len": 80
+ },
+ {
+  "id": "114-2-C-048",
+  "kind": "部分給分",
+  "accepted": [
+   "A",
+   "D"
+  ],
+  "notice": "第48題答A或D或AD者均給分",
+  "original_answer": "A",
+  "answer_table_len": 80
+ },
+ {
+  "id": "114-2-E-043",
+  "kind": "部分給分",
+  "accepted": [
+   "A",
+   "C",
+   "D"
+  ],
+  "notice": "第43題答A或C或D或AC或AD或CD或ACD者均給分",
+  "original_answer": "D",
+  "answer_table_len": 80
+ },
+ {
+  "id": "114-2-E-057",
+  "kind": "部分給分",
+  "accepted": [
+   "A",
+   "C",
+   "D"
+  ],
+  "notice": "第57題答A或C或D或AC或AD或CD或ACD者均給分",
+  "original_answer": "A",
+  "answer_table_len": 80
+ },
+ {
+  "id": "115-1-B-022",
+  "kind": "部分給分",
+  "accepted": [
+   "B",
+   "D"
+  ],
+  "notice": "第22題答B或D或BD者均給分",
+  "original_answer": "B",
+  "answer_table_len": 80
+ },
+ {
+  "id": "115-1-B-031",
+  "kind": "一律給分",
+  "accepted": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "notice": "第31題一律給分",
+  "original_answer": "C",
+  "answer_table_len": 80
+ },
+ {
+  "id": "115-1-B-060",
+  "kind": "一律給分",
+  "accepted": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "notice": "第60題一律給分",
+  "original_answer": "B",
+  "answer_table_len": 80
+ },
+ {
+  "id": "115-1-D-048",
+  "kind": "部分給分",
+  "accepted": [
+   "A",
+   "B"
+  ],
+  "notice": "第48題答A或B或AB者均給分",
+  "original_answer": "B",
+  "answer_table_len": 80
+ },
+ {
+  "id": "115-1-F-031",
+  "kind": "部分給分",
+  "accepted": [
+   "C",
+   "D"
+  ],
+  "notice": "第31題答C或D或CD者均給分",
+  "original_answer": "C",
+  "answer_table_len": 80
+ },
+ {
+  "id": "115-1-F-052",
+  "kind": "改單一答案",
+  "accepted": [
+   "C"
+  ],
+  "notice": "第52題答C給分",
+  "original_answer": "D",
+  "answer_table_len": 80
+ },
+ {
+  "id": "115-2-A-007",
+  "kind": "一律給分",
+  "accepted": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "notice": "第7題一律給分",
+  "original_answer": "A",
+  "answer_table_len": 80
+ },
+ {
+  "id": "115-2-A-015",
+  "kind": "部分給分",
+  "accepted": [
+   "B",
+   "D"
+  ],
+  "notice": "第15題答B或D或BD者均給分",
+  "original_answer": "B",
+  "answer_table_len": 80
+ },
+ {
+  "id": "115-2-A-067",
+  "kind": "一律給分",
+  "accepted": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "notice": "第67題一律給分",
+  "original_answer": "C",
+  "answer_table_len": 80
+ },
+ {
+  "id": "115-2-C-012",
+  "kind": "一律給分",
+  "accepted": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "notice": "第12題一律給分",
+  "original_answer": "C",
+  "answer_table_len": 80
+ },
+ {
+  "id": "115-2-C-072",
+  "kind": "部分給分",
+  "accepted": [
+   "A",
+   "B",
+   "D"
+  ],
+  "notice": "第72題答A或B或D或AB或AD或BD或ABD者均給分",
+  "original_answer": "A",
+  "answer_table_len": 80
+ },
+ {
+  "id": "115-2-C-075",
+  "kind": "部分給分",
+  "accepted": [
+   "A",
+   "B"
+  ],
+  "notice": "第75題答A或B或AB者均給分",
+  "original_answer": "A",
+  "answer_table_len": 80
+ },
+ {
+  "id": "115-2-F-050",
+  "kind": "部分給分",
+  "accepted": [
+   "B",
+   "C"
+  ],
+  "notice": "第50題答B或C者均給分",
+  "original_answer": "B",
+  "answer_table_len": 80
+ }
+]
