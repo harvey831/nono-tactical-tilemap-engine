@@ -1,0 +1,8 @@
+{
+  "papers": 60,
+  "questions_extracted": 4800,
+  "invalid_sequences": [],
+  "unparsed_answer_tables": [],
+  "topic_candidates_nonempty": 4306,
+  "correction_documents": 25
+}

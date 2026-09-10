@@ -1,0 +1,653 @@
+=== PDF PAGE 1 ===
+114 年第二次專技高考醫師中醫師第一階段考試、牙醫師藥師考試分
+階段考試、醫事檢驗師、醫事放射師、物理治療師考試、114 年專技
+高考職能治療師、呼吸治療師、獸醫師、助產師考試 
+代  號：3309 
+類科名稱：醫事放射師 
+科目名稱：放射線器材學（包括磁振學與超音波學） 
+考試時間：1 小時  座號： ___________
+※注意：本試題可以使用電子計算器 
+※本試題為單一選擇題，請選出一個正確或最適當答案。 
+ 
+1.X 光管中用於集中電子射束之聚焦杯（focusing cup）之電性為何？ 
+ 
+A.直流負電壓 
+B.直流正電壓 
+C.中性 
+D.交流電 
+ 
+2.X 光機使用之整流器設計中，下列何者具有最好的 X 光產生效率？ 
+ 
+A.三相六波整流 
+B.半波整流 
+C.全波整流 
+D.高頻整流 
+ 
+3.下列何者為最常用於電腦放射攝影（computed radiography, CR）片匣中之增感屏磷光體材料？ 
+ 
+A.氟溴化鋇：銪（BaFBr:Eu） 
+B.溴化銀（AgBr） 
+C.鎢酸鈣（CaWO4） 
+D.釓（gadolinium） 
+ 
+4.使用楔形濾器（wedge filter）進行足部X 光照射時，下列何者正確？ 
+ 
+A.足跟部分比較厚可置放於楔形濾器薄的部分之下 
+B.楔形濾器薄的部分吸收較多的光子可用於腳尖部位 
+C.足跟部分比較厚可置放於楔形濾器厚的部分之下 
+D.楔形濾器厚的部分吸收較少的光子可用於腳尖部位 
+ 
+5.乳房攝影合適的 source-to-image receptor distance（SID）距離是多少？ 
+ A.50～80 cm 
+B.100～120 cm 
+
+=== PDF PAGE 2 ===
+C.180～200 cm 
+D.10～20 cm 
+ 
+6.比較不同時間的影像變化，以兩個相連時段的影像相減，所得影像是對比劑在體內隨時間的變化，此種技術為
+DSA 血管影像中之何種模式？ 
+ 
+A.time-interval difference（TID）mode 
+B.k-edge subtraction mode 
+C.energy subtraction mode 
+D.mask subtraction mode 
+ 
+7.下列何者最不常用於 X 光血管攝影？ 
+ 
+A.gadolinium 
+B.guidewires 
+C.balloon 
+D.stent 
+ 
+8.在乳房攝影上，下列何種靶材／濾片不建議使用？ 
+ 
+A.Mo / Mo 
+B.Rh / Mo 
+C.W / Ag 
+D.Rh / Rh 
+ 
+9.關於乳房攝影的輻射劑量，下列敘述何者錯誤？ 
+ 
+A.DgN為轉換因子，可將平均乳腺曝露轉換成表面皮膚劑量 
+B.DgN與輻射品質（kVp、HVL）、乳房厚度有關係 
+C.在相同乳腺密度下，維持一樣底片光密度（optical density）結果時，當 kVp 設定越高其輻射劑量越低 
+D.使用柵板（grid）會使得輻射劑量增加 
+ 
+10.目前臨床上 CT 常用管電流自動調控方法以降低病患輻射劑量，如圖為某一病患掃描情況，其中橫軸為 z 軸
+（頭到腳的方向）相對距離，縱軸為有效mAs 輸出，此結果是利用那一種管電流自動調控方法？ 
+
+=== PDF PAGE 3 ===
+  
+ 
+A.axis tube current modulation 
+B.angular tube current modulation 
+C.longitudinal tube current modulation 
+D.angular-longitudinal tube current modulation 
+ 
+11.如圖是利用下列何者 3D 影像重建技術？ 
+ 
+ 
+A.multi-planar reformation（MPR） 
+B.maximum intensity projection（MIP） 
+C.shaded surface display（SSD） 
+D.volume rendering（VR） 
+ 
+
+
+=== PDF PAGE 4 ===
+12.使用 multiple-slice helical CT 的 helical mode 掃描一位病人，設定 beam width 10 mm，掃描時間 20
+秒，掃描速度每秒一圈，pitch 是 2.0：1。此病人大約有多少身體組織的長度被掃描到？ 
+ 
+A.100 mm 
+B.200 mm 
+C.400 mm 
+D.800 mm 
+ 
+13.假設下列選項是一個圈選 3×3 畫素 ROI 的水假體 CT 影像，下列何者之影像雜訊最大？ 
+ 
+A.
+ 
+B.
+ 
+C.
+ 
+D.
+  
+14.關於量測 computed tomography dose index（CTDI）進行品保的敘述，下列何者最不適當？ 
+ 
+A.需要利用假體計算輻射劑量的物理量 
+B.可以直接計算病人輻射劑量的物理量 
+C.需要量測假體的中心位置 
+D.需要量測假體的周圍位置 
+ 
+15.有關螺旋電腦斷層掃描（helical CT），下列敘述何者最不適當？ 
+ 
+A.z-direction（axial-direction）的影像解析度有效提升 
+B.影像品質不受病人身體移動影響 
+C.病人影像資料量變多 
+D.可以快速完成病人掃描 
+ 
+16.下列何者不是診斷用 X 光機以準直儀（collimator）限制照野的優點？ 
+ A.減少病人劑量 
+B.減少射束硬化 
+
+
+=== PDF PAGE 5 ===
+C.減少散射輻射 
+D.增加影像對比度 
+ 
+17.如圖所示為診斷用 X 光機的成像配置，其中目標物 a、b 與 c 具相同尺寸，下列敘述何者正確？ 
+ 
+ 
+A.目標物 a 在影像接收器上有最大成像 
+B.目標物 b 在影像接收器上有最大成像 
+C.目標物 c 在影像接收器上有最大成像 
+D.目標物 a、b 與 c 在影像接收器上有相同成像 
+ 
+18.常規診斷用 X 光機的雙能量影像（dual-energy imaging），是將兩組不同 kVp 的掃描處理成兩張具不同物理
+特性的影像，並藉由調整影像合併權重以生成特定組織的高對比度影像，權重合併前的兩張影像各主要代表
+何種物理特性？ 
+ 
+A.photoelectric effect 與 Compton effect 
+B.primary radiation 與 scattered radiation 
+C.photon transmission 與 photon attenuation 
+D.collision interaction 與 radiative interaction 
+ 
+19.關於電腦放射攝影（CR）系統，用來激發光激發磷光體（PSP）之雷射光，下列敘述何者正確？ 
+
+
+=== PDF PAGE 6 ===
+ 
+A.為單能光 
+B.為多能光譜 
+C.波長較發射光短 
+D.強度較發射光弱 
+ 
+20.下列何種組合屬於直接式數位放射攝影（DR）系統？ 
+ 
+A.NaI–光電二極體 
+B.CsI–光電二極體 
+C.CsI–CCD 
+D.a-Se–薄膜電晶體 
+ 
+21.數位影像可透過影像壓縮以減少資料儲存的容量，常規有損失壓縮（lossy compression）是指高於何種比例
+的壓縮程度？ 
+ 
+A.1：1 
+B.3：1 
+C.5：1 
+D.10：1 
+ 
+22.關於電腦放射攝影（CR）系統讀取影像板（imaging plate）的敘述，下列何者正確？ 
+ 
+A.使用強磁場對影像板進行消磁作用，以清除影像板之訊號使其重複使用 
+B.利用強光照射，使影像板之電子由激發態回到穩態以釋放可見光子 
+C.當 motor drive 功能異常時，會產生帶狀假影（banding artifact） 
+D.影像板內之潛像（latent image）是由 X光瞬間產生之可見光構成 
+ 
+23.下列那一種影像接收器所得到的空間解析度最佳？ 
+ 
+A.CsI + CCD 
+B.CsI + a-Si + TFT 
+C.image-intensifier tube + TV camera + ADC 
+D.amorphous selenium + TFT 
+ 
+24.乳房攝影系統中，若靶材與過濾器使用相同元素，其目的不包括下列何者？ 
+ 
+A.留下 K 層特性 X 光 
+B.抑制高能量制動 X 光 
+C.抑制低能量制動 X 光 
+D.減少散射 
+ 
+
+=== PDF PAGE 7 ===
+25.關於超音波彩色都卜勒影像的敘述，下列何者最不適當？ 
+ 
+A.自相關（autocorrelation）是計算都卜勒頻率偏移的常用數學分析方法 
+B.彩色都卜勒影像可以用來辨別血流方向 
+C.彩色都卜勒影像會受到都卜勒角度影響 
+D.相同掃描條件下，彩色都卜勒影像的顯像率（frame rate）較 B 模式灰階影像高 
+ 
+26.超音波功率都卜勒影像的亮度，主要是依據下列那種資訊量來決定？ 
+ 
+A.都卜勒頻率偏移 
+B.都卜勒訊號之頻譜能量 
+C.都卜勒訊號之訊雜比 
+D.超音波接收訊號之強度 
+ 
+27.根據美國食品衛生藥物管理局（FDA）規範，診斷用超音波影像的強度上限（空間峰值時間平均，簡稱
+SPTA）是多少 mW/cm2？ 
+ 
+A.120 
+B.320 
+C.520 
+D.720 
+ 
+28.關於超音波影像的機械指標（mechanical index），下列敘述何者錯誤？ 
+ 
+A.機械指標與超音波入射波聲壓成正比 
+B.機械指標與超音波頻率的 0.5 次方成正比 
+C.機械指標越大，表示非熱效應風險越高 
+D.機械指標與聲輻射力（acoustic radiation force）有關 
+ 
+29.超音波入射至組織中會產生熱效應，下列何者與組織溫度變化無關？ 
+ 
+A.組織特性 
+B.超音波頻率 
+C.脈衝重複頻率 
+D.訊號放大器 
+ 
+30.2 MHz 的連續波超音波在一秒內有多少循環（cycles）？ 
+ 
+A.200 
+B.2,000 
+C.200,000 
+
+=== PDF PAGE 8 ===
+D.2,000,000 
+ 
+31.超音波換能器操作的原理為何？ 
+ 
+A.光電效應 
+B.都卜勒效應 
+C.康普吞效應 
+D.壓電效應 
+ 
+32.在固定壓差下，若血管血流流動阻力加倍，體積流動率（volumetric flow rate）會有何變化？ 
+ 
+A.減半 
+B.加倍 
+C.不變 
+D.變為 1/4 
+ 
+33.擴散加權（diffusion weighted）磁振造影的參數 b 值，其大小和下列何者最相關？ 
+ 
+A.射頻線圈（RF coil）的大小  
+B.重複時間（repetition time）的長短 
+C.含氧血紅素（oxyhemoglobin）的濃度 
+D.磁旋比（gyromagnetic ratio）的大小 
+ 
+34.下列那一個方法可以降低磁振造影所產生的熱效應？ 
+ 
+A.將 turbo spin echo sequence 改成 gradient echo sequence  
+B.搭配使用 spatial saturation pulse 
+C.增加照野面積（field of view）以增加散熱面積 
+D.減少液態氮的濃度 
+ 
+35.在磁振造影儀器中，下列何者之功能與磁梯度線圈無關？ 
+ 
+A.切面選擇 
+B.偏折角度 
+C.相位編碼 
+D.頻率編碼 
+ 
+36.在磁振造影中所使用體線圈（body coil），下列敘述何者錯誤？ 
+ 
+A.可用來發射射頻，也可用來接收射頻 
+B.可產生較均勻的射頻磁場 
+C.與相同大小的表面線圈相比，體線圈一般可以得到較均勻的訊號 
+
+=== PDF PAGE 9 ===
+D.與相同大小的表面線圈相比，體線圈一般可以得到較高的訊雜比 
+ 
+37.為了讓表面線圈得到最好的訊雜比，其線圈軸向最好與主磁場成多少角度？ 
+ 
+A.0° 
+B.45° 
+C.90° 
+D.180° 
+ 
+38.關於磁振造影中切面的厚度，若固定其它參數，下列敘述何者正確？ 
+ 
+A.梯度磁場越小，切面則越薄 
+B.射頻頻寬越大，切面則越薄 
+C.射頻頻寬越小，切面則越薄 
+D.切面厚度與射頻頻寬無關 
+ 
+39.對於身體有金屬植入物如心臟節律器或電子器件之病患，其磁場安全的範圍是： 
+ 
+A.小於 5 高斯線區域 
+B.小於 10 高斯線區域 
+C.小於 20 高斯線區域 
+D.小於 50 高斯線區域 
+ 
+40.在 1.5T 磁場下針對體內氫原子進行共振，若射頻線圈內含有電感為 4 × 10-8 亨利（Henry），則線圈內要加
+入約多少法拉（Farad）的電容？ 
+ 
+A.6.34 × 10-6 
+B.2.64 × 10-8 
+C.1.55 × 10-10 
+D.1.22 × 10-12 
+ 
+41.關於 MRI 超導線圈的敘述，下列何者錯誤？ 
+ 
+A.當超導線圈的冷凝劑含量過低時，可能會產生淬熄（quench）現象 
+B.淬熄（quench）造成冷凝劑滲漏於掃描室內，因氣體較冷會集中靠近地板處 
+C.臨床常使用的超導線圈，材質屬於低溫超導體 
+D.淬熄（quench）後超導線圈無法立刻再重新使用 
+ 
+42.關於 Maxwell gradient-coil pair 的敘述，下列何者最不適當？ 
+ A.該線圈常用於產生 Z 軸方向的梯度磁場 
+B.在 MRI 中兩個線圈的中心連線，會垂直於Y 軸 
+
+=== PDF PAGE 10 ===
+C.MRI 掃描時可使用該線圈來產生相位編碼磁場 
+D.該線圈產生的磁場方向與 Golay coil 產生的方向垂直 
+ 
+43.在 MRI 影像中的化學位移假影，可透過下列那種方式改善？ 
+ 
+A.增加射頻激發強度 
+B.降低梯度磁場爬升速度（slew rate） 
+C.降低射頻激發頻寬 
+D.降低主磁場強度 
+ 
+44.下列為梯度磁場隨時間的變化圖（由左至右），何者在梯度磁場結束後（箭號處），產生的渦電流強度最
+小？ 
+ 
+A.
+ 
+B.
+ 
+C.
+ 
+D.
+  
+
+
+=== PDF PAGE 11 ===
+45.單一個表面線圈與 8 個此表面線圈所組成的相位陣列（phased array）線圈相較，在最佳情況之下，下列敘
+述何者最不適當？ 
+ 
+A.相位陣列線圈產生的 SNR 約為單一表面線圈的 倍 
+B.相位陣列線圈產生的 SAR 約為單一表面線圈的 8 倍 
+C.相位陣列線圈的照野（FOV）約為單一表面線圈的 8 倍 
+D.相位陣列線圈與單一表面線圈在臨床造影應用上皆設計為接收線圈 
+ 
+46.在磁振造影中，下列何者為射頻屏蔽（RF shielding）所使用的主要材料？ 
+ 
+A.鉛 
+B.銅 
+C.水泥 
+D.硼 
+ 
+47.在磁振造影系統中，下列何者無法經由電腦控制台設定或更改？ 
+ 
+A.主磁場（main magnetic field） 
+B.梯度放大器（gradient amplifiers） 
+C.射頻傳輸系統（RF transmitters） 
+D.造影參數（acquisition parameters） 
+ 
+48.使用游離腔量測游離輻射時，下列敘述何者錯誤？ 
+ 
+A.無論是密封式（sealed）或開放式（open）游離腔，腔體內的空氣均會受外界的溫度及壓力影響，因此皆需
+做溫壓的修正 
+B.為修正離子再結合而造成的訊號損失，可使用全電壓及半電壓分別量測後，再查表得知修正因子 
+C.為修正游離腔的極性效應（polarity effect），應分別使用正電壓及負電壓量測，再將讀值分別取絕對值
+後相加除二 
+D.游離腔使用前應送國家實驗室進行校正 
+ 
+49.若一游離輻射在空氣中可產生 10 個離子對，則同樣的游離輻射在半導體劑量計內約可產生多少電子－電洞
+對？ 
+ 
+A.1 
+B.10 
+C.100 
+D.1000 
+ 
+50.如圖所示為 235 MeV 質子射束的 SOBP 百分深度劑量圖，圖中關於射程甲、乙、丙、丁的描述，下列何者正
+確？ 
+
+
+=== PDF PAGE 12 ===
+ 
+ 
+A.甲：residual range（Rres），乙：practical range（Rp），丙：distal R90 
+B.乙：practical range（Rp），丙：distal R90，丁：residual range（Rres） 
+C.甲：residual range（Rres），乙：distal R90；丙：practical range（Rp） 
+D.乙：residual range（Rres），丙：distal R90，丁：practical range（Rp） 
+ 
+51.對大多數的物質而言，在下列那一種光與物質的交互作用下，其質量衰減係數會非常相似？ 
+ 
+A.光電效應 
+B.康普吞效應 
+C.成對發生 
+D.光核蛻變 
+ 
+52.如果以 SSD 的技術執行放射治療，下列何者會影響幾何半影？①射源大小 ②治療深度 ③照野大小 ④射
+源至表面的距離 
+ 
+A.僅①④ 
+B.僅②③ 
+C.僅①②④ 
+D.①②③④ 
+ 
+53.關於模擬攝影機的敘述，下列何者錯誤？ 
+ 
+A.模擬攝影機的檢查床與治療室的檢查床相似 
+B.可由模擬攝影機取得設計病人所要使用的補償器（compensator）或填充物（bolus）的相關量測資料 
+C.模擬攝影機控制室不可能執行放射治療計畫 
+D.模擬攝影機必須有定位雷射的搭配 
+ 
+54.關於攝護腺插種治療，在手術完成後，下列敘述何者錯誤？ 
+
+
+=== PDF PAGE 13 ===
+ 
+A.放射性種子有可能掉落在膀胱或尿道內 
+B.放射性種子有可能遺落在垃圾桶內，因此手術室垃圾桶也須以偵檢器檢查 
+C.病患回家後，體內放射性種子不可能再排出體外 
+D.允許病患離開醫院前，需考慮病患終生可能對其他個體造成的總劑量 
+ 
+55.子宮頸癌病人接受 HDR 治療，連管放置好之後拍攝的 X 光片如圖所示，如果醫師裝置與固定的非常恰當，病
+人也沒亂動，則圖中箭號所指示之白色盤狀物對應到的生理組織為： 
+ 
+ 
+A.陰道側穹窿（lateral vaginal fornix） 
+B.外子宮頸口（external cervical os） 
+C.內子宮頸口（internal cervical os） 
+D.子宮體（uterus corpus） 
+ 
+56.下列那些為醫用直線加速器治療機頭的組件？①監測游離腔 ②散射薄片 ③電子槍 ④高密度的屏蔽物質 
+ 
+A.①②③ 
+B.①②④ 
+C.僅②③ 
+D.僅①④ 
+ 
+57.60Co 適用於體外放射治療，其在選擇上優於鐳及銫的原因，包含下列那些？①較高的比活度 ②每居禮中有
+較大的輻射輸出 ③較高的平均光子能量 ④較高的Γ值 
+ 
+A.①②③④ 
+B.僅①③④ 
+C.僅②③④ 
+D.僅①② 
+ 
+58.依據輻射醫療曝露品質保證標準，醫用直線加速器光子射束中心軸於治療深度之劑量參數，每月量測值與基
+準值差異容許值為多少百分比以下？ 
+ A.1％ 
+B.2％ 
+
+
+=== PDF PAGE 14 ===
+C.3％ 
+D.5％ 
+ 
+59.關於Ｘ光模擬定位儀的敘述，下列何者錯誤？ 
+ 
+A.Ｘ光模擬定位儀的檢查床與治療室的檢查床相似 
+B.可測得身體的厚度 
+C.可測得身體的電子密度 
+D.可得相對應填充物的設計 
+ 
+60.依據輻射醫療曝露品質保證標準，電腦斷層模擬定位掃描儀，每日校驗項目水假體影像 CT 值準確度及假影評
+估中，其水的 CT 值應介於多少 HU 之間？ 
+ 
+A.-3～3 
+B.-5～5 
+C.-7～7 
+D.-10～10 
+ 
+61.電腦斷層模擬定位掃描儀，每日校驗的檢查，包含下列那些？①目視定位（機架）雷射燈功能正常 ②目視
+所有指示燈及操作電腦功能正常 ③測試指示病人的揚聲器功能正常 ④測試安全連鎖裝置功能正常 
+ 
+A.①②③④ 
+B.僅①②③ 
+C.僅②④ 
+D.僅①③④ 
+ 
+62.依據輻射醫療曝露品質保證標準，電腦斷層模擬定位掃描儀，每月校驗項目之水假體影像均勻度及雜訊評
+估，雜訊值與其基準值差異容許值為多少百分比以下？ 
+ 
+A.3％ 
+B.5％ 
+C.10％ 
+D.20％ 
+ 
+63.依據輻射醫療曝露品質保證標準，X 光模擬定位儀，每年校驗項目之旋轉臂機械旋轉中心及治療床機械旋轉
+中心，其誤差容許值分別為何？ 
+ 
+A.直徑 2 mm 圓形範圍以下，直徑 3 mm 圓形範圍以下 
+B.直徑 3 mm 圓形範圍以下，直徑 2 mm 圓形範圍以下 
+C.直徑 2 mm 扇形範圍以下，直徑 2 mm 圓形範圍以下 
+D.直徑 3 mm 圓形範圍以下，直徑 3 mm 扇形範圍以下 
+ 
+
+=== PDF PAGE 15 ===
+64.有關直線加速器的接收測試，包含下列那些項目？①輻射防護偵測 ②準直儀對稱性 ③輻射等中心點 ④
+臨床劑量校驗 
+ 
+A.①②③④ 
+B.僅①②④ 
+C.僅①②③ 
+D.僅③④ 
+ 
+65.在核醫造影時，為了減少散射（scatter）而將能窗變窄，則計數率與取像所需時間有何改變？ 
+ 
+A.計數率下降，取像所需時間增加 
+B.計數率下降，取像所需時間縮短 
+C.計數率上升，取像所需時間增加 
+D.沒有影響 
+ 
+66.常規核醫造影使用波高分析器（pulse height analyzer），可增加下列那項特性？ 
+ 
+A.偵測效率（detector efficiency） 
+B.接收散射光子數目（scattered photons） 
+C.對比雜訊比（contrast-to-noise ratio） 
+D.計數率（count rate） 
+ 
+67.下列何種造影條件，其取像矩陣之像素何者最小？ 
+ 
+A.FOV 50 cm，128×128 
+B.FOV 25 cm，128×128 
+C.FOV 30 cm，256×256 
+D.FOV 40 cm，256×256 
+ 
+68.關於碲鋅鎘偵檢器（CZT detector）心臟掃描專用 SPECT 與傳統 NaI (Tl) SPECT 的比較，下列何者錯誤？ 
+ 
+A.前者在造影時，不用旋轉 gantry 
+B.前者的造價較高（若尺寸相同） 
+C.前者的造影時間較短 
+D.前者的能量解析度較差 
+ 
+69.關於 MLEM 和 OSEM 的敘述，下列何者最不適當？ 
+ 
+A.兩者皆可以合併物理參數（衰減、均勻度等）進行疊代修正 
+B.兩者皆利用統計中將相似度的期望值最大化的方法疊代求解 
+C.在達成相同的影像品質條件下，OSEM 所需之計算時間會短於 MLEM 
+
+=== PDF PAGE 16 ===
+D.若沒有時間限制，疊代越多次，影像品質越好 
+ 
+70.進行頭部99mTc-TRODAT-1 SPECT 掃描時，下列敘述何者錯誤？ 
+ 
+A.通常需旋轉 360°，取樣角度為 3°～ 6° 
+B.利用 fan beam collimator 時，常使用 non-circular orbit 得到較佳之解析度 
+C.可以由預覽 linogram 知道患者在長時間的掃描下，是否有移動 
+D.要以 SPECT/CT 掃描進行衰減校正時，常使用 low energy high resolution collimator 
+ 
+71.當掃描條件改變時（沒說明的參數維持不變），對於 SPECT 影像訊雜比（SNR）的影響，下列敘述何者正確？ 
+ 
+A.每個角度的掃描時間由 20 秒改成 30 秒，SNR 會上升 
+B.將能窗由±10%改成±20%，SNR 會上升 
+C.將截止頻率（cycle/pixel）由 0.5 改成 0.3 時，SNR 會下降 
+D.將 matrix size 由 128×128 改成 256×256，SNR 會上升 
+ 
+72.以 SPECT/CT 進行骨骼斷層掃描，融合的影像如圖所示，其假影最可能的成因為何？ 
+ 
+ 
+A.misregistration（misalignment）  
+B.metal artifact 
+C.uniformity artifact 
+D.truncated artifact 
+ 
+73.正子核種中，下列何者的正子射程（positron range）最短？ 
+ 
+A.18F 
+B.82Rb 
+C.13N 
+D.68Ga 
+ 
+
+
+=== PDF PAGE 17 ===
+74.當互毀輻射光子發生在外圍周邊晶體位置時，光子與偵檢器作用會穿透不同晶體，故使靠周邊的解析度變
+差，此為下列何種效應？ 
+ 
+A.scatter coincident event 
+B.parallax error 
+C.pile-up effect 
+D.crystal error 
+ 
+75.假設早上 8 點合成 10 mL 的18F-FDG 500 mCi，若下午一點半需要 10 mCi的 FDG，則當時需要抽多少 mL？
+（18F 半衰期 110 分鐘） 
+ 
+A.0.5 
+B.0.63 
+C.1.6 
+D.6.25 
+ 
+76.下圖為 system sensitivity，spatial resolution 與 source to collimator distance 的關係圖，藍色表示
+pinhole collimator，綠色表示 converging collimator，紫色表示 high resolution parallel hole 
+collimator，紅色表示 general purpose parallel hole collimator。若射源距離 collimator 5 cm 處，其
+spatial resolution 的比較，下列何者最差？ 
+ 
+A.pinhole collimator 
+B.converging collimator 
+C.high resolution parallel hole collimator 
+D.general purpose parallel hole collimator 
+ 
+77.承上題，若射源距離 collimator 5 cm，其 sensitivity 的比較，下列何者最高？ 
+
+
+=== PDF PAGE 18 ===
+ 
+A.pinhole collimator 
+B.converging collimator 
+C.high resolution parallel hole collimator 
+D.general purpose parallel hole collimator 
+ 
+78.在核醫影像中，若使用照野（UFOV）為 55 cm×41 cm，則其中心照野（CFOV）約為多少 cm2？ 
+ 
+A.52×39 
+B.41×31 
+C.73×55 
+D.45×36 
+ 
+79.相較於標準條件（全功能準直儀），改變SPECT 掃描參數時，會得到相對的利益和缺點，下列敘述何者最不
+適當？ 
+ 
+A.使用高解析度準直儀，解析度提升，靈敏度下降 
+B.使用扇型準直儀，靈敏度提升，照野變小 
+C.每角度造影更長的時間，訊雜比（SNR）提升，患者移動可能性增加 
+D.使用較小的影像矩陣，靈敏度提升，解析度變差 
+ 
+80.正子電腦斷層掃描中，由非同一個互毀事件所產生的光子，但同時被兩個偵測器偵測到的事件指的是下列何
+者？ 
+ 
+A.random event 
+B.scatter event 
+C.true event 
+D.prompts event 
+ 
+ 

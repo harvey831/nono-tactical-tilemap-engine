@@ -1,0 +1,543 @@
+=== PDF PAGE 1 ===
+113年第二次專技高考醫師中醫師考試第一階段考試、牙醫師藥師考
+試分階段考試、醫事檢驗師、醫事放射師、物理治療師考試、113年
+專技高考職能治療師、呼吸治療師、獸醫師、助產師考試
+代　　號：6309
+類科名稱：醫事放射師
+科目名稱：核子醫學診療原理與技術學
+考試時間：1小時 座號：___________
+  ※注意：本試題可以使用電子計算器   　　　　　　　  
+※本試題為單一選擇題，請選出一個正確或最適當答案。
+ 
+1.下列有關201Tl-thallous chloride的敘述，何者正確？
+ 
+A.201Tl為加速器製造核種，半衰期68小時
+B.在體內行為類似鈉離子
+C.可用於心肌灌注、甲狀腺腫瘤、腦瘤造影檢查
+D.在心肌中不會再分布
+2.有關99mTc-DISIDA的敘述，下列何者正確？
+ 
+A.會在肝臟被代謝
+B.為電中性分子
+C.大部分經由尿液排出體外
+D.適用於腎臟功能造影檢查
+3.下列那一核種已用於標幟單株抗體作為治療藥物？
+ 
+A.111In
+B.32P
+C.90Y
+D.223Ra
+4.以迴旋加速器生產68Ge之核反應，下列何者錯誤？
+ 
+A.66Zn（α, 2n）68Ge
+B.68Ga（p, n）68Ge
+C.69Ga（p, 2n） 68Ge
+D.71Ga（p, 4n）68Ge
+5.有關迴旋加速器所產生之核種，下列何者衰變模式非100% β+ decay？
+ 
+
+=== PDF PAGE 2 ===
+A.11C
+B.13N
+C.15O
+D.18F
+6.下列何者可用來評估前列腺癌之復發？
+ 
+A.18F-florbetapir
+B.18F-flutemetamol
+C.18F-florbetaben
+D.18F-fluciclovine
+7.有關放射性DOTATATE藥物，下列敘述何者錯誤？
+ 
+A.68Ga-DOTATATE 其TATE為Tyr3-octreotate
+B.TATE為somatostatin之類似物
+C.將68Ga-DOTATATE換為177Lu-DOTATATE，可治療神經內分泌瘤
+D.177Lu可用作治療核種，是因可放出α粒子
+8.下列何者非核醫臨床使用於心肌造影之藥物？
+ 
+A.18F-FDG
+B.99mTc-sestamibi
+C.13N-NH3
+D.99mTc-phytate
+9.關於放射性188W的敘述，下列何者錯誤？
+ 
+A.188W半衰期為69.8天
+B.於原子爐進行[186W（n,γ）187W, 187W（n, γ）188W]獲得
+C.為188Re孳生器之母核種
+D.188W-188Re孳生器中，母核與子核活性關係為暫態平衡
+10.有關90Y-Zevalin的敘述，下列何者錯誤？
+ A.為美國FDA 第一個核准通過的放射性標幟之抗體診斷藥物
+B.是一種融合（chimeric）抗CD20單株抗體標幟之放射性藥物
+
+=== PDF PAGE 3 ===
+C.90Y的半衰期為64小時
+D.可用於復發的非何杰金氏淋巴瘤
+11.下圖結構為何種配位基縮寫？
+ 
+A.EDTA
+B.DTPA
+C.DTTA
+D.EDPA
+12.下列心肌造影核醫藥物，何者作用機制相同？ ①201Tl-TlCl　②82Rb-RbCl　③123I-MIBG　④99mTc-
+sestamibi
+ 
+A.①②
+B.②③
+C.③④
+D.①④
+13.有關造影製劑與其臨床應用的對應關係，下列何者錯誤？
+ 
+A.11C-PIB：類澱粉蛋白沉積
+B.18F-FMISO：腫瘤缺氧
+C.18F-FLT：腫瘤增生
+D.11C-choline：胺基酸代謝
+14.111In衰變的方式為：
+ 
+A.electron capture
+B.alpha emission
+C.beta emission
+D.positron emission
+15.生產13N-ammonia，使用下列何種靶原料？
+ A.16O氧氣
+
+=== PDF PAGE 4 ===
+B.18O氧氣
+C.16O水含微量乙醇
+D.18O水含微量乙醇
+16.下列何者與放射藥物的輻射解離（radiolysis）無關？
+ 
+A.溶液pH值
+B.物理半衰期
+C.衰變釋出能量型式
+D.容器屏蔽
+17.評估心臟疾病程度的公式，下列何者錯誤？
+ 
+A.CFR（coronary flow reserve）= peak hyperemia myocardial blood flow / rest myocardial blood
+flow
+B.EF（ejection fraction）= end systolic count / end diastolic count
+C.FFR（fractional flow reserve）= distal coronary pressure / proximal coronary pressure
+D.HMR（heart mediastinum ratio）= heart mean count / mediastinal mean count
+18.心肌灌注造影出現左心室前壁及中膈大片可逆性缺損時，下列何種狀況最為可能？
+ 
+A.左前降支冠狀動脈有嚴重狹窄，造成嚴重心肌缺血
+B.右冠狀動脈有輕微狹窄，造成輕微心肌缺血
+C.左迴旋支冠狀動脈有嚴重狹窄，造成嚴重心肌缺血
+D.女性乳房造成之衰減假影，可不予理會
+19.有關99mTc-ECD的敘述，下列何者正確？①可通過正常血腦障壁　②為脂溶性藥物　③必須在配製完成後30分
+鐘內注射至受檢者體內　④受檢者接受到最大輻射劑量的器官（critical organ）是膀胱
+ 
+A.①②③
+B.①②④
+C.②③④
+D.①③④
+20.有關核醫腦神經藥物的敘述，下列何者錯誤？
+ A.99mTc-TRODAT-1在腦內行特異性結合的部位為節前（pre-synaptic）神經元的多巴胺轉運體（dopamine
+transporter）
+B.123I-IBZM在腦內行特異性結合的部位為節後（post-synaptic）神經元的多巴胺受體（dopamine
+receptor）
+
+=== PDF PAGE 5 ===
+C.18F-DOPA在腦內行特異性結合的部位為血清素轉運體（serotonin transporter）
+D.18F-norepinephrine在腦內行特異性結合的部位為囊泡單胺轉運體（vesicular monoamine transporter）
+21.有關癲癇病灶腦血流灌注或葡萄糖代謝影像之敘述，下列何者錯誤？
+ 
+A.在沒有發作時（發作間期，interictal）為正常或下降
+B.在癲癇發作期（ictal）為熱區
+C.在癲癇發作後及時（immediate postictal）可為上升熱區或下降的冷區
+D.一般而言，癲癇發作期的影像用PET較SPECT容易得到
+22.亨廷頓舞蹈症（Huntington's disease）是因基底核的GABA（gamma-aminobutyric acid, g-胺基丁酸）神
+經傳導素缺乏，致使神經細胞退化而產生的腦部退化疾病，其腦血流灌注影像會呈現下列何種現象？
+ 
+A.大腦灰質灌流下降
+B.小腦灌流下降
+C.基底核、尾核灌流下降
+D.大腦白質灌流下降
+23.腦血流灌注造影較不適用於下列何種疾病之評估？
+ 
+A.暫時性腦部缺氧
+B.白質退化症
+C.前顳葉失智症
+D.癲癇病灶定位
+24.在心臟灌流造影運動壓力相時，下列心臟生理變化之敘述何者錯誤？
+ 
+A.運動增加心臟負荷
+B.運動增加心臟氧氣需求
+C.運動時正常冠狀動脈血流不變，狹窄冠狀動脈血流減少
+D.運動誘發缺氧
+25.壓力相心臟灌流造影經判讀為暫時缺氧性擴張（transient ischemic dilatation），係指下列何種狀況？
+ 
+A.冠狀動脈擴張
+B.氣管擴張
+C.左心室擴張
+D.右心室擴張
+26.完成心肌灌注造影的影像重建工作後，後續應將斷層影像重新旋轉（re-orientation）成下列那三種標準的
+心臟方位？①transaxial axis　②vertical long axis　③short axis　④horizontal long axis　
+⑤coronal axis
+
+=== PDF PAGE 6 ===
+ A.①②④
+B.②③④
+C.①③⑤
+D.③④⑤
+27.常規心肌灌注造影的放射藥物中，下列何者對病人造成的輻射劑量最大？
+ 
+A.99mTc-sestamibi
+B.201Tl-TlCl
+C.13N-ammonia
+D.82Rb-RbCl
+28.下列何種正子製劑可用於偵測腫瘤缺氧（hypoxia）造影？
+ 
+A.18F-fluoromisonidazole（FMISO）
+B.18F-fluoroethyl-L-tyrosine（FET）
+C.18F-fluorodeoxyglucose（FDG）
+D.18F-fluorocholine（FCH）
+29.有關111In-octreotide偵測神經內分泌腫瘤之敘述，下列何者錯誤？
+ 
+A.神經內分泌腫瘤常發生於肺部、腸胃道及胰臟
+B.octreotide為體抑素（somatostatin）之類似物
+C.此體抑素受體（somatostatin receptor）全身掃描可偵測腫瘤位置與對藥物吸收情形
+D.111In-octreotide與腫瘤細胞體抑素受體結合後會產生解離作用（111In與octreotide 脫離而排出細胞外）
+30.乳癌病人在注射99mTc-MDP後約8小時進行骨頭掃描發現超級影像（superscan），下列何者是最不可能的診
+斷？
+ 
+A.瀰漫性骨轉移
+B.腎性骨失養症（renal osteodystrophy）
+C.副甲狀腺機能低下症（hypoparathyroidism）
+D.延遲造影的正常變異
+31.關於111In-pentetreotide掃描之敘述，下列何者錯誤？
+ A.建議病人檢查前後多喝水
+B.建議製劑注射劑量20～25 mCi
+C.建議製劑注射4小時及24小時後攝影
+
+=== PDF PAGE 7 ===
+D.建議掃描時使用中能量準直儀
+32.下列何種核醫製劑最不適合用來偵測神經內分泌瘤（neuroendocrine tumor）？
+ 
+A.18F-FDOPA
+B.68Ga-DOTATOC
+C.131I-MIBG
+D.111In-Zevalin
+33.下列何者是針對前列腺腫瘤的造影製劑？
+ 
+A.68Ga-DOTATATE
+B.68Ga-DOTATOC
+C.18F-PSMA
+D.90Y-cT84.66
+34.有關18F-FDG正子腫瘤造影前的準備，下列何者錯誤？
+ 
+A.避免劇烈運動
+B.禁食4～6小時
+C.糖尿病患者當天可正常服用糖尿病用藥
+D.糖尿病患者在正子造影前2小時內可施打胰島素
+35.PET/CT的無顯影劑CT不適用於下列何者？
+ 
+A.正子病灶的解剖定位
+B.正子影像衰減校正
+C.輔助偵測無或低正子藥物代謝之病灶
+D.觀察病灶血流
+36.下列何者非骨骼造影製劑？
+ 
+A.99mTc-MDP
+B.99mTc-HMDP
+C.18F-sodium fluoride
+D.18F-choline
+37.有關18F-FDG的敘述，下列何者錯誤？
+ A.腦部攝取明顯
+
+=== PDF PAGE 8 ===
+B.18F-FDG是葡萄糖的類似物，不會經由腎臟、輸尿管及膀胱排出
+C.18F-FDG在大多數惡性腫瘤細胞的代謝是正常細胞的數倍
+D.18F-FDG在發炎細胞的代謝有時與腫瘤細胞難以區分
+38.下列何種核醫藥物在注射初期可評估腎臟灌注，而在注射後晚期可觀察到腎皮質影像？
+ 
+A.99mTc-DTPA
+B.99mTc-MAG3
+C.99mTc-MAA
+D.99mTc-GH（glucoheptonate）
+39.下圖為施打利尿劑腎臟造影之腎圖，箭頭處為給與利尿劑的時間點，若泌尿道確定有阻塞狀況，則腎圖結果
+為其中何者？
+ 
+A.1
+B.2
+C.3
+D.4
+40.有關甲狀腺造影的敘述，下列何者錯誤？
+ 
+A.給與99mTc-pertechnetate後20分鐘進行影像擷取
+B.給與200～400 μCi的123I-NaI或2～10 mCi的99mTc-pertechnetate
+C.給與123I-NaI後4小時或24小時進行影像擷取
+D.123I-NaI及99mTc-pertechnetate均以口服方式給與
+41.以123I-NaI或99mTc-pertechnetate進行甲狀腺閃爍造影時，能窗的中心能量應分別設在多少keV？
+ A.123I-NaI：140 keV，99mTc-pertechnetate：364 keV
+B.123I-NaI：364 keV，99mTc-pertechnetate：159 keV
+C.
+
+=== PDF PAGE 9 ===
+123I-NaI：159 keV，99mTc-pertechnetate：364 keV
+D.123I-NaI：159 keV，99mTc-pertechnetate：140 keV
+42.利用核醫造影進行膀胱輸尿管逆流（vesicoureteral reflux, VUR）檢查結果如下圖所示，下列何種狀況最
+為可能？
+　  
+ 
+A.右側膀胱輸尿管逆流
+B.左側膀胱輸尿管逆流
+C.雙側膀胱輸尿管逆流
+D.沒有膀胱輸尿管逆流
+43.甲狀腺掃描檢查（thyroid scan）的影像如下圖，其中箭頭所指最可能為何？
+ 
+
+=== PDF PAGE 10 ===
+A.腫塊
+B.食道
+C.甲狀腺錐葉
+D.氣管
+44.神經內分泌腫瘤（neuroendocrine tumor, NET）患者的68Ga-DOTATOC及18F-FDG PET/CT造影影像如下圖所
+示，下列診斷何者最為可能？
+ 
+A.患處68Ga-DOTATOC PET/CT及18F-FDG PET/CT均未呈現放射活性增加，不建議使用peptide receptor
+radionuclide therapy
+B.患處68Ga-DOTATOC PET/CT及18F-FDG PET/CT均呈現放射活性增加，可以使用peptide receptor
+radionuclide therapy
+C.患處68Ga-DOTATOC PET/CT呈現放射活性增加，而18F-FDG PET/CT未呈現放射活性增加，可以使用peptide
+receptor radionuclide therapy
+D.患處68Ga-DOTATOC PET/CT及18F-FDG PET/CT均未呈現放射活性增加，可以使用peptide receptor
+radionuclide therapy
+45.99mTc-sestamibi 及123I-NaI頸部閃爍造影結果如下圖，下列那種狀況最為可能？
+ A.異位性甲狀腺腺瘤
+B.正常甲狀腺組織
+C.甲狀腺結節
+
+=== PDF PAGE 11 ===
+D.副甲狀腺腺瘤
+46.甲狀腺碘攝取率檢查中，服用300 μCi 123I-NaI 24小時後，測得甲狀腺計數為80,123 cpm且大腿計數為
+5,324 cpm，300 μCi 123I-NaI膠囊計數為345,890 cpm，背景計數為111 cpm，123I的半衰期為13小時，計
+算甲狀腺24小時的攝取量約為多少%？
+ 
+A.20
+B.38
+C.58
+D.78
+47.99mTc-MDP造影中，甲狀腺、胃、唾液腺出現放射性活性聚集，其可能的原因為何？
+ 
+A.腎功能不佳
+B.藥物標幟不佳
+C.時間等候不足
+D.打錯藥物
+48.欲用核醫檢查偵測發炎病灶，下列何種製劑最不適合？
+ 
+A.67Ga-citrate
+B.111In-oxine標幟WBC
+C.18F-FDG
+D.99mTc-HMPAO
+49.關於食道穿流（esophageal transit study）的敘述，下列何者錯誤？
+ 
+A.使用的放射藥品為99mTc-pertechnetate或99mTc-sulfur colloid
+B.檢查前禁食約3小時
+C.攝影前給病人口服維他命C
+D.讓受檢者平躺或坐在椅子上
+50.以體內／體外標幟紅血球法（in vivo/in vitro method）進行消化道出血檢查，須先靜脈注射何物？
+ 
+A.99mTc-pertechnetate
+B.亞錫離子
+C.99mTc-sulfur colloid
+D.抗凝血劑
+51.平面閃爍攝影影像中，有關訊號（signal）與雜訊（noise）的敘述，下列何者錯誤？
+ 
+
+=== PDF PAGE 12 ===
+A.訊號正比於計數值
+B.雜訊正比於計數值的平方根
+C.雜訊在低計數值的影像中影響較小
+D.增加計數值可降低雜訊的影響
+52.有關99mTc標幟紅血球造影的臨床應用，下列何者除外？
+ 
+A.肝臟海綿狀血管瘤檢查
+B.平衡性血池造影
+C.腸胃道出血檢查
+D.心肌缺血檢查
+53.下列何種放射製劑最適合用於嚴重黃疸病患之肝膽道造影？
+ 
+A.99mTc-sulfur colloid
+B.99mTc-disofenin
+C.99mTc-mebrofenin
+D.99mTc red blood cells
+54.典型骨髓炎在三相式骨骼掃描（three-phase bone scan）上，其放射活性積聚呈現下列何種情形？
+ 
+A.血流相上升，血池相上升，骨骼相正常
+B.血流相、血池相、骨骼相皆上升
+C.血流相下降，血池相上升，骨骼相上升
+D.血流相、血池相、骨骼相皆下降
+55.下列何者最適合用於診斷唾液腺功能異常及腺體管道阻塞？
+ 
+A.99mTc-pertechnetate
+B.99mTc-MAA
+C.99mTc-sulfur colloid
+D.99mTc-DMSA
+56.下列何種細胞會選擇性攝取99mTc-IDA？
+ 
+A.肝細胞（hepatocytes）
+B.庫弗氏細胞（Kupffer's cells）
+C.巨噬細胞（macrophages）
+D.胰島細胞（islet cells）
+
+=== PDF PAGE 13 ===
+57.將含有200,000 cpm無載體（carrier-free）24Na的等張溶液注射到人體內，接著藉由靜脈採血取得1.0 mL血
+液樣品，計測放射活度為100.0 cpm。該受檢者的總血液體積為多少mL？
+ 
+A.500
+B.1,000
+C.2,000
+D.4,000
+58.RIA品管血清的檢測結果，在Levey Jennings chart中，10個連續品管數據均落在平均值同一側者，可判定
+為：
+ 
+A.隨機誤差
+B.其他誤差
+C.系統誤差 
+D.固有誤差
+59.單株抗體的製備中，如何篩選專一性抗體？
+ 
+A.使用分子篩（molecular sieve）
+B.使用層析法（chromatography）
+C.使用離子交換法（ion exchange）
+D.使用免疫分析法，如酵素免疫分析法（ELISA）
+60.關於放射免疫分析專用加馬計數器房間的要求，不包括下列何者？
+ 
+A.穩定的電源供應
+B.無塵室
+C.空調
+D.濕度控制
+61.甲型胎兒蛋白（alphafetoprotein, AFP）的成分是：
+ 
+A.脂蛋白（lipoprotein）
+B.醣蛋白（glycoprotein）
+C.核蛋白（nucleoprotein）
+D.多胜肽（polypeptide）
+62.下列何種情形比較不會出現血中TSH濃度上升的狀況？
+ A.原發性甲狀腺功能不足（primary hypothyroidism）
+B.重症病患者
+C.飽餐一頓後
+
+=== PDF PAGE 14 ===
+D.腦下垂體（pituitary gland）腫瘤
+63.一個半值層（HVL）的厚度約等於幾個十值層（TVL）？
+ 
+A.0.3
+B.3.3
+C.0.5
+D.0.25
+64.假設99mTc的半值層是0.3 mm鉛厚度，一支 20 mCi 99mTc-MDP 的輻射量為11 R/hr，若使用2.5 mm鉛套作為
+屏蔽，其輻射量會降至多少mR/hr？
+ 
+A.25
+B.18
+C.34
+D.50
+65.惡性腫瘤骨轉移病患進行223Ra治療時，以偵檢器進行1公尺體外曝露率測量得數值0.1 μSv/hr，針對此病患
+下列建議何者正確？
+ 
+A.為避免病患影響他人，故須接受鉛屏蔽隔離至少 2～3 天
+B.應避免病患糞便尿液排泄物對他人汙染（例如如廁方式採坐式馬桶）
+C.醫護或醫事人員對此病患之照護應穿著鉛衣保護，避免超過年劑量限度
+D.223Ra注射治療後，廢棄物可歸類為感染廢棄物丟棄
+66.甲狀腺濾泡癌病患在術後欲進行131I治療，下列何者不是131I治療前做小劑量131I全身掃描之目的或意義？
+ 
+A.偵測其甲狀腺殘餘之多寡
+B.有助於腫瘤分期判定
+C.偵測是否有源自甲狀腺之遠端轉移腫瘤
+D.避免放射碘治療時產生之擊昏效應（stunning effect）
+67.有關核醫89Sr骨轉移標靶同位素治療的敘述，下列何者錯誤？
+ 
+A.屬於β射線治療
+B.需標化雙磷酸鹽藥物，故能以骨轉移病灶為標靶
+C.主要可減緩骨轉移之疼痛
+D.對於延長骨轉移病患之存活不甚顯著
+68.下列何者非為偵測多巴胺轉運體（dopamine transporter）活性的核醫造影劑？
+ A.11C-CFT (2β-carbomethoxy-3β-(4-fluorophenyl)-tropane)
+
+=== PDF PAGE 15 ===
+B.11C-β-CIT (2β-carbomethoxy-3β-(4-iodophenyl)-tropane)
+C.123I-IBF (iodobenzofuran)
+D.123I-IPT (N-((E)3-iodopropen-2-yl)-2β-carbomethoxy-3β-(4-chlorophenyl)-tropane)
+69.哺乳中的母親在下列何種情形時，應被告知完全停止授乳？
+ 
+A.接受任一種核醫藥物
+B.接受4 mCi 67Ga-citrate注射
+C.接受37 MBq 99mTc-MAA注射
+D.服用370 MBq 131I-NaI
+70.有關高斯濾波器（Gaussian filter）在核醫影像處理之應用，下列何者錯誤？
+ 
+A.使用高斯低通濾波器可有效濾除雜訊
+B.高斯濾波器可利用空間領域濾波函數的半高全寬值控制可通過的訊號
+C.使用較小半高全寬值的高斯濾波器，將產生更平滑且雜訊更少的影像
+D.高斯濾波函數可透過傅立葉轉換，轉換至空間頻率進行濾波
+71.人工髖關節（hip prosthetics）、牙科填充物（dental fillings）、化療人工血管（chemotherapy
+port）等植入物會在PET/CT影像中造成何種假影（artifacts）？
+ 
+A.truncation artifacts
+B.motion artifacts
+C.metal artifacts
+D.contrast artifacts
+72.在核醫影像圈選病灶區時，所量測出的放射計數值與病變的真正放射計數值差異很大，例如低估（或高估）
+與其實際數值有量化偏差現象稱為：
+ 
+A.motion artifacts
+B.partial volume effect
+C.recovery coefficient effect
+D.truncation artifact
+73.PET/CT檢查前6小時內有做過鋇劑腸胃道攝影檢查，對腸胃道造影的SUV（standard uptake value）影響為
+何？
+ A.不受影響
+B.等於1
+C.會被低估
+
+=== PDF PAGE 16 ===
+D.會被高估
+74.在PET儀器訊號校正中，下列方程式中
+ 是選項中何項的意義？（T：真實事件計數率（true event rate），
+S：散射事件計數率（scatter event rate），R：隨機事件計數率（random event rate），k：隨機事件常
+數）
+ 
+A.noise equivalent count rate（NECR）
+B.dead time correction
+C.signal-to-noise ratio（SNR）
+D.attenuation correction
+75.在測量放射樣本計數（counts）時，至少需要測量多少計數，才能達到99%標準差信賴區間，且真實計數值
+（true value）是在測量值（measured value）的1%內？
+ 
+A.90,000
+B.40,000
+C.20,000
+D.10,000
+76.在一個3分鐘的放射樣本測量中，測得計數（counts）為8,100，平均計數率R為多少cpm？
+ 
+A.24,300
+B.2,700
+C.900
+D.30
+77.承上題，R的標準偏差（standard deviation）是多少cpm？
+ 
+A.270
+B.240
+C.90
+D.30
+78.有關蓋革偵檢器之敘述，下列何者錯誤？
+ 
+A.適合用於偵測低劑量環境汙染
+B.充填氣體多為惰性氣體
+C.產生之離子對數目與外加電壓成正比
+D.常添加鹵素氣體作為焠熄氣體
+79.下列何種偵測器是用來測量放射性物質的放射活度？
+
+=== PDF PAGE 17 ===
+ A.gamma counter
+B.dose calibrator
+C.G-M counter
+D.survey meter
+80.距一99mTc點射源0.5公尺處的輻射強度測量結果為36 mR/h，若要量測輻射強度降至18 mR/h，應距該射源多
+少公尺處？
+ 
+A.0.5
+B.0.7
+C.1.0
+D.1.5

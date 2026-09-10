@@ -1,0 +1,546 @@
+=== PDF PAGE 1 ===
+114年第二次專技高考醫師中醫師第一階段考試、牙醫師藥師考試分
+階段考試、醫事檢驗師、醫事放射師、物理治療師考試、114年專技
+高考職能治療師、呼吸治療師、獸醫師、助產師考試
+代　　號：4309
+類科名稱：醫事放射師
+科目名稱：放射線診斷原理與技術學
+考試時間：1小時 座號：___________
+  ※注意：本試題禁止使用電子計算器   　　　　　　　  
+※本試題為單一選擇題，請選出一個正確或最適當答案。
+1.針對男性腰椎攝影AP axial L5-S1 projection，其中心射束（central ray, CR）之角度對位何者
+正確？
+ 
+A.cephalad 30°、CR to the level of the ASIS（anterior superior iliac spine）at the
+midline of the body
+B.cephalad 15°、CR to the level of the iliac crest at the midline of the body
+C.caudad 30°、CR to the level of the ASIS（anterior superior iliac spine） at the
+midline of the body
+D.caudad 15°、CR to the level of the iliac crest at the midline of the body
+2.在一速度為500之影像接受器上，如要得到光密度（optical density, OD）值為1.0之影像，最少需
+要多少曝露？
+ 
+A.2 mR
+B.4 mR
+C.5 mR
+D.8 mR
+3.拍攝腰椎X光側面像時，若SID為100公分，影像上錐體的寬為5.4公分，則距離影像接受器25公分之
+實際錐體大小為多少公分？
+ 
+A.1.35
+B.4.06
+C.5.40
+D.7.20
+4.濾片（filter）厚度增加時，對X光發射頻譜的量（quantity）與品質（quality）的影響為何？
+ A.quantity增加、quality下降
+B.quantity增加、quality上升
+C.quantity增加、quality不變
+
+=== PDF PAGE 2 ===
+D.quantity減少、quality上升
+5.X光影像系統的電器迴路中，可以見到預讀電壓表（pre-reading kVp meter）位於下列那一個區段
+內？
+ 
+A.控制區域
+B.低壓區域
+C.高壓區域
+D.管球區域
+6. 用一般X光素片（如站立的腹部素片、胸部X光素片）來診斷腸道破裂產生的游離空氣（free
+air），下列敘述何者最不恰當？
+ 
+A. 空氣與軟組織的X光吸收密度不同
+B. 游離空氣會隨身體姿勢不同，移向身體的較高部位
+C. 在站立胸部以及腹部X光素片上，游離空氣會移動至橫膈下方
+D. 後腹腔因為與游離空氣的組織密度差別大，是最容易看到游離空氣處
+7. 有關腹部素片（plain abdomen）的敘述，下列何者最不適當？
+ 
+A.在腹部素片可以呈現肝臟的輪廓
+B.腹部素片採取站立姿勢，因此小腸會因為有無空氣以及液體而改變位置，空氣多的部分會往上移動
+C.大部分 正常情況下，左腎位置比起右腎來的低
+D. 升結腸以及降結腸部分屬於後腹腔，通常較不會因為空氣多寡改變位置
+8. 有關 焦斑外輻射（off-focus radiation），下列敘述何者正確？
+ 
+A. 當電子束打到焦斑外的地方，產生的X光稱作 焦斑外輻射
+B.會造成影像對比增加
+C.可以減少輻射劑量
+D.會提高影像解析度
+9.散射線（scattering radiation）會對影像品質造成何種影響？
+ 
+A.減少失真度（distortion）
+B.減少光密度（density）
+C.減少對比度（contrast）
+D.增加解析度（resolution）
+10.採用inferosuperior axial projection進行肩關節的攝影（Lawrence method），下列有關中心射
+束的敘述何者正確？
+ A.平行身體長軸，並向內側偏轉25度
+
+=== PDF PAGE 3 ===
+B.平行身體長軸，並向外側偏轉25度
+C.垂直身體長軸，並向內側偏轉25度
+D.垂直身體長軸，並向外側偏轉25度
+11.下列何者與一般常規X光攝影之影像失真（distortion）無關？
+ 
+A.source image receptor distance（SID）
+B.object image receptor distance（OID）
+C.object image receptor alignment
+D.upside-down focused grid
+12.下列有關骨質密度測定的描述，何者錯誤？
+ 
+A.quantitative computed tomography通常選擇脊椎T12至L5中2-3節椎體
+B.quantitative ultrasound一般選擇脊椎L1至L4
+C.quantitative dual-energy X-ray absorptiometry一般選擇脊椎L1至L4
+D.quantitative dual-energy X-ray absorptiometry可選擇股骨（femur）近端
+13.下列何者不是腹腔動脈幹（celiac trunk）供應的主要器官？
+ 
+A.胃
+B.小腸
+C.肝臟
+D.脾臟
+14.下列何者無法減少血管造影期間患者的劑量？
+ 
+A.精確的使用collimation
+B.影像增強器（image intensifier）和患者之間的距離最小化
+C.X射線源與患者之間的距離最小化
+D.使用圖像保留（last image hold）之類的功能
+15.施行肝臟血管攝影檢查時發覺透視影像太黑，下列敘述何者正確？
+ 
+A.調整table使目標置於影像中央位置
+B.調整collimator以放大FOV
+C.調整frame rate
+D.調整檢查室燈光
+16.下列何者是血管攝影使用含碘對比劑中相對較佳的選擇？
+ A.非離子性高滲透壓
+B.非離子性低滲透壓
+
+=== PDF PAGE 4 ===
+C.離子性高滲透壓
+D.離子性低滲透壓
+17.肝門脈系統（hepatic portal system）包括下列那幾條血管？①肝門靜脈（hepatic portal
+vein）　②右腎靜脈（right renal vein）　③脾靜脈（splenic vein）　④肝總動脈（common
+hepatic artery）　⑤腸繫膜靜脈（mesenteric vein）
+ 
+A.①②④
+B.①③④
+C.①③⑤
+D.②③⑤  
+18.下列何種腦血管疾病在做血管攝影檢查時，較需要提高每秒顯示幀數（frames per second,
+FPS）？
+ 
+A.動脈瘤
+B.靜脈竇栓塞
+C.缺血性中風
+D.動靜脈畸形
+19.於IVU攝影時，在注射後15分鐘發現如下圖影像，下列那一種處理方式可能性最低？
+ 
+A.先依標準時間完成攝影，再請醫師決定
+B.先追加造影劑10 mL，再依時間攝影
+C.等候30 分鐘後，再繼續攝影
+D.立即請醫師決定下一張所需延後攝影時間
+20.實施大腸硫酸鋇攝影檢查時，如呈現錐形狹窄的"beak sign"時，患者可能有下列那一種疾病？
+ A.ulcerative colitis
+
+=== PDF PAGE 5 ===
+B.polyps
+C.diverticula
+D.volvulus
+21.靜脈注射泌尿道攝影（IVU）中，不同時間點攝影之目的，下列何者錯誤？
+ 
+A.注射造影劑前：評估泌尿道結石
+B.注射後5分鐘：評估腎盂顯影狀況
+C.注射後10分鐘：評估腎盂及輸尿管顯影狀況
+D.注射後30分鐘：評估尿道排尿狀況
+22.檢查頭顱之"three-vessel angiography"不包括下列那一條血管？
+ 
+A.right common carotid artery
+B.left common carotid artery
+C.vertebral artery
+D.axillary artery
+23.有關雙能X光吸收測量儀（dual-energy X-ray absorptiometry）測量骨質密度的敘述，下列何者
+正確？
+ 
+A.測量股骨的骨質密度時，應使受檢者的脊椎與下肢伸直成一直線
+B.測量股骨的骨質密度時，應使受檢者的下肢伸直並向內轉約15至20度
+C.測量腰椎的骨質密度時，應使受檢者的下肢伸直並向外轉約15至20度
+D.測量股骨的骨質密度時，應使受檢者的膝蓋抬高並彎曲約60至90度
+24.有關膝關節攝影（knee arthrography）的敘述，下列何者錯誤？
+ 
+A.膝關節之姿勢會因不同的檢查方法而異
+B.中心線宜對準半月板，每20度攝影一張
+C.兩側半月板極易辨識，無需用鉛字註明
+D.半月板應置於照野中心區
+25.下列何種膽道攝影無需使用造影劑即可呈現膽道？
+ 
+A.CT cholangiography
+B.ERCP
+C.PTC
+D.MRCP
+26.下列何者為肝癌血管栓塞術最主要的禁忌？
+ A.肝癌腫瘤破裂
+
+=== PDF PAGE 6 ===
+B.多發性肝癌腫瘤
+C.門靜脈主幹栓塞
+D.病人貧血
+27.若其他掃描參數不改變時，跟pitch=1進行比較，當pitch=2時，病人劑量會降低多少%？
+ 
+A.20
+B.30
+C.50
+D.pitch與病人輻射劑量無關
+28.下列何種CT假體可以用於檢測CTDI？
+ 
+A.imaging performance phantom 
+B.geometric phantom 
+C.instrumentation phantom 
+D.dosimetry phantom
+29.當前的商用CT掃描儀，最有可能使用下列何種類型的X射線探測器？
+ 
+A.閃爍體（scintillators）
+B.光電導體（photoconductors）
+C.光敏螢光粉（photostimulable phosphors）
+D.氣體電離室（gas ionization chambers）
+30.一物質之CT number為-100 HU，此物質最可能為下列何者？
+ 
+A.water
+B.fat
+C.gray matter
+D.white matter
+31.CT window level設為-600 HU, window width設為1700 HU時，用於下列何部位的評估最為適當？
+ 
+A.lung
+B.mediastinum
+C.liver
+D.bone
+32.中年男性創傷，矢狀面重組的（sagittal reformatted）電腦斷層影像如下圖，箭號所指異常處最
+適當的敘述為何？
+
+=== PDF PAGE 7 ===
+ 
+A.脊髓橫斷（spinal transection）
+B.椎間盤疝脫（herniated intervertebral disc）
+C.移動假影（motion artifact）
+D.金屬假影（metal artifact）
+33.某人頭部創傷，到院前心跳停止（out-of-hospital cardiac arrest, OHCA），經心肺復甦術及氣
+管內管（endotracheal tube）插管治療後，接受電腦斷層檢查，下圖箭號處最適當的敘述為何？
+ 
+A.食道插管（esophageal intubation）
+B.氣管狹窄（tracheal stenosis）
+C.食道破裂（esophageal perforation）
+D.正常插管後現象（normal postintubation phenomenon）
+34.下列CT值（CT number）等相關敘述，何者正確？
+ A.CT值的單位是Gy
+
+=== PDF PAGE 8 ===
+B.CT值與組織衰減係數成正比
+C.組織衰減係數與組織密度成反比
+D.CT值與組織密度成反比
+35.在電腦斷層檢查時，若設定影像照野field of view（FOV）長寬各為256 mm，影像矩陣為 512 ×
+512，切片厚度為 1 mm，則體素（voxel）大小為多少mm3？
+ 
+A.5×5×0.5
+B.1×1×1
+C.0.5×0.5×0.5
+D.0.5×0.5×1
+36.假設CT的灰階值包含範圍為+180～ -80，則其window width（WW）和window level（WL）為何？
+ 
+A.WW = 260，WL = +40
+B.WW = 260，WL = +50
+C.WW = 100，WL = +60
+D.WW = 100，WL = +50
+37.關於orbital CT在眼眶外傷之應用的敘述，下列何者錯誤？
+ 
+A.所有異物的CT值皆比眼眶脂肪低
+B.玻璃異物的CT值比眼眶脂肪高
+C.眼球破裂時，其形狀會改變
+D.用bone window比較容易評估眼眶骨折
+38.有關CT的flying focal spot的敘述，下列何者正確？
+ 
+A.可以讓球管轉速更快
+B.是螺旋（spiral）CT發展的重要技術
+C.可降低球管的熱容量（MHU）
+D.可以提高空間解析度（spatial resolution）
+39.電腦斷層攝影所使用的bowtie filter之主要目的為何？
+ 
+A.減少掃描時間
+B.使射束更加均勻
+C.減少射束半值層
+D.減少病人劑量 
+40.下列那一項是PET/CT中，低劑量CT最主要的功能？
+ A.判斷良性或惡性
+
+=== PDF PAGE 9 ===
+B.診斷病灶
+C.衰減校正
+D.標示病灶的惡性度
+41.當電腦斷層攝影最小可解析的物體大小為0.5 mm時，CT影像系統中的解析度為多少lp/cm？
+ 
+A.20
+B.15
+C.10
+D.5
+42.相較於SDCT（single detector computed tomography），MDCT（multidetector computed
+tomography）的特點何者錯誤？
+ 
+A.較佳的空間與時間解析度
+B.有較高的散射
+C.使用pre-patient collimator控制切片厚度
+D.部分體積效應較小
+43.Gadolinium顯影劑增強MR血管攝影，臨床上最常使用下列那種方法顯示？
+ 
+A.maximum intensity projection（MIP）
+B.minimal intensity projection（MinIP）
+C.surface rendering
+D.fiber trajectory
+44.在肌肉骨骼MR影像中，為了得到較高訊雜比（SNR），較常使用何種線圈？
+ 
+A.body coil
+B.head coil
+C.surface coil
+D.volume coil
+45.90度的RF脈衝經過幾次T1時間後，縱向磁化強度才能接近完全恢復？
+ 
+A.4
+B.3
+C.2
+D.1
+46.在傳統MRI造影時，若發生化學位移假影（chemical shift artifact）時，會沿什麼方向產生？
+ A.frequency encode
+
+=== PDF PAGE 10 ===
+B.phase encode
+C.slice selection
+D.oblique direction
+47.使用下列何項參數最可能呈現MRI之T2 weighted image？
+ 
+A.short TR, long TE
+B.short TR, short TE
+C.long TR, long TE
+D.long TR, short TE
+48.按照磁性分類，下列何者可被歸類為順磁性（paramagnetic）？
+ 
+A.人體組織
+B.含氧血紅素
+C.去氧血紅素
+D.二氧化鐵
+49.下列何種造影參數下，腦脊髓液在影像上較白質為亮？
+ 
+A.TR=2000 ms，TE=8 ms
+B.TR=2000 ms，TE=80 ms 
+C.TR=200 ms，TE=80 ms 
+D.TR=200 ms，TE=8 ms
+50.在1.5 T的MRI中使用反轉回復技術進行抑制腦脊髓液的訊號時，下列何者最接近反轉時間應設定的
+數值？
+ 
+A.50毫秒
+B.200毫秒
+C.2000毫秒
+D.5000毫秒
+51.關於開放式磁振造影儀（open MRI scanner）的敘述，下列何者正確？
+ 
+A.使用永久磁鐵，所以磁場強度無法達到3T
+B.使用永久磁鐵，所以不需要梯度線圈（gradient）
+C.使用電磁鐵，所以無法進行腦部造影
+D.使用電磁鐵，所以不會產生化學位移假影（chemical shift artifact）
+52.下列何者可做為超導磁鐵的超導材料？
+ A.鈷（cobalt）、鎳（nickel）
+
+=== PDF PAGE 11 ===
+B.鐵（iron）、鉑（platinum）
+C.鋯（zirconium）、錸（rhenium）
+D.鈮（niobium）、鈦（titanium）
+53.銅（copper）常做為RF屏蔽（RF shielding）中的材質，下列何者為其原因？
+ 
+A.良好的導電率（conductivity）
+B.良好的延展性（ductility）
+C.有較高的密度（density）
+D.良好的耐腐蝕性（corrosion resistance）
+54.下列何者可發射射頻（RF），也能接收射頻？
+ 
+A.shimming coil
+B.endorectal coil
+C.birdcage coil
+D.breast coil
+55.根據Larmor equation，在3T磁場環境下，氫質子旋進的頻率為多少MHz？
+ 
+A.42.6
+B.127.8
+C.21.3
+D.63.9
+56.有關磁振造影中平面回波成像（echo planar imaging）的特性敘述，下列何者錯誤？
+ 
+A.由於快速成像的特性，廣泛用於結構性與功能性造影
+B.可利用單次激發，連續採樣，達成快速成像
+C.其k-space掃描軌跡必須為螺旋式
+D.其化學位移（chemical shift）假影，只會在相位編碼方向
+57.下列何種磁振造影技術對偵測腦部微小出血之敏感度最高？
+ 
+A.gradient echo sequence
+B.T2-weighted imaging
+C.diffusion weighted imaging
+D.susceptibility weighted imaging
+58.附圖中箭號所指示的暗灰色區域是下列何種現象產生的假影？
+
+=== PDF PAGE 12 ===
+ 
+A.motion artifact
+B.chemical shift artifact
+C.turbulent flow artifact
+D.truncation artifact
+59.下列何者為特定組織訊號抑制（tissue suppression）的MRI技術？
+ 
+A.STIR（short tau inversion recovery）
+B.GRASS（gradient-recalled acquisitions in steady state ）
+C.TOF（time of flight）
+D.EPI（echo planar imaging）
+60.注射磁振造影的造影劑後最主要會發生下列何種現象？
+ 
+A.組織內的擴散常數（diffusion coefficient）增加
+B.組織的縱向回復時間縮短
+C.化學位移的頻率變化加大
+D.組織的橫向回復時間變長
+61.肝臟超音波橫向掃描時，在外側節段（lateral segment, L）與尾葉（caudate lobe, C）之間有
+一高回音裂隙（fissure, F），如下圖箭號處。此高回音裂隙與下列何者最有關係？
+
+=== PDF PAGE 13 ===
+ 
+A.靜脈韌帶（ligamentum venosum）
+B.動脈韌帶（ligamentum arteriosum）
+C.圓韌帶（ligamentum teres）
+D.鎌狀韌帶（falciform ligament）
+62.肝臟超音波橫向掃描時，發現一個高回音性病灶，介於右肝靜脈（right hepatic vein, RHV）與
+中肝靜脈（middle hepatic vein, MHV）之間（如下圖）。根據Couinaud classification的分
+類，此病灶應在肝臟的那一個節段（segment）？
+ 
+A.8（VIII）
+B.7（VII）
+C.4（IV）
+D.3（III）
+
+=== PDF PAGE 14 ===
+63.右上腹部超音波掃描時，發現一囊狀構造橫徑超過4公分，壁厚超過3公釐，內有高回音結構且具有
+後側音影（acoustic shadowing），以及陽性超音波墨菲氏徵象（positive sonographic
+Murphy's sign），下圖最有可能的診斷為何？
+ 
+A.急性結石性膽囊炎（acute calculous cholecystitis）
+B.急性無結石性膽囊炎（acute acalculous cholecystitis）
+C.急性氣腫性膽囊炎（acute emphysematous cholecystitis）
+D.膽結石性腸阻塞（gallstone ileus）
+64.關於膀胱超音波的敘述，下列何者正確？
+ 
+A.正常的膀胱為均勻的中度回音
+B.膀胱體積測量為橫徑、前後徑、上下徑的乘積，再乘以0.52
+C.慢性膀胱炎會呈現較薄的膀胱壁
+D.膀胱結石會造成後方回音增強
+65.超音波掃描單純性肝臟囊腫（simple hepatic cyst），一般不會出現下列何種情形？
+ 
+A.內部無回音
+B.界限清晰，呈圓形或橢圓形
+C.囊腫兩側呈現鏡像影像
+D.囊腫後方呈現回音增強
+66.下圖為肋骨弓下緣之超音波掃描影像，其編號A、B、C的解剖位置，依序應為下列何者?
+
+=== PDF PAGE 15 ===
+ 
+A.腹主動脈、門靜脈、左肝靜脈
+B.腹主動脈、肝動脈、右肝靜脈
+C.下腔靜脈、門靜脈、右肝靜脈
+D.下腔靜脈、門靜脈、左肝靜脈
+67.關於消化系統超音波掃描的敘述，下列何者錯誤？
+ 
+A.正常的膽囊壁厚度應小於6 mm    
+B.正常的總膽管直徑通常小於7 mm
+C.若膽囊已切除的病人，總膽管直徑達 9 mm，仍可算正常
+D.正常的胰管直徑大小應小於3 mm
+68.附圖中箭號所指高回音的部位最可能為何？
+ 
+A.腎髓質（medulla）
+B.腎竇部（renal sinus）
+C.腎盂（pelvis）
+D.腎皮質（cortex）
+69.附圖為上腹部超音波影像，箭號所指的低回音構造為下列何者？
+
+=== PDF PAGE 16 ===
+ 
+A.腹腔動脈幹（celiac trunk）
+B.上腸繫膜動脈（superior mesenteric artery）
+C.右肝靜脈（right hepatic vein）
+D.右腎動脈（right renal artery）
+70.附圖為右上腹部超音波斜縱向掃描，箭號所指的構造最可能為下列何者？
+ 
+A.膽囊（gallbladder）
+B.總膽管（common bile duct）
+C.下腔靜脈（inferior vena cava）
+D.門靜脈（portal vein）
+71.脾臟超音波掃描如附圖影像，箭號所指最可能為何？
+
+=== PDF PAGE 17 ===
+ 
+A.pancreatic tail
+B.accessory spleen
+C.splenic vein
+D.renal cyst
+72.在超音波影像上，一般成人正常的腎臟長徑約為多少cm？
+ 
+A.16～18
+B.10～12
+C.6～8
+D.2～4
+73.關於SMPTE（society of motion picture and television engineers）測試模板的敘述，下列何
+者錯誤？
+ 
+A.可以提供螢幕解析度及其他特性檢測使用
+B.由 0%至100% 提供11個不同程度百分比的基本灰階區塊供檢測
+C.在額外增設的0%灰階區塊內，可以見到一個比較小面積的5%灰色階區塊
+D.在額外增設的100%灰階區塊內，可以見到一個比較小面積的95%灰色階區塊
+74.關於傳統型乳房攝影重照率（repeat rate）的敘述，下列何者錯誤？
+ 
+A.每一分項的重照率都必須小於2%
+B.全體項目的重照率總和必須小於2%
+C.重照率=需重照患者數/總患者數
+D.重照率計算須包含所有原因的重照，不能只計算放射科醫師的退片數量
+75.下圖影像是執行那一種CT品管步驟的結果？
+
+=== PDF PAGE 18 ===
+ 
+A.對比解析度
+B.空間解析度
+C.均勻度
+D.切面準確度
+76.Ｘ光管套之漏射線（leakage radiation）在1公尺處應低於多少mR/hr？
+ 
+A.1
+B.10
+C.100
+D.5
+77.影像對位（image registration）的技術中，下列何者不是剛體變換（rigid transformation）所
+需的要件？
+ 
+A.參考影像（reference image）
+B.平移（translation）
+C.旋轉（rotation）
+D.變形（warp）
+78.圖中所示，影像經由傅立葉轉換（Fourier Transform）至頻譜空間（frequency domain），並於
+頻譜空間上進行濾波（filtering），此濾波後之頻譜資訊經由反傅立葉轉換（Inverse Fourier
+Transform）後，其結果為下列何者？
+
+=== PDF PAGE 19 ===
+ A.
+B.
+C.
+
+
+=== PDF PAGE 20 ===
+D.
+79.下列何者最適合用於影像中「點」（isolated points）的偵測？
+ 
+A.
+B.
+C.
+D.
+80.HL7（Health 7）醫療資訊的交換標準，相當於網路七層架構（open system interconnection,
+OSI）中那一層級協定（protocol layer）？
+ 
+A.資料連結層（data link layer）
+B.網路層（network layer）
+C.應用層（application layer）
+D.實體層（physical layer）

@@ -1,0 +1,659 @@
+=== PDF PAGE 1 ===
+113 113 113 113 年第一次專門職業及技術人員高等考試醫師牙醫師中醫師藥師考年第一次專門職業及技術人員高等考試醫師牙醫師中醫師藥師考年第一次專門職業及技術人員高等考試醫師牙醫師中醫師藥師考年第一次專門職業及技術人員高等考試醫師牙醫師中醫師藥師考
+試分階段考試試分階段考試試分階段考試試分階段考試、、、、醫事檢驗師醫事檢驗師醫事檢驗師醫事檢驗師、、、、醫事放射師醫事放射師醫事放射師醫事放射師、、、、物理治療師考試物理治療師考試物理治療師考試物理治療師考試    
+代代 代代        號號 號號：： ：：4309 4309 4309 4309    
+類科名稱 類科名稱 類科名稱 類科名稱：： ：：醫事放射師 醫事放射師 醫事放射師 醫事放射師    
+科目名稱 科目名稱 科目名稱 科目名稱：： ：：放射線診斷原理與技術學 放射線診斷原理與技術學 放射線診斷原理與技術學 放射線診斷原理與技術學    
+考試時間 考試時間 考試時間 考試時間：： ：：11 11 小時 小時 小時 小時        座號 座號 座號 座號：： ：：___________ ___________ ___________ ___________ 
+※※ ※※注意 注意 注意 注意：： ：：本試題禁止使用電子計算器 本試題禁止使用電子計算器 本試題禁止使用電子計算器 本試題禁止使用電子計算器    
+※※ ※※本試題為單一選擇題 本試題為單一選擇題 本試題為單一選擇題 本試題為單一選擇題，， ，，請選出一個正確或最適當答案 請選出一個正確或最適當答案 請選出一個正確或最適當答案 請選出一個正確或最適當答案。。 。。    
+ 
+1. 下列何種攝影法，可以最清楚呈現腸阻塞所造成的空氣液位面（air-fluid levels）？ 
+ 
+A. erect abdomen 
+B. KUB 
+C. prone abdomen 
+D. lateral abdomen 
+ 
+2. 在 KUB 攝影時，其中心射束應與下列何者平行？ 
+ 
+A. iliac crest 
+B. symphysis pubis 
+C. jugular notch 
+D. diaphragm 
+ 
+3. 下列何種 elbow 攝影法影像中，radius head 和 ulna head 可分開？ 
+ 
+A. lateral（external rotation）oblique 
+B. medial（internal rotation）oblique 
+C. true AP elbow projection 
+D. lateral elbow projection 
+ 
+4. 下列何者是診斷髕骨半脫位（subluxation of patella）最常使用的攝影方法？ 
+ 
+A. tangential projection 
+B. Camp Coventry method 
+C. Holmblad method 
+D. Holmblad variation 
+ 
+5. 關於乳房攝影（mammography）的敘述，下列何者錯誤？ 
+ A. 影像可以包含第一到第六肋骨的胸部範圍 
+B. 影像可以在側面看到 inframammary fold 的組織 
+
+=== PDF PAGE 2 ===
+C. 乳房攝影定位採用象限系統法與時鐘系統法 
+D. 影像包含上下直徑規範的範圍是 22～30 公分 
+ 
+6. 關於Ｘ光攝影光柵的敘述，下列何者正確？ 
+ 
+A. 與平行光柵（parallel grid）相比，交錯光柵（crossed grid）對於過濾散射Ｘ光的能力較差  
+B. 與聚焦光柵（focused grid）相比，平行光柵（parallel grid）較不易發生遠距光柵截止（grid cutoff） 
+C. 與平行光柵（parallel grid）相比，交錯光柵（crossed grid）對於擺放位置正確性的容忍度較高 
+D. 具有較高柵比（grid ratio）的聚焦光柵（focused grid），對於擺放位置正確性的容忍度較高 
+ 
+7. 關於 X 光管陰極的敘述，下列何者最不適當？ 
+ 
+A. 鎢之熱發射（thermal emission）效率較其他金屬高，故常作為陰極燈絲之材料 
+B. 陰極燈絲添加釷，可增加熱發射效率 
+C. 聚焦杯（focusing cup）通常為正電位，用以打散電子 
+D. 增加燈絲電流有助於增加管電流 
+ 
+8. 線對測試假體（line pair test pattern）所能看清楚的鉛條寬度為 0.4 mm，則其空間解析度（spatial 
+resolution）為何？ 
+ 
+A. 25 lp/cm  
+B. 12.5 lp/cm 
+C. 6.25 lp/cm 
+D. 2.5 lp/cm 
+ 
+9. Thoracic spine AP projection 攝影時，為解決體厚不均造成之影像光密度差異，下列方法何者錯誤？ 
+ 
+A. higher kV technique 
+B. inspiration 
+C. wedge filter 
+D. heel effect 
+ 
+10. 關於脊椎一般素片（plain film）的敘述，下列何者錯誤？ 
+ 
+A. 通常正常的頸椎有七節，胸椎十二節，腰椎五節 
+B. 只有胸椎有肋骨連結，通常肋骨也有十二對 
+C. 椎間盤在一般素片下無法看到，只能由上下節脊椎骨的間距推斷 
+D. 自發性壓迫性骨折（compression fracture）最好發於頸椎 
+ 
+11. 有關 X 光的散射輻射，下列敘述何者錯誤？ 
+ A. 縮小 X 光照野可減少散射輻射 
+
+=== PDF PAGE 3 ===
+B. 被照體的厚度越大，散射輻射越多 
+C. 散射輻射會造成影像的模糊並降低影像的對比 
+D. 當電壓（能量）增高時，散射輻射減少 
+ 
+12. 下列何種攝影技術最適合用來評估咬合不全？ 
+ 
+A. Stenver's view 25 degrees caudad 
+B. open mouth view 
+C. temporomandibular joints-lateral 25 degrees caudad 
+D. Towne's view 
+ 
+13. 下列何者對腹內膿腫而高燒的病人有幫助？ 
+ 
+A. 影像導引切片術 
+B. 影像導引引流術 
+C. 影像導引注射術 
+D. 經導管動脈栓塞術 
+ 
+14. 位於顱內的內頸動脈，形狀為乙狀（S-shaped）之部分稱為： 
+ 
+A. carotid sinus 
+B. carotid canal 
+C. carotid body 
+D. carotid siphon 
+ 
+15. 關於鋇劑的敘述，下列何者正確？     
+ 
+A. 容易溶於水中 
+B. 為消化道攝影常使用之陰性（negative）對比劑 
+C. 食道攝影一般使用較為稀釋比例的鋇劑（thin barium） 
+D. 屬於放射線不透性（radiopaque）的對比劑 
+ 
+16. 執行靜脈注射泌尿攝影（IVU）時，懷疑有下列何種疾病時，須加做解尿後膀胱攝影？ 
+ 
+A. 腎腫瘤   
+B. 輸尿管結石  
+C. 腎外傷 
+D. 攝護腺肥大 
+ 
+17. 下列那種檢查或治療處置，不需使用薛丁格技術（Seldinger technique）？ 
+ A. 中央靜脈導管置放術 
+
+=== PDF PAGE 4 ===
+B. 數位減贅血管攝影術 
+C. 經皮穿肝膽囊引流術 
+D. 電腦斷層血管攝影術 
+ 
+18. 下列何者不是施行乳房攝影時需壓迫患者乳房的主要原因 
+ 
+A. 會增加攝影結果的空間解析度 
+B. 會增加攝影結果的對比解析度 
+C. 會降低病人的攝影劑量 
+D. 會縮短攝影的時間 
+ 
+19. 實施子宮輸卵管攝影（HSG）時，若病患影像顯示如下圖 
+ 
+A. 兩側輸卵管都無阻塞 
+B. 右側遠端輸卵管阻塞 
+C. 左側遠端輸卵管阻塞 
+D. 兩側輸卵管都有阻塞 
+ 
+20. 下圖所顯示之大腸鋇劑攝影影像，患者採取那一種攝影姿勢及其主要目標是那一區域 
+下列何者不是施行乳房攝影時需壓迫患者乳房的主要原因 ？ 
+若病患影像顯示如下圖 ，則可能代表那一種結果 
+ 
+患者採取那一種攝影姿勢及其主要目標是那一區域 
+則可能代表那一種結果 ？ 
+患者採取那一種攝影姿勢及其主要目標是那一區域 ？ 
+
+=== PDF PAGE 5 ===
+ 
+A. RPO 擺位、肝彎曲 
+B. RPO 擺位、脾彎曲 
+C. LPO 擺位、肝彎曲 
+D. LPO 擺位、脾彎曲 
+ 
+21. 若想要以雙重攝影方式觀察升結腸的息肉 
+ 
+A. left lateral decubitus position 
+B. right lateral decubitus position 
+C. LPO position 
+D. RPO position 
+ 
+22. 下列那一條動脈通常不是直接由 aortic arch 
+ 
+A. brachiocephalic artery 
+B. left common carotid artery 
+C. left subclavian artery 
+D. right subclavian artery 
+ 
+23. Celiac trunk 之開口通常位於下列那一個位置 
+ 
+A. T12－L1 
+B. L3－L4 
+C. L5－S1 
+D. T10－T11 
+ 
+24. 下列有關靜脈注射泌尿系統造影（intravenous urography 
+ 
+若想要以雙重攝影方式觀察升結腸的息肉 （polyp）時，下列那一種攝影擺位方式最適合 
+left lateral decubitus position （AP projection） 
+right lateral decubitus position （AP projection） 
+aortic arch 分出？ 
+之開口通常位於下列那一個位置 ？ 
+intravenous urography ）的敘述，何者正確 ？
+下列那一種攝影擺位方式最適合 ？ 
+？ 
+
+=== PDF PAGE 6 ===
+ 
+A. 注射造影劑之後 10 分鐘做第一張攝影 
+B. 適當壓迫下腹部之後攝影，可使腎盂腎盞（pelvicalyceal system）以及上端輸尿管的呈現更清楚 
+C. 不需要做斜位像攝影 
+D. 不適用於 15 歲以下的小兒科病人 
+ 
+25. 下列有關小兒腸套疊（intussusception）的敘述，何者正確？ 
+ 
+A. 病患通常有嚴重便秘，但是只有輕微腹痛 
+B. 以空氣灌腸（air enema）不會有引起腸壁破裂的危險 
+C. 可以用鋇劑灌腸（barium enema）治療 
+D. 灌腸治療時，當造影劑到達盲腸（cecum），即能確定治療成功 
+ 
+26. 下列何者通常無法以經皮膽道引流術（percutaneous transhepatic cholangiography and drainage, 
+PTCD）達到降低黃疸指數之目的？ 
+ 
+A. 總膽管下端結石 
+B. 壺腹（ampulla of Vater）腫瘤 
+C. 胰臟頭部腫瘤 
+D. 猛爆性肝炎 
+ 
+27. 頭部 CT 的影像如下圖，下列何者為最有可能之診斷？ 
+ 
+ 
+A. 腦出血 
+B. 腦膜瘤 
+C. 硬腦膜下血腫 
+D. 惡性膠質瘤 
+ 
+
+
+=== PDF PAGE 7 ===
+28. 電腦斷層檢查如下圖，下列敘述何者最適當？ 
+ 
+ 
+A. multiplanar reformat sagittal image 
+B. volume rendering axial image 
+C. multiplanar reformat coronal image 
+D. volume rendering sagittal image 
+ 
+29. 電腦斷層檢查如下圖，圖中箭號所示屬於下列何種組織成分？ 
+ 
+ 
+A. water 
+B. air 
+C. soft tissue 
+D. calcification 
+ 
+30. 顯影電腦斷層檢查如下圖，下列敘述何者最適當？ 
+
+
+=== PDF PAGE 8 ===
+ 
+ 
+A. multiplanr reformat image of coronal nephrogenic phase image 
+B. maximal intensity projection of coronal excretory phase image 
+C. maximal intensity projection of sagittal nephrogenic phase image 
+D. maximal intensity projection of sagittal excretory phase image 
+ 
+31. 電腦斷層檢查如下圖，下列敘述何者最適當？ 
+ 
+ 
+A. 呈現 renal artery 
+B. 呈現 hepatic artery 
+C. 呈現 superior mesenteric artery 
+D. 呈現 inferior mesenteric artery 
+ 
+32. 關於等向性數據（isotropic data）的敘述，下列何者正確？[允許所有 MPR 和 3D 圖像有著相同的最佳空間 
+解析度（spatial resolution） \voxel 之高度、寬度和深度的三面長度均等 ]擁有較高解析度的 MPR 
+圖像，較不需要等向性數據（isotropic data）  
+
+
+=== PDF PAGE 9 ===
+ 
+A. 僅[\  
+B. 僅\]  
+C. 僅[]  
+D. [\]  
+ 
+33. 關於 window width 及 window level 的敘述，下列何者錯誤？ 
+ 
+A. window width 為設定了 CT numbers 的範圍，由灰階（gray scale）所顯示 
+B. window level 能控制影像的亮度 
+C. window level 能控制影像的對比度 
+D. 適當的 window level 主要由解剖結構之組織密度來決定 
+ 
+34. 患者有腦室內出血（intraventricular hemorrhage, IVH），矢狀面重組的（sagittal reformatted）電腦 
+斷層影像如下圖，箭號所指異常處是什麼構造？ 
+ 
+ 
+A. 第三腦室（third ventricle） 
+B. 第四腦室（fourth ventricle） 
+C. 第五腦室（fifth ventricle） 
+D. 側腦室（lateral ventricles） 
+ 
+35. 關於 DLP（dose length product）的敘述，下列何者正確？ 
+ 
+A. 與 CTDI volume 成反比 
+B. 與電腦斷層掃描範圍軸體方向（z-axis）長度成反比 
+C. 與 weighted CTDI 成反比 
+
+
+=== PDF PAGE 10 ===
+D. 與螺距（pitch）成反比 
+ 
+36. CT 如要減少雜訊為原來的 1/3，則劑量需增加幾倍？ 
+ 
+A. 3 
+B. 6 
+C. 9 
+D. 27 
+ 
+37. 下列何者會導致電腦斷層條紋假影（streak artifacts）？ [疊影（aliasing） \金屬物體 ]病患移動  
+ 
+A. 僅[ 
+B. 僅\ 
+C. 僅[\  
+D. [\]  
+ 
+38. 第幾代 CT 是使用環狀偵檢器及扇形光束旋轉的電腦斷層？ 
+ 
+A. 第一代 
+B. 第二代 
+C. 第三代 
+D. 第四代 
+ 
+39. 腦部電腦斷層攝影檢查時，下列何種情況一般最不需要注射造影劑？ 
+ 
+A. 血管構造異常 
+B. 膿瘍 
+C. 腫瘤 
+D. 頭部創傷  
+ 
+40. 電腦斷層攝影在施打造影劑前，須評估病人那一項生化檢查？ 
+ 
+A. glucose 
+B. uric acid 
+C. creatinine 
+D. cholesterol 
+ 
+41. 有關 CT 值（CT number）的敘述，下列何者錯誤？ 
+ 
+A. 水的 CT 值為零 
+B. CT 值的範圍為負 1000 到正 1000（-1000～1000）HU 
+C. CT 值是根據空氣的線性衰減（attenuation）係數所計算定義的 
+
+=== PDF PAGE 11 ===
+D. CT 值越大代表線性衰減（attenuation）係數也越大 
+ 
+42. 在正常頭部電腦斷層影像中，下列何種構造之 CT number 最高？ 
+ 
+A. 脊髓液 
+B. 大腦灰質 
+C. 血液 
+D. 皮下脂肪 
+ 
+43. 為了產生三維（3D）phase contrast（PC）MR 血管攝影，至少需要多少組圖像？ 
+ 
+A. 2 
+B. 4 
+C. 6 
+D. 8 
+ 
+44. 下圖為何種 MR 影像？ 
+ 
+ 
+A. coronal T1 weighted MR 
+B. axial T2 weighted MR 
+C. sagittal T1 weighted MR 
+D. sagittal T2 weighted MR 
+ 
+45. 懷孕婦女接受 MRI 檢查時，針對是否使用 gadolinium 對比劑施打之考量，下列何者最適當？ 
+ 
+A. 可以正常施打，沒有任何疑慮 
+B. 只要腎臟功能正常即可施打 
+C. 除非必要，最好不要施打 
+D. 對人類胎兒有已知風險，絕對不可施打 
+ 
+46. 下列何者的訊號通常在 MR spectroscopy（MRS）上是被壓抑下去的？ 
+ A. lactate 
+
+
+=== PDF PAGE 12 ===
+B. NAA 
+C. water 
+D. choline 
+ 
+47. 下列何者在 MR spectroscopy（MRS）TE=270 msec 的頻譜上不易被偵測到？ 
+ 
+A. NAA 
+B. glutamate 
+C. creatine 
+D. choline  
+ 
+48. 磁振造影的磁場不均勻度（nonuniformities）是要靠勻場線圈（shim coils）來改善，一般 1.5T 所需的磁 
+場均勻度（uniformity）大約在多少範圍？ 
+ 
+A. 2～3 ppm 
+B. 6～7 ppm 
+C. 10～11 ppm 
+D. 20～21 ppm 
+ 
+49. 關於磁振造影之比吸收率（specific absorption rate, SAR）與病人參數的關係，下列敘述何者正確？ 
+ 
+A. 比吸收率的單位是 Watt 
+B. 比吸收率所設定之限制值以四肢造影最低 
+C. 較高的磁場強度，掃描造影最可能產生較大的比吸收率 
+D. 比吸收率與病人參數、病人導電度無關，但與磁振造影設備及技術有關  
+ 
+50. 對於 3T MRI 屏蔽閉孔（shielded closed-bore）式之散雜磁場（fringe field），在遠離 MRI 機器中心點 
+的 4 公尺線附近所產生的磁場大約為多少 mT？ 
+ 
+A. 0.1 
+B. 0.5 
+C. 1.0 
+D. 3.0 
+ 
+51. 使用 1 Tesla MRI，下列物質何者的 T1 relaxation time 最短？ 
+ 
+A. water 
+B. fat 
+C. CSF 
+D. white matter 
+ 
+
+=== PDF PAGE 13 ===
+52. 下列何原因最可能在 MRI T1 weighted image 
+intensity）？ 
+ 
+A. edema 
+B. infection 
+C. hemangioma 
+D. air 
+ 
+53. 為了消除或降低 MRI ghosting artifacts 
+ 
+A. swapping phase and frequency 
+B. presaturation pulse 
+C. respiratory gating  
+D. contrast enhancement 
+ 
+54. 下圖最可能有磁振造影中之何種 artifact 
+ 
+A. truncation artifact 
+B. flow artifacts 
+C. shading artifact 
+D. aliasing artifact 
+ 
+55. 關於擴散加權（diffusion weighted 
+ 
+A. b 值愈大，同一組織所得到的影像訊號愈大 
+B. b 值的單位為 s/mm 
+2
+ 
+C. b 值的大小與 gradient 的強度有關 
+D. b 值的大小與 gradient 所開啟的時間長短有關 
+ 
+56. 下列何者是相位陣列線圈（phased array coils 
+MRI T1 weighted image 及 T2 weighted image 上皆呈現無訊號 
+MRI ghosting artifacts ，下列何種處理方式最可能增加 scan time 
+artifact ？ 
+ 
+diffusion weighted ）磁振造影的參數 b 值，下列敘述何者錯誤 ？
+同一組織所得到的影像訊號愈大  
+的強度有關  
+所開啟的時間長短有關  
+phased array coils ）的特點？ 
+上皆呈現無訊號 （no signal 
+scan time ？ 
+？ 
+
+=== PDF PAGE 14 ===
+ 
+A. 利用多個小的表面線圈（surface coil）以提升訊雜比（signal-to-noise ratio） 
+B. 屬於可涵蓋大範圍掃描面積的體積線圈（volume coil） 
+C. 多個小的表面線圈連結起來以達到減少掃描時間的目的 
+D. 覆蓋在病人身上可減少呼吸所引起的移動假影（motion artifact） 
+ 
+57. 磁振造影 chemical shift artifact 的產生，主要是因為下列那兩種物質共振頻率差異所致？ 
+ 
+A. 水及空氣 
+B. 脂肪及水 
+C. 蛋白質及水 
+D. 蛋白質及脂肪 
+ 
+58. 1.5T 脂肪之 T1 約為 200 ms，當使用 STIR 時，其 inversion time 最適當的設定值約為多少 ms？ 
+ 
+A. 90 
+B. 140 
+C. 2200 
+D. 10 
+ 
+59. 磁敏感加權造影（susceptibility weighted imaging）通常使用下列何種脈衝序列來測量？ 
+ 
+A. spin echo 
+B. gradient echo 
+C. flow attenuated inversion recovery 
+D. regional saturation technique 
+ 
+60. 有關 MRI 的弛緩時間（relaxation time），下列何者正確？ 
+ 
+A. T1＞T2＞ T2* 
+B. T1＞T2*＞T2 
+C. T2＞T2*＞T1 
+D. T2*＞T2＞T1 
+ 
+61. 在淋巴結彈性超音波影像中，呈現為較硬之結構有可能為下列何者？ 
+ 
+A. 惡性腫瘤轉移 
+B. 淋巴囊腫 
+C. 淋巴滲漏 
+D. 發炎 
+ 
+62. 下列何者不是肝血管瘤（hepatic hemangioma）在超音波下的特徵？ 
+
+=== PDF PAGE 15 ===
+ 
+A. 小肝血管瘤常為均勻高回聲（homogeneously hyperechoic） 
+B. 其外圍邊界常伴隨著低回聲的邊緣 
+C. 較大的血管瘤回聲常變得不均勻（inhomogeneous） 
+D. 較大的血管瘤，常難與其他腫瘤作鑑別診斷 
+ 
+63. 下列何者為肝硬化併發症的超音波表現？[門脈高壓 \腹水 ]肝硬化晚期會出現肝臟萎縮 
+ 
+A. 僅[\  
+B. 僅\]  
+C. 僅[]  
+D. [\]  
+ 
+64. 以彩色都卜勒掃描膀胱時，下列何種疾病可能產生閃爍假影（twinkling artifact）？ 
+ 
+A. 膀胱結石 
+B. 膀胱憩室 
+C. 膀胱炎 
+D. 輸尿管囊腫 
+ 
+65. 嚴重脂肪肝之病人進行超音波檢查時，一般不會出現下列何種情形？ 
+ 
+A. 肝臟實質出現結節性變化 
+B. 肝臟瀰漫性回音減弱  
+C. 門靜脈壁回音減弱 
+D. 橫膈膜全反射回音減弱甚至不呈現 
+ 
+66. 下列各種超音波檢查中何者具有最高的輸出強度？ 
+ 
+A. 胎兒監視都卜勒 
+B. B 模式超音波 
+C. 彩色功率都卜勒 
+D. 雙重脈衝都卜勒 
+ 
+67. 下列有關脾臟超音波掃描的敘述，何者錯誤？ 
+ 
+A. 請受檢者吸氣較容易呈現脾臟影像 
+B. 透過脾門處可呈現胰臟尾部影像 
+C. 病毒性肝硬化者，脾臟容易腫大 
+D. 酒精性肝硬化者，脾臟往往萎縮 
+ 
+68. 附圖為陰囊超音波影像，其最可能的診斷為下列何者？ 
+
+=== PDF PAGE 16 ===
+ 
+ 
+A. testicular tumor 
+B. hydrocele   
+C. hernia 
+D. hematoma 
+ 
+69. 典型甲狀腺的腺瘤（adenoma）於超音波掃描影像中，最可能會呈現下列何種特徵？ 
+ 
+A. 低回音暈輪（halo sign） 
+B. 偽腎像（pseudokidney sign） 
+C. 靶型（target sign） 
+D. 同心圓環狀（concentric ring） 
+ 
+70. 下列何種頻率之超音波探頭最適合用於乳房與甲狀腺檢查？ 
+ 
+A. 2～4 MHz 
+B. 4～6 MHz 
+C. 7～10 MHz 
+D. 20 MHz 
+ 
+71. 附圖為腹部超音波掃描影像，箭號所示的構造應為下列何者？ 
+ 
+ 
+A. 脾靜脈（splenic vein） 
+B. 腹腔動脈幹（celiac trunk） 
+C. 下腔靜脈（inferior vena cava） 
+D. 主動脈（aorta） 
+ 
+
+
+=== PDF PAGE 17 ===
+72. 下列那一項檢查最適合用來診斷創傷性主動脈弓破裂（traumatic aortic arch rupture）？ 
+ 
+A. 胸部磁振造影（chest MRI） 
+B. 經食道超音波檢查（transesophageal sonography） 
+C. 注射對比劑之胸部電腦斷層掃描 
+D. 心臟超音波檢查（cardiac sonography） 
+ 
+73. 下列縮寫的涵義說明何者錯誤？ 
+ 
+A. MTF : modulation transfer function 
+B. FWTW : full-width at twice-maximum 
+C. ERF : edge response function 
+D. SSP : slice sensitivity profile 
+ 
+74. 關於 ACR（American College of Radiology）所用的傳統乳房攝影認證假體的敘述，下列何者正確？ 
+ 
+A. 腫塊：6 個、斑點群：6 群 
+B. 腫塊：5 個、斑點群：4 群 
+C. 腫塊：4 個、纖維：6 條 
+D. 斑點群：5 群、纖維：6 條 
+ 
+75. X 光的焦斑尺寸無法用下列那一項評估？ 
+ 
+A. 針孔照相機（pinhole camera） 
+B. 邊緣散開函數（edge spread function） 
+C. 焦斑測試儀器組（focal spot test tool） 
+D. 解析度表（resolution chart） 
+ 
+76. 下列何者不是磁振造影的一般禁忌？ 
+ 
+A. 配戴心臟起搏器者 
+B. 植入人工耳蝸者 
+C. 眼窩有鐵屑異物者 
+D. 髖關節置換者 
+ 
+77. 影像 f1 經過下列何者的運算可得到影像 f2 結果？ 
+
+=== PDF PAGE 18 ===
+ 
+ 
+A. 
+ 
+B. 
+ 
+C. 
+ 
+D. 
+  
+78. 物體的亮度為 LO，背景的亮度為 LB，依上述條件，下列何者為對比（contrast）的定義？ 
+ A. LO－LB 
+B. （LO－LB）∕ LO 
+
+
+=== PDF PAGE 19 ===
+C. LO  ∕（LO－LB） 
+D. （LO－LB） ∕ LB 
+ 
+79. 下列何者不是遠距放射線學（teleradiology）運作的重要因素？ 
+ 
+A. 影像壓縮 
+B. 影像資料隱私和安全 
+C. 醫療法律 
+D. 影像重建 
+ 
+80. 在 HL7 中，每個訊息屬於一種訊息型態（message type），其中規範病人的基本資料為： 
+ 
+A. MSH 
+B. EVN 
+C. NK1 
+D. PID 
+ 
+ 

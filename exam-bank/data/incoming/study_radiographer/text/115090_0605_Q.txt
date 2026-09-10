@@ -1,0 +1,947 @@
+=== PDF PAGE 1 ===
+115 年第二次專技高考醫師中醫師第一階段考試、牙醫師藥師考試分
+階段考試、醫事檢驗師、醫事放射師、物理治療師考試、115 年專技
+高考職能治療師、呼吸治療師、獸醫師、助產師考試 
+代  號：6309 
+類科名稱：醫事放射師 
+科目名稱：核子醫學診療原理與技術學 
+考試時間：1小時  座號：___________
+※注意：本試題可以使用電子計算器 
+※本試題為單一選擇題，請選出一個正確或最適當答案。 
+ 
+1.
+18
+F-FDG 於心肌及腦部組織攝入機轉為何？  
+ 
+A.離子交換（ion exchange） 
+B.主動運輸（active transport） 
+C.吞噬（phagocytosis） 
+D.代謝（metabolism） 
+ 
+2.試計算 10 mg無載體（carrier-free）的
+18
+F
+-
+離子，其比活度（specific activity）為何？（t1/2＝110 min，
+單位為 MBq/mmol） 
+ 
+A.9.48×10
+7 
+MBq/mmol 
+B.3.51×10
+10 
+MBq/mmol 
+C.6.32×10
+10 
+MBq/mmol 
+D.3.51×10
+11
+ MBq/mmol 
+ 
+3.
+131
+I 的平均壽命（mean life）為幾天？ 
+ 
+A.4 
+B.8 
+C.11.2 
+D.14 
+ 
+4.正子藥物製備後，將其通過一孔徑為0.22微米的纖維素酯薄膜過濾器（millipore filter）的目的最可能為
+何？ 
+ 
+A.評估其穩定性 
+B.測定其水溶性 
+C.測定其帶電荷數 
+D.去除微生物 
+ 
+5.
+177
+Lu-Pluvito
+TM
+是治療轉移攝護腺癌之核醫治療製劑，其治療前的診斷評估可用下列何種核醫診斷製劑？ 
+
+=== PDF PAGE 2 ===
+ 
+A.
+111
+In-pentetreotide 
+B.
+68
+Ga-DOTATATE 
+C.
+123
+I-MIBG 
+D.
+68
+Ga-PSMA-11 
+ 
+6.下列何者對腫瘤的攝取量最容易受到胺基酸轉運體的影響？ 
+ 
+A.
+11
+C-acetate 
+B.
+18
+F-FDOPA 
+C.
+18
+F-FDG 
+D.
+18
+F-NaF 
+ 
+7.下列何種核醫藥物不屬於胺基酸或胜肽的類似物（amino acid or peptide analog）？ 
+ 
+A.
+18
+F-fluciclovine 
+B.
+18
+F-fluorodopa 
+C.
+13
+N-ammonia 
+D.
+177
+Lu-DOTATOC 
+ 
+8.有關
+99m
+Tc-sestamibi 之敘述，下列何者錯誤？ 
+ 
+A.其結構為鎝一價六配位之親水性金屬錯合物 
+B.可取代
+201
+TlCl作為心肌灌注造影 
+C.其製程是利用亞錫還原後形成
+99m
+Tc-citrate，再與MIBI 交換配位獲得 
+D.可用於乳癌及副甲狀腺機能亢進之檢查 
+ 
+9.有關放射藥物有效半衰期之敘述，下列何者正確？ 
+ 
+A.有效半衰期為生物半衰期與物理半衰期之平均值 
+B.有效半衰期取決於生物半衰期與物理半衰期之較長者 
+C.高度趨骨性放射藥物的有效半衰期取決於物理半衰期 
+D.口服
+131
+I-NaI的有效半衰期較
+123
+I-NaI短 
+ 
+10.有關核醫造影評估原發多形性腦膠質瘤（glioblastoma multiforme）的敘述，下列何者錯誤？ 
+ 
+A.
+18
+F-FDG 與
+201
+Tl-TlCl都可以聚積在具代謝活性的腦瘤細胞內 
+B.
+18
+F-FET 可鑑別放射治療後所產生的放射性壞死與腫瘤復發 
+C.
+18
+F-FDG 診斷復發腦瘤較
+18
+F-FDOPA為優 
+D.原發多形性腦膠質瘤較腦膜瘤（meningioma）有較差的預後 
+ 
+11.有關
+99m
+Tc-sulfur colloid腸道出血造影的敘述，下列何者正確？ 
+
+=== PDF PAGE 3 ===
+ 
+A.可以進行24 小時的延遲造影 
+B.會與紅血球進行螯合，經由泌尿道排泄 
+C.在血循環中快速被清除 
+D.可以快速偵測副甲狀腺功能腫大 
+ 
+12.
+99m
+Tc-HMPAO WBC標幟白血球造影，因會在肺臟呈現高度聚積假影，所以一般建議注射多久後進行造影，能讓
+肺臟的活性水平降低至背景值？ 
+ 
+A.0.5 小時 
+B.1 小時 
+C.4 小時 
+D.24 小時 
+ 
+13.有關放射性同位素
+64
+Cu之敘述，下列何者正確？ 
+ 
+A.半衰期為13.2 小時 
+B.美國 FDA已核准
+64
+Cu-ATSM用於臨床腫瘤增生造影 
+C.由加速器製造之核反應為
+64
+Ni（p, n）
+64
+Cu 
+D.打靶結束之純化過程，是以HCl 溶解靶體後通過陰離子交換管柱獲得
+64
+Cu 
+ 
+14.
+131
+I-MIBG臨床用於治療神經母細胞瘤（neuroblastoma），其中MIBG為下列何者之縮寫？ 
+ 
+A.metaiodobenzylguanine 
+B.metaiodobenzylguanidine 
+C.metaiodobenzylglucose 
+D.metaiodobenzylgalactose 
+ 
+15.下列何者不適合作為肺臟造影劑？ 
+ 
+A.
+99m
+Tc-aerosol     
+B.
+99m
+Tc-MAA 
+C.
+133
+Xe 
+D.
+99m
+Tc-phytate 
+ 
+16.用基因轉殖將碘化鈉轉運分子（sodium iodide symporter）植入特定腫瘤細胞，下列核醫製劑何者較不適用
+於此腫瘤之影像偵測？ 
+ 
+A.
+99m
+Tc-MIBI 
+B.
+99m
+Tc-pertechnetate  
+C.
+123
+I-NaI  
+
+=== PDF PAGE 4 ===
+D.
+124
+I-NaI 
+ 
+17.正常成人
+18
+F-FDG PET腦造影，下列何者
+18
+F-FDG的攝取最低？ 
+ 
+A.大腦皮質 
+B.小腦皮質 
+C.基底核 
+D.大腦白質 
+ 
+18.下列何種心肌灌注製劑，因半衰期限制，於檢查前才由迴旋加速器產生，以提供正子同位素合成檢查藥物？ 
+ 
+A.
+13
+N-ammonia 
+B.
+82
+Rb-RbCl 
+C.
+201
+Tl-TlCl 
+D.
+18
+F-FDG 
+ 
+19.PET-MRI影像定位，需使用各種技術檢視像素強度直方圖（pixel intensity histogram），下列何者除外？ 
+ 
+A.cross-correlation 
+B.variance minimization 
+C.entropy minimization 
+D.thin-plate splines 
+ 
+20.有關
+99m
+Tc-ECD腦SPECT造影，下列敘述何者錯誤？ 
+ 
+A.最常使用低能量－高解析度－平行孔準直儀 
+B.扇形射束準直儀（fan-beam collimator）可改善影像空間解析度 
+C.3 或 4 偵測頭SPECT比2偵測頭的靈敏度高 
+D.斜孔準直儀（slant-hole collimator）可提升影像對比解析度（contrast resolution） 
+ 
+21.有關放射核種腦池造影（radionuclide cisternography），下列敘述何者錯誤？ 
+ 
+A.檢查時需作腰椎穿刺將檢查藥物注射入蜘蛛膜下腔 
+B.
+99m
+Tc-DTPA比
+111
+In-DTPA理想 
+C.懷疑腦脊髓液外漏應在鼻孔塞棉球6至 8小時，再取出計數 
+D.正常人同位素藥物注射後24 小時內可到達顱凸（convexity） 
+ 
+22.下列何種核醫造影劑最適合偵測中樞神經類肉瘤（sarcoidosis）？ 
+ 
+A.
+67
+Ga-citrate 
+B.
+123
+I-NaI 
+C.
+99m
+Tc-ECD 
+
+=== PDF PAGE 5 ===
+D.
+99m
+Tc-HMPAO 
+ 
+23.關於同位素腦池造影（radionuclide cisternography）之敘述，下列那些正確？①可用來進行腦脊髓液滲漏
+檢查 ②可用來診斷正常腦壓水腦症（normal pressure hydrocephalus） ③可由靜脈注射 ④可用
+111
+In-
+DTPA 藥物 
+ 
+A.①②③ 
+B.②③④ 
+C.①②④ 
+D.①③④ 
+ 
+24.
+18
+F-FDG PET的腦部影像較不適用於下列何種狀況？ 
+ 
+A.頑固型癲癇症術前評估 
+B.腦部低惡性度膠質瘤（low grade glioma）在放療後腫瘤殘存或復發的偵測 
+C.阿茲海默氏病與額顳葉失智症的鑑別診斷 
+D.評估腦部神經元的活性 
+ 
+25.關於核醫
+201
+Tl-TlCl心肌灌注檢查的upward creep，下列敘述何者正確？ 
+ 
+A.upward creep的心肌缺損主要發生在上壁 
+B.upward creep的現象出現在藥物壓力測試 
+C.upward creep為受檢者呼吸速率改變造成 
+D.運動後立即造影可避免upward creep的產生 
+ 
+26.下列何者不是
+99m
+Tc-ECD SPECT腦血流灌注造影劑的特性？ 
+ 
+A.分子量小 
+B.帶電荷 
+C.脂溶性 
+D.會經腦內酶水解或構型轉化 
+ 
+27.有關正子造影（PET）癌症評估，下列組合何者正確？ 
+ 
+A.胺基酸代謝（Amino acid metabolism）：
+11
+C-methionine 
+B.受體表現（receptor expression）：
+18
+F-fluoromisonidazole（FMISO） 
+C.缺氧（hypoxia）：
+18
+F-fluoroethyltyrosine（FET） 
+D.生物合成（biosynthesis）：
+68
+Ga-DOTA-TATE 
+ 
+28.下列何種同位素最常被用來輔助治療分化型甲狀腺癌？ 
+ A.
+123
+I-NaI 
+
+=== PDF PAGE 6 ===
+B.
+124
+I-NaI 
+C.
+125
+I-NaI 
+D.
+131
+I-NaI 
+ 
+29.乳癌病人進行全身骨骼造影，下列何部位所出現孤立性病變（a solitary lesion）最不可能為骨骼轉移？ 
+ 
+A.脊椎和骨盆 
+B.頭骨 
+C.肋骨 
+D.胸骨 
+ 
+30.關於骨骼造影於複雜性局部疼痛症候群（complex regional pain syndrome）的敘述，下列何者最不適當？ 
+ 
+A.典型表現為單側肢體血流量、血池活性增加及在延遲影像上整個病灶區域的關節周圍攝取增加，診斷準確性
+最高 
+B.即使在疾病病程後期通常也顯示血流量增加 
+C.大多數情況下（＞95％）都會發現延遲影像的關節周圍攝取增加 
+D.感染和關節炎可能導致偽陽性結果 
+ 
+31.使用
+18
+F-FDG PET評估惡性淋巴瘤，下列敘述何者正確？ 
+ 
+A.在小淋巴細胞淋巴瘤（small lymphocytic lymphoma）顯示高攝取 
+B.可以替代組織病理學檢查來確診疾病 
+C.評估結外病灶（如骨髓和脾臟）其敏感度低於電腦斷層 
+D.執行化療後可利用
+18
+F-FDG PET監測治療反應，以決定是否須改變治療策略 
+ 
+32.關於
+18
+F-FDG PET在甲狀腺癌中的應用，下列敘述何者錯誤？ 
+ 
+A.分化型甲狀腺乳突癌（papillary thyroid cancer）病人，
+18
+F-FDG PET比
+131
+I造影更易偵測到遠端轉移病灶 
+B.分化不良之甲狀腺乳突癌（papillary thyroid cancer）病人，
+18
+F-FDG PET比
+131
+I 造影更易偵測到遠端轉移
+病灶 
+C.分化型甲狀腺濾泡癌（follicular thyroid cancer）病人，
+131
+I比
+18
+F-FDG PET造影更易偵測到遠端轉移病
+灶 
+D.分化不良之甲狀腺濾泡癌（follicular thyroid cancer）病人，
+18
+F-FDG PET比
+131
+I 造影更易偵測到遠端轉
+移病灶 
+ 
+33.有關
+18
+F-FDG PET，下列何者錯誤？ 
+ 
+A.可評估惡性腫瘤、轉移病灶及發炎反應等 
+B.
+18
+F-FDG 會經由細胞膜上之葡萄糖轉運蛋白（glucose transporter）進入細胞，進一步磷酸化成葡萄糖-6-
+磷酸（
+18
+F-FDG-6-phosphate） 
+
+=== PDF PAGE 7 ===
+C.惡性細胞一般富含葡萄糖-6-磷酸酵素（glucose-6-phosphatase） 
+D.
+18
+F-FDG-6-phosphate會大量累積滯留在癌細胞內 
+ 
+34.下列何者可做為核醫骨頭掃描的造影製劑？①
+99m
+Tc-MDP ②
+99m
+Tc-HDP ③
+99m
+Tc-DTPA ④
+99m
+Tc-PYP 
+ 
+A.僅①③ 
+B.僅①②④ 
+C.僅②③④ 
+D.①②③④ 
+ 
+35.有關核醫骨骼造影評估骨轉移，下列何者錯誤？ 
+ 
+A.骨轉移病灶放射活性可能增加或減少 
+B.骨骼造影之靈敏度較 X光檢查高 
+C.病灶放射活性增加係因為蝕骨作用 
+D.骨放射活性增加不一定是骨轉移 
+ 
+36.有關
+99m
+Tc-MDP骨骼造影，下列何者不是超級影像（superscan）的特點？ 
+ 
+A.全身骨骼攝取全面均勻增加 
+B.常見於攝護腺癌骨轉移的患者 
+C.腎臟和膀胱活性特別強 
+D.要小心和代謝性骨骼病變（metabolic bone disease）做鑑別診斷 
+ 
+37.患者服用與標準膠囊相同的口服膠囊進行甲狀腺攝取（thyroid uptake）。吞服膠囊6 小時後獲得下列數
+據，甲狀腺攝取約為多少％？ 
+ 
+ 
+A.13.0 
+B.15.4 
+C.17.6 
+D.19.1 
+ 
+38.關於
+99m
+Tc-sestamibi副甲狀腺造影，延遲相與早期相影像相比，下列敘述何者正確？ 
+ A.正常甲狀腺活性持續，副甲狀腺腺瘤活性消失 
+B.副甲狀腺腺瘤活性持續，甲狀腺活性下降 
+
+
+=== PDF PAGE 8 ===
+C.功能亢進的甲狀腺組織活性持續，副甲狀腺或唾液腺無活性攝取 
+D.唾液腺和正常甲狀腺組織活性持續 
+ 
+39.
+99m
+Tc-pertechnetate被甲狀腺攝取的主要原理為下列何者？ 
+ 
+A.吞噬作用（phagocytosis）  
+B.主動運輸（active transportation）  
+C.受體結合（receptor binding）  
+D.擴散（diffusion） 
+ 
+40.有關腎臟造影的敘述，下列何者正確？ 
+ 
+A.
+99m
+Tc-DMSA適用於腎臟灌注造影（renal perfusion imaging） 
+B.腎圖造影（renography）無法得知左右腎功能比率 
+C.受檢者水分攝取、對比劑注射及膀胱充滿尿液不會影響腎圖造影（renography） 
+D.肝臟或脾臟可能造成腎臟上端（upper pole）呈現低活度（hypoactive） 
+ 
+41.目前應用於臨床治療甲狀腺機能亢進一般使用下列何種放射核種之製劑？ 
+ 
+A.
+18
+F-FDG 
+B.
+99m
+Tc-DTPA 
+C.
+131
+I-NaI 
+D.
+32
+P-sodium phosphate 
+ 
+42.比較
+131
+I-NaI及
+99m
+Tc-TcO4
+-1
+應用於甲狀腺檢查，下列敘述何者最適當？ 
+ 
+A.
+131
+I-NaI 會受身體TSH 濃度影響，
+99m
+Tc-TcO4
+-1
+不會 
+B.
+131
+I-NaI 於甲狀腺中會被有機化（organification），
+99m
+Tc-TcO4
+-1
+則不會 
+C.
+131
+I-NaI與
+99m
+Tc-TcO4
+-1
+皆不會受飲食及藥物中含碘成分影響 
+D.
+131
+I-NaI與
+99m
+Tc-TcO4
+-1
+皆經由糞便排出體外 
+ 
+43.關於利尿腎臟造影（diuretic renography）的原理及技術，下列敘述何者錯誤？ 
+ 
+A.與超音波相比，利尿腎臟掃描更能確認排尿速度與是否有功能性尿路阻塞 
+B.可用的核醫製劑有
+99m
+Tc-DTPA、
+99m
+Tc-DMSA、
+131
+I Hippuran 
+C.在給予利尿劑後，需繼續造影至少15 分鐘以上以評估尿路阻塞 
+D.若計算出的區域活度半高時間（time to half peak; T1/2）為8 分鐘，則代表沒有尿路阻塞 
+ 
+44.幼兒接受
+99m
+Tc-DMSA腎皮質造影時，無法分辨下列何種病變？ 
+ A.異位性腎臟（ectopic kidney） 
+B.膀胱輸尿管逆流（vesicoureteric reflux, VUR）併發的腎臟疤痕（renal scarring） 
+
+=== PDF PAGE 9 ===
+C.馬蹄腎（horseshoe kidney） 
+D.膀胱輸尿管逆流（vesicoureteric reflux, VUR） 
+ 
+45.疑似輸尿管腎盂阻塞（UPJ obstruction）病人進行
+99m
+Tc-DTPA造影時，常配合何種藥物作測試？ 
+ 
+A.dipyridamole 
+B.captopril 
+C.furosemide 
+D.benzodiazepam 
+ 
+46.口服放射碘測量甲狀腺攝取率時，通常測量何處的放射量作為背景值？ 
+ 
+A.大腿 
+B.足部 
+C.手肘 
+D.手掌 
+ 
+47.病患就診時有發燒、貧血及背部痛症狀，且在檢查後發現白血球細胞數增加。圖 A為
+99m
+Tc-MDP影像，圖 B 為
+67
+Ga-citrate影像。下列評估何者最為可能？ 
+ 
+ 
+A.骨髓炎（Osteomyelitis） 
+B.腎炎（Nephritis） 
+C.急性腎小管壞死（acute tubular necrosis） 
+D.克隆氏病（Crohn's disease） 
+ 
+48.有一組 MAA kit藥品，每毫升（mL）含有950,000顆粒數。注射5毫升（mL）活性 50 mCi的
+99m
+Tc到MAA 套
+組內，如果本檢查抽出上述製備好的
+99m
+Tc-MAA 4 mCi，裡面約有多少MAA顆粒數？ 
+ A.76,000 
+
+
+=== PDF PAGE 10 ===
+B.380,000 
+C.410,000 
+D.450,000 
+ 
+49.直立（坐或站姿）進行肺通氣檢查時，肺部的正常清除效率為何？ 
+ 
+A.頂部＞底部 
+B.頂部＝底部 
+C.頂部＜底部 
+D.
+133
+Xe 會在肺葉內沉積不會清除 
+ 
+50.血漿中維生素 B12低於多少pg/mL時，則被視為低下？ 
+ 
+A.250 
+B.160 
+C.200 
+D.900 
+ 
+51.Schilling test給與核醫製劑的活性約為多少？ 
+ 
+A.5 nCi 
+B.0.5 μCi 
+C.0.5 mCi 
+D.5 mCi 
+ 
+52.有關核醫前哨淋巴結（sentinel lymph node）造影的敘述，下列何者正確？ 
+ 
+A.只可應用於乳癌患者定位前哨淋巴結 
+B.在淋巴閃爍攝影（lymphoscintigraphy）上呈現冷區 
+C.注射含碘對比劑 
+D.可能會有1個以上的前哨淋巴結 
+ 
+53.有關核醫藥物與對應的造影目的，下列何者正確？ 
+ 
+A.
+18 
+F-FES：攝護腺癌造影 
+B.
+111
+In-octreotide：神經內分泌腫瘤造影 
+C.
+18
+F-MISO：巴金森氏病評估 
+D.
+99m
+Tc-annexin V：缺氧組織造影 
+ 
+54.以
+99m
+Tc 標幟紅血球進行腸胃道出血造影，與
+99m
+Tc標幟硫膠體相較，下列敘述何者錯誤？ 
+ A.血液清除速率較慢 
+
+=== PDF PAGE 11 ===
+B.可檢查時間較長，可以持續 24 小時 
+C.較適用於急性活動性腸胃道出血 
+D.影像較容易受泌尿道攝取活性干擾 
+ 
+55.放射免疫分析僅使用
+125
+I試劑，下列那一核種最適用於校正實驗室加馬計數器（gamma counter）？ 
+ 
+A.
+226
+Ra 
+B.
+68
+Ge 
+C.
+137
+Cs 
+D.
+129
+I 
+ 
+56.評估抗體與抗原的結合強度與穩定性的指標為： 
+ 
+A.抗體與抗原的分子量比值 
+B.抗體與抗原結合體的平衡解離常數（Kd） 
+C.抗體與抗原的泳動率（mobility）比值 
+D.抗體與抗原的等電點（isoelectric point）比值 
+ 
+57.欲將
+125
+I標幟於抗體上，最可能結合於那個胺基酸上？ 
+ 
+A.酪胺酸（tyrosine） 
+B.丙胺酸（alanine） 
+C.半胱胺酸（cysteine） 
+D.天門冬胺酸（aspartate） 
+ 
+58.將
+125
+I標幟於蛋白質時，下列那種方法的標幟效率最高？ 
+ 
+A.Triiodide Method 
+B.Iodine Monochloride Method 
+C.Chloramine-T Method 
+D.Enzymatic Method 
+ 
+59.現行測定是否懷孕，是檢測尿液中何種物質是否出現？ 
+ 
+A.雌二醇（E2） 
+B.泌乳激素（prolactin） 
+C.絨毛膜促性腺激素（hCG） 
+D.胰島素（insulin） 
+ 
+60.有關
+131
+I-NaI治療甲狀腺全切除的甲狀腺癌病人，下列敘述何者正確？ 
+ A.細胞經由鈉鉀幫浦（Na
++
+/K
++
+ pump）攝取藥物 
+
+=== PDF PAGE 12 ===
+B.不適合治療未分化型甲狀腺癌（anaplastic thyroid carcinoma, ATC） 
+C.低度復發風險的病人一定要接受高劑量
+131
+I-NaI治療 
+D.治療後服用甲狀腺荷爾蒙，可提高甲促素（thyroid stimulating hormone, TSH）抑制腫瘤生長 
+ 
+61.有關治療腫瘤的放射性製劑，下列敘述何者正確？ 
+ 
+A.
+90
+Y-microspheres治療肝癌 
+B.
+177
+Lu-DOTATATE治療乳癌 
+C.
+90
+Y-ibritumomab tiuxetan治療神經內分泌腫瘤 
+D.
+177
+Lu-PSMA製劑治療肺癌 
+ 
+62.有關輻射防護合理抑低之原則，下列何者錯誤？ 
+ 
+A.須符合原許可之活動 
+B.須考慮技術現狀、改善公共衛生及安全之經濟效益以及社會與社會經濟因素 
+C.合理抑低的英文為as low as achievable（ALARA） 
+D.須為公共之利益而利用輻射 
+ 
+63.核醫治療用短半衰期之核種較長半衰期之核種的特點，下列何者正確？ 
+ 
+A.較高劑量率（dose rate） 
+B.較高輻射穿透組織能力（tissue penetration） 
+C.較低正常組織毒性（tissue toxicity） 
+D.較適合用於治療後影像評估（post-therapeutic imaging） 
+ 
+64.下列何種核醫治療是根據病患體重給予核醫藥物劑量或活度？ 
+ 
+A.
+131
+I-NaI 
+B.
+223
+Ra-RaCl2 
+C.
+177
+Lu-PSMA 
+D.
+177
+Lu-DOTATATE 
+ 
+65.
+223
+Ra-RaCl2治療去勢抗性前列腺癌的主要適應症（部位）為何？ 
+ 
+A.原發病灶 
+B.淋巴轉移 
+C.骨骼轉移 
+D.癌臟器轉移 
+ 
+66.下列何種核醫治療製劑，最不適合用於癌細胞骨轉移而導致的骨疼痛？ 
+ A.
+32
+P-orthophosphate 
+
+=== PDF PAGE 13 ===
+B.
+89
+Sr-SrCl2 
+C.
+153
+Sm-EDTMP 
+D.
+90
+Y-micro-spheres  
+ 
+67.具射出α或β粒子的核種常用於胜肽受體放射治療（peptide receptor radionuclide therapy, PRRT），下
+列敘述何者正確？ 
+ 
+A.β射出的核種直線能量轉移（LET）大於α射出的核種 
+B.β射出的核種造成DNA雙股斷裂的能力大於α射出的核種 
+C.α射出核種的交叉火力效應（cross-fire effect）小於β射出的核種 
+D.相較於β射出的核種，α射出核種的治療效果易受腫瘤內氧氣濃度高低的影響 
+ 
+68.關於正子掃描儀器偵檢器中，下列何者擁有最短的衰變時間（decay time）？ 
+ 
+A.NaI(Tl) 
+B.BGO 
+C.LSO 
+D.BaF2 
+ 
+69.下列關於解析度的敘述，何者錯誤？ 
+ 
+A.空間解析度（spatial resolution）與 pixel size的大小有關 
+B.能量解析度（energy resolution）與FWHM有關 
+C.時間解析度（temporal resolution）與 dead time有關 
+D.Gamma camera的整體解析度（total resolution）=（intrinsic resolution × extrinsic resolution）
+/2 
+ 
+70.針對附圖的
+137
+Cs能譜，其能量解析度為何？ 
+ 
+
+
+=== PDF PAGE 14 ===
+ 
+A.7％ 
+B.14％ 
+C.21％ 
+D.28％ 
+ 
+71.針對附圖的準直儀而言，下列敘述何者錯誤？ 
+ 
+ 
+A.空間解析度較平行孔準直儀為差 
+B.靈敏度較平行孔準直儀為差 
+C.縮短準直儀與病人的間距可提升靈敏度 
+D.縮短準直儀與病人的間距可提升空間解析度 
+ 
+72.關於正子影像資訊的SUV定量描述，下列何者最不適當？ 
+ 
+A.SUV 有助於測量腫瘤的代謝功能 
+B.SUV 計算通常需要體重資訊 
+C.SUV 不受取像時間點的影響 
+D.部分容積效應對小型病灶的 SUV 影響很大 
+ 
+73.有關理想的核醫造影製劑敘述，下列何者最不適當？ 
+ 
+A.容易獲得 
+B.長的有效半衰期（effective half-life） 
+C.高的靶對非靶活性比率（target-to-nontarget activity ratio） 
+D.以電子捕獲或同質異構轉換的衰變（decay by electron capture or isomeric transition）  
+ 
+74.[
+222
+Rn→
+218
+Po＋α＋∆Q]，
+222
+Rn原子質量為 222.0176 amu，
+218
+Po 原子質量為218.0090 amu，α質量為4.0015 
+amu，
+4
+He 原子質量為4.0026 amu，反應能∆Q 為何？ 
+ A.4.57 MeV 
+B.5.59 MeV 
+
+
+=== PDF PAGE 15 ===
+C.6.61 MeV 
+D.7.48 MeV 
+ 
+75.下列何種現象無質能互換（mass energy conversion）？ 
+ 
+A.核蛻變（nuclear decay） 
+B.光電效應（photoelectric effect） 
+C.成對效應（pair production） 
+D.互毀（annihilation） 
+ 
+76.
+68
+Ga-PSMA-11進行核醫造影，下列器官何者所接受輻射劑量最高？ 
+ 
+A.心臟 
+B.肝臟 
+C.腎臟 
+D.脾臟 
+ 
+77.已知
+99m
+Tc發射 140 keV之加馬光子能量予NaI (Tl) 晶體，NaI (Tl) 晶體之閃爍效率為20％，且產生出每
+個可見光之光子能量為3 eV，產生之可見光進入光電倍增管（PMT）的比例為80％，PMT光陰極的光電轉換
+效率為 20％，則PMT 光陰極產生之光電子數目為何？ 
+ 
+A.1,493 
+B.2,240 
+C.2,987 
+D.4,479 
+ 
+78.某人不慎攝入一放射核種，使肺共接受1 mGy的β-ray 及 0.5 mGy的α-particle，已知肺的組織加權因數
+為 0.12，試求肺的有效劑量為多少 mSv？ 
+ 
+A.0.18 
+B.1.32 
+C.6.12 
+D.9.17 
+ 
+79.量測氚之放射活度，最理想的偵檢器為： 
+ 
+A.半導體偵檢器 
+B.蓋革偵檢器 
+C.固態閃爍偵檢器 
+D.液態閃爍計數器 
+ 
+80.若吸收劑量相同，則下列何者所產生的輻射生物效應最低？ 
+
+=== PDF PAGE 16 ===
+ 
+A.質子 
+B.中子 
+C.γ射線 
+D.α粒子 
+ 
+ 

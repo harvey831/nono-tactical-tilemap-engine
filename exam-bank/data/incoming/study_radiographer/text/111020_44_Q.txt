@@ -1,0 +1,528 @@
+=== PDF PAGE 1 ===
+111年第一次專門職業及技術人員高等考試醫師牙醫師藥師考試分階
+段考試、醫事檢驗師、醫事放射師、物理治療師考試
+代　　號：4309
+類科名稱：醫事放射師
+科目名稱：放射線診斷原理與技術學
+考試時間：1小時 座號：___________
+  ※本科目測驗試題為單一選擇題，請就各選項中選出一個正確或最適當的答案，複選作答者，該題不予計分!
+  ※注意：本試題禁止使用電子計算器   　　　　　　　  
+ 
+1.診斷頸椎（ cervical spine ） C1 及 C2 之 X 光攝影法，下列何者錯誤？
+ 
+A.swimmer's lateral view
+B.Fuchs method AP view
+C.Judd method PA view
+D.wagging jaw AP view
+2.關於肩部 Y view 攝影（ scapular Y lateral view ）投影的敘述，下列何者錯誤？
+ 
+A.病人採用站立姿勢，並使用 PA oblique projection
+B.用來評估遠端肱骨是否骨折
+C.可以看到肩岬脊與喙狀突
+D.身體冠狀平面與 IR 呈 45 ～ 60 度的斜位
+3.關於頭部視神經孔攝影（ parieto-orbital oblique projection ）的敘述，下列何者錯誤？
+ 
+A.parieto-orbital oblique projection 又稱為 Rhese method 攝影
+B.需要鼻子、臉頰與下巴貼片才能看到完整的眼眶影像
+C.視神經孔位於眼眶內上 1/4 處
+D.AML 線的對位線須垂直於底片
+4.一條件設定為 75 kVp 、 100 mAs 的Ｘ光機，在 SID 為 180 cm 的地方測得曝露為 500 mR ，若在同一操作條件下，
+降低曝露至 125 mR ，則應增加鋁濾器的厚度為何？（已知鋁的半值層厚度為 2.8 mm ）
+ 
+A.2.8 mm
+B.5.6 mm
+C.8.4 mm
+D.11.2 mm
+5.下列何種參數的增加，最不可能增加Ｘ光的量（ quantity ）？
+ 
+A.管電壓
+B.管電流
+C.曝光時間
+D.電壓漣波值（ voltage ripple ）
+6.依先後順序排列電腦放射攝影（ computed radiography, CR ）的成像過程：① expose ② stimulate ③ read 
+④ erase
+ A.①②③④
+B.②①④③
+
+=== PDF PAGE 2 ===
+C.③④②①
+D.④①③②
+7.關於數位放射攝影（ digital radiography, DR ）電荷耦合元件（ CCD ）的敘述，下列何者最不適當？
+ 
+A.CCD 為光敏感元件，用於接收光訊號
+B.在工作範圍內， CCD 對輻射的反應是線性的
+C.相對於螢光屏－底片（ screen film ）， CCD 的動態範圍（ dynamic range ）較寬
+D.相對於螢光屏－底片（ screen film ）， CCD 需要較多的輻射量成像
+8.關於放大 X 光照相術（ magnification radiography ），下列敘述何者錯誤？
+ 
+A.會故意增加 OD （ optical density ）值  
+B.放大因子（ MF ）＝影像大小／物體大小  
+C.使用柵板來減少散射
+D.主要缺點是會增加病人劑量
+9.X 光影像系統的電器迴路中，除了高壓產生器的逆變器（ inverter ）迴路外，整流器（ rectifiers ）位置通常位於
+那一區段內？
+ 
+A.控制台區段
+B.低壓區段
+C.高壓區段
+D.管球區段
+10.有關足跟效應（ heel effect ）之敘述，下列何者錯誤？
+ 
+A.陽極方向 X 光輻射強度較陰極大
+B.陽極角度越小，足跟效應越大
+C.陰極方向焦斑模糊程度較大
+D.陰極應朝向較厚部位以使照相曝光較均勻
+11.就  心導管攝影、腦部血管攝影以及腹部血管攝影，下列敘述何者錯誤？
+ 
+A.FOV 通常腹部血管攝影最大，腦部血管攝影次之，心導管攝影最小
+B. 以攝影速度（ frame rate ）而言，通常腦部血管攝影最快，心導管攝影次之，腹部血管攝影最慢
+C. 三項檢查皆需將導管放置在血管內，因此導管必須在 X 光透視下可見
+D.三項檢查皆需要導管內注射含碘造影劑
+12.在骨質密度檢查報告中，所謂 T score 為與下列何者的平均值做比較？
+ 
+A.同性別 30 歲健康成人
+B.不分性別 30 歲健康成人
+C.同性別同年齡
+D.不分性別同年齡
+13.多少的 X 射線管電壓（ kV ），將導致血管中含碘顯影劑在影像有較清晰的對比？
+ A.55
+B.80
+C.100
+
+=== PDF PAGE 3 ===
+D.110
+14.因為血栓造成的急性腦中風，如於黃金救治時間內，下列何項介入性放射線術式對病人有幫助？
+ 
+A.影像導引切片術
+B.影像導引引流術
+C.經導管取血栓術
+D.經導管動脈栓塞術
+15.關於乳房攝影技術的敘述，下列何者正確？
+ 
+A.進行放大攝影（ magnification ）技術時，必須增加物體與影像接受器的距離（ OID ）
+B.為增加影像亮度，使用較低的管電流時間（ mAs ）曝光條件
+C.為增加影像對比度，使用較高的管電壓（ kVp ）曝光條件
+D.因受足跟效應（ heel effect ）的影響，胸壁應置於陽極側
+16.關於施行腦部血管攝影檢查的敘述，下列何者正確？
+ 
+A.內頸動脈血管攝影時對比劑注射速率最好不大於 3 mL/sec
+B.檢查時病患必須閉氣
+C.不可使用數位減影血管攝影
+D.對比劑自動注射器施打前必須先排氣
+17.實施 PCN （ percutaneous nephrostomy ）時，對比劑的注入方式與患者採取的姿勢，下列何者正確？
+ 
+A.藉由導尿管經尿道注入、 prone position
+B.藉由導尿管經尿道注入、 supine position
+C.經由穿刺腎臟方式注入、 prone position
+D.經由穿刺腎臟方式注入、 supine position
+18.患者在那一種擺位下接受檢查，才能得到下圖的影像？
+ 
+A.LAO position
+B.RAO position
+C.AP projection
+D.PA projection
+19.有關食道鋇劑攝影之敘述，下列何者錯誤？  
+ 
+
+=== PDF PAGE 4 ===
+A.檢查可採站姿
+B.患者吞下鋇劑，採 X 光透視攝影
+C.一般以側位照最能夠清楚的呈現食道
+D.應包含下咽部（ hypopharynx ）攝影
+20.下列血管攝影中，何者在靜脈相影像中，通常不能清楚呈現門靜脈（ portal vein ）？
+ 
+A.腎動脈
+B.腹動脈幹
+C.上腸繫膜動脈
+D.脾動脈
+21.下列檢查何者為逆行性泌尿道攝影？
+ 
+A.intravenous pyelography
+B.antegrade pyelography
+C.retrograde pyelography
+D.percutaneous nephrostomy
+22.下列血管攝影檢查器械的敘述，何者錯誤？
+ 
+A.穿刺針的 G （ gauge ）號數是針管的外徑，數字愈大管徑愈小
+B.鞘管（ sheath ）的 Fr 號數是鞘管的外徑，數字愈大管徑愈大
+C.導線（ guide wire ）的大小常以吋（ inch ）為單位
+D.導管（ catheter ）的 Fr 號數是導管的外徑，數字愈大管徑愈大
+23.下列那三條血管連接主動脈弓，通往頭頸部？
+ 
+A.left vertebral artery, right vertebral artery, right common carotid artery
+B.left common carotid artery, right common carotid artery, left subclavian artery
+C.brachiocephalic artery, right common carotid artery, right vertebral artery
+D.brachiocephalic artery, left common carotid artery, left subclavian artery 
+24.靜脈注射泌尿道攝影，病患疑有下列何種疾病時最需加做解尿後的膀胱攝影？
+ 
+A.腎結石
+B.輸尿管腫瘤
+C.攝護腺肥大
+D.腎臟水腫
+25.在血管攝影室執行經皮穿肝膽道攝影（ PTC ）後，下列何者並非其較常見併發症？
+ 
+A.氣胸
+B.肝臟出血
+C.膽汁溢流至腹腔
+D.胰臟炎
+26.附圖為肝臟血管攝影，圖中紅色箭號所指已栓塞血管為下列何者？
+
+=== PDF PAGE 5 ===
+ 
+A.common hepatic artery
+B.proper hepatic artery
+C.superior mesenteric artery
+D.gastroduodenal artery
+27.在校準不當的檢測器中，均勻的假體在 CT 中會出現何種圖像？
+ 
+A.增加雜訊
+B.影像模糊
+C.減少對比
+D.環狀雜訊
+28.儲存 20 張 512×512 腹部 CT 檢查的圖像，若每個像素使用 16 位元需要多少記憶體（ MB ）？
+ 
+A.0.1
+B.1
+C.10
+D.100
+29.當增加 CT 掃描中的 volume CT dose index 時，最有可能改善什麼？
+ 
+A.解析度
+B.雜訊
+C.對比
+D.病人輻射劑量
+30.外傷造成之單側聽力受損，宜用下列何種影像檢查評估？
+ 
+A.MRI of internal auditory canal
+B.temporal bone high resolution CT （ HRCT ）
+C.Stenver's view
+D.routine brain CT with bone window
+31.頭部 CT 的影像如下圖，下列敘述何者錯誤？
+
+=== PDF PAGE 6 ===
+ 
+A.此為 CT angiography 檢查  
+B.此為 maximum intensity projection （ MIP ）處理後的影像
+C.病人可能以 subarachnoid hemorrhage （ SAH ）表現
+D.箭頭所指處為前交通枝動脈瘤（ Acom aneurysm ）
+32.“CT imaging of blood vessels opacified by contrast medium” 這句話最適合定義下列何種 CT 影像？
+ 
+A.CT angiography
+B.CT urography
+C.triphasic liver CT
+D.brain perfusion CT
+33.下列何者是現代電腦斷層的體積掃描（ volume scanning ）比舊有的單層掃描（ single-slice scanning ）具有的優
+勢？①體積數據（ volumetric data ）允許更多準確的重建  ②掃描時間更短  ③減少因患者的移動所引起的假
+影  
+ 
+A.①②③
+B.僅①②
+C.僅②③
+D.僅①③
+34.下列何者不是 CT 掃描儀形成 CT 圖像包含的步驟？
+ A.投影（ projections ）
+B.數據採集（ data acquisition ）
+C.影像重建（ image reconstruction ）
+
+=== PDF PAGE 7 ===
+D.圖像顯示（ image display ）
+35.先天性心臟病患者，胸部 CT angiography 顯示全肺靜脈迴流異常（ total anomalous pulmonary venous return,
+TAPVR ）如下圖所示。此影像是用何種後處理技術？
+ 
+A.maximum intensity projection （ MIP ）
+B.minimum intensity projection （ MinIP ）
+C.surface rendering （ SR ）
+D.partial volume averaging （ PVA ）
+36.改變窗位 window level （ WL ）主要可以改變電腦斷層影像的：
+ 
+A.明暗度
+B.解析度
+C.銳利度
+D.切片厚度
+37.一 64 切面螺旋（ multislice spiral ） CT 檢查，使用 32 mm 寬的 X 光射束，在 10 秒檢查時間內，若 X 光管每 0.5 秒轉
+一圈，每轉一圈病床移動 32 mm ，則 z 軸涵蓋範圍為多少 cm ？
+ 
+A.6
+B.10
+C.32
+D.64
+38.附圖中箭號所指，最可能為下列何者？
+ A.肺動脈
+B.上腔靜脈
+
+=== PDF PAGE 8 ===
+C.主動脈
+D.下腔靜脈
+39.當進行切片定位雷射準確性（ light accuracy alignment ）的電腦斷層攝影品質保證測試時，射束中心與雷射位
+置誤差應在多少 mm 之內？
+ 
+A.1
+B.2
+C.5
+D.8
+40.附圖為肝臟電腦斷層動態顯影，由圖中可以判斷肝臟最可能為那一項病灶？
+ 
+A.hepatic cyst
+B.cholangiocarcinoma
+C.hepatocellular carcinoma
+D.liver hemangioma
+41.有關 CT 掃描參數 pitch 的敘述，下列何者錯誤？
+ 
+A.在相同的切面厚度下， pitch 越大則每圈掃描移動的床距愈大
+B.在相同的掃描範圍情況下， pitch 大小與病人劑量成反比關係， pitch 愈小病人劑量愈高
+C.在相同的掃描範圍情況下， pitch 大小與掃描時間成反比關係， pitch 愈大掃描時間愈短
+D.pitch 大小與病人劑量無關
+42.下列那一項技術是組成 spiral/helical CT 研發成功的主要關鍵？
+ 
+A.slip-ring technology
+B.pencil beam
+C.fan beam
+D.parallel beam
+43.下列何者具有較低的磁易感性（ susceptibility ）？
+ 
+A.含鐵血黃素（ hemosiderin ）
+B.脫氧血紅素（ deoxyhemoglobin ）
+C.氧化鐵
+D.肌肉
+44.1.5 T 主磁場之下，健康人體腦組織灰質的 T1 時間相較於白質長約多少 % ？
+ A.30
+B.0
+
+=== PDF PAGE 9 ===
+C.0.3
+D.100
+45.在創建 128×128 的傳統磁振造影影像時，每個回波將被採樣 128 次，以在  frequency encoding 方向上創建 128 個
+像素，要在  phase encoding 方向上創建 128 個像素，需要多少回波？
+ 
+A.128
+B.1282
+C.128/2
+D.128×2
+46.下列何者為 1.5 T 磁場進行 MR 頻譜（ MRS ）的最基本要求？
+ 
+A.均勻磁場
+B.強磁場
+C.強磁梯度
+D.快速切換梯度
+47.除造影劑反應外，下列何者為 MR 掃描最常見的不良反應？
+ 
+A.射頻燒傷
+B.心律失常
+C.急性聽力損失
+D.腦損傷
+48.下圖中 FLAIR 影像左側腦室內有一個白的訊號如箭號處，此應為：
+ 
+A.flow phenomenon
+B.腫瘤
+C.出血  
+D.truncation artifact
+49.下圖影像箭號處的黑點成因為何？
+
+=== PDF PAGE 10 ===
+ 
+A.flow void in a normal patent vessel
+B.flow related enhancement
+C.occluded vessel
+D.microbleed 
+50.在 1.5 T 磁場強度時，腦組織的腦脊髓液（ CSF ）的縱向弛緩時間是 3600 ms ，橫向弛緩時間是 200 ms ，流體衰
+減的反轉回復（ FLAIR ）中所使用的反轉回復時間（ TI ）約為多少  ms ？
+ 
+A.2495
+B.139
+C.2663
+D.2356 
+51.調整下列何項參數最可能改變 MRI 之 T1 contrast ？
+ 
+A.TR
+B.flow
+C.TE
+D.b value
+52. 所謂  short inversion time inversion recovery （ STIR ）是要抑制下列何種物質的訊號？
+ 
+A.flow
+B.air
+C.water
+D.fat
+53.下列何者為射頻線圈對人體主要的生物效應？
+ A.局部熱效應
+B.改變心跳週期
+
+=== PDF PAGE 11 ===
+C.產生幻視
+D.高分貝噪音
+54.關於臨床常用的超導磁鐵（ superconducting electromagnets ）磁振造影系統，下列何者為其磁場方向？
+ 
+A.垂直於地面
+B.平行於地面
+C.與 slice selection gradient 呈 45 度夾角
+D.與 frequency encoding gradient 呈 45 度夾角
+55.有關磁振造影擴散加權影像（ diffusion weighted imaging, DWI ）技術的敘述，下列何者錯誤？
+ 
+A.常用 echo-planar imaging （ EPI ）脈衝波序（ pulse sequence ）
+B.由 b 參數值（ b factor ）控制影像對比
+C.當 b = 0 及長 TR 、 TE 時，呈現為 T1 權重影像
+D.分子擴散程度可以量化為表象擴散係數（ apparent diffusion coefficient, ADC ）
+56.下列那一項最適合用來減少磁振造影之 aliasing artifact ？
+ 
+A.shim coil 取代 surface coil
+B.frequency undersampling 技術
+C.增強射頻脈衝
+D.擴大 FOV
+57.在磁振造影中使用 fast spin echo 脈衝序列測量一張影像，如果影像的相位編碼數為 256 ， echo train length 為 8 ，
+則需要多少個 TR ？
+ 
+A.1
+B.8
+C.16
+D.32
+58.磁振造影中降低影像切面厚度的方法，下列何者正確？
+ 
+A.降低激發射頻的頻寬
+B.降低切面梯度的強度
+C.增加激發射頻的偏轉角度
+D.降低切面間 gap 的寬度
+59.在 MRI 中欲取得質子密度加權影像（ PDWI ）時，其 TR 與 TE 的設定應分別為何？
+ 
+A.長、長
+B.短、短
+C.長、短
+D.短、長
+60.下列那一個公式是用來計算磁振造影系統的原子共振頻率？
+ A.Bloch
+B.Fourier
+C.Larmor
+
+=== PDF PAGE 12 ===
+D.Plank
+61.正常甲狀腺長軸（ longitudinal length ）為多少？
+ 
+A.1 ～ 3 公分
+B.4 ～ 7 公分
+C.9 ～ 12 公分
+D.小於 2 公分
+62.膽囊超音波掃描時，發現膽囊（ GB ）腔內充滿濃稠膽汁，其回音與鄰近肝臟組織的回音相近，造成膽囊不容
+易辨識（如圖），該現象稱之為何？
+ 
+A.肝化（ hepatization ）
+B.肝纖維化（ liver fibrosis ）
+C.肝硬化
+D.瓷罐膽囊（ porcelain gallbladder ）
+63.下圖為膀胱的彩色都卜勒影像（橫向掃描），箭號所指的是：
+ A.輸尿管尿液射入膀胱（ ureteric jet ）
+B.膀胱炎（ cystitis ）
+
+=== PDF PAGE 13 ===
+C.膀胱癌（ bladder cancer ）
+D.膀胱瘜肉（ polyp ）
+64.隨著年齡漸增，胰臟的回音特性會呈現下列何種情形？
+ 
+A.回音增強且體積可能增大
+B.回音增強且體積可能縮小
+C.回音減低且體積可能增大
+D.回音減低且體積可能縮小
+65.關於腎臟超音波常見的病灶，下列敘述何者錯誤？
+ 
+A.腎結石（ renal stone ）會出現後方回音衰減
+B.腎囊腫（ cyst ）會出現後方回音增強        
+C.平滑肌脂肪血管瘤（ angiomyolipoma ）通常為低回音
+D.水腎（ hydronephrosis ）通常在腎盂處，呈現擴張的無回音區
+66.下圖為腎臟超音波縱向影像，箭號所指的是：
+ 
+A.angiomyolipoma （ AML ）
+B.renal cell carcinoma （ RCC ）   
+C.renal cyst
+D.renal stone
+67.當超音波掃描肝臟時，在 S1 處發現有一個 2 公分的腫瘤，試問 S1 是指：
+ 
+A.左葉外分葉（ left lateral segment ）
+B.右葉前分葉（ right anterior segment ）
+C.方葉（ quadrate lobe ）
+D.尾葉（ caudate lobe ）
+68.超音波掃描若發現膽囊內出現具回音之病灶時，最容易鑑別膽結石與息肉的方法為？
+ 
+
+=== PDF PAGE 14 ===
+A.更換高頻率的探頭
+B.請病人深呼吸
+C.改變病人姿勢
+D.以彩色都卜勒觀察血流
+69.穿透力深度為 15 cm ，三個焦點且每幅影像有 100 條掃描線，則最大的影像畫面率（ frame rate, f/s ）為何？
+ 
+A.5
+B.8.5
+C.15
+D.17.1
+70.下列那一項無法提高超音波影像之解析度？
+ 
+A.減少空間脈衝長度（ spatial pulse length ）
+B.增加頻寬（ bandwidth ）
+C.提高品質因子（ quality factor ）
+D.縮窄波寬（ beam width ）
+71.附圖為膀胱超音波影像，箭號所指最可能為何？
+ 
+A.移行細胞癌（ transitional cell carcinoma ）
+B.輸尿管膨出（ ureterocele ）
+C.血腫（ hematoma ）
+D.膀胱結石（ bladder stone ）
+72.附圖為腹部超音波影像，箭號所指為何？
+ A.遠方回音增強（ distal enhancement ）
+
+=== PDF PAGE 15 ===
+B.音影（ acoustic shadows ）
+C.臨界角假影（ critical angle artifacts ）
+D.音波迴盪假影（ reverberation artifacts ）
+73.為使操作放射師能觀測透視的輻射劑量輸出，在美國 FDA 要求下於 2006 年後生產的透視機組，應提供那些設
+備或數據供使用？① dose area product （ DAP ）  ② cumulative total dose （ CTD ）  ③ high-level dose
+detective （ HLD ）  ④ entrance skin dose detective （ ESDD ）
+ 
+A.僅③④
+B.僅①②
+C.僅①③
+D.①②③④
+74.依據「輻射醫療曝露品質保證標準」規定，醫療機構使用下列那些設備時，不用設置醫療曝露品質保證組織
+及專業人員？①核醫用電腦斷層掃描儀  ②診斷用電腦斷層機組  ③加馬刀  ④乳房 X 光攝影儀  ⑤心導管
+透視機組  ⑥血管攝影透視機組
+ 
+A.①④⑤
+B.①②③
+C.⑤⑥
+D.僅①⑤
+75.執行 CT 品管時，下圖的假體影像應該是用於執行那一種品管？
+ 
+A.對比解析度
+B.空間解析度
+C.切面準確度
+D.線性度
+76.某一影像系統的空間解析度為 25 lp/cm ，則其像素（ pixel ）大小為何？
+ A.0.05 mm
+
+=== PDF PAGE 16 ===
+B.0.1 mm
+C.0.15 mm
+D.0.2 mm
+77.下列何者不是 JPEG 影像壓縮技術所使用的方法？
+ 
+A.霍夫曼編碼（ Huffman coding ）
+B.區塊編碼（ block coding ）
+C.離散餘弦轉換（ discrete cosine transform, DCT ）
+D.小波轉換（ wavelet transform ）
+78.遠距放射線學（ teleradiology ）主要是藉由下列何種網路技術來達成？
+ 
+A.LAN
+B.WAN
+C.Ethernet
+D.token ring
+79.彩色都卜勒超音波影像大小為 256×256 的矩陣，無壓縮、無檔頭資料（ file header ），需要多少電腦容量來儲
+存？
+ 
+A.65536 bytes
+B.196608 bytes
+C.262144 bytes
+D.524288 bytes
+80.使用附圖無法執行數位顯示器的那一項測試？
+  
+ 
+A.0% ～ 5% 與 95% ～ 100% 的低對比方塊可辨識
+B.亮度均勻度
+C.由 0% 至 100% 的每個相鄰灰階可分別辨認
+D.高對比線對清楚可分辨
